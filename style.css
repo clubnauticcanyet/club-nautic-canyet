@@ -337,6 +337,9 @@ button {
 /* ================= HERO BUTTON ================= */
 
 .hero-button {
+       position: relative;
+    top: -25px;
+   
     display: inline-flex;
 
     align-items: center;
