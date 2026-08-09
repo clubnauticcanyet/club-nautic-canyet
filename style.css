@@ -1,12 +1,10 @@
-/* =========================================
+/* =========================================================
    CLUB NÀUTIC CANYET
    ROSAMAR · COSTA BRAVA
-   ========================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+   ========================================================= */
 
 
-/* ---------- RESET ---------- */
+/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -19,9 +17,9 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
     background: #061d2b;
-    color: white;
+    color: #ffffff;
 }
 
 a {
@@ -29,208 +27,306 @@ a {
     text-decoration: none;
 }
 
+button {
+    font-family: inherit;
+}
 
-/* ---------- HEADER ---------- */
+
+/* ================= HEADER ================= */
 
 .header {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: 120px;
-    padding: 25px 38px;
+    height: 125px;
+
+    padding: 25px 42px;
 
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
 
-    z-index: 10;
+    z-index: 20;
 
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 20, 35, 0.65),
-        rgba(0, 20, 35, 0)
-    );
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(2, 18, 29, 0.72),
+            rgba(2, 18, 29, 0)
+        );
 }
 
 
-/* ---------- LOGO ---------- */
+/* ================= LOGO ================= */
 
 .logo {
     display: block;
-    width: 230px;
+    width: 185px;
+
+    position: relative;
+    z-index: 25;
 }
 
 .logo img {
     width: 100%;
     height: auto;
+
     display: block;
 }
 
 
-/* ---------- NAVEGACIÓN ---------- */
+/* ================= MENU ================= */
 
 .navigation {
     display: flex;
     align-items: center;
-    gap: 38px;
-    padding-top: 12px;
+
+    gap: 30px;
+
+    margin-left: auto;
+    margin-right: 25px;
+
+    padding-top: 14px;
 }
 
-.navigation > a {
+.navigation a {
     position: relative;
 
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
-    letter-spacing: 1px;
+
+    letter-spacing: 1.3px;
 
     color: rgba(255,255,255,0.95);
 
-    transition: all 0.3s ease;
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
 }
 
-.navigation > a:hover {
-    color: #e6b63c;
+.navigation a:hover {
+    color: #e4b63d;
 }
 
-.navigation > a.active::after {
+.navigation a.active {
+    color: #ffffff;
+}
+
+.navigation a.active::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     right: 0;
-    bottom: -12px;
+
+    bottom: -11px;
 
     height: 2px;
 
-    background: #e6b63c;
+    background: #d9aa39;
 }
 
 
-/* ---------- ÁREA SOCIOS ---------- */
+/* ================= AREA SOCIOS ================= */
 
-.members-button {
-    border: 1px solid #d7a936;
-    padding: 12px 18px;
+.navigation .members-button {
+    padding: 11px 15px;
 
-    color: white !important;
+    border: 1px solid rgba(220,176,64,0.9);
 
-    transition: all 0.3s ease;
+    color: #ffffff;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
-.members-button:hover {
-    background: #d7a936;
-    color: #071d2b !important;
+.navigation .members-button:hover {
+    background: #d9aa39;
+    color: #071c2a;
 }
 
 
-/* ---------- HERO ---------- */
+/* ================= IDIOMAS ================= */
+
+.language-selector {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    position: absolute;
+
+    top: 16px;
+    right: 42px;
+
+    z-index: 30;
+}
+
+.language-selector button {
+    border: 0;
+
+    background: transparent;
+
+    color: rgba(255,255,255,0.68);
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    padding: 2px;
+
+    transition: color 0.25s ease;
+}
+
+.language-selector span {
+    color: rgba(255,255,255,0.4);
+
+    font-size: 10px;
+}
+
+.language-selector button:hover,
+.language-selector button.lang-active {
+    color: #e4b63d;
+}
+
+
+/* ================= HERO ================= */
 
 .hero {
     position: relative;
 
-    min-height: 100vh;
+    width: 100%;
     height: 100vh;
+    min-height: 720px;
 
     overflow: hidden;
 
     display: flex;
     align-items: center;
 
-    background-image: url("images/C486C2B8-8916-4344-825E-DA67852897A4.png");
+    background-image:
+        url("images/615FFDF4-5258-49DB-9107-8C424C19EF22.png");
+
     background-size: cover;
+
     background-position: center center;
+
     background-repeat: no-repeat;
 }
 
 
-/* ---------- OSCURECER FOTO ---------- */
+/* ================= HERO OVERLAY ================= */
 
 .hero-overlay {
     position: absolute;
+
     inset: 0;
+
+    z-index: 1;
 
     background:
         linear-gradient(
             90deg,
-            rgba(2, 18, 29, 0.78) 0%,
-            rgba(2, 18, 29, 0.42) 30%,
-            rgba(2, 18, 29, 0.05) 65%,
-            rgba(2, 18, 29, 0.18) 100%
+            rgba(3, 20, 31, 0.78) 0%,
+            rgba(3, 20, 31, 0.52) 27%,
+            rgba(3, 20, 31, 0.12) 65%,
+            rgba(3, 20, 31, 0.18) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(2, 17, 27, 0.18) 0%,
+            rgba(2, 17, 27, 0) 45%,
+            rgba(2, 17, 27, 0.55) 100%
         );
-
-    z-index: 1;
 }
 
 
-/* ---------- CONTENIDO HERO ---------- */
+/* ================= HERO CONTENT ================= */
 
 .hero-content {
     position: relative;
-    z-index: 2;
 
-    width: min(650px, 48%);
+    z-index: 5;
 
-    margin-left: 5%;
+    width: min(680px, 52%);
 
-    padding-top: 80px;
+    margin-left: 7%;
+
+    margin-top: 45px;
 }
 
 
-/* ---------- PEQUEÑO TEXTO ---------- */
+/* ================= HERO KICKER ================= */
 
-.eyebrow {
-    display: none;
+.hero-kicker {
+    display: block;
 
-    font-size: 13px;
+    margin-bottom: 22px;
+
+    color: #e2b43b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
     letter-spacing: 4px;
-
-    color: #e6b63c;
-
-    margin-bottom: 25px;
 }
 
 
-/* ---------- TITULAR ---------- */
+/* ================= HERO TITLE ================= */
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(48px, 4.5vw, 76px);
+    font-size: clamp(48px, 5vw, 78px);
 
-    line-height: 1.08;
+    line-height: 1.05;
 
     font-weight: 400;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 
     text-transform: uppercase;
 
     text-shadow:
-        0 3px 20px rgba(0,0,0,0.35);
+        0 4px 22px rgba(0,0,0,0.35);
 }
 
 
-/* ---------- LÍNEA DORADA ---------- */
+/* ================= HERO LINE ================= */
 
-.gold-line {
-    width: 76px;
+.hero-content::after {
+    content: "";
+
+    display: block;
+
+    width: 75px;
+
     height: 3px;
 
-    background: #e6b63c;
+    margin-top: 28px;
 
-    margin: 28px 0;
+    margin-bottom: 24px;
+
+    background: #e1b13a;
 }
 
 
-/* ---------- TEXTO INTRO ---------- */
+/* ================= HERO TEXT ================= */
 
-.intro {
+.hero-content > p {
     font-size: 17px;
 
-    line-height: 1.7;
-
-    font-weight: 400;
+    line-height: 1.65;
 
     color: rgba(255,255,255,0.92);
 
@@ -238,133 +334,104 @@ a {
 }
 
 
-/* ---------- BOTÓN ---------- */
+/* ================= HERO BUTTON ================= */
 
-.main-button {
+.hero-button {
     display: inline-flex;
 
     align-items: center;
-    gap: 25px;
+    justify-content: center;
 
-    padding: 17px 25px;
+    min-height: 51px;
 
-    background: #d9a72e;
+    padding: 0 25px;
 
-    color: #071d2b;
+    background: #d9aa39;
 
-    font-size: 13px;
+    color: #071d2a;
 
-    font-weight: 600;
+    font-size: 11px;
 
-    letter-spacing: 1px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
 
     transition:
-        transform 0.3s ease,
-        background 0.3s ease;
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
-.main-button span {
-    font-size: 20px;
-}
+.hero-button:hover {
+    background: #f0ca5c;
 
-.main-button:hover {
-    background: #f0c451;
-
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 
-/* ---------- AVISOS ---------- */
+/* ================= NOTICE ================= */
 
-.club-alert {
+.club-notice {
     position: absolute;
 
-    right: 4%;
-    bottom: 105px;
+    z-index: 6;
 
-    z-index: 3;
+    right: 4.5%;
+    bottom: 185px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 18px;
+    gap: 17px;
 
-    min-width: 275px;
+    width: 285px;
 
-    padding: 22px 25px;
+    padding: 20px 23px;
 
-    background: rgba(3, 25, 40, 0.82);
+    background: rgba(2, 25, 39, 0.66);
 
-    border-left: 2px solid #d9a72e;
+    border-left: 2px solid #d9aa39;
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(7px);
 }
 
-.alert-icon {
-    font-size: 28px;
-
-    color: #e6b63c;
-}
-
-.club-alert strong {
-    font-size: 13px;
-
-    letter-spacing: 1px;
-}
-
-.club-alert p {
-    margin-top: 7px;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-
-    color: rgba(255,255,255,0.78);
-}
-
-
-/* ---------- SCROLL ---------- */
-
-.scroll-down {
-    position: absolute;
-
-    bottom: 25px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    z-index: 5;
+.notice-icon {
+    color: #e1b13a;
 
     font-size: 25px;
-
-    color: #e6b63c;
-
-    animation: floating 2s infinite ease-in-out;
 }
 
-@keyframes floating {
+.club-notice strong {
+    display: block;
 
-    0%, 100% {
-        transform: translate(-50%, 0);
-    }
+    font-size: 11px;
 
-    50% {
-        transform: translate(-50%, 8px);
-    }
+    letter-spacing: 1.4px;
+}
+
+.club-notice p {
+    margin-top: 7px;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    color: rgba(255,255,255,0.75);
 }
 
 
-/* ---------- BLOQUES INFERIORES ---------- */
+/* =========================================================
+   ENLACES INFERIORES
+   TRANSPARENTES
+   ========================================================= */
 
 .quick-links {
     position: absolute;
 
-    z-index: 4;
+    z-index: 10;
 
-    bottom: 0;
     left: 0;
+    bottom: 0;
 
     width: 100%;
 
@@ -372,165 +439,398 @@ a {
 
     grid-template-columns: repeat(5, 1fr);
 
-    background: rgba(2, 24, 38, 0.88);
+    background: rgba(3, 24, 38, 0.28);
 
-    backdrop-filter: blur(7px);
+    border-top: 1px solid rgba(255,255,255,0.24);
 
-    border-top: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(4px);
 }
 
 .quick-link {
-    min-height: 175px;
+    position: relative;
 
-    padding: 25px 30px;
+    min-height: 170px;
 
-    border-right: 1px solid rgba(255,255,255,0.18);
+    padding: 25px 28px 20px;
+
+    border-right: 1px solid rgba(255,255,255,0.20);
+
+    background: transparent;
 
     transition:
-        background 0.35s ease,
-        transform 0.35s ease;
+        background 0.35s ease;
 }
 
 .quick-link:last-child {
-    border-right: none;
+    border-right: 0;
 }
 
 .quick-link:hover {
-    background: rgba(220,170,50,0.12);
+    background: rgba(255,255,255,0.075);
 }
 
-.quick-link .icon {
+
+/* ICONOS */
+
+.quick-icon {
     display: block;
 
-    color: #e6b63c;
+    margin-bottom: 14px;
 
-    font-size: 25px;
+    color: #e1b13a;
 
-    margin-bottom: 15px;
+    font-size: 23px;
+
+    line-height: 1;
 }
 
-.quick-link h2 {
-    font-family: 'Playfair Display', serif;
 
-    font-size: 21px;
+/* TÍTULO */
+
+.quick-link h3 {
+    margin-bottom: 9px;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
 
     font-weight: 500;
 
-    margin-bottom: 9px;
+    letter-spacing: 0.4px;
 }
+
+
+/* TEXTO */
 
 .quick-link p {
-    font-size: 12px;
+    max-width: 180px;
+
+    color: rgba(255,255,255,0.74);
+
+    font-size: 11px;
 
     line-height: 1.55;
-
-    color: rgba(255,255,255,0.75);
 }
 
-.arrow {
+
+/* FLECHA */
+
+.quick-arrow {
+    position: absolute;
+
+    right: 27px;
+    bottom: 22px;
+
+    color: #e1b13a;
+
+    font-size: 21px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.quick-link:hover .quick-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ================= SECCIONES ================= */
+
+.section {
+    position: relative;
+
+    padding: 110px 7%;
+}
+
+.section-light {
+    background: #f4f1ea;
+
+    color: #092233;
+}
+
+.section-dark {
+    background: #061d2b;
+
+    color: #ffffff;
+}
+
+.container {
+    width: min(1180px, 100%);
+
+    margin: 0 auto;
+}
+
+.section-kicker {
     display: block;
 
-    margin-top: 13px;
+    margin-bottom: 20px;
 
-    color: #e6b63c;
+    color: #b48a28;
 
-    font-size: 20px;
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.section h2 {
+    max-width: 800px;
+
+    margin-bottom: 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 4vw, 62px);
+
+    line-height: 1.1;
+
+    font-weight: 400;
+}
+
+.section p {
+    max-width: 760px;
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
 }
 
 
-/* ---------- FOOTER ---------- */
+/* ================= CARDS ================= */
 
-footer {
-    padding: 50px;
+.cards {
+    display: grid;
 
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
 
-    background: #061d2b;
+    gap: 1px;
+
+    margin-top: 55px;
+
+    background: rgba(255,255,255,0.15);
+}
+
+.card {
+    min-height: 220px;
+
+    padding: 35px;
+
+    background: #092536;
+}
+
+.card h3 {
+    margin-bottom: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.72);
+}
+
+
+/* ================= SECTION IMAGE ================= */
+
+.section-image {
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    background-image:
+        url("images/615FFDF4-5258-49DB-9107-8C424C19EF22.png");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.section-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,20,31,0.78),
+            rgba(3,20,31,0.25)
+        );
+}
+
+.section-image-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info a {
+    color: #a37a20;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 45px 7%;
+
+    background: #041520;
 
     color: rgba(255,255,255,0.55);
 
     font-size: 11px;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    margin-bottom: 8px;
 }
 
 
-/* =========================================
+/* =========================================================
    TABLET
-   ========================================= */
+   ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
 
     .header {
-        padding: 22px 25px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .logo {
-        width: 190px;
+        width: 155px;
     }
 
     .navigation {
-        gap: 20px;
+        gap: 18px;
+        margin-right: 10px;
     }
 
-    .navigation > a {
-        font-size: 12px;
+    .navigation a {
+        font-size: 10px;
+    }
+
+    .language-selector {
+        right: 25px;
     }
 
     .hero-content {
+        margin-left: 5%;
         width: 55%;
-        margin-left: 4%;
-    }
-
-    .hero h1 {
-        font-size: 55px;
     }
 
     .quick-link {
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }
 
 
-/* =========================================
-   MÓVIL
-   ========================================= */
+/* =========================================================
+   IPAD / TABLET VERTICAL
+   ========================================================= */
 
-@media (max-width: 768px) {
-
-    .header {
-        height: auto;
-
-        padding: 18px 20px;
-
-        align-items: center;
-    }
-
-    .logo {
-        width: 150px;
-    }
+@media (max-width: 900px) {
 
     .navigation {
         display: none;
     }
 
+    .language-selector {
+        top: 23px;
+        right: 25px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 155px;
+    }
+
+    .hero-content {
+        width: 65%;
+        margin-left: 6%;
+    }
+
+    .quick-links {
+        grid-template-columns: repeat(5, minmax(160px, 1fr));
+
+        overflow-x: auto;
+    }
+
+    .quick-link {
+        min-width: 160px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 95px;
+
+        padding: 17px 20px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .language-selector {
+        top: 17px;
+        right: 18px;
+    }
+
     .hero {
-        height: auto;
-        min-height: 100svh;
+        min-height: 760px;
 
-        background-position: 62% center;
+        height: 100svh;
 
-        align-items: flex-end;
+        align-items: flex-start;
+
+        background-position: 60% center;
     }
 
     .hero-overlay {
         background:
             linear-gradient(
                 to bottom,
-                rgba(0,20,35,0.35),
-                rgba(0,20,35,0.15) 40%,
-                rgba(0,20,35,0.82) 100%
+                rgba(2,18,29,0.28),
+                rgba(2,18,29,0.25) 35%,
+                rgba(2,18,29,0.88) 100%
             );
     }
 
@@ -539,72 +839,107 @@ footer {
 
         margin: 0;
 
-        padding: 170px 25px 210px;
+        padding: 190px 25px 220px;
+    }
+
+    .hero-kicker {
+        font-size: 10px;
+
+        letter-spacing: 3px;
     }
 
     .hero h1 {
-        font-size: clamp(40px, 11vw, 58px);
+        font-size: 42px;
 
-        line-height: 1.08;
+        line-height: 1.06;
     }
 
-    .intro {
-        font-size: 15px;
+    .hero-content > p {
+        font-size: 14px;
     }
 
-    .club-alert {
+    .hero-button {
+        width: auto;
+    }
+
+    .club-notice {
         display: none;
     }
 
     .quick-links {
         position: absolute;
 
+        bottom: 0;
+
         display: flex;
+
+        width: 100%;
 
         overflow-x: auto;
 
-        bottom: 0;
+        background: rgba(3,24,38,0.38);
 
-        background: rgba(2,24,38,0.94);
+        backdrop-filter: blur(5px);
+
+        scrollbar-width: none;
+    }
+
+    .quick-links::-webkit-scrollbar {
+        display: none;
     }
 
     .quick-link {
-        flex: 0 0 210px;
+        flex: 0 0 190px;
 
-        min-height: 150px;
+        min-height: 145px;
 
-        padding: 20px;
+        padding: 18px 18px;
     }
 
-    .scroll-down {
-        display: none;
+    .quick-link h3 {
+        font-size: 18px;
+    }
+
+    .quick-link p {
+        font-size: 10px;
+    }
+
+    .quick-arrow {
+        right: 17px;
+        bottom: 17px;
+    }
+
+    .section {
+        padding: 80px 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-image {
+        min-height: 550px;
     }
 
 }
 
 
-/* =========================================
-   MÓVILES MUY PEQUEÑOS
-   ========================================= */
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
 
-@media (max-width: 430px) {
-
-    .logo {
-        width: 135px;
-    }
-
-    .hero-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+@media (max-width: 400px) {
 
     .hero h1 {
-        font-size: 39px;
+        font-size: 37px;
     }
 
-    .main-button {
-        width: 100%;
-        justify-content: center;
+    .logo {
+        width: 115px;
+    }
+
+    .quick-link {
+        flex-basis: 175px;
     }
 
 }
