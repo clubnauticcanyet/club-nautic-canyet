@@ -18,29 +18,49 @@
     <!-- ================= HEADER ================= -->
 
     <header class="header">
-        
-        <div class="language-selector">
-    <button class="lang-active" onclick="changeLanguage('ca')">CAT</button>
-    <span>|</span>
-    <button onclick="changeLanguage('es')">ES</button>
-    <span>|</span>
-    <button onclick="changeLanguage('fr')">FR</button>
-</div>
 
         <a href="#inicio" class="logo">
-            <img src="images/C486C2B8-8916-4344-825E-DA67852897A4.png"
+            <img src="images/IMG_0085.png"
                  alt="Club Nàutic Canyet">
         </a>
 
         <nav class="navigation">
-            <a href="#inicio" class="active">INICI</a>
-            <a href="#club">EL CLUB</a>
-            <a href="#nautica">NÀUTICA</a>
-            <a href="#actividades">ACTIVITATS</a>
-            <a href="#canyet">CANYET</a>
-            <a href="#socios">SOCIS</a>
-            <a href="#contacto">CONTACTE</a>
+
+            <a href="#inicio" class="active" data-i18n="nav_inicio">INICI</a>
+
+            <a href="#club" data-i18n="nav_club">EL CLUB</a>
+
+            <a href="#nautica" data-i18n="nav_nautica">NÀUTICA</a>
+
+            <a href="#actividades" data-i18n="nav_actividades">ACTIVITATS</a>
+
+            <a href="#canyet" data-i18n="nav_canyet">CANYET</a>
+
+            <a href="#socios" data-i18n="nav_socios">SOCIS</a>
+
+            <a href="#contacto" data-i18n="nav_contacto">CONTACTE</a>
+
         </nav>
+
+        <div class="language-selector">
+
+            <button class="lang-active" onclick="changeLanguage('ca')">
+                CAT
+            </button>
+
+            <span>|</span>
+
+            <button onclick="changeLanguage('es')">
+                ES
+            </button>
+
+            <span>|</span>
+
+            <button onclick="changeLanguage('fr')">
+                FR
+            </button>
+
+        </div>
 
     </header>
 
@@ -55,24 +75,117 @@
 
             <div class="hero-content">
 
-                <span class="hero-kicker">
+                <span class="hero-kicker" data-i18n="hero_kicker">
                     CLUB NÀUTIC CANYET
                 </span>
 
-                <h1>
+                <h1 data-i18n="hero_title">
                     MAR, NATURA<br>
                     I TRADICIÓ
                 </h1>
 
-                <p>
+                <p data-i18n="hero_text">
                     Un espai únic al cor de la Costa Brava
                 </p>
 
-                <a href="#club" class="hero-button">
+                <a href="#club"
+                   class="hero-button"
+                   data-i18n="hero_button">
                     DESCOBREIX EL CLUB
                 </a>
 
             </div>
+
+        </section>
+
+
+        <!-- ================= ENLACES INFERIORES ================= -->
+
+        <section class="quick-links">
+
+            <a href="#club" class="quick-link">
+
+                <span class="quick-icon">⛵</span>
+
+                <h3 data-i18n="quick_club">
+                    EL CLUB
+                </h3>
+
+                <p data-i18n="quick_club_text">
+                    Història, valors i comunitat
+                </p>
+
+                <span class="quick-arrow">→</span>
+
+            </a>
+
+
+            <a href="#nautica" class="quick-link">
+
+                <span class="quick-icon">⚓</span>
+
+                <h3 data-i18n="quick_nautica">
+                    NÀUTICA
+                </h3>
+
+                <p data-i18n="quick_nautica_text">
+                    Fondejos, boies, embarcacions i serveis
+                </p>
+
+                <span class="quick-arrow">→</span>
+
+            </a>
+
+
+            <a href="#actividades" class="quick-link">
+
+                <span class="quick-icon">◉</span>
+
+                <h3 data-i18n="quick_activities">
+                    ACTIVITATS
+                </h3>
+
+                <p data-i18n="quick_activities_text">
+                    Vela, submarinisme i activitats nàutiques
+                </p>
+
+                <span class="quick-arrow">→</span>
+
+            </a>
+
+
+            <a href="#canyet" class="quick-link">
+
+                <span class="quick-icon">☀</span>
+
+                <h3 data-i18n="quick_canyet">
+                    CANYET
+                </h3>
+
+                <p data-i18n="quick_canyet_text">
+                    La cala, Rosamar i el seu entorn
+                </p>
+
+                <span class="quick-arrow">→</span>
+
+            </a>
+
+
+            <a href="#socios" class="quick-link">
+
+                <span class="quick-icon">♧</span>
+
+                <h3 data-i18n="quick_members">
+                    SOCIS
+                </h3>
+
+                <p data-i18n="quick_members_text">
+                    Accés a informació, avisos i documentació
+                </p>
+
+                <span class="quick-arrow">→</span>
+
+            </a>
 
         </section>
 
@@ -83,20 +196,20 @@
 
             <div class="container">
 
-                <span class="section-kicker">
+                <span class="section-kicker" data-i18n="club_kicker">
                     EL CLUB
                 </span>
 
-                <h2>
+                <h2 data-i18n="club_title">
                     Un club nàutic amb identitat pròpia
                 </h2>
 
-                <p>
-                    El Club Nàutic Canyet es troba a Rosamar, en un dels
-                    racons més especials de la Costa Brava.
+                <p data-i18n="club_text_1">
+                    El Club Nàutic Canyet es troba a Rosamar,
+                    en un dels racons més especials de la Costa Brava.
                 </p>
 
-                <p>
+                <p data-i18n="club_text_2">
                     Un entorn privilegiat on el mar, la natura i la
                     navegació formen part d'una mateixa manera de viure.
                 </p>
@@ -112,41 +225,60 @@
 
             <div class="container">
 
-                <span class="section-kicker">
+                <span class="section-kicker" data-i18n="nautica_kicker">
                     NÀUTICA
                 </span>
 
-                <h2>
+                <h2 data-i18n="nautica_title">
                     El mar com a forma de vida
                 </h2>
 
-                <p>
-                    Navegació, embarcacions i experiències al mar en un
-                    entorn natural incomparable.
+                <p data-i18n="nautica_text">
+                    Navegació, embarcacions i experiències al mar
+                    en un entorn natural incomparable.
                 </p>
 
                 <div class="cards">
 
                     <article class="card">
-                        <h3>Embarcacions</h3>
-                        <p>
-                            Espai i serveis pensats per als amants de la
-                            navegació.
+
+                        <h3 data-i18n="boat_title">
+                            Embarcacions
+                        </h3>
+
+                        <p data-i18n="boat_text">
+                            Espai i serveis pensats per als amants
+                            de la navegació.
                         </p>
+
                     </article>
 
-                    <article class="card">
-                        <h3>Navegació</h3>
-                        <p>
-                            Descobreix la costa i les seves cales des del mar.
-                        </p>
-                    </article>
 
                     <article class="card">
-                        <h3>Mar</h3>
-                        <p>
-                            Un entorn privilegiat per gaudir del Mediterrani.
+
+                        <h3 data-i18n="navigation_title">
+                            Navegació
+                        </h3>
+
+                        <p data-i18n="navigation_text">
+                            Descobreix la costa i les seves cales
+                            des del mar.
                         </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h3 data-i18n="sea_title">
+                            Mar
+                        </h3>
+
+                        <p data-i18n="sea_text">
+                            Un entorn privilegiat per gaudir
+                            del Mediterrani.
+                        </p>
+
                     </article>
 
                 </div>
@@ -162,35 +294,52 @@
 
             <div class="container">
 
-                <span class="section-kicker">
+                <span class="section-kicker" data-i18n="activities_kicker">
                     ACTIVITATS
                 </span>
 
-                <h2>
+                <h2 data-i18n="activities_title">
                     Gaudeix de la Costa Brava
                 </h2>
 
                 <div class="cards">
 
                     <article class="card">
-                        <h3>Navegació</h3>
-                        <p>
+
+                        <h3 data-i18n="activity_navigation">
+                            Navegació
+                        </h3>
+
+                        <p data-i18n="activity_navigation_text">
                             Sortides i experiències vinculades al mar.
                         </p>
+
                     </article>
 
+
                     <article class="card">
-                        <h3>Esport</h3>
-                        <p>
+
+                        <h3 data-i18n="activity_sport">
+                            Esport
+                        </h3>
+
+                        <p data-i18n="activity_sport_text">
                             Activitats nàutiques per gaudir de l'entorn.
                         </p>
+
                     </article>
 
+
                     <article class="card">
-                        <h3>Família</h3>
-                        <p>
+
+                        <h3 data-i18n="activity_family">
+                            Família
+                        </h3>
+
+                        <p data-i18n="activity_family_text">
                             Un espai per compartir el Mediterrani amb els teus.
                         </p>
+
                     </article>
 
                 </div>
@@ -208,15 +357,15 @@
 
             <div class="container section-image-content">
 
-                <span class="section-kicker">
+                <span class="section-kicker" data-i18n="canyet_kicker">
                     CANYET · ROSAMAR
                 </span>
 
-                <h2>
+                <h2 data-i18n="canyet_title">
                     Un dels racons més especials de la Costa Brava
                 </h2>
 
-                <p>
+                <p data-i18n="canyet_text">
                     Mar cristal·lí, costa rocosa, natura i tranquil·litat.
                     Un lloc per viure el Mediterrani.
                 </p>
@@ -232,20 +381,22 @@
 
             <div class="container">
 
-                <span class="section-kicker">
+                <span class="section-kicker" data-i18n="members_kicker">
                     SOCIS
                 </span>
 
-                <h2>
+                <h2 data-i18n="members_title">
                     Formar part del Club Nàutic Canyet
                 </h2>
 
-                <p>
+                <p data-i18n="members_text">
                     Un espai de trobada per a persones que comparteixen
                     la passió pel mar i per la Costa Brava.
                 </p>
 
-                <a href="#contacto" class="hero-button">
+                <a href="#contacto"
+                   class="hero-button"
+                   data-i18n="members_button">
                     CONTACTA AMB NOSALTRES
                 </a>
 
@@ -260,15 +411,15 @@
 
             <div class="container">
 
-                <span class="section-kicker">
+                <span class="section-kicker" data-i18n="contact_kicker">
                     CONTACTE
                 </span>
 
-                <h2>
+                <h2 data-i18n="contact_title">
                     Parlem
                 </h2>
 
-                <p>
+                <p data-i18n="contact_text">
                     Per a qualsevol consulta sobre el Club Nàutic Canyet,
                     posa't en contacte amb nosaltres.
                 </p>
@@ -276,7 +427,9 @@
                 <div class="contact-info">
 
                     <p>
-                        <strong>Club Nàutic Canyet</strong>
+                        <strong>
+                            Club Nàutic Canyet
+                        </strong>
                     </p>
 
                     <p>
@@ -315,35 +468,290 @@
         </div>
 
     </footer>
-<script>
-function changeLanguage(language) {
-    localStorage.setItem('clubLanguage', language);
 
-    if (language === 'ca') {
-        document.documentElement.lang = 'ca';
-    }
 
-    if (language === 'es') {
-        document.documentElement.lang = 'es';
-    }
+    <!-- ================= IDIOMAS ================= -->
 
-    if (language === 'fr') {
-        document.documentElement.lang = 'fr';
-    }
+    <script>
 
-    document.querySelectorAll('.language-selector button').forEach(button => {
-        button.classList.remove('lang-active');
-    });
+        const translations = {
 
-    const activeButton = document.querySelector(
-        '.language-selector button[onclick*="' + language + '"]'
-    );
+            ca: {
 
-    if (activeButton) {
-        activeButton.classList.add('lang-active');
-    }
-}
-</script>
+                nav_inicio: "INICI",
+                nav_club: "EL CLUB",
+                nav_nautica: "NÀUTICA",
+                nav_actividades: "ACTIVITATS",
+                nav_canyet: "CANYET",
+                nav_socios: "SOCIS",
+                nav_contacto: "CONTACTE",
+
+                hero_kicker: "CLUB NÀUTIC CANYET",
+                hero_title: "MAR, NATURA<br>I TRADICIÓ",
+                hero_text: "Un espai únic al cor de la Costa Brava",
+                hero_button: "DESCOBREIX EL CLUB",
+
+                quick_club: "EL CLUB",
+                quick_club_text: "Història, valors i comunitat",
+
+                quick_nautica: "NÀUTICA",
+                quick_nautica_text: "Fondejos, boies, embarcacions i serveis",
+
+                quick_activities: "ACTIVITATS",
+                quick_activities_text: "Vela, submarinisme i activitats nàutiques",
+
+                quick_canyet: "CANYET",
+                quick_canyet_text: "La cala, Rosamar i el seu entorn",
+
+                quick_members: "SOCIS",
+                quick_members_text: "Accés a informació, avisos i documentació",
+
+                club_kicker: "EL CLUB",
+                club_title: "Un club nàutic amb identitat pròpia",
+                club_text_1: "El Club Nàutic Canyet es troba a Rosamar, en un dels racons més especials de la Costa Brava.",
+                club_text_2: "Un entorn privilegiat on el mar, la natura i la navegació formen part d'una mateixa manera de viure.",
+
+                nautica_kicker: "NÀUTICA",
+                nautica_title: "El mar com a forma de vida",
+                nautica_text: "Navegació, embarcacions i experiències al mar en un entorn natural incomparable.",
+
+                boat_title: "Embarcacions",
+                boat_text: "Espai i serveis pensats per als amants de la navegació.",
+
+                navigation_title: "Navegació",
+                navigation_text: "Descobreix la costa i les seves cales des del mar.",
+
+                sea_title: "Mar",
+                sea_text: "Un entorn privilegiat per gaudir del Mediterrani.",
+
+                activities_kicker: "ACTIVITATS",
+                activities_title: "Gaudeix de la Costa Brava",
+
+                activity_navigation: "Navegació",
+                activity_navigation_text: "Sortides i experiències vinculades al mar.",
+
+                activity_sport: "Esport",
+                activity_sport_text: "Activitats nàutiques per gaudir de l'entorn.",
+
+                activity_family: "Família",
+                activity_family_text: "Un espai per compartir el Mediterrani amb els teus.",
+
+                canyet_kicker: "CANYET · ROSAMAR",
+                canyet_title: "Un dels racons més especials de la Costa Brava",
+                canyet_text: "Mar cristal·lí, costa rocosa, natura i tranquil·litat. Un lloc per viure el Mediterrani.",
+
+                members_kicker: "SOCIS",
+                members_title: "Formar part del Club Nàutic Canyet",
+                members_text: "Un espai de trobada per a persones que comparteixen la passió pel mar i per la Costa Brava.",
+                members_button: "CONTACTA AMB NOSALTRES",
+
+                contact_kicker: "CONTACTE",
+                contact_title: "Parlem",
+                contact_text: "Per a qualsevol consulta sobre el Club Nàutic Canyet, posa't en contacte amb nosaltres."
+            },
+
+            es: {
+
+                nav_inicio: "INICIO",
+                nav_club: "EL CLUB",
+                nav_nautica: "NÁUTICA",
+                nav_actividades: "ACTIVIDADES",
+                nav_canyet: "CANYET",
+                nav_socios: "SOCIOS",
+                nav_contacto: "CONTACTO",
+
+                hero_kicker: "CLUB NÀUTIC CANYET",
+                hero_title: "MAR, NATURALEZA<br>Y TRADICIÓN",
+                hero_text: "Un espacio único en el corazón de la Costa Brava",
+                hero_button: "DESCUBRE EL CLUB",
+
+                quick_club: "EL CLUB",
+                quick_club_text: "Historia, valores y comunidad",
+
+                quick_nautica: "NÁUTICA",
+                quick_nautica_text: "Fondeos, boyas, embarcaciones y servicios",
+
+                quick_activities: "ACTIVIDADES",
+                quick_activities_text: "Vela, submarinismo y actividades náuticas",
+
+                quick_canyet: "CANYET",
+                quick_canyet_text: "La cala, Rosamar y su entorno",
+
+                quick_members: "SOCIOS",
+                quick_members_text: "Acceso a información, avisos y documentación",
+
+                club_kicker: "EL CLUB",
+                club_title: "Un club náutico con identidad propia",
+                club_text_1: "El Club Nàutic Canyet se encuentra en Rosamar, en uno de los rincones más especiales de la Costa Brava.",
+                club_text_2: "Un entorno privilegiado donde el mar, la naturaleza y la navegación forman parte de una misma manera de vivir.",
+
+                nautica_kicker: "NÁUTICA",
+                nautica_title: "El mar como forma de vida",
+                nautica_text: "Navegación, embarcaciones y experiencias en el mar en un entorno natural incomparable.",
+
+                boat_title: "Embarcaciones",
+                boat_text: "Espacio y servicios pensados para los amantes de la navegación.",
+
+                navigation_title: "Navegación",
+                navigation_text: "Descubre la costa y sus calas desde el mar.",
+
+                sea_title: "Mar",
+                sea_text: "Un entorno privilegiado para disfrutar del Mediterráneo.",
+
+                activities_kicker: "ACTIVIDADES",
+                activities_title: "Disfruta de la Costa Brava",
+
+                activity_navigation: "Navegación",
+                activity_navigation_text: "Salidas y experiencias vinculadas al mar.",
+
+                activity_sport: "Deporte",
+                activity_sport_text: "Actividades náuticas para disfrutar del entorno.",
+
+                activity_family: "Familia",
+                activity_family_text: "Un espacio para compartir el Mediterráneo con los tuyos.",
+
+                canyet_kicker: "CANYET · ROSAMAR",
+                canyet_title: "Uno de los rincones más especiales de la Costa Brava",
+                canyet_text: "Mar cristalino, costa rocosa, naturaleza y tranquilidad. Un lugar para vivir el Mediterráneo.",
+
+                members_kicker: "SOCIOS",
+                members_title: "Formar parte del Club Nàutic Canyet",
+                members_text: "Un punto de encuentro para personas que comparten la pasión por el mar y por la Costa Brava.",
+                members_button: "CONTACTA CON NOSOTROS",
+
+                contact_kicker: "CONTACTO",
+                contact_title: "Hablemos",
+                contact_text: "Para cualquier consulta sobre el Club Nàutic Canyet, ponte en contacto con nosotros."
+            },
+
+            fr: {
+
+                nav_inicio: "ACCUEIL",
+                nav_club: "LE CLUB",
+                nav_nautica: "NAUTISME",
+                nav_actividades: "ACTIVITÉS",
+                nav_canyet: "CANYET",
+                nav_socios: "MEMBRES",
+                nav_contacto: "CONTACT",
+
+                hero_kicker: "CLUB NÀUTIC CANYET",
+                hero_title: "MER, NATURE<br>ET TRADITION",
+                hero_text: "Un lieu unique au cœur de la Costa Brava",
+                hero_button: "DÉCOUVRIR LE CLUB",
+
+                quick_club: "LE CLUB",
+                quick_club_text: "Histoire, valeurs et communauté",
+
+                quick_nautica: "NAUTISME",
+                quick_nautica_text: "Mouillages, bouées, bateaux et services",
+
+                quick_activities: "ACTIVITÉS",
+                quick_activities_text: "Voile, plongée et activités nautiques",
+
+                quick_canyet: "CANYET",
+                quick_canyet_text: "La crique, Rosamar et ses environs",
+
+                quick_members: "MEMBRES",
+                quick_members_text: "Informations, avis et documentation",
+
+                club_kicker: "LE CLUB",
+                club_title: "Un club nautique avec une identité propre",
+                club_text_1: "Le Club Nàutic Canyet se trouve à Rosamar, dans l'un des endroits les plus remarquables de la Costa Brava.",
+                club_text_2: "Un environnement privilégié où la mer, la nature et la navigation font partie d'un même art de vivre.",
+
+                nautica_kicker: "NAUTISME",
+                nautica_title: "La mer comme art de vivre",
+                nautica_text: "Navigation, bateaux et expériences en mer dans un environnement naturel exceptionnel.",
+
+                boat_title: "Bateaux",
+                boat_text: "Des espaces et services pensés pour les passionnés de navigation.",
+
+                navigation_title: "Navigation",
+                navigation_text: "Découvrez la côte et ses criques depuis la mer.",
+
+                sea_title: "La mer",
+                sea_text: "Un environnement privilégié pour profiter de la Méditerranée.",
+
+                activities_kicker: "ACTIVITÉS",
+                activities_title: "Profiter de la Costa Brava",
+
+                activity_navigation: "Navigation",
+                activity_navigation_text: "Sorties et expériences liées à la mer.",
+
+                activity_sport: "Sport",
+                activity_sport_text: "Activités nautiques pour profiter de l'environnement.",
+
+                activity_family: "Famille",
+                activity_family_text: "Un espace pour partager la Méditerranée en famille.",
+
+                canyet_kicker: "CANYET · ROSAMAR",
+                canyet_title: "L'un des endroits les plus remarquables de la Costa Brava",
+                canyet_text: "Mer cristalline, côte rocheuse, nature et tranquillité. Un lieu pour vivre la Méditerranée.",
+
+                members_kicker: "MEMBRES",
+                members_title: "Faire partie du Club Nàutic Canyet",
+                members_text: "Un lieu de rencontre pour ceux qui partagent la passion de la mer et de la Costa Brava.",
+                members_button: "CONTACTEZ-NOUS",
+
+                contact_kicker: "CONTACT",
+                contact_title: "Parlons-en",
+                contact_text: "Pour toute question concernant le Club Nàutic Canyet, contactez-nous."
+            }
+
+        };
+
+
+        function changeLanguage(language) {
+
+            localStorage.setItem("clubLanguage", language);
+
+            document.documentElement.lang = language;
+
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+
+                const key = element.getAttribute("data-i18n");
+
+                if (translations[language][key]) {
+
+                    element.innerHTML = translations[language][key];
+
+                }
+
+            });
+
+
+            document.querySelectorAll(".language-selector button")
+                .forEach(button => {
+
+                    button.classList.remove("lang-active");
+
+                });
+
+
+            const activeButton =
+                document.querySelector(
+                    '.language-selector button[onclick*="' + language + '"]'
+                );
+
+
+            if (activeButton) {
+                activeButton.classList.add("lang-active");
+            }
+
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const savedLanguage =
+                localStorage.getItem("clubLanguage") || "ca";
+
+            changeLanguage(savedLanguage);
+
+        });
+
+    </script>
 
 </body>
+
 </html>
