@@ -271,11 +271,8 @@ button {
 
     margin-left: 7%;
 
-    /*
-       Lo subimos ligeramente para dejar espacio
-       limpio al bloque inferior.
-    */
-    transform: translateY(-65px);
+    /* Bajamos el contenido para separarlo claramente del logo */
+    transform: translateY(-5px);
 }
 
 
