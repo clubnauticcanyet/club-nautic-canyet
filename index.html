@@ -315,7 +315,35 @@
         </div>
 
     </footer>
+<script>
+function changeLanguage(language) {
+    localStorage.setItem('clubLanguage', language);
 
+    if (language === 'ca') {
+        document.documentElement.lang = 'ca';
+    }
+
+    if (language === 'es') {
+        document.documentElement.lang = 'es';
+    }
+
+    if (language === 'fr') {
+        document.documentElement.lang = 'fr';
+    }
+
+    document.querySelectorAll('.language-selector button').forEach(button => {
+        button.classList.remove('lang-active');
+    });
+
+    const activeButton = document.querySelector(
+        '.language-selector button[onclick*="' + language + '"]'
+    );
+
+    if (activeButton) {
+        activeButton.classList.add('lang-active');
+    }
+}
+</script>
 
 </body>
 </html>
