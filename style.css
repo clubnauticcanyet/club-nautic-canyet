@@ -47,7 +47,7 @@ button {
     display: flex;
     align-items: flex-start;
 
-    z-index: 20;
+    z-index: 30;
 
     background:
         linear-gradient(
@@ -62,17 +62,19 @@ button {
 
 .logo {
     display: block;
+
     width: 185px;
 
     position: relative;
-    z-index: 25;
+
+    z-index: 35;
 }
 
 .logo img {
+    display: block;
+
     width: 100%;
     height: auto;
-
-    display: block;
 }
 
 
@@ -147,6 +149,7 @@ button {
 
 .navigation .members-button:hover {
     background: #d9aa39;
+
     color: #071c2a;
 }
 
@@ -164,7 +167,7 @@ button {
     top: 16px;
     right: 42px;
 
-    z-index: 30;
+    z-index: 40;
 }
 
 .language-selector button {
@@ -199,18 +202,23 @@ button {
 }
 
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
     position: relative;
 
     width: 100%;
+
     height: 100vh;
+
     min-height: 720px;
 
     overflow: hidden;
 
     display: flex;
+
     align-items: center;
 
     background-image:
@@ -250,7 +258,9 @@ button {
 }
 
 
-/* ================= HERO CONTENT ================= */
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .hero-content {
     position: relative;
@@ -261,7 +271,11 @@ button {
 
     margin-left: 7%;
 
-    margin-top: 45px;
+    /*
+       Lo subimos ligeramente para dejar espacio
+       limpio al bloque inferior.
+    */
+    transform: translateY(-65px);
 }
 
 
@@ -334,15 +348,19 @@ button {
 }
 
 
-/* ================= HERO BUTTON ================= */
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
 
 .hero-button {
-       position: relative;
-    top: -25px;
-   
+    position: relative;
+
+    top: auto;
+
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     min-height: 51px;
@@ -371,15 +389,21 @@ button {
 }
 
 
-/* ================= NOTICE ================= */
+/* =========================================================
+   NOTICE
+   ========================================================= */
 
 .club-notice {
     position: absolute;
 
-    z-index: 6;
+    z-index: 8;
 
     right: 4.5%;
-    bottom: 185px;
+
+    /*
+       Encima del bloque inferior.
+    */
+    bottom: 205px;
 
     display: flex;
 
@@ -425,47 +449,69 @@ button {
 
 /* =========================================================
    ENLACES INFERIORES
+   6 ELEMENTOS
    TRANSPARENTES
    ========================================================= */
 
 .quick-links {
     position: absolute;
 
-    z-index: 10;
+    z-index: 15;
 
     left: 0;
+
     bottom: 0;
 
     width: 100%;
 
+    height: 190px;
+
     display: grid;
 
-    grid-template-columns: repeat(5, 1fr);
+    /*
+       AHORA SON 6 COLUMNAS
+    */
+    grid-template-columns: repeat(6, 1fr);
 
-    background: rgba(3, 24, 38, 0.28);
+    background: rgba(3, 24, 38, 0.30);
 
     border-top: 1px solid rgba(255,255,255,0.24);
 
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
 }
+
+
+/* ================= CADA ENLACE ================= */
 
 .quick-link {
     position: relative;
 
-    min-height: 170px;
+    min-width: 0;
 
-    padding: 25px 28px 20px;
+    height: 190px;
+
+    padding: 27px 25px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    background: transparent;
 
     border-right: 1px solid rgba(255,255,255,0.20);
 
-    background: transparent;
+    color: #ffffff;
 
     transition:
         background 0.35s ease;
 }
 
 .quick-link:last-child {
-    border-right: 0;
+    border-right: none;
 }
 
 .quick-link:hover {
@@ -473,12 +519,12 @@ button {
 }
 
 
-/* ICONOS */
+/* ================= ICONOS ================= */
 
 .quick-icon {
     display: block;
 
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 
     color: #e1b13a;
 
@@ -488,7 +534,7 @@ button {
 }
 
 
-/* TÍTULO */
+/* ================= TÍTULO ================= */
 
 .quick-link h3 {
     margin-bottom: 9px;
@@ -505,12 +551,12 @@ button {
 }
 
 
-/* TEXTO */
+/* ================= TEXTO ================= */
 
 .quick-link p {
-    max-width: 180px;
+    max-width: 185px;
 
-    color: rgba(255,255,255,0.74);
+    color: rgba(255,255,255,0.76);
 
     font-size: 11px;
 
@@ -518,12 +564,13 @@ button {
 }
 
 
-/* FLECHA */
+/* ================= FLECHA ================= */
 
 .quick-arrow {
     position: absolute;
 
-    right: 27px;
+    right: 25px;
+
     bottom: 22px;
 
     color: #e1b13a;
@@ -539,7 +586,9 @@ button {
 }
 
 
-/* ================= SECCIONES ================= */
+/* =========================================================
+   SECCIONES
+   ========================================================= */
 
 .section {
     position: relative;
@@ -604,7 +653,9 @@ button {
 }
 
 
-/* ================= CARDS ================= */
+/* =========================================================
+   CARDS
+   ========================================================= */
 
 .cards {
     display: grid;
@@ -645,7 +696,9 @@ button {
 }
 
 
-/* ================= SECTION IMAGE ================= */
+/* =========================================================
+   SECTION IMAGE
+   ========================================================= */
 
 .section-image {
     min-height: 650px;
@@ -684,7 +737,9 @@ button {
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-info {
     margin-top: 40px;
@@ -695,7 +750,9 @@ button {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer {
     padding: 45px 7%;
@@ -715,13 +772,14 @@ button {
 
 
 /* =========================================================
-   TABLET
+   TABLET HORIZONTAL
    ========================================================= */
 
 @media (max-width: 1150px) {
 
     .header {
         padding-left: 25px;
+
         padding-right: 25px;
     }
 
@@ -731,6 +789,7 @@ button {
 
     .navigation {
         gap: 18px;
+
         margin-right: 10px;
     }
 
@@ -744,14 +803,35 @@ button {
 
     .hero-content {
         margin-left: 5%;
+
         width: 55%;
     }
 
-    .quick-link {
-        padding-left: 20px;
-        padding-right: 20px;
+    .quick-links {
+        height: 175px;
     }
 
+    .quick-link {
+        height: 175px;
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    .quick-link h3 {
+        font-size: 18px;
+    }
+
+    .quick-link p {
+        font-size: 10px;
+
+        max-width: 150px;
+    }
+
+    .quick-arrow {
+        right: 17px;
+    }
 }
 
 
@@ -767,6 +847,7 @@ button {
 
     .language-selector {
         top: 23px;
+
         right: 25px;
     }
 
@@ -780,19 +861,46 @@ button {
 
     .hero-content {
         width: 65%;
+
         margin-left: 6%;
+
+        transform: translateY(-70px);
     }
 
+    /*
+       En tablet vertical las 6 pastillas
+       se mantienen en una fila desplazable.
+    */
+
     .quick-links {
-        grid-template-columns: repeat(5, minmax(160px, 1fr));
+        display: flex;
+
+        height: 175px;
 
         overflow-x: auto;
+
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .quick-links::-webkit-scrollbar {
+        display: none;
     }
 
     .quick-link {
-        min-width: 160px;
+        flex: 0 0 180px;
+
+        min-width: 180px;
+
+        height: 175px;
     }
 
+    .club-notice {
+        display: none;
+    }
 }
 
 
@@ -814,6 +922,7 @@ button {
 
     .language-selector {
         top: 17px;
+
         right: 18px;
     }
 
@@ -842,7 +951,9 @@ button {
 
         margin: 0;
 
-        padding: 190px 25px 220px;
+        padding: 190px 25px 250px;
+
+        transform: none;
     }
 
     .hero-kicker {
@@ -869,20 +980,31 @@ button {
         display: none;
     }
 
+
+    /* ================= QUICK LINKS MÓVIL ================= */
+
     .quick-links {
         position: absolute;
 
-        bottom: 0;
+        left: 0;
 
-        display: flex;
+        bottom: 0;
 
         width: 100%;
 
+        height: 150px;
+
+        display: flex;
+
         overflow-x: auto;
 
-        background: rgba(3,24,38,0.38);
+        overflow-y: hidden;
+
+        background: rgba(3,24,38,0.40);
 
         backdrop-filter: blur(5px);
+
+        -webkit-backdrop-filter: blur(5px);
 
         scrollbar-width: none;
     }
@@ -894,7 +1016,11 @@ button {
     .quick-link {
         flex: 0 0 190px;
 
-        min-height: 145px;
+        min-width: 190px;
+
+        height: 150px;
+
+        min-height: 150px;
 
         padding: 18px 18px;
     }
@@ -905,12 +1031,18 @@ button {
 
     .quick-link p {
         font-size: 10px;
+
+        max-width: 150px;
     }
 
     .quick-arrow {
         right: 17px;
+
         bottom: 17px;
     }
+
+
+    /* ================= SECCIONES ================= */
 
     .section {
         padding: 80px 25px;
@@ -923,7 +1055,6 @@ button {
     .section-image {
         min-height: 550px;
     }
-
 }
 
 
@@ -943,6 +1074,7 @@ button {
 
     .quick-link {
         flex-basis: 175px;
-    }
 
+        min-width: 175px;
+    }
 }
