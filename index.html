@@ -2,931 +2,2242 @@
 <html lang="ca">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Club Nàutic Canyet · Rosamar · Costa Brava</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Club Nàutic Canyet · Rosamar · Costa Brava
+    </title>
 
     <meta name="description"
-        content="Club Nàutic Canyet · Rosamar · Costa Brava. Mar, natura, navegació i tradició a la Costa Brava.">
+          content="Club Nàutic Canyet · Rosamar · Costa Brava. Mar, natura, navegació, tradició i comunitat.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- ================= HEADER ================= -->
 
-    <header class="header">
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
 
-        <a href="#inicio" class="logo">
-            <img src="images/6468DE60-AED8-4554-BC22-8978B873ECDF.png"
-                 alt="Club Nàutic Canyet">
+<header class="header">
+
+    <a href="#inicio"
+       class="logo">
+
+        <img
+            src="images/6468DE60-AED8-4554-BC22-8978B873ECDF.png"
+            alt="Club Nàutic Canyet">
+
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="#inicio"
+           class="active"
+           data-i18n="nav_inicio">
+            INICI
         </a>
 
-        <nav class="navigation">
+        <a href="#club"
+           data-i18n="nav_club">
+            EL CLUB
+        </a>
 
-            <a href="#inicio" class="active" data-i18n="nav_inicio">INICI</a>
+        <a href="#nautica"
+           data-i18n="nav_nautica">
+            NÀUTICA
+        </a>
 
-            <a href="#club" data-i18n="nav_club">EL CLUB</a>
+        <a href="#actividades"
+           data-i18n="nav_actividades">
+            ACTIVITATS
+        </a>
 
-            <a href="#nautica" data-i18n="nav_nautica">NÀUTICA</a>
+        <a href="#canyet"
+           data-i18n="nav_canyet">
+            CANYET
+        </a>
 
-            <a href="#actividades" data-i18n="nav_actividades">ACTIVITATS</a>
+        <a href="#socios"
+           data-i18n="nav_socios">
+            SOCIS
+        </a>
 
-            <a href="#canyet" data-i18n="nav_canyet">CANYET</a>
+        <a href="#maritemps"
+           data-i18n="nav_mar">
+            MAR I TEMPS
+        </a>
 
-            <a href="#socios" data-i18n="nav_socios">SOCIS</a>
+        <a href="#contacto"
+           data-i18n="nav_contacto">
+            CONTACTE
+        </a>
 
-            <a href="#contacto" data-i18n="nav_contacto">CONTACTE</a>
+    </nav>
 
-        </nav>
 
-        <div class="language-selector">
+    <div class="language-selector">
 
-            <button class="lang-active" onclick="changeLanguage('ca')">
-                CAT
-            </button>
+        <button
+            class="lang-active"
+            onclick="changeLanguage('ca')">
+            CAT
+        </button>
 
-            <span>|</span>
+        <span>|</span>
 
-            <button onclick="changeLanguage('es')">
-                ES
-            </button>
+        <button onclick="changeLanguage('es')">
+            ES
+        </button>
 
-            <span>|</span>
+        <span>|</span>
 
-            <button onclick="changeLanguage('fr')">
-                FR
-            </button>
+        <button onclick="changeLanguage('fr')">
+            FR
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section id="inicio"
+         class="hero">
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <span class="hero-kicker"
+              data-i18n="hero_kicker">
+            CLUB NÀUTIC CANYET
+        </span>
+
+
+        <h1 data-i18n="hero_title">
+            MAR, NATURA<br>
+            I TRADICIÓ
+        </h1>
+
+
+        <p data-i18n="hero_text">
+            Un espai únic al cor de la Costa Brava
+        </p>
+
+        <!--
+        BOTÓ ELIMINAT DEL HERO
+
+        El hero queda més net i les targetes
+        inferiors ja fan de navegació principal.
+        -->
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ENLACES INFERIORES
+     ========================================================= -->
+
+<section class="quick-links">
+
+
+    <!-- ================= EL CLUB ================= -->
+
+    <a href="#club"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ⛵
+        </span>
+
+        <h3 data-i18n="quick_club">
+            EL CLUB
+        </h3>
+
+        <p data-i18n="quick_club_text">
+            Història, fundació, valors i comunitat
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <!-- ================= NÀUTICA ================= -->
+
+    <a href="#nautica"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ⚓
+        </span>
+
+        <h3 data-i18n="quick_nautica">
+            NÀUTICA
+        </h3>
+
+        <p data-i18n="quick_nautica_text">
+            Socis, fondejos, embarcacions i serveis
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <!-- ================= ACTIVITATS ================= -->
+
+    <a href="#actividades"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ◉
+        </span>
+
+        <h3 data-i18n="quick_activities">
+            ACTIVITATS
+        </h3>
+
+        <p data-i18n="quick_activities_text">
+            Sortides especials i experiències al mar
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <!-- ================= CANYET ================= -->
+
+    <a href="#canyet"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ☀
+        </span>
+
+        <h3 data-i18n="quick_canyet">
+            CANYET
+        </h3>
+
+        <p data-i18n="quick_canyet_text">
+            Història de la cala, pontets i entorn
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <!-- ================= SOCIS ================= -->
+
+    <a href="#socios"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ♧
+        </span>
+
+        <h3 data-i18n="quick_members">
+            SOCIS
+        </h3>
+
+        <p data-i18n="quick_members_text">
+            Informació privada, avisos i documentació
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <!-- ================= MAR I TEMPS ================= -->
+
+    <a href="#maritemps"
+       class="quick-link">
+
+        <span class="quick-icon">
+            🌊
+        </span>
+
+        <h3 data-i18n="quick_weather">
+            MAR I TEMPS
+        </h3>
+
+        <p data-i18n="quick_weather_text">
+            Estat de la mar, vent i previsió a Canyet
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     EL CLUB
+     ========================================================= -->
+
+<section id="club"
+         class="section section-light">
+
+    <div class="container">
+
+
+        <span class="section-kicker"
+              data-i18n="club_kicker">
+            EL CLUB
+        </span>
+
+
+        <h2 data-i18n="club_title">
+            Un club nàutic amb identitat pròpia
+        </h2>
+
+
+        <p data-i18n="club_text_1">
+            El Club Nàutic Canyet neix amb una vocació clara:
+            preservar una manera de viure el mar, la costa i
+            la comunitat de Canyet · Rosamar.
+        </p>
+
+
+        <p data-i18n="club_text_2">
+            Més que un espai per a la navegació, el club és un
+            punt de trobada entre persones unides per la passió
+            pel Mediterrani i pel privilegiat entorn de la Costa Brava.
+        </p>
+
+
+        <div class="cards">
+
+
+            <article class="card">
+
+                <h3 data-i18n="club_foundation_title">
+                    Fundació
+                </h3>
+
+                <p data-i18n="club_foundation_text">
+                    Una història vinculada al mar, a Canyet i a
+                    les persones que han fet possible la vida
+                    nàutica d'aquest indret.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3 data-i18n="club_values_title">
+                    Valors
+                </h3>
+
+                <p data-i18n="club_values_text">
+                    Respecte pel mar, convivència, tradició,
+                    natura i una manera responsable de gaudir
+                    de la Costa Brava.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3 data-i18n="club_community_title">
+                    Comunitat
+                </h3>
+
+                <p data-i18n="club_community_text">
+                    Un club pensat per compartir experiències,
+                    navegar i mantenir viu l'esperit de Canyet.
+                </p>
+
+            </article>
+
 
         </div>
 
-    </header>
+    </div>
+
+</section>
 
 
-    <!-- ================= HERO ================= -->
 
-    <main>
+<!-- =========================================================
+     NÀUTICA
+     ========================================================= -->
 
-        <section id="inicio" class="hero">
+<section id="nautica"
+         class="section section-dark">
 
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-
-                <span class="hero-kicker" data-i18n="hero_kicker">
-                    CLUB NÀUTIC CANYET
-                </span>
-
-                <h1 data-i18n="hero_title">
-                    MAR, NATURA<br>
-                    I TRADICIÓ
-                </h1>
-
-                <p data-i18n="hero_text">
-                    Un espai únic al cor de la Costa Brava
-                </p>
-
-                <a href="#club"
-                   class="hero-button"
-                   data-i18n="hero_button">
-                    DESCOBREIX EL CLUB
-                </a>
-
-            </div>
-
-        </section>
+    <div class="container">
 
 
-        <!-- ================= ENLACES INFERIORES ================= -->
+        <span class="section-kicker"
+              data-i18n="nautica_kicker">
+            NÀUTICA
+        </span>
 
-        <section class="quick-links">
 
-            <!-- EL CLUB -->
+        <h2 data-i18n="nautica_title">
+            El mar com a forma de vida
+        </h2>
 
-            <a href="#club" class="quick-link">
 
-                <span class="quick-icon">⛵</span>
+        <p data-i18n="nautica_text">
+            Ser soci del Club Nàutic Canyet significa formar
+            part d'una comunitat vinculada al mar i disposar
+            d'un entorn privilegiat per gaudir de la navegació.
+        </p>
 
-                <h3 data-i18n="quick_club">
-                    EL CLUB
+
+        <div class="cards">
+
+
+            <!-- SOCI -->
+
+            <article class="card">
+
+                <h3 data-i18n="member_price_title">
+                    Soci del Club
                 </h3>
 
-                <p data-i18n="quick_club_text">
-                    Història, valors i comunitat
+                <p data-i18n="member_price_text">
+                    Alta de soci:
+                    <strong>1.500 €</strong>
+                    de fons perdut.
                 </p>
 
-                <span class="quick-arrow">→</span>
+                <p data-i18n="member_mooring_text">
+                    Fondeig de juny a setembre:
+                    <strong>1.600 €</strong>.
+                </p>
 
-            </a>
+            </article>
 
 
-            <!-- NÀUTICA -->
 
-            <a href="#nautica" class="quick-link">
+            <!-- FONDEIGS -->
 
-                <span class="quick-icon">⚓</span>
+            <article class="card">
 
-                <h3 data-i18n="quick_nautica">
-                    NÀUTICA
+                <h3 data-i18n="mooring_title">
+                    Fondejos
                 </h3>
 
-                <p data-i18n="quick_nautica_text">
-                    Fondejos, boies, embarcacions i serveis
+                <p data-i18n="mooring_text">
+                    També s'ofereixen fondejos per dia.
                 </p>
 
-                <span class="quick-arrow">→</span>
+                <p data-i18n="mooring_price_pending">
+                    Tarifa diària: consultar.
+                </p>
 
-            </a>
+            </article>
 
 
-            <!-- ACTIVITATS -->
 
-            <a href="#actividades" class="quick-link">
+            <!-- JOVES -->
 
-                <span class="quick-icon">◉</span>
+            <article class="card">
 
-                <h3 data-i18n="quick_activities">
-                    ACTIVITATS
+                <h3 data-i18n="young_title">
+                    Tarifa jove
                 </h3>
 
-                <p data-i18n="quick_activities_text">
-                    Vela, submarinisme i activitats nàutiques
+                <p data-i18n="young_text">
+                    Per a menors de 32 anys.
+                    Sense fons perdut.
                 </p>
 
-                <span class="quick-arrow">→</span>
-
-            </a>
-
-
-            <!-- CANYET -->
-
-            <a href="#canyet" class="quick-link">
-
-                <span class="quick-icon">☀</span>
-
-                <h3 data-i18n="quick_canyet">
-                    CANYET
-                </h3>
-
-                <p data-i18n="quick_canyet_text">
-                    La cala, Rosamar i el seu entorn
+                <p data-i18n="young_price_pending">
+                    Condicions i tarifa: consultar.
                 </p>
 
-                <span class="quick-arrow">→</span>
+            </article>
 
-            </a>
 
+        </div>
 
-            <!-- SOCIS -->
 
-            <a href="#socios" class="quick-link">
 
-                <span class="quick-icon">♧</span>
+        <!-- ================= INFORMACIÓ NÀUTICA ================= -->
 
-                <h3 data-i18n="quick_members">
-                    SOCIS
-                </h3>
+        <div class="nautica-extra">
 
-                <p data-i18n="quick_members_text">
-                    Accés a informació, avisos i documentació
-                </p>
+            <h3 data-i18n="nautica_services_title">
+                Serveis i fondejos
+            </h3>
 
-                <span class="quick-arrow">→</span>
-
-            </a>
-
-
-            <!-- MAR I TEMPS -->
-
-            <a href="#mar-tiempo" class="quick-link">
-
-    <span class="quick-icon">🌊</span>
-
-    <h3 data-i18n="quick_weather">
-        MAR I TEMPS
-    </h3>
-
-    <p data-i18n="quick_weather_text">
-        Estat de la mar, vent i previsió meteorològica
-    </p>
-
-    <span class="quick-arrow">→</span>
-
-</a>
-
-        </section>
-
-
-        <!-- ================= EL CLUB ================= -->
-
-        <section id="club" class="section section-light">
-
-            <div class="container">
-
-                <span class="section-kicker" data-i18n="club_kicker">
-                    EL CLUB
-                </span>
-
-                <h2 data-i18n="club_title">
-                    Un club nàutic amb identitat pròpia
-                </h2>
-
-                <p data-i18n="club_text_1">
-                    El Club Nàutic Canyet es troba a Rosamar,
-                    en un dels racons més especials de la Costa Brava.
-                </p>
-
-                <p data-i18n="club_text_2">
-                    Un entorn privilegiat on el mar, la natura i la
-                    navegació formen part d'una mateixa manera de viure.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= NÀUTICA ================= -->
-
-        <section id="nautica" class="section section-dark">
-
-            <div class="container">
-
-                <span class="section-kicker" data-i18n="nautica_kicker">
-                    NÀUTICA
-                </span>
-
-                <h2 data-i18n="nautica_title">
-                    El mar com a forma de vida
-                </h2>
-
-                <p data-i18n="nautica_text">
-                    Navegació, embarcacions i experiències al mar
-                    en un entorn natural incomparable.
-                </p>
-
-                <div class="cards">
-
-                    <article class="card">
-
-                        <h3 data-i18n="boat_title">
-                            Embarcacions
-                        </h3>
-
-                        <p data-i18n="boat_text">
-                            Espai i serveis pensats per als amants
-                            de la navegació.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <h3 data-i18n="navigation_title">
-                            Navegació
-                        </h3>
-
-                        <p data-i18n="navigation_text">
-                            Descobreix la costa i les seves cales
-                            des del mar.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <h3 data-i18n="sea_title">
-                            Mar
-                        </h3>
-
-                        <p data-i18n="sea_text">
-                            Un entorn privilegiat per gaudir
-                            del Mediterrani.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ACTIVITATS ================= -->
-
-        <section id="actividades" class="section section-light">
-
-            <div class="container">
-
-                <span class="section-kicker" data-i18n="activities_kicker">
-                    ACTIVITATS
-                </span>
-
-                <h2 data-i18n="activities_title">
-                    Gaudeix de la Costa Brava
-                </h2>
-
-                <div class="cards">
-
-                    <article class="card">
-
-                        <h3 data-i18n="activity_navigation">
-                            Navegació
-                        </h3>
-
-                        <p data-i18n="activity_navigation_text">
-                            Sortides i experiències vinculades al mar.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <h3 data-i18n="activity_sport">
-                            Esport
-                        </h3>
-
-                        <p data-i18n="activity_sport_text">
-                            Activitats nàutiques per gaudir de l'entorn.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <h3 data-i18n="activity_family">
-                            Família
-                        </h3>
-
-                        <p data-i18n="activity_family_text">
-                            Un espai per compartir el Mediterrani amb els teus.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CANYET ================= -->
-
-        <section id="canyet" class="section section-image">
-
-            <div class="section-image-overlay"></div>
-
-            <div class="container section-image-content">
-
-                <span class="section-kicker" data-i18n="canyet_kicker">
-                    CANYET · ROSAMAR
-                </span>
-
-                <h2 data-i18n="canyet_title">
-                    Un dels racons més especials de la Costa Brava
-                </h2>
-
-                <p data-i18n="canyet_text">
-                    Mar cristal·lí, costa rocosa, natura i tranquil·litat.
-                    Un lloc per viure el Mediterrani.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SOCIS ================= -->
-
-        <section id="socios" class="section section-dark">
-
-            <div class="container">
-
-                <span class="section-kicker" data-i18n="members_kicker">
-                    SOCIS
-                </span>
-
-                <h2 data-i18n="members_title">
-                    Formar part del Club Nàutic Canyet
-                </h2>
-
-                <p data-i18n="members_text">
-                    Un espai de trobada per a persones que comparteixen
-                    la passió pel mar i per la Costa Brava.
-                </p>
-
-                <a href="#contacto"
-                   class="hero-button"
-                   data-i18n="members_button">
-                    CONTACTA AMB NOSALTRES
-                </a>
-
-            </div>
-
-        </section>
-
-                <!-- ================= MAR I TEMPS ================= -->
-
-        <section id="mar-tiempo" class="marine-section">
-
-            <div class="container">
-
-                <span class="section-kicker">
-                    MAR I TEMPS
-                </span>
-
-                <h2>
-                    Canyet · Rosamar
-                </h2>
-
-                <p class="marine-intro">
-                    Estat actual de la mar, vent i condicions meteorològiques
-                    a Canyet, Rosamar.
-                </p>
-
-
-                <div class="marine-location">
-                    📍 Canyet · Rosamar · Costa Brava
-                </div>
-
-
-                <div class="marine-dashboard">
-
-
-                    <!-- TEMPERATURA -->
-
-                    <div class="marine-card">
-
-                        <span class="marine-icon">
-                            🌡️
-                        </span>
-
-                        <span class="marine-label">
-                            TEMPERATURA
-                        </span>
-
-                        <strong id="marine-temperature">
-                            —
-                        </strong>
-
-                        <small>
-                            °C
-                        </small>
-
-                    </div>
-
-
-                    <!-- ESTADO DEL MAR -->
-
-                    <div class="marine-card">
-
-                        <span class="marine-icon">
-                            🌊
-                        </span>
-
-                        <span class="marine-label">
-                            ESTAT DE LA MAR
-                        </span>
-
-                        <strong id="marine-wave">
-                            —
-                        </strong>
-
-                        <small>
-                            m
-                        </small>
-
-                    </div>
-
-
-                    <!-- VIENTO -->
-
-                    <div class="marine-card">
-
-                        <span class="marine-icon">
-                            💨
-                        </span>
-
-                        <span class="marine-label">
-                            VENT
-                        </span>
-
-                        <strong id="marine-wind">
-                            —
-                        </strong>
-
-                        <small>
-                            km/h
-                        </small>
-
-                    </div>
-
-
-                    <!-- DIRECCIÓN -->
-
-                    <div class="marine-card">
-
-                        <span class="marine-icon">
-                            🧭
-                        </span>
-
-                        <span class="marine-label">
-                            DIRECCIÓ DEL VENT
-                        </span>
-
-                        <strong id="marine-direction">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="marine-update">
-
-                    <span>
-                        ●
-                    </span>
-
-                    <span>
-                        Dades actualitzades automàticament
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-      
-    <!-- ================= CONTACTE ================= -->
-
-        <section id="contacto" class="section section-light">
-
-            <div class="container">
-
-                <span class="section-kicker" data-i18n="contact_kicker">
-                    CONTACTE
-                </span>
-
-                <h2 data-i18n="contact_title">
-                    Parlem
-                </h2>
-
-                <p data-i18n="contact_text">
-                    Per a qualsevol consulta sobre el Club Nàutic Canyet,
-                    posa't en contacte amb nosaltres.
-                </p>
-
-                <div class="contact-info">
-
-                    <p>
-                        <strong>
-                            Club Nàutic Canyet
-                        </strong>
-                    </p>
-
-                    <p>
-                        Rosamar · Costa Brava
-                    </p>
-
-                    <p>
-                        <a href="mailto:info@clubnauticcanyet.com">
-                            info@clubnauticcanyet.com
-                        </a>
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="container">
-
-            <p>
-                © 2026 Club Nàutic Canyet · Rosamar · Costa Brava
-            </p>
-
-            <p>
-                Club Nàutic Canyet
+            <p data-i18n="nautica_services_text">
+                Informació sobre fondejos, boies, embarcacions,
+                serveis i condicions d'ús del club.
             </p>
 
         </div>
 
-    </footer>
+    </div>
 
+</section>
 
-    <!-- ================= IDIOMAS ================= -->
 
-    <script>
 
-        const translations = {
+<!-- =========================================================
+     ACTIVITATS
+     ========================================================= -->
 
-            ca: {
+<section id="actividades"
+         class="section section-light">
 
-                nav_inicio: "INICI",
-                nav_club: "EL CLUB",
-                nav_nautica: "NÀUTICA",
-                nav_actividades: "ACTIVITATS",
-                nav_canyet: "CANYET",
-                nav_socios: "SOCIS",
-                nav_contacto: "CONTACTE",
+    <div class="container">
 
-                hero_kicker: "CLUB NÀUTIC CANYET",
-                hero_title: "MAR, NATURA<br>I TRADICIÓ",
-                hero_text: "Un espai únic al cor de la Costa Brava",
-                hero_button: "DESCOBREIX EL CLUB",
 
-                quick_club: "EL CLUB",
-                quick_club_text: "Història, valors i comunitat",
+        <span class="section-kicker"
+              data-i18n="activities_kicker">
+            ACTIVITATS
+        </span>
 
-                quick_nautica: "NÀUTICA",
-                quick_nautica_text: "Fondejos, boies, embarcacions i serveis",
 
-                quick_activities: "ACTIVITATS",
-                quick_activities_text: "Vela, submarinisme i activitats nàutiques",
+        <h2 data-i18n="activities_title">
+            Experiències per viure el mar
+        </h2>
 
-                quick_canyet: "CANYET",
-                quick_canyet_text: "La cala, Rosamar i el seu entorn",
 
-                quick_members: "SOCIS",
-                quick_members_text: "Accés a informació, avisos i documentació",
+        <p data-i18n="activities_intro">
+            Activitats especials pensades per gaudir de la
+            Costa Brava des del mar.
+        </p>
 
-                quick_weather: "MAR I TEMPS",
-                quick_weather_text: "Estat de la mar, vent i previsió meteorològica",
 
-                club_kicker: "EL CLUB",
-                club_title: "Un club nàutic amb identitat pròpia",
-                club_text_1: "El Club Nàutic Canyet es troba a Rosamar, en un dels racons més especials de la Costa Brava.",
-                club_text_2: "Un entorn privilegiat on el mar, la natura i la navegació formen part d'una mateixa manera de viure.",
+        <div class="cards">
 
-                nautica_kicker: "NÀUTICA",
-                nautica_title: "El mar com a forma de vida",
-                nautica_text: "Navegació, embarcacions i experiències al mar en un entorn natural incomparable.",
 
-                boat_title: "Embarcacions",
-                boat_text: "Espai i serveis pensats per als amants de la navegació.",
+            <!-- FOCS -->
 
-                navigation_title: "Navegació",
-                navigation_text: "Descobreix la costa i les seves cales des del mar.",
+            <article class="card">
 
-                sea_title: "Mar",
-                sea_text: "Un entorn privilegiat per gaudir del Mediterrani.",
+                <h3 data-i18n="fireworks_title">
+                    Focs artificials
+                </h3>
 
-                activities_kicker: "ACTIVITATS",
-                activities_title: "Gaudeix de la Costa Brava",
+                <p data-i18n="fireworks_text">
+                    Sortida en embarcació per gaudir dels
+                    focs artificials de Sant Feliu de Guíxols
+                    des del mar.
+                </p>
 
-                activity_navigation: "Navegació",
-                activity_navigation_text: "Sortides i experiències vinculades al mar.",
+            </article>
 
-                activity_sport: "Esport",
-                activity_sport_text: "Activitats nàutiques per gaudir de l'entorn.",
 
-                activity_family: "Família",
-                activity_family_text: "Un espai per compartir el Mediterrani amb els teus.",
 
-                canyet_kicker: "CANYET · ROSAMAR",
-                canyet_title: "Un dels racons més especials de la Costa Brava",
-                canyet_text: "Mar cristal·lí, costa rocosa, natura i tranquil·litat. Un lloc per viure el Mediterrani.",
+            <!-- ECLIPSI -->
 
-                members_kicker: "SOCIS",
-                members_title: "Formar part del Club Nàutic Canyet",
-                members_text: "Un espai de trobada per a persones que comparteixen la passió pel mar i per la Costa Brava.",
-                members_button: "CONTACTA AMB NOSALTRES",
+            <article class="card">
 
-                contact_kicker: "CONTACTE",
-                contact_title: "Parlem",
-                contact_text: "Per a qualsevol consulta sobre el Club Nàutic Canyet, posa't en contacte amb nosaltres."
-            },
+                <h3 data-i18n="eclipse_title">
+                    Sortida per veure l'eclipsi
+                </h3>
 
+                <p data-i18n="eclipse_text">
+                    Una sortida especial per viure l'eclipsi
+                    des d'un lloc privilegiat: el mar davant
+                    de Canyet · Rosamar.
+                </p>
 
-            es: {
+            </article>
 
-                nav_inicio: "INICIO",
-                nav_club: "EL CLUB",
-                nav_nautica: "NÁUTICA",
-                nav_actividades: "ACTIVIDADES",
-                nav_canyet: "CANYET",
-                nav_socios: "SOCIOS",
-                nav_contacto: "CONTACTO",
 
-                hero_kicker: "CLUB NÀUTIC CANYET",
-                hero_title: "MAR, NATURALEZA<br>Y TRADICIÓN",
-                hero_text: "Un espacio único en el corazón de la Costa Brava",
-                hero_button: "DESCUBRE EL CLUB",
+        </div>
 
-                quick_club: "EL CLUB",
-                quick_club_text: "Historia, valores y comunidad",
+    </div>
 
-                quick_nautica: "NÁUTICA",
-                quick_nautica_text: "Fondeos, boyas, embarcaciones y servicios",
+</section>
 
-                quick_activities: "ACTIVIDADES",
-                quick_activities_text: "Vela, submarinismo y actividades náuticas",
 
-                quick_canyet: "CANYET",
-                quick_canyet_text: "La cala, Rosamar y su entorno",
 
-                quick_members: "SOCIOS",
-                quick_members_text: "Acceso a información, avisos y documentación",
+<!-- =========================================================
+     CANYET
+     ========================================================= -->
 
-                quick_weather: "MAR Y TIEMPO",
-                quick_weather_text: "Estado del mar, viento y previsión meteorológica",
+<section id="canyet"
+         class="section section-image">
 
-                club_kicker: "EL CLUB",
-                club_title: "Un club náutico con identidad propia",
-                club_text_1: "El Club Nàutic Canyet se encuentra en Rosamar, en uno de los rincones más especiales de la Costa Brava.",
-                club_text_2: "Un entorno privilegiado donde el mar, la naturaleza y la navegación forman parte de una misma manera de vivir.",
+    <div class="section-image-overlay"></div>
 
-                nautica_kicker: "NÁUTICA",
-                nautica_title: "El mar como forma de vida",
-                nautica_text: "Navegación, embarcaciones y experiencias en el mar en un entorno natural incomparable.",
 
-                boat_title: "Embarcaciones",
-                boat_text: "Espacio y servicios pensados para los amantes de la navegación.",
+    <div class="container section-image-content">
 
-                navigation_title: "Navegación",
-                navigation_text: "Descubre la costa y sus calas desde el mar.",
 
-                sea_title: "Mar",
-                sea_text: "Un entorno privilegiado para disfrutar del Mediterráneo.",
+        <span class="section-kicker"
+              data-i18n="canyet_kicker">
+            CANYET · ROSAMAR
+        </span>
 
-                activities_kicker: "ACTIVIDADES",
-                activities_title: "Disfruta de la Costa Brava",
 
-                activity_navigation: "Navegación",
-                activity_navigation_text: "Salidas y experiencias vinculadas al mar.",
+        <h2 data-i18n="canyet_title">
+            Una cala amb història
+        </h2>
 
-                activity_sport: "Deporte",
-                activity_sport_text: "Actividades náuticas para disfrutar del entorno.",
 
-                activity_family: "Familia",
-                activity_family_text: "Un espacio para compartir el Mediterráneo con los tuyos.",
+        <p data-i18n="canyet_text_1">
+            Canyet és un dels racons més singulars de la
+            Costa Brava. Una cala envoltada de costa rocosa,
+            vegetació mediterrània i mar obert.
+        </p>
 
-                canyet_kicker: "CANYET · ROSAMAR",
-                canyet_title: "Uno de los rincones más especiales de la Costa Brava",
-                canyet_text: "Mar cristalino, costa rocosa, naturaleza y tranquilidad. Un lugar para vivir el Mediterráneo.",
 
-                members_kicker: "SOCIOS",
-                members_title: "Formar parte del Club Nàutic Canyet",
-                members_text: "Un punto de encuentro para personas que comparten la pasión por el mar y por la Costa Brava.",
-                members_button: "CONTACTA CON NOSOTROS",
+        <p data-i18n="canyet_text_2">
+            Els seus pontets, els camins de costa i les
+            construccions vinculades a l'antic entorn de
+            Mas Canyet formen part d'una història que encara
+            avui dona identitat a aquest indret.
+        </p>
 
-                contact_kicker: "CONTACTO",
-                contact_title: "Hablemos",
-                contact_text: "Para cualquier consulta sobre el Club Nàutic Canyet, ponte en contacto con nosotros."
-            },
 
+        <p data-i18n="canyet_text_3">
+            Un paisatge on la natura, la navegació i la
+            història conviuen en un mateix espai.
+        </p>
 
-            fr: {
 
-                nav_inicio: "ACCUEIL",
-                nav_club: "LE CLUB",
-                nav_nautica: "NAUTISME",
-                nav_actividades: "ACTIVITÉS",
-                nav_canyet: "CANYET",
-                nav_socios: "MEMBRES",
-                nav_contacto: "CONTACT",
+    </div>
 
-                hero_kicker: "CLUB NÀUTIC CANYET",
-                hero_title: "MER, NATURE<br>ET TRADITION",
-                hero_text: "Un lieu unique au cœur de la Costa Brava",
-                hero_button: "DÉCOUVRIR LE CLUB",
+</section>
 
-                quick_club: "LE CLUB",
-                quick_club_text: "Histoire, valeurs et communauté",
 
-                quick_nautica: "NAUTISME",
-                quick_nautica_text: "Mouillages, bouées, bateaux et services",
 
-                quick_activities: "ACTIVITÉS",
-                quick_activities_text: "Voile, plongée et activités nautiques",
+<!-- =========================================================
+     MAR I TEMPS
+     ========================================================= -->
 
-                quick_canyet: "CANYET",
-                quick_canyet_text: "La crique, Rosamar et ses environs",
+<section id="maritemps"
+         class="marine-section">
 
-                quick_members: "MEMBRES",
-                quick_members_text: "Informations, avis et documentation",
+    <div class="container">
 
-                quick_weather: "MER ET MÉTÉO",
-                quick_weather_text: "État de la mer, vent et prévisions météo",
 
-                club_kicker: "LE CLUB",
-                club_title: "Un club nautique avec une identité propre",
-                club_text_1: "Le Club Nàutic Canyet se trouve à Rosamar, dans l'un des endroits les plus remarquables de la Costa Brava.",
-                club_text_2: "Un environnement privilégié où la mer, la nature et la navigation font partie d'un même art de vivre.",
+        <span class="section-kicker marine-kicker"
+              data-i18n="marine_kicker">
+            MAR I TEMPS
+        </span>
 
-                nautica_kicker: "NAUTISME",
-                nautica_title: "La mer comme art de vivre",
-                nautica_text: "Navigation, bateaux et expériences en mer dans un environnement naturel exceptionnel.",
 
-                boat_title: "Bateaux",
-                boat_text: "Des espaces et services pensés pour les passionnés de navigation.",
+        <h2 data-i18n="marine_title">
+            Canyet · Rosamar
+        </h2>
 
-                navigation_title: "Navigation",
-                navigation_text: "Découvrez la côte et ses criques depuis la mer.",
 
-                sea_title: "La mer",
-                sea_text: "Un environnement privilégié pour profiter de la Méditerranée.",
+        <p class="marine-intro"
+           data-i18n="marine_intro">
+            Estat actual de la mar, vent i condicions
+            meteorològiques a Canyet · Rosamar.
+        </p>
 
-                activities_kicker: "ACTIVITÉS",
-                activities_title: "Profiter de la Costa Brava",
 
-                activity_navigation: "Navigation",
-                activity_navigation_text: "Sorties et expériences liées à la mer.",
+        <div class="marine-location">
+            📍 CANYET · ROSAMAR · COSTA BRAVA
+        </div>
 
-                activity_sport: "Sport",
-                activity_sport_text: "Activités nautiques pour profiter de l'environnement.",
 
-                activity_family: "Famille",
-                activity_family_text: "Un espace pour partager la Méditerranée en famille.",
 
-                canyet_kicker: "CANYET · ROSAMAR",
-                canyet_title: "L'un des endroits les plus remarquables de la Costa Brava",
-                canyet_text: "Mer cristalline, côte rocheuse, nature et tranquillité. Un lieu pour vivre la Méditerranée.",
+        <!-- ================= PANEL MAR ================= -->
 
-                members_kicker: "MEMBRES",
-                members_title: "Faire partie du Club Nàutic Canyet",
-                members_text: "Un lieu de rencontre pour ceux qui partagent la passion de la mer et de la Costa Brava.",
-                members_button: "CONTACTEZ-NOUS",
+        <div class="marine-dashboard">
 
-                contact_kicker: "CONTACT",
-                contact_title: "Parlons-en",
-                contact_text: "Pour toute question concernant le Club Nàutic Canyet, contactez-nous."
+
+            <!-- TEMPERATURA -->
+
+            <article class="marine-card">
+
+                <span class="marine-icon">
+                    🌡️
+                </span>
+
+                <span class="marine-label"
+                      data-i18n="marine_temperature">
+                    TEMPERATURA
+                </span>
+
+                <strong id="marine-temperature">
+                    —
+                </strong>
+
+                <small>
+                    °C
+                </small>
+
+            </article>
+
+
+
+            <!-- ESTADO MAR -->
+
+            <article class="marine-card">
+
+                <span class="marine-icon">
+                    🌊
+                </span>
+
+                <span class="marine-label"
+                      data-i18n="marine_wave">
+                    ESTAT DE LA MAR
+                </span>
+
+                <strong id="marine-wave">
+                    —
+                </strong>
+
+                <small>
+                    m
+                </small>
+
+            </article>
+
+
+
+            <!-- VIENTO -->
+
+            <article class="marine-card">
+
+                <span class="marine-icon">
+                    💨
+                </span>
+
+                <span class="marine-label"
+                      data-i18n="marine_wind">
+                    VENT
+                </span>
+
+                <strong id="marine-wind">
+                    —
+                </strong>
+
+                <small>
+                    km/h
+                </small>
+
+            </article>
+
+
+
+            <!-- DIRECCIÓN -->
+
+            <article class="marine-card">
+
+                <span class="marine-icon">
+                    🧭
+                </span>
+
+                <span class="marine-label"
+                      data-i18n="marine_direction">
+                    DIRECCIÓ DEL VENT
+                </span>
+
+                <strong id="marine-direction">
+                    —
+                </strong>
+
+                <small>
+                    °
+                </small>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- ================= ACTUALIZACIÓN ================= -->
+
+        <div class="marine-update">
+
+            <span>
+                ●
+            </span>
+
+            <span data-i18n="marine_update">
+                Preparat per a actualització automàtica
+            </span>
+
+        </div>
+
+
+        <!--
+        PREVISIÓ HORÀRIA
+
+        La connectarem en el següent pas
+        amb dades reals de Canyet · Rosamar.
+        -->
+
+        <div class="marine-forecast">
+
+            <h3 data-i18n="marine_forecast_title">
+                Previsió marítima
+            </h3>
+
+            <div id="marine-forecast-grid">
+
+                <div class="marine-forecast-placeholder"
+                     data-i18n="marine_forecast_loading">
+                    Carregant previsió...
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SOCIS
+     ========================================================= -->
+
+<section id="socios"
+         class="section section-dark">
+
+    <div class="container">
+
+
+        <span class="section-kicker"
+              data-i18n="members_kicker">
+            SOCIS
+        </span>
+
+
+        <h2 data-i18n="members_title">
+            Àrea privada de socis
+        </h2>
+
+
+        <p data-i18n="members_text">
+            Un espai reservat als membres del Club Nàutic
+            Canyet per consultar informació, avisos,
+            documentació i comunicacions del club.
+        </p>
+
+
+
+        <!-- ================= LOGIN ================= -->
+
+        <div class="members-login"
+             id="members-login">
+
+
+            <h3 data-i18n="members_login_title">
+                Accés exclusiu per als socis
+            </h3>
+
+
+            <p data-i18n="members_login_text">
+                Introdueix el PIN d'accés.
+            </p>
+
+
+            <div class="members-pin-form">
+
+                <input
+                    type="password"
+                    id="members-pin"
+                    maxlength="12"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    placeholder="PIN"
+                    aria-label="PIN">
+
+
+                <button
+                    type="button"
+                    onclick="checkMemberPin()"
+                    data-i18n="members_login_button">
+
+                    ENTRAR
+
+                </button>
+
+            </div>
+
+
+            <p id="members-error"
+               class="members-error"
+               aria-live="polite">
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= ÁREA PRIVADA ================= -->
+
+        <div class="members-private"
+             id="members-private"
+             style="display:none;">
+
+
+            <h3 data-i18n="members_private_title">
+                Benvingut a l'àrea de socis
+            </h3>
+
+
+            <p data-i18n="members_private_text">
+                Aquesta zona anirà incorporant la informació,
+                avisos i documentació que el club vagi facilitant.
+            </p>
+
+
+            <div class="members-private-grid">
+
+
+                <article class="member-private-card">
+
+                    <span>
+                        📢
+                    </span>
+
+                    <h4 data-i18n="private_news">
+                        Avisos
+                    </h4>
+
+                    <p data-i18n="private_news_text">
+                        Properament.
+                    </p>
+
+                </article>
+
+
+
+                <article class="member-private-card">
+
+                    <span>
+                        📄
+                    </span>
+
+                    <h4 data-i18n="private_documents">
+                        Documentació
+                    </h4>
+
+                    <p data-i18n="private_documents_text">
+                        Properament.
+                    </p>
+
+                </article>
+
+
+
+                <article class="member-private-card">
+
+                    <span>
+                        ⚓
+                    </span>
+
+                    <h4 data-i18n="private_moorings">
+                        Fondejos
+                    </h4>
+
+                    <p data-i18n="private_moorings_text">
+                        Properament.
+                    </p>
+
+                </article>
+
+
+
+                <article class="member-private-card">
+
+                    <span>
+                        📅
+                    </span>
+
+                    <h4 data-i18n="private_calendar">
+                        Calendari
+                    </h4>
+
+                    <p data-i18n="private_calendar_text">
+                        Properament.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <button
+                type="button"
+                class="members-logout"
+                onclick="logoutMembers()"
+                data-i18n="members_logout">
+
+                SORTIR
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACTE
+     ========================================================= -->
+
+<section id="contacto"
+         class="section section-light">
+
+    <div class="container">
+
+
+        <span class="section-kicker"
+              data-i18n="contact_kicker">
+            CONTACTE
+        </span>
+
+
+        <h2 data-i18n="contact_title">
+            Parlem
+        </h2>
+
+
+        <p data-i18n="contact_text">
+            Per a qualsevol consulta sobre el Club Nàutic Canyet,
+            posa't en contacte amb nosaltres.
+        </p>
+
+
+        <div class="contact-info">
+
+
+            <p>
+
+                <strong>
+                    Club Nàutic Canyet
+                </strong>
+
+            </p>
+
+
+            <p>
+                Rosamar · Costa Brava
+            </p>
+
+
+            <p>
+
+                <a href="mailto:info@clubnauticcanyet.com">
+
+                    info@clubnauticcanyet.com
+
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 Club Nàutic Canyet · Rosamar · Costa Brava
+        </p>
+
+        <p>
+            Club Nàutic Canyet
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     IDIOMAS + FUNCIONES
+     ========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   TRADUCCIONES
+   ========================================================= */
+
+const translations = {
+
+
+    /* =====================================================
+       CATALÀ
+       ===================================================== */
+
+    ca: {
+
+        nav_inicio: "INICI",
+        nav_club: "EL CLUB",
+        nav_nautica: "NÀUTICA",
+        nav_actividades: "ACTIVITATS",
+        nav_canyet: "CANYET",
+        nav_socios: "SOCIS",
+        nav_mar: "MAR I TEMPS",
+        nav_contacto: "CONTACTE",
+
+
+        hero_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        hero_title:
+            "MAR, NATURA<br>I TRADICIÓ",
+
+        hero_text:
+            "Un espai únic al cor de la Costa Brava",
+
+
+        quick_club:
+            "EL CLUB",
+
+        quick_club_text:
+            "Història, fundació, valors i comunitat",
+
+
+        quick_nautica:
+            "NÀUTICA",
+
+        quick_nautica_text:
+            "Socis, fondejos, embarcacions i serveis",
+
+
+        quick_activities:
+            "ACTIVITATS",
+
+        quick_activities_text:
+            "Sortides especials i experiències al mar",
+
+
+        quick_canyet:
+            "CANYET",
+
+        quick_canyet_text:
+            "Història de la cala, pontets i entorn",
+
+
+        quick_members:
+            "SOCIS",
+
+        quick_members_text:
+            "Informació privada, avisos i documentació",
+
+
+        quick_weather:
+            "MAR I TEMPS",
+
+        quick_weather_text:
+            "Estat de la mar, vent i previsió a Canyet",
+
+
+
+        /* CLUB */
+
+        club_kicker:
+            "EL CLUB",
+
+        club_title:
+            "Un club nàutic amb identitat pròpia",
+
+        club_text_1:
+            "El Club Nàutic Canyet neix amb una vocació clara: preservar una manera de viure el mar, la costa i la comunitat de Canyet · Rosamar.",
+
+        club_text_2:
+            "Més que un espai per a la navegació, el club és un punt de trobada entre persones unides per la passió pel Mediterrani i pel privilegiat entorn de la Costa Brava.",
+
+        club_foundation_title:
+            "Fundació",
+
+        club_foundation_text:
+            "Una història vinculada al mar, a Canyet i a les persones que han fet possible la vida nàutica d'aquest indret.",
+
+        club_values_title:
+            "Valors",
+
+        club_values_text:
+            "Respecte pel mar, convivència, tradició, natura i una manera responsable de gaudir de la Costa Brava.",
+
+        club_community_title:
+            "Comunitat",
+
+        club_community_text:
+            "Un club pensat per compartir experiències, navegar i mantenir viu l'esperit de Canyet.",
+
+
+
+        /* NÀUTICA */
+
+        nautica_kicker:
+            "NÀUTICA",
+
+        nautica_title:
+            "El mar com a forma de vida",
+
+        nautica_text:
+            "Ser soci del Club Nàutic Canyet significa formar part d'una comunitat vinculada al mar i disposar d'un entorn privilegiat per gaudir de la navegació.",
+
+        member_price_title:
+            "Soci del Club",
+
+        member_price_text:
+            "Alta de soci: 1.500 € de fons perdut.",
+
+        member_mooring_text:
+            "Fondeig de juny a setembre: 1.600 €.",
+
+        mooring_title:
+            "Fondejos",
+
+        mooring_text:
+            "També s'ofereixen fondejos per dia.",
+
+        mooring_price_pending:
+            "Tarifa diària: consultar.",
+
+        young_title:
+            "Tarifa jove",
+
+        young_text:
+            "Per a menors de 32 anys. Sense fons perdut.",
+
+        young_price_pending:
+            "Condicions i tarifa: consultar.",
+
+        nautica_services_title:
+            "Serveis i fondejos",
+
+        nautica_services_text:
+            "Informació sobre fondejos, boies, embarcacions, serveis i condicions d'ús del club.",
+
+
+
+        /* ACTIVITATS */
+
+        activities_kicker:
+            "ACTIVITATS",
+
+        activities_title:
+            "Experiències per viure el mar",
+
+        activities_intro:
+            "Activitats especials pensades per gaudir de la Costa Brava des del mar.",
+
+        fireworks_title:
+            "Focs artificials",
+
+        fireworks_text:
+            "Sortida en embarcació per gaudir dels focs artificials de Sant Feliu de Guíxols des del mar.",
+
+        eclipse_title:
+            "Sortida per veure l'eclipsi",
+
+        eclipse_text:
+            "Una sortida especial per viure l'eclipsi des d'un lloc privilegiat: el mar davant de Canyet · Rosamar.",
+
+
+
+        /* CANYET */
+
+        canyet_kicker:
+            "CANYET · ROSAMAR",
+
+        canyet_title:
+            "Una cala amb història",
+
+        canyet_text_1:
+            "Canyet és un dels racons més singulars de la Costa Brava. Una cala envoltada de costa rocosa, vegetació mediterrània i mar obert.",
+
+        canyet_text_2:
+            "Els seus pontets, els camins de costa i les construccions vinculades a l'antic entorn de Mas Canyet formen part d'una història que encara avui dona identitat a aquest indret.",
+
+        canyet_text_3:
+            "Un paisatge on la natura, la navegació i la història conviuen en un mateix espai.",
+
+
+
+        /* MAR */
+
+        marine_kicker:
+            "MAR I TEMPS",
+
+        marine_title:
+            "Canyet · Rosamar",
+
+        marine_intro:
+            "Estat actual de la mar, vent i condicions meteorològiques a Canyet · Rosamar.",
+
+        marine_temperature:
+            "TEMPERATURA",
+
+        marine_wave:
+            "ESTAT DE LA MAR",
+
+        marine_wind:
+            "VENT",
+
+        marine_direction:
+            "DIRECCIÓ DEL VENT",
+
+        marine_update:
+            "Preparat per a actualització automàtica",
+
+        marine_forecast_title:
+            "Previsió marítima",
+
+        marine_forecast_loading:
+            "Carregant previsió...",
+
+
+
+        /* SOCIS */
+
+        members_kicker:
+            "SOCIS",
+
+        members_title:
+            "Àrea privada de socis",
+
+        members_text:
+            "Un espai reservat als membres del Club Nàutic Canyet per consultar informació, avisos, documentació i comunicacions del club.",
+
+        members_login_title:
+            "Accés exclusiu per als socis",
+
+        members_login_text:
+            "Introdueix el PIN d'accés.",
+
+        members_login_button:
+            "ENTRAR",
+
+        members_private_title:
+            "Benvingut a l'àrea de socis",
+
+        members_private_text:
+            "Aquesta zona anirà incorporant la informació, avisos i documentació que el club vagi facilitant.",
+
+        private_news:
+            "Avisos",
+
+        private_news_text:
+            "Properament.",
+
+        private_documents:
+            "Documentació",
+
+        private_documents_text:
+            "Properament.",
+
+        private_moorings:
+            "Fondejos",
+
+        private_moorings_text:
+            "Properament.",
+
+        private_calendar:
+            "Calendari",
+
+        private_calendar_text:
+            "Properament.",
+
+        members_logout:
+            "SORTIR",
+
+
+
+        /* CONTACTE */
+
+        contact_kicker:
+            "CONTACTE",
+
+        contact_title:
+            "Parlem",
+
+        contact_text:
+            "Per a qualsevol consulta sobre el Club Nàutic Canyet, posa't en contacte amb nosaltres."
+
+    },
+
+
+
+    /* =====================================================
+       ESPAÑOL
+       ===================================================== */
+
+    es: {
+
+        nav_inicio: "INICIO",
+        nav_club: "EL CLUB",
+        nav_nautica: "NÁUTICA",
+        nav_actividades: "ACTIVIDADES",
+        nav_canyet: "CANYET",
+        nav_socios: "SOCIOS",
+        nav_mar: "MAR Y TIEMPO",
+        nav_contacto: "CONTACTO",
+
+
+        hero_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        hero_title:
+            "MAR, NATURALEZA<br>Y TRADICIÓN",
+
+        hero_text:
+            "Un espacio único en el corazón de la Costa Brava",
+
+
+        quick_club:
+            "EL CLUB",
+
+        quick_club_text:
+            "Historia, fundación, valores y comunidad",
+
+
+        quick_nautica:
+            "NÁUTICA",
+
+        quick_nautica_text:
+            "Socios, fondeos, embarcaciones y servicios",
+
+
+        quick_activities:
+            "ACTIVIDADES",
+
+        quick_activities_text:
+            "Salidas especiales y experiencias en el mar",
+
+
+        quick_canyet:
+            "CANYET",
+
+        quick_canyet_text:
+            "Historia de la cala, pontets y entorno",
+
+
+        quick_members:
+            "SOCIOS",
+
+        quick_members_text:
+            "Información privada, avisos y documentación",
+
+
+        quick_weather:
+            "MAR Y TIEMPO",
+
+        quick_weather_text:
+            "Estado del mar, viento y previsión en Canyet",
+
+
+
+        club_kicker:
+            "EL CLUB",
+
+        club_title:
+            "Un club náutico con identidad propia",
+
+        club_text_1:
+            "El Club Nàutic Canyet nace con una vocación clara: preservar una manera de vivir el mar, la costa y la comunidad de Canyet · Rosamar.",
+
+        club_text_2:
+            "Más que un espacio para la navegación, el club es un punto de encuentro entre personas unidas por la pasión por el Mediterráneo y por el privilegiado entorno de la Costa Brava.",
+
+        club_foundation_title:
+            "Fundación",
+
+        club_foundation_text:
+            "Una historia vinculada al mar, a Canyet y a las personas que han hecho posible la vida náutica de este lugar.",
+
+        club_values_title:
+            "Valores",
+
+        club_values_text:
+            "Respeto por el mar, convivencia, tradición, naturaleza y una manera responsable de disfrutar de la Costa Brava.",
+
+        club_community_title:
+            "Comunidad",
+
+        club_community_text:
+            "Un club pensado para compartir experiencias, navegar y mantener vivo el espíritu de Canyet.",
+
+
+
+        nautica_kicker:
+            "NÁUTICA",
+
+        nautica_title:
+            "El mar como forma de vida",
+
+        nautica_text:
+            "Ser socio del Club Nàutic Canyet significa formar parte de una comunidad vinculada al mar y disponer de un entorno privilegiado para disfrutar de la navegación.",
+
+        member_price_title:
+            "Socio del Club",
+
+        member_price_text:
+            "Alta de socio: 1.500 € de fondo perdido.",
+
+        member_mooring_text:
+            "Fondeo de junio a septiembre: 1.600 €.",
+
+        mooring_title:
+            "Fondeos",
+
+        mooring_text:
+            "También se ofrecen fondeos por día.",
+
+        mooring_price_pending:
+            "Tarifa diaria: consultar.",
+
+        young_title:
+            "Tarifa joven",
+
+        young_text:
+            "Para menores de 32 años. Sin fondo perdido.",
+
+        young_price_pending:
+            "Condiciones y tarifa: consultar.",
+
+        nautica_services_title:
+            "Servicios y fondeos",
+
+        nautica_services_text:
+            "Información sobre fondeos, boyas, embarcaciones, servicios y condiciones de uso del club.",
+
+
+
+        activities_kicker:
+            "ACTIVIDADES",
+
+        activities_title:
+            "Experiencias para vivir el mar",
+
+        activities_intro:
+            "Actividades especiales pensadas para disfrutar de la Costa Brava desde el mar.",
+
+        fireworks_title:
+            "Fuegos artificiales",
+
+        fireworks_text:
+            "Salida en embarcación para disfrutar de los fuegos artificiales de Sant Feliu de Guíxols desde el mar.",
+
+        eclipse_title:
+            "Salida para ver el eclipse",
+
+        eclipse_text:
+            "Una salida especial para vivir el eclipse desde un lugar privilegiado: el mar frente a Canyet · Rosamar.",
+
+
+
+        canyet_kicker:
+            "CANYET · ROSAMAR",
+
+        canyet_title:
+            "Una cala con historia",
+
+        canyet_text_1:
+            "Canyet es uno de los rincones más singulares de la Costa Brava. Una cala rodeada de costa rocosa, vegetación mediterránea y mar abierto.",
+
+        canyet_text_2:
+            "Sus pontets, los caminos de costa y las construcciones vinculadas al antiguo entorno de Mas Canyet forman parte de una historia que todavía hoy da identidad a este lugar.",
+
+        canyet_text_3:
+            "Un paisaje donde naturaleza, navegación e historia conviven en un mismo espacio.",
+
+
+
+        marine_kicker:
+            "MAR Y TIEMPO",
+
+        marine_title:
+            "Canyet · Rosamar",
+
+        marine_intro:
+            "Estado actual del mar, viento y condiciones meteorológicas en Canyet · Rosamar.",
+
+        marine_temperature:
+            "TEMPERATURA",
+
+        marine_wave:
+            "ESTADO DEL MAR",
+
+        marine_wind:
+            "VIENTO",
+
+        marine_direction:
+            "DIRECCIÓN DEL VIENTO",
+
+        marine_update:
+            "Preparado para actualización automática",
+
+        marine_forecast_title:
+            "Previsión marítima",
+
+        marine_forecast_loading:
+            "Cargando previsión...",
+
+
+
+        members_kicker:
+            "SOCIOS",
+
+        members_title:
+            "Área privada de socios",
+
+        members_text:
+            "Un espacio reservado a los miembros del Club Nàutic Canyet para consultar información, avisos, documentación y comunicaciones del club.",
+
+        members_login_title:
+            "Acceso exclusivo para socios",
+
+        members_login_text:
+            "Introduce el PIN de acceso.",
+
+        members_login_button:
+            "ENTRAR",
+
+        members_private_title:
+            "Bienvenido al área de socios",
+
+        members_private_text:
+            "Esta zona irá incorporando la información, avisos y documentación que el club vaya facilitando.",
+
+        private_news:
+            "Avisos",
+
+        private_news_text:
+            "Próximamente.",
+
+        private_documents:
+            "Documentación",
+
+        private_documents_text:
+            "Próximamente.",
+
+        private_moorings:
+            "Fondeos",
+
+        private_moorings_text:
+            "Próximamente.",
+
+        private_calendar:
+            "Calendario",
+
+        private_calendar_text:
+            "Próximamente.",
+
+        members_logout:
+            "SALIR",
+
+
+
+        contact_kicker:
+            "CONTACTO",
+
+        contact_title:
+            "Hablemos",
+
+        contact_text:
+            "Para cualquier consulta sobre el Club Nàutic Canyet, ponte en contacto con nosotros."
+
+    },
+
+
+
+    /* =====================================================
+       FRANÇAIS
+       ===================================================== */
+
+    fr: {
+
+        nav_inicio: "ACCUEIL",
+        nav_club: "LE CLUB",
+        nav_nautica: "NAUTISME",
+        nav_actividades: "ACTIVITÉS",
+        nav_canyet: "CANYET",
+        nav_socios: "MEMBRES",
+        nav_mar: "MER ET MÉTÉO",
+        nav_contacto: "CONTACT",
+
+
+        hero_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        hero_title:
+            "MER, NATURE<br>ET TRADITION",
+
+        hero_text:
+            "Un lieu unique au cœur de la Costa Brava",
+
+
+        quick_club:
+            "LE CLUB",
+
+        quick_club_text:
+            "Histoire, fondation, valeurs et communauté",
+
+
+        quick_nautica:
+            "NAUTISME",
+
+        quick_nautica_text:
+            "Membres, mouillages, bateaux et services",
+
+
+        quick_activities:
+            "ACTIVITÉS",
+
+        quick_activities_text:
+            "Sorties spéciales et expériences en mer",
+
+
+        quick_canyet:
+            "CANYET",
+
+        quick_canyet_text:
+            "Histoire de la crique, pontets et environs",
+
+
+        quick_members:
+            "MEMBRES",
+
+        quick_members_text:
+            "Informations privées, avis et documentation",
+
+
+        quick_weather:
+            "MER ET MÉTÉO",
+
+        quick_weather_text:
+            "État de la mer, vent et prévisions à Canyet",
+
+
+
+        club_kicker:
+            "LE CLUB",
+
+        club_title:
+            "Un club nautique avec une identité propre",
+
+        club_text_1:
+            "Le Club Nàutic Canyet est né avec une vocation claire : préserver une manière de vivre la mer, la côte et la communauté de Canyet · Rosamar.",
+
+        club_text_2:
+            "Plus qu'un espace de navigation, le club est un lieu de rencontre pour ceux qui partagent la passion de la Méditerranée et de l'environnement exceptionnel de la Costa Brava.",
+
+        club_foundation_title:
+            "Fondation",
+
+        club_foundation_text:
+            "Une histoire liée à la mer, à Canyet et aux personnes qui ont rendu possible la vie nautique de ce lieu.",
+
+        club_values_title:
+            "Valeurs",
+
+        club_values_text:
+            "Respect de la mer, convivialité, tradition, nature et une manière responsable de profiter de la Costa Brava.",
+
+        club_community_title:
+            "Communauté",
+
+        club_community_text:
+            "Un club conçu pour partager des expériences, naviguer et préserver l'esprit de Canyet.",
+
+
+
+        nautica_kicker:
+            "NAUTISME",
+
+        nautica_title:
+            "La mer comme art de vivre",
+
+        nautica_text:
+            "Être membre du Club Nàutic Canyet signifie faire partie d'une communauté liée à la mer et profiter d'un environnement privilégié pour naviguer.",
+
+        member_price_title:
+            "Membre du Club",
+
+        member_price_text:
+            "Adhésion : 1 500 € de contribution non remboursable.",
+
+        member_mooring_text:
+            "Mouillage de juin à septembre : 1 600 €.",
+
+        mooring_title:
+            "Mouillages",
+
+        mooring_text:
+            "Des mouillages à la journée sont également proposés.",
+
+        mooring_price_pending:
+            "Tarif journalier : nous consulter.",
+
+        young_title:
+            "Tarif jeune",
+
+        young_text:
+            "Pour les moins de 32 ans. Sans contribution non remboursable.",
+
+        young_price_pending:
+            "Conditions et tarif : nous consulter.",
+
+        nautica_services_title:
+            "Services et mouillages",
+
+        nautica_services_text:
+            "Informations sur les mouillages, bouées, bateaux, services et conditions d'utilisation du club.",
+
+
+
+        activities_kicker:
+            "ACTIVITÉS",
+
+        activities_title:
+            "Des expériences pour vivre la mer",
+
+        activities_intro:
+            "Des activités spéciales pour profiter de la Costa Brava depuis la mer.",
+
+        fireworks_title:
+            "Feux d'artifice",
+
+        fireworks_text:
+            "Sortie en bateau pour admirer les feux d'artifice de Sant Feliu de Guíxols depuis la mer.",
+
+        eclipse_title:
+            "Sortie pour observer l'éclipse",
+
+        eclipse_text:
+            "Une sortie spéciale pour vivre l'éclipse depuis un lieu privilégié : la mer face à Canyet · Rosamar.",
+
+
+
+        canyet_kicker:
+            "CANYET · ROSAMAR",
+
+        canyet_title:
+            "Une crique chargée d'histoire",
+
+        canyet_text_1:
+            "Canyet est l'un des endroits les plus singuliers de la Costa Brava. Une crique entourée de côte rocheuse, de végétation méditerranéenne et de mer ouverte.",
+
+        canyet_text_2:
+            "Ses pontets, les chemins côtiers et les constructions liées à l'ancien environnement de Mas Canyet font partie d'une histoire qui donne encore aujourd'hui son identité à ce lieu.",
+
+        canyet_text_3:
+            "Un paysage où nature, navigation et histoire se rencontrent.",
+
+
+
+        marine_kicker:
+            "MER ET MÉTÉO",
+
+        marine_title:
+            "Canyet · Rosamar",
+
+        marine_intro:
+            "État actuel de la mer, vent et conditions météorologiques à Canyet · Rosamar.",
+
+        marine_temperature:
+            "TEMPÉRATURE",
+
+        marine_wave:
+            "ÉTAT DE LA MER",
+
+        marine_wind:
+            "VENT",
+
+        marine_direction:
+            "DIRECTION DU VENT",
+
+        marine_update:
+            "Prêt pour la mise à jour automatique",
+
+        marine_forecast_title:
+            "Prévisions maritimes",
+
+        marine_forecast_loading:
+            "Chargement des prévisions...",
+
+
+
+        members_kicker:
+            "MEMBRES",
+
+        members_title:
+            "Espace privé des membres",
+
+        members_text:
+            "Un espace réservé aux membres du Club Nàutic Canyet pour consulter les informations, avis, documents et communications du club.",
+
+        members_login_title:
+            "Accès réservé aux membres",
+
+        members_login_text:
+            "Introduisez votre code PIN.",
+
+        members_login_button:
+            "ENTRER",
+
+        members_private_title:
+            "Bienvenue dans l'espace membres",
+
+        members_private_text:
+            "Cette zone intégrera progressivement les informations, avis et documents communiqués par le club.",
+
+        private_news:
+            "Avis",
+
+        private_news_text:
+            "Prochainement.",
+
+        private_documents:
+            "Documents",
+
+        private_documents_text:
+            "Prochainement.",
+
+        private_moorings:
+            "Mouillages",
+
+        private_moorings_text:
+            "Prochainement.",
+
+        private_calendar:
+            "Calendrier",
+
+        private_calendar_text:
+            "Prochainement.",
+
+        members_logout:
+            "SORTIR",
+
+
+
+        contact_kicker:
+            "CONTACT",
+
+        contact_title:
+            "Parlons-en",
+
+        contact_text:
+            "Pour toute question concernant le Club Nàutic Canyet, contactez-nous."
+
+    }
+
+};
+
+
+
+/* =========================================================
+   CAMBIO DE IDIOMA
+   ========================================================= */
+
+function changeLanguage(language) {
+
+    localStorage.setItem(
+        "clubLanguage",
+        language
+    );
+
+
+    document.documentElement.lang =
+        language;
+
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+
+            if (
+                translations[language] &&
+                translations[language][key]
+            ) {
+
+                element.innerHTML =
+                    translations[language][key];
+
             }
-
-        };
-
-
-        function changeLanguage(language) {
-
-            localStorage.setItem("clubLanguage", language);
-
-            document.documentElement.lang = language;
-
-            document.querySelectorAll("[data-i18n]").forEach(element => {
-
-                const key = element.getAttribute("data-i18n");
-
-                if (translations[language][key]) {
-
-                    element.innerHTML = translations[language][key];
-
-                }
-
-            });
-
-
-            document.querySelectorAll(".language-selector button")
-                .forEach(button => {
-
-                    button.classList.remove("lang-active");
-
-                });
-
-
-            const activeButton =
-                document.querySelector(
-                    '.language-selector button[onclick*="' + language + '"]'
-                );
-
-
-            if (activeButton) {
-                activeButton.classList.add("lang-active");
-            }
-
-        }
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const savedLanguage =
-                localStorage.getItem("clubLanguage") || "ca";
-
-            changeLanguage(savedLanguage);
 
         });
 
-    </script>
+
+    document
+        .querySelectorAll(
+            ".language-selector button"
+        )
+        .forEach(button => {
+
+            button.classList.remove(
+                "lang-active"
+            );
+
+        });
+
+
+    const activeButton =
+        document.querySelector(
+            '.language-selector button[onclick*="' +
+            language +
+            '"]'
+        );
+
+
+    if (activeButton) {
+
+        activeButton.classList.add(
+            "lang-active"
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ÁREA DE SOCIS
+   ========================================================= */
+
+/*
+   PIN TEMPORAL
+
+   NO ES SEGURIDAD REAL.
+   Lo sustituiremos más adelante por un sistema
+   de acceso real cuando tengamos definida la zona
+   privada y dónde alojaremos la documentación.
+*/
+
+const MEMBER_PIN = "2026";
+
+
+function checkMemberPin() {
+
+    const input =
+        document.getElementById(
+            "members-pin"
+        );
+
+
+    const error =
+        document.getElementById(
+            "members-error"
+        );
+
+
+    const login =
+        document.getElementById(
+            "members-login"
+        );
+
+
+    const privateArea =
+        document.getElementById(
+            "members-private"
+        );
+
+
+    if (
+        input.value ===
+        MEMBER_PIN
+    ) {
+
+        login.style.display =
+            "none";
+
+
+        privateArea.style.display =
+            "block";
+
+
+        error.textContent =
+            "";
+
+        input.value =
+            "";
+
+    }
+
+    else {
+
+        error.textContent =
+            "PIN incorrecte.";
+
+        input.value =
+            "";
+
+        input.focus();
+
+    }
+
+}
+
+
+
+function logoutMembers() {
+
+    const login =
+        document.getElementById(
+            "members-login"
+        );
+
+
+    const privateArea =
+        document.getElementById(
+            "members-private"
+        );
+
+
+    login.style.display =
+        "block";
+
+
+    privateArea.style.display =
+        "none";
+
+}
+
+
+
+/* =========================================================
+   ENTER CON ENTER EN EL PIN
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const pinInput =
+            document.getElementById(
+                "members-pin"
+            );
+
+
+        if (pinInput) {
+
+            pinInput.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key ===
+                        "Enter"
+                    ) {
+
+                        checkMemberPin();
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   INICIALIZACIÓN
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const savedLanguage =
+            localStorage.getItem(
+                "clubLanguage"
+            ) || "ca";
+
+
+        changeLanguage(
+            savedLanguage
+        );
+
+    }
+);
+
+
+</script>
+
 
 </body>
 
