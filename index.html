@@ -675,8 +675,6 @@
         <div class="marine-dashboard">
 
 
-            <!-- TEMPERATURA -->
-
             <article class="marine-card">
 
                 <span class="marine-icon">
@@ -699,8 +697,6 @@
             </article>
 
 
-
-            <!-- OLEAJE -->
 
             <article class="marine-card">
 
@@ -725,8 +721,6 @@
 
 
 
-            <!-- VIENTO -->
-
             <article class="marine-card">
 
                 <span class="marine-icon">
@@ -749,8 +743,6 @@
             </article>
 
 
-
-            <!-- DIRECCIÓN -->
 
             <article class="marine-card">
 
@@ -791,6 +783,17 @@
             <span data-i18n="marine_update">
                 Preparat per a actualització automàtica
             </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             INFORMACIÓN EXTRA
+             ================================================= -->
+
+        <div id="marine-extra-info"
+             class="marine-extra-info">
 
         </div>
 
@@ -1676,7 +1679,7 @@ const translations = {
             "SALIR",
 
 
-        /* CONTACTO */
+        /* CONTACTE */
 
         contact_kicker:
             "CONTACTO",
@@ -1829,7 +1832,7 @@ const translations = {
             "Informations sur les mouillages, bouées, bateaux, services et conditions d'utilisation du club.",
 
 
-        /* ACTIVITATS */
+        /* ACTIVITÉS */
 
         activities_kicker:
             "ACTIVITÉS",
@@ -2149,51 +2152,12 @@ function logoutMembers() {
 
 
 /* =========================================================
-   ENTER EN EL PIN
-   ========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        const pinInput =
-            document.getElementById(
-                "members-pin"
-            );
-
-
-        if (pinInput) {
-
-            pinInput.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (
-                        event.key ===
-                        "Enter"
-                    ) {
-
-                        checkMemberPin();
-
-                    }
-
-                }
-            );
-
-        }
-
-    }
-);
-
-
-
-/* =========================================================
    MAR I TEMPS
    CANYET · ROSAMAR
    ========================================================= */
 
 /*
-   Coordenadas utilizadas:
+   Coordenadas:
 
    CANYET · ROSAMAR
    Latitud:  41.7596
@@ -2201,8 +2165,6 @@ document.addEventListener(
 
    Los datos se obtienen directamente desde
    las APIs de Open-Meteo.
-
-   No se abre ninguna página externa.
 */
 
 
@@ -2470,7 +2432,7 @@ async function loadMarineWeather() {
 
 
         /* =================================================
-           TEMPERATURA DEL AIRE
+           TEMPERATURA
            ================================================= */
 
         const temperatureElement =
@@ -2566,7 +2528,7 @@ async function loadMarineWeather() {
 
 
         /* =================================================
-           AÑADIR INFORMACIÓN EXTRA
+           INFORMACIÓN EXTRA
            ================================================= */
 
         updateMarineExtraInfo(
@@ -3149,6 +3111,45 @@ function startMarineUpdates() {
 
 
 /* =========================================================
+   ENTER EN EL PIN
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const pinInput =
+            document.getElementById(
+                "members-pin"
+            );
+
+
+        if (pinInput) {
+
+            pinInput.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key ===
+                        "Enter"
+                    ) {
+
+                        checkMemberPin();
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
    INICIALIZACIÓN
    ========================================================= */
 
@@ -3174,44 +3175,10 @@ document.addEventListener(
 
 
         /* ==============================
-           MAR Y TIEMPO
+           MAR Y TEMPS
            ============================== */
 
         startMarineUpdates();
-
-
-
-        /* ==============================
-           PIN SOCIOS
-           ============================== */
-
-        const pinInput =
-            document.getElementById(
-                "members-pin"
-            );
-
-
-        if (pinInput) {
-
-
-            pinInput.addEventListener(
-                "keydown",
-                function (event) {
-
-
-                    if (
-                        event.key ===
-                        "Enter"
-                    ) {
-
-                        checkMemberPin();
-
-                    }
-
-                }
-            );
-
-        }
 
     }
 );
