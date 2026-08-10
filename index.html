@@ -147,13 +147,6 @@
             Un espai únic al cor de la Costa Brava
         </p>
 
-        <!--
-        BOTÓ ELIMINAT DEL HERO
-
-        El hero queda més net i les targetes
-        inferiors ja fan de navegació principal.
-        -->
-
     </div>
 
 </section>
@@ -441,8 +434,6 @@
         <div class="cards">
 
 
-            <!-- SOCI -->
-
             <article class="card">
 
                 <h3 data-i18n="member_price_title">
@@ -464,8 +455,6 @@
 
 
 
-            <!-- FONDEIGS -->
-
             <article class="card">
 
                 <h3 data-i18n="mooring_title">
@@ -483,8 +472,6 @@
             </article>
 
 
-
-            <!-- JOVES -->
 
             <article class="card">
 
@@ -507,8 +494,6 @@
         </div>
 
 
-
-        <!-- ================= INFORMACIÓ NÀUTICA ================= -->
 
         <div class="nautica-extra">
 
@@ -559,8 +544,6 @@
         <div class="cards">
 
 
-            <!-- FOCS -->
-
             <article class="card">
 
                 <h3 data-i18n="fireworks_title">
@@ -576,8 +559,6 @@
             </article>
 
 
-
-            <!-- ECLIPSI -->
 
             <article class="card">
 
@@ -687,7 +668,9 @@
 
 
 
-        <!-- ================= PANEL MAR ================= -->
+        <!-- =================================================
+             DATOS ACTUALES
+             ================================================= -->
 
         <div class="marine-dashboard">
 
@@ -717,7 +700,7 @@
 
 
 
-            <!-- ESTADO MAR -->
+            <!-- OLEAJE -->
 
             <article class="marine-card">
 
@@ -795,7 +778,9 @@
 
 
 
-        <!-- ================= ACTUALIZACIÓN ================= -->
+        <!-- =================================================
+             ACTUALIZACIÓN
+             ================================================= -->
 
         <div class="marine-update">
 
@@ -810,12 +795,10 @@
         </div>
 
 
-        <!--
-        PREVISIÓ HORÀRIA
 
-        La connectarem en el següent pas
-        amb dades reals de Canyet · Rosamar.
-        -->
+        <!-- =================================================
+             PREVISIÓN HORARIA
+             ================================================= -->
 
         <div class="marine-forecast">
 
@@ -823,11 +806,14 @@
                 Previsió marítima
             </h3>
 
+
             <div id="marine-forecast-grid">
 
                 <div class="marine-forecast-placeholder"
                      data-i18n="marine_forecast_loading">
+
                     Carregant previsió...
+
                 </div>
 
             </div>
@@ -870,7 +856,9 @@
 
 
 
-        <!-- ================= LOGIN ================= -->
+        <!-- =================================================
+             LOGIN
+             ================================================= -->
 
         <div class="members-login"
              id="members-login">
@@ -919,7 +907,9 @@
 
 
 
-        <!-- ================= ÁREA PRIVADA ================= -->
+        <!-- =================================================
+             ÁREA PRIVADA
+             ================================================= -->
 
         <div class="members-private"
              id="members-private"
@@ -1123,7 +1113,7 @@
 
 
 <!-- =========================================================
-     IDIOMAS + FUNCIONES
+     JAVASCRIPT
      ========================================================= -->
 
 <script>
@@ -1151,7 +1141,6 @@ const translations = {
         nav_mar: "MAR I TEMPS",
         nav_contacto: "CONTACTE",
 
-
         hero_kicker:
             "CLUB NÀUTIC CANYET",
 
@@ -1161,13 +1150,11 @@ const translations = {
         hero_text:
             "Un espai únic al cor de la Costa Brava",
 
-
         quick_club:
             "EL CLUB",
 
         quick_club_text:
             "Història, fundació, valors i comunitat",
-
 
         quick_nautica:
             "NÀUTICA",
@@ -1175,13 +1162,11 @@ const translations = {
         quick_nautica_text:
             "Socis, fondejos, embarcacions i serveis",
 
-
         quick_activities:
             "ACTIVITATS",
 
         quick_activities_text:
             "Sortides especials i experiències al mar",
-
 
         quick_canyet:
             "CANYET",
@@ -1189,20 +1174,17 @@ const translations = {
         quick_canyet_text:
             "Història de la cala, pontets i entorn",
 
-
         quick_members:
             "SOCIS",
 
         quick_members_text:
             "Informació privada, avisos i documentació",
 
-
         quick_weather:
             "MAR I TEMPS",
 
         quick_weather_text:
             "Estat de la mar, vent i previsió a Canyet",
-
 
 
         /* CLUB */
@@ -1236,7 +1218,6 @@ const translations = {
 
         club_community_text:
             "Un club pensat per compartir experiències, navegar i mantenir viu l'esperit de Canyet.",
-
 
 
         /* NÀUTICA */
@@ -1284,7 +1265,6 @@ const translations = {
             "Informació sobre fondejos, boies, embarcacions, serveis i condicions d'ús del club.",
 
 
-
         /* ACTIVITATS */
 
         activities_kicker:
@@ -1309,7 +1289,6 @@ const translations = {
             "Una sortida especial per viure l'eclipsi des d'un lloc privilegiat: el mar davant de Canyet · Rosamar.",
 
 
-
         /* CANYET */
 
         canyet_kicker:
@@ -1326,7 +1305,6 @@ const translations = {
 
         canyet_text_3:
             "Un paisatge on la natura, la navegació i la història conviuen en un mateix espai.",
-
 
 
         /* MAR */
@@ -1360,7 +1338,6 @@ const translations = {
 
         marine_forecast_loading:
             "Carregant previsió...",
-
 
 
         /* SOCIS */
@@ -1417,7 +1394,6 @@ const translations = {
             "SORTIR",
 
 
-
         /* CONTACTE */
 
         contact_kicker:
@@ -1430,7 +1406,6 @@ const translations = {
             "Per a qualsevol consulta sobre el Club Nàutic Canyet, posa't en contacte amb nosaltres."
 
     },
-
 
 
     /* =====================================================
@@ -1448,7 +1423,6 @@ const translations = {
         nav_mar: "MAR Y TIEMPO",
         nav_contacto: "CONTACTO",
 
-
         hero_kicker:
             "CLUB NÀUTIC CANYET",
 
@@ -1458,13 +1432,11 @@ const translations = {
         hero_text:
             "Un espacio único en el corazón de la Costa Brava",
 
-
         quick_club:
             "EL CLUB",
 
         quick_club_text:
             "Historia, fundación, valores y comunidad",
-
 
         quick_nautica:
             "NÁUTICA",
@@ -1472,13 +1444,11 @@ const translations = {
         quick_nautica_text:
             "Socios, fondeos, embarcaciones y servicios",
 
-
         quick_activities:
             "ACTIVIDADES",
 
         quick_activities_text:
             "Salidas especiales y experiencias en el mar",
-
 
         quick_canyet:
             "CANYET",
@@ -1486,13 +1456,11 @@ const translations = {
         quick_canyet_text:
             "Historia de la cala, pontets y entorno",
 
-
         quick_members:
             "SOCIOS",
 
         quick_members_text:
             "Información privada, avisos y documentación",
-
 
         quick_weather:
             "MAR Y TIEMPO",
@@ -1501,6 +1469,7 @@ const translations = {
             "Estado del mar, viento y previsión en Canyet",
 
 
+        /* CLUB */
 
         club_kicker:
             "EL CLUB",
@@ -1533,6 +1502,7 @@ const translations = {
             "Un club pensado para compartir experiencias, navegar y mantener vivo el espíritu de Canyet.",
 
 
+        /* NÁUTICA */
 
         nautica_kicker:
             "NÁUTICA",
@@ -1577,6 +1547,7 @@ const translations = {
             "Información sobre fondeos, boyas, embarcaciones, servicios y condiciones de uso del club.",
 
 
+        /* ACTIVIDADES */
 
         activities_kicker:
             "ACTIVIDADES",
@@ -1600,6 +1571,7 @@ const translations = {
             "Una salida especial para vivir el eclipse desde un lugar privilegiado: el mar frente a Canyet · Rosamar.",
 
 
+        /* CANYET */
 
         canyet_kicker:
             "CANYET · ROSAMAR",
@@ -1617,6 +1589,7 @@ const translations = {
             "Un paisaje donde naturaleza, navegación e historia conviven en un mismo espacio.",
 
 
+        /* MAR */
 
         marine_kicker:
             "MAR Y TIEMPO",
@@ -1649,6 +1622,7 @@ const translations = {
             "Cargando previsión...",
 
 
+        /* SOCIOS */
 
         members_kicker:
             "SOCIOS",
@@ -1702,6 +1676,7 @@ const translations = {
             "SALIR",
 
 
+        /* CONTACTO */
 
         contact_kicker:
             "CONTACTO",
@@ -1713,7 +1688,6 @@ const translations = {
             "Para cualquier consulta sobre el Club Nàutic Canyet, ponte en contacto con nosotros."
 
     },
-
 
 
     /* =====================================================
@@ -1731,7 +1705,6 @@ const translations = {
         nav_mar: "MER ET MÉTÉO",
         nav_contacto: "CONTACT",
 
-
         hero_kicker:
             "CLUB NÀUTIC CANYET",
 
@@ -1741,13 +1714,11 @@ const translations = {
         hero_text:
             "Un lieu unique au cœur de la Costa Brava",
 
-
         quick_club:
             "LE CLUB",
 
         quick_club_text:
             "Histoire, fondation, valeurs et communauté",
-
 
         quick_nautica:
             "NAUTISME",
@@ -1755,13 +1726,11 @@ const translations = {
         quick_nautica_text:
             "Membres, mouillages, bateaux et services",
 
-
         quick_activities:
             "ACTIVITÉS",
 
         quick_activities_text:
             "Sorties spéciales et expériences en mer",
-
 
         quick_canyet:
             "CANYET",
@@ -1769,13 +1738,11 @@ const translations = {
         quick_canyet_text:
             "Histoire de la crique, pontets et environs",
 
-
         quick_members:
             "MEMBRES",
 
         quick_members_text:
             "Informations privées, avis et documentation",
-
 
         quick_weather:
             "MER ET MÉTÉO",
@@ -1784,6 +1751,7 @@ const translations = {
             "État de la mer, vent et prévisions à Canyet",
 
 
+        /* CLUB */
 
         club_kicker:
             "LE CLUB",
@@ -1816,6 +1784,7 @@ const translations = {
             "Un club conçu pour partager des expériences, naviguer et préserver l'esprit de Canyet.",
 
 
+        /* NÁUTICA */
 
         nautica_kicker:
             "NAUTISME",
@@ -1860,6 +1829,7 @@ const translations = {
             "Informations sur les mouillages, bouées, bateaux, services et conditions d'utilisation du club.",
 
 
+        /* ACTIVITATS */
 
         activities_kicker:
             "ACTIVITÉS",
@@ -1883,6 +1853,7 @@ const translations = {
             "Une sortie spéciale pour vivre l'éclipse depuis un lieu privilégié : la mer face à Canyet · Rosamar.",
 
 
+        /* CANYET */
 
         canyet_kicker:
             "CANYET · ROSAMAR",
@@ -1900,6 +1871,7 @@ const translations = {
             "Un paysage où nature, navigation et histoire se rencontrent.",
 
 
+        /* MAR */
 
         marine_kicker:
             "MER ET MÉTÉO",
@@ -1932,6 +1904,7 @@ const translations = {
             "Chargement des prévisions...",
 
 
+        /* SOCIS */
 
         members_kicker:
             "MEMBRES",
@@ -1985,6 +1958,7 @@ const translations = {
             "SORTIR",
 
 
+        /* CONTACT */
 
         contact_kicker:
             "CONTACT",
@@ -2078,10 +2052,9 @@ function changeLanguage(language) {
 /*
    PIN TEMPORAL
 
-   NO ES SEGURIDAD REAL.
-   Lo sustituiremos más adelante por un sistema
-   de acceso real cuando tengamos definida la zona
-   privada y dónde alojaremos la documentación.
+   Este PIN NO constituye seguridad real.
+   Más adelante podremos sustituirlo por un sistema
+   de autenticación real.
 */
 
 const MEMBER_PIN = "2026";
@@ -2176,7 +2149,7 @@ function logoutMembers() {
 
 
 /* =========================================================
-   ENTER CON ENTER EN EL PIN
+   ENTER EN EL PIN
    ========================================================= */
 
 document.addEventListener(
@@ -2215,12 +2188,978 @@ document.addEventListener(
 
 
 /* =========================================================
+   MAR I TEMPS
+   CANYET · ROSAMAR
+   ========================================================= */
+
+/*
+   Coordenadas utilizadas:
+
+   CANYET · ROSAMAR
+   Latitud:  41.7596
+   Longitud: 2.98205
+
+   Los datos se obtienen directamente desde
+   las APIs de Open-Meteo.
+
+   No se abre ninguna página externa.
+*/
+
+
+const CANYET_LAT =
+    41.7596;
+
+
+const CANYET_LON =
+    2.98205;
+
+
+
+/* =========================================================
+   DIRECCIÓN DEL VIENTO
+   ========================================================= */
+
+function windDirection(degrees) {
+
+    if (
+        degrees === null ||
+        degrees === undefined ||
+        Number.isNaN(degrees)
+    ) {
+
+        return "—";
+
+    }
+
+
+    const directions = [
+
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SO",
+        "O",
+        "NO"
+
+    ];
+
+
+    const index =
+        Math.round(
+            degrees / 45
+        ) % 8;
+
+
+    return directions[index];
+
+}
+
+
+
+/* =========================================================
+   ESTADO DE LA MAR
+   ========================================================= */
+
+function seaState(height) {
+
+    if (
+        height === null ||
+        height === undefined
+    ) {
+
+        return "—";
+
+    }
+
+
+    if (height < 0.3) {
+
+        return "Calma";
+
+    }
+
+
+    if (height < 0.7) {
+
+        return "Suave";
+
+    }
+
+
+    if (height < 1.2) {
+
+        return "Moderada";
+
+    }
+
+
+    if (height < 2.0) {
+
+        return "Movida";
+
+    }
+
+
+    if (height < 3.0) {
+
+        return "Fuerte";
+
+    }
+
+
+    return "Muy fuerte";
+
+}
+
+
+
+/* =========================================================
+   CARGAR DATOS METEOROLÓGICOS
+   ========================================================= */
+
+async function loadMarineWeather() {
+
+
+    try {
+
+
+        /* =================================================
+           TIEMPO
+           ================================================= */
+
+        const weatherURL =
+
+            "https://api.open-meteo.com/v1/forecast" +
+
+            "?latitude=" +
+            CANYET_LAT +
+
+            "&longitude=" +
+            CANYET_LON +
+
+            "&current=" +
+            "temperature_2m," +
+            "wind_speed_10m," +
+            "wind_direction_10m" +
+
+            "&hourly=" +
+            "temperature_2m," +
+            "wind_speed_10m," +
+            "wind_direction_10m" +
+
+            "&forecast_days=3" +
+
+            "&timezone=Europe%2FMadrid";
+
+
+
+        /* =================================================
+           MAR
+           ================================================= */
+
+        const marineURL =
+
+            "https://marine-api.open-meteo.com/v1/marine" +
+
+            "?latitude=" +
+            CANYET_LAT +
+
+            "&longitude=" +
+            CANYET_LON +
+
+            "&current=" +
+            "wave_height," +
+            "wave_direction," +
+            "wave_period," +
+            "sea_surface_temperature," +
+            "swell_wave_height" +
+
+            "&hourly=" +
+            "wave_height," +
+            "wave_direction," +
+            "wave_period," +
+            "swell_wave_height," +
+            "sea_surface_temperature" +
+
+            "&forecast_days=3" +
+
+            "&timezone=Europe%2FMadrid";
+
+
+
+        /* =================================================
+           PETICIONES
+           ================================================= */
+
+        const responses =
+            await Promise.all([
+
+                fetch(weatherURL),
+
+                fetch(marineURL)
+
+            ]);
+
+
+        const weatherResponse =
+            responses[0];
+
+
+        const marineResponse =
+            responses[1];
+
+
+        if (
+            !weatherResponse.ok ||
+            !marineResponse.ok
+        ) {
+
+            throw new Error(
+                "No se han podido obtener los datos."
+            );
+
+        }
+
+
+        const weather =
+            await weatherResponse.json();
+
+
+        const marine =
+            await marineResponse.json();
+
+
+
+        /* =================================================
+           DATOS ACTUALES
+           ================================================= */
+
+        const currentWeather =
+            weather.current || {};
+
+
+        const currentMarine =
+            marine.current || {};
+
+
+        const temperature =
+            currentWeather.temperature_2m;
+
+
+        const wind =
+            currentWeather.wind_speed_10m;
+
+
+        const windDegrees =
+            currentWeather.wind_direction_10m;
+
+
+        const wave =
+            currentMarine.wave_height;
+
+
+        const wavePeriod =
+            currentMarine.wave_period;
+
+
+        const seaTemperature =
+            currentMarine.sea_surface_temperature;
+
+
+
+        /* =================================================
+           TEMPERATURA DEL AIRE
+           ================================================= */
+
+        const temperatureElement =
+            document.getElementById(
+                "marine-temperature"
+            );
+
+
+        if (
+            temperatureElement &&
+            temperature !== null &&
+            temperature !== undefined
+        ) {
+
+            temperatureElement.textContent =
+                Math.round(
+                    temperature
+                );
+
+        }
+
+
+
+        /* =================================================
+           OLEAJE
+           ================================================= */
+
+        const waveElement =
+            document.getElementById(
+                "marine-wave"
+            );
+
+
+        if (waveElement) {
+
+            waveElement.textContent =
+                wave !== null &&
+                wave !== undefined
+
+                    ? wave.toFixed(1)
+
+                    : "—";
+
+        }
+
+
+
+        /* =================================================
+           VIENTO
+           ================================================= */
+
+        const windElement =
+            document.getElementById(
+                "marine-wind"
+            );
+
+
+        if (windElement) {
+
+            windElement.textContent =
+                wind !== null &&
+                wind !== undefined
+
+                    ? Math.round(
+                        wind
+                    )
+
+                    : "—";
+
+        }
+
+
+
+        /* =================================================
+           DIRECCIÓN
+           ================================================= */
+
+        const directionElement =
+            document.getElementById(
+                "marine-direction"
+            );
+
+
+        if (directionElement) {
+
+            directionElement.textContent =
+                windDirection(
+                    windDegrees
+                );
+
+        }
+
+
+
+        /* =================================================
+           AÑADIR INFORMACIÓN EXTRA
+           ================================================= */
+
+        updateMarineExtraInfo(
+            seaTemperature,
+            wavePeriod,
+            wave
+        );
+
+
+
+        /* =================================================
+           PREVISIÓN
+           ================================================= */
+
+        createMarineForecast(
+            weather,
+            marine
+        );
+
+
+
+        /* =================================================
+           ACTUALIZACIÓN
+           ================================================= */
+
+        const updateElement =
+            document.querySelector(
+                ".marine-update"
+            );
+
+
+        if (updateElement) {
+
+
+            const now =
+                new Date();
+
+
+            const time =
+                now.toLocaleTimeString(
+                    "ca-ES",
+                    {
+                        hour:
+                            "2-digit",
+
+                        minute:
+                            "2-digit"
+                    }
+                );
+
+
+            updateElement.innerHTML =
+
+                "<span>●</span>" +
+
+                "<span>" +
+
+                "ACTUALITZAT A LES " +
+
+                time +
+
+                " · CANYET" +
+
+                "</span>";
+
+        }
+
+
+    }
+
+    catch (error) {
+
+
+        console.error(
+            "Error cargando Mar i Temps:",
+            error
+        );
+
+
+        const updateElement =
+            document.querySelector(
+                ".marine-update"
+            );
+
+
+        if (updateElement) {
+
+            updateElement.innerHTML =
+
+                "<span>●</span>" +
+
+                "<span>" +
+
+                "Dades temporalment no disponibles" +
+
+                "</span>";
+
+        }
+
+    }
+
+}
+
+
+
+/* =========================================================
+   INFORMACIÓN EXTRA DE LA MAR
+   ========================================================= */
+
+function updateMarineExtraInfo(
+    seaTemperature,
+    wavePeriod,
+    wave
+) {
+
+
+    const marineSection =
+        document.querySelector(
+            ".marine-section"
+        );
+
+
+    if (!marineSection) {
+
+        return;
+
+    }
+
+
+    let extra =
+        document.getElementById(
+            "marine-extra-info"
+        );
+
+
+    if (!extra) {
+
+
+        extra =
+            document.createElement(
+                "div"
+            );
+
+
+        extra.id =
+            "marine-extra-info";
+
+
+        extra.className =
+            "marine-extra-info";
+
+
+        const forecast =
+            document.querySelector(
+                ".marine-forecast"
+            );
+
+
+        if (forecast) {
+
+            forecast.parentNode.insertBefore(
+                extra,
+                forecast
+            );
+
+        }
+
+    }
+
+
+    const waterText =
+        seaTemperature !== null &&
+        seaTemperature !== undefined
+
+            ? seaTemperature.toFixed(1) + " °C"
+
+            : "—";
+
+
+    const periodText =
+        wavePeriod !== null &&
+        wavePeriod !== undefined
+
+            ? wavePeriod.toFixed(1) + " s"
+
+            : "—";
+
+
+    const stateText =
+        seaState(
+            wave
+        );
+
+
+    extra.innerHTML = `
+
+        <div class="marine-extra-item">
+
+            <span>
+                🌊
+            </span>
+
+            <div>
+
+                <small>
+                    TEMPERATURA DE L'AIGUA
+                </small>
+
+                <strong>
+                    ${waterText}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="marine-extra-item">
+
+            <span>
+                〰
+            </span>
+
+            <div>
+
+                <small>
+                    PERÍODE DE L'ONA
+                </small>
+
+                <strong>
+                    ${periodText}
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="marine-extra-item">
+
+            <span>
+                ◉
+            </span>
+
+            <div>
+
+                <small>
+                    ESTAT ORIENTATIU
+                </small>
+
+                <strong>
+                    ${stateText}
+                </strong>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+
+/* =========================================================
+   PREVISIÓN HORARIA
+   ========================================================= */
+
+function createMarineForecast(
+    weather,
+    marine
+) {
+
+
+    const container =
+        document.getElementById(
+            "marine-forecast-grid"
+        );
+
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        "";
+
+
+    const weatherTimes =
+        weather.hourly &&
+        weather.hourly.time
+            ? weather.hourly.time
+            : [];
+
+
+    const marineTimes =
+        marine.hourly &&
+        marine.hourly.time
+            ? marine.hourly.time
+            : [];
+
+
+    const now =
+        new Date();
+
+
+    let shown =
+        0;
+
+
+    for (
+        let i = 0;
+        i < weatherTimes.length;
+        i++
+    ) {
+
+
+        if (
+            shown >= 12
+        ) {
+
+            break;
+
+        }
+
+
+        const date =
+            new Date(
+                weatherTimes[i]
+            );
+
+
+        if (
+            date < now
+        ) {
+
+            continue;
+
+        }
+
+
+        const marineIndex =
+            marineTimes.indexOf(
+                weatherTimes[i]
+            );
+
+
+        if (
+            marineIndex === -1
+        ) {
+
+            continue;
+
+        }
+
+
+        const hour =
+            date.toLocaleTimeString(
+                "ca-ES",
+                {
+                    hour:
+                        "2-digit",
+
+                    minute:
+                        "2-digit"
+                }
+            );
+
+
+        const temperature =
+            weather.hourly
+                .temperature_2m[i];
+
+
+        const wind =
+            weather.hourly
+                .wind_speed_10m[i];
+
+
+        const windDegrees =
+            weather.hourly
+                .wind_direction_10m[i];
+
+
+        const wave =
+            marine.hourly
+                .wave_height[
+                    marineIndex
+                ];
+
+
+        const period =
+            marine.hourly
+                .wave_period[
+                    marineIndex
+                ];
+
+
+
+        /* =================================================
+           TARJETA
+           ================================================= */
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            "marine-forecast-card";
+
+
+        card.innerHTML = `
+
+            <div class="marine-forecast-time">
+
+                ${hour}
+
+            </div>
+
+
+            <div class="marine-forecast-wave">
+
+                🌊
+
+                ${
+                    wave !== null &&
+                    wave !== undefined
+
+                        ? wave.toFixed(1)
+
+                        : "—"
+                }
+
+                m
+
+            </div>
+
+
+            <div class="marine-forecast-wind">
+
+                💨
+
+                ${
+                    wind !== null &&
+                    wind !== undefined
+
+                        ? Math.round(
+                            wind
+                        )
+
+                        : "—"
+                }
+
+                km/h
+
+            </div>
+
+
+            <div class="marine-forecast-direction">
+
+                🧭
+
+                ${
+                    windDirection(
+                        windDegrees
+                    )
+                }
+
+            </div>
+
+
+            <div class="marine-forecast-temperature">
+
+                ${
+                    temperature !== null &&
+                    temperature !== undefined
+
+                        ? Math.round(
+                            temperature
+                        )
+
+                        : "—"
+                }
+
+                °C
+
+            </div>
+
+
+            <div class="marine-forecast-period">
+
+                〰
+
+                ${
+                    period !== null &&
+                    period !== undefined
+
+                        ? period.toFixed(
+                            1
+                        )
+
+                        : "—"
+                }
+
+                s
+
+            </div>
+
+        `;
+
+
+        container.appendChild(
+            card
+        );
+
+
+        shown++;
+
+    }
+
+
+    if (
+        shown === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div class="marine-forecast-placeholder">
+
+                Dades de previsió temporalment no disponibles.
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ACTUALIZACIÓN AUTOMÁTICA
+   ========================================================= */
+
+let marineUpdateInterval;
+
+
+
+function startMarineUpdates() {
+
+
+    loadMarineWeather();
+
+
+    /*
+       Actualización cada 15 minutos.
+    */
+
+    marineUpdateInterval =
+        setInterval(
+
+            function () {
+
+                loadMarineWeather();
+
+            },
+
+            15 * 60 * 1000
+
+        );
+
+}
+
+
+
+/* =========================================================
    INICIALIZACIÓN
    ========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
+
+
+        /* ==============================
+           IDIOMA
+           ============================== */
 
         const savedLanguage =
             localStorage.getItem(
@@ -2231,6 +3170,48 @@ document.addEventListener(
         changeLanguage(
             savedLanguage
         );
+
+
+
+        /* ==============================
+           MAR Y TIEMPO
+           ============================== */
+
+        startMarineUpdates();
+
+
+
+        /* ==============================
+           PIN SOCIOS
+           ============================== */
+
+        const pinInput =
+            document.getElementById(
+                "members-pin"
+            );
+
+
+        if (pinInput) {
+
+
+            pinInput.addEventListener(
+                "keydown",
+                function (event) {
+
+
+                    if (
+                        event.key ===
+                        "Enter"
+                    ) {
+
+                        checkMemberPin();
+
+                    }
+
+                }
+            );
+
+        }
 
     }
 );
