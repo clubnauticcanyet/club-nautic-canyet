@@ -3,2204 +3,293 @@
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>Club Nàutic Canyet · Rosamar · Costa Brava</title>
-
-<meta name="description"
-      content="Club Nàutic Canyet · Rosamar · Costa Brava. Mar, natura, navegació, tradició i comunitat.">
-
-<style>
-
-/* =========================================================
-   CLUB NÀUTIC CANYET
-   ROSAMAR · COSTA BRAVA
-   INDEX COMPLETO · 2026
-   ========================================================= */
-
-
-/* ================= RESET ================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family:
-        Montserrat,
-        Arial,
-        sans-serif;
-
-    background: #061d2b;
-    color: #fff;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button,
-input {
-    font-family: inherit;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.header {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    min-height: 125px;
-
-    padding: 25px 42px;
-
-    display: flex;
-    align-items: flex-start;
-
-    z-index: 50;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(2,18,29,.78),
-            rgba(2,18,29,0)
-        );
-}
-
-
-/* LOGO */
-
-.logo {
-    width: 185px;
-    display: block;
-}
-
-.logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-/* MENU */
-
-.navigation {
-
-    display: flex;
-    align-items: center;
-
-    gap: 27px;
-
-    margin-left: auto;
-    margin-right: 25px;
-
-    padding-top: 14px;
-}
-
-.navigation a {
-
-    position: relative;
-
-    font-size: 11px;
-    font-weight: 500;
-
-    letter-spacing: 1.2px;
-
-    white-space: nowrap;
-
-    color: rgba(255,255,255,.94);
-
-    transition: .3s ease;
-}
-
-.navigation a:hover {
-    color: #e4b63d;
-}
-
-.navigation a.active::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    bottom: -11px;
-
-    height: 2px;
-
-    background: #d9aa39;
-}
-
-
-/* IDIOMAS */
-
-.language-selector {
-
-    position: absolute;
-
-    top: 15px;
-    right: 42px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 7px;
-
-    z-index: 60;
-}
-
-.language-selector button {
-
-    border: 0;
-    background: transparent;
-
-    color: rgba(255,255,255,.6);
-
-    cursor: pointer;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    padding: 2px;
-
-    transition: .25s ease;
-}
-
-.language-selector button:hover,
-.language-selector button.lang-active {
-    color: #e4b63d;
-}
-
-.language-selector span {
-    color: rgba(255,255,255,.35);
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-
-    position: relative;
-
-    width: 100%;
-    height: 100vh;
-
-    min-height: 720px;
-
-    display: flex;
-    align-items: center;
-
-    overflow: hidden;
-
-    background-image:
-        url("images/615FFDF4-5258-49DB-9107-8C424C19EF22.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero-overlay {
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(3,20,31,.82),
-            rgba(3,20,31,.48) 32%,
-            rgba(3,20,31,.08) 70%,
-            rgba(3,20,31,.20)
-        ),
-        linear-gradient(
-            to bottom,
-            rgba(2,17,27,.18),
-            rgba(2,17,27,0) 50%,
-            rgba(2,17,27,.62)
-        );
-}
-
-.hero-content {
-
-    position: relative;
-
-    z-index: 5;
-
-    width: min(680px,55%);
-
-    margin-left: 7%;
-
-    transform: translateY(55px);
-}
-
-.hero-kicker {
-
-    display: block;
-
-    margin-bottom: 18px;
-
-    color: #e2b43b;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 4px;
-}
-
-.hero h1 {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: clamp(48px,5vw,78px);
-
-    line-height: 1.04;
-
-    font-weight: 400;
-
-    letter-spacing: -1.5px;
-
-    text-transform: uppercase;
-
-    text-shadow:
-        0 5px 25px rgba(0,0,0,.35);
-}
-
-.hero-content::after {
-
-    content: "";
-
-    display: block;
-
-    width: 75px;
-    height: 3px;
-
-    margin-top: 28px;
-    margin-bottom: 23px;
-
-    background: #e1b13a;
-}
-
-.hero-content > p {
-
-    max-width: 520px;
-
-    margin-bottom: 25px;
-
-    color: rgba(255,255,255,.92);
-
-    font-size: 17px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   QUICK LINKS
-   ========================================================= */
-
-.quick-links {
-
-    position: absolute;
-
-    z-index: 15;
-
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 190px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(6,1fr);
-
-    background:
-        rgba(3,24,38,.38);
-
-    border-top:
-        1px solid rgba(255,255,255,.22);
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.quick-link {
-
-    position: relative;
-
-    min-width: 0;
-    height: 190px;
-
-    padding: 27px 25px 22px;
-
-    display: flex;
-    flex-direction: column;
-
-    border-right:
-        1px solid rgba(255,255,255,.18);
-
-    transition:
-        background .35s ease,
-        transform .35s ease;
-}
-
-.quick-link:last-child {
-    border-right: 0;
-}
-
-.quick-link:hover {
-    background: rgba(255,255,255,.07);
-}
-
-.quick-icon {
-
-    margin-bottom: 14px;
-
-    color: #e1b13a;
-
-    font-size: 23px;
-
-    line-height: 1;
-}
-
-.quick-link h3 {
-
-    margin-bottom: 8px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.quick-link p {
-
-    max-width: 180px;
-
-    color: rgba(255,255,255,.72);
-
-    font-size: 10px;
-
-    line-height: 1.55;
-}
-
-.quick-arrow {
-
-    position: absolute;
-
-    right: 25px;
-    bottom: 20px;
-
-    color: #e1b13a;
-
-    font-size: 21px;
-
-    transition: transform .3s ease;
-}
-
-.quick-link:hover .quick-arrow {
-    transform: translateX(6px);
-}
-
-
-/* =========================================================
-   SECCIONES GENERALES
-   ========================================================= */
-
-.section {
-
-    position: relative;
-
-    padding:
-        110px
-        7%;
-}
-
-.section-light {
-
-    background: #f4f1ea;
-
-    color: #092233;
-}
-
-.section-dark {
-
-    background: #061d2b;
-
-    color: #fff;
-}
-
-.container {
-
-    width: min(1180px,100%);
-
-    margin: 0 auto;
-}
-
-.section-kicker {
-
-    display: block;
-
-    margin-bottom: 18px;
-
-    color: #b48a28;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-}
-
-.section h2 {
-
-    max-width: 850px;
-
-    margin-bottom: 25px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(40px,4.5vw,64px);
-
-    line-height: 1.08;
-
-    font-weight: 400;
-}
-
-.section > .container > p {
-
-    max-width: 760px;
-
-    margin-bottom: 18px;
-
-    font-size: 16px;
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   CARDS GENERALES
-   ========================================================= */
-
-.cards {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 1px;
-
-    margin-top: 50px;
-
-    background:
-        rgba(255,255,255,.13);
-}
-
-.card {
-
-    position: relative;
-
-    padding: 34px;
-
-    min-height: 220px;
-
-    background: #092536;
-
-    transition:
-        transform .35s ease,
-        background .35s ease;
-}
-
-.card:hover {
-
-    transform: translateY(-5px);
-
-    background: #0c3043;
-}
-
-.card h3 {
-
-    margin-bottom: 17px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 27px;
-
-    font-weight: 400;
-}
-
-.card p {
-
-    color: rgba(255,255,255,.74);
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   NÁUTICA
-   ========================================================= */
-
-.nautica-price {
-
-    margin:
-        18px
-        0
-        12px;
-
-    color: #e1b13a;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 42px;
-
-    line-height: 1;
-}
-
-.nautica-note {
-
-    color: rgba(255,255,255,.55) !important;
-
-    font-size: 12px !important;
-}
-
-
-/* TARIFAS */
-
-.tariff-area {
-
-    margin-top: 55px;
-
-    padding: 35px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.018)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.12);
-}
-
-.tariff-area > h3 {
-
-    margin-bottom: 8px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 30px;
-
-    font-weight: 400;
-}
-
-.tariff-intro {
-
-    color:
-        rgba(255,255,255,.58);
-
-    font-size: 12px !important;
-
-    margin-bottom: 35px !important;
-}
-
-.tariff-block {
-
-    margin-top: 30px;
-}
-
-.tariff-block h4 {
-
-    margin-bottom: 12px;
-
-    color: #e1b13a;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    letter-spacing: .5px;
-}
-
-.tariff-subtitle {
-
-    color:
-        rgba(255,255,255,.5);
-
-    font-size: 12px;
-
-    margin-bottom: 12px;
-}
-
-.tariff-table-wrap {
-
-    overflow-x: auto;
-}
-
-.tariff-table {
-
-    width: 100%;
-
-    border-collapse: collapse;
-
-    font-size: 12px;
-}
-
-.tariff-table th {
-
-    padding:
-        13px
-        12px;
-
-    text-align: left;
-
-    color:
-        rgba(255,255,255,.48);
-
-    font-size: 9px;
-
-    letter-spacing: 1.3px;
-
-    text-transform: uppercase;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.13);
-}
-
-.tariff-table td {
-
-    padding:
-        15px
-        12px;
-
-    color:
-        rgba(255,255,255,.76);
-
-    border-bottom:
-        1px solid rgba(255,255,255,.07);
-}
-
-.tariff-table td strong {
-
-    color: #fff;
-
-    font-size: 13px;
-}
-
-.tariff-note {
-
-    margin-top: 13px;
-
-    color:
-        rgba(255,255,255,.45);
-
-    font-size: 10px !important;
-
-    line-height: 1.6 !important;
-}
-
-
-/* =========================================================
-   ACTIVIDADES
-   ========================================================= */
-
-.activity-section {
-
-    background:
-        linear-gradient(
-            135deg,
-            #f4f1ea,
-            #e9e5dc
-        );
-}
-
-.activity-intro {
-
-    max-width: 650px !important;
-
-    color: #455563;
-}
-
-.activity-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 25px;
-
-    margin-top: 50px;
-}
-
-.activity-card {
-
-    position: relative;
-
-    min-height: 580px;
-
-    padding: 0;
-
-    overflow: hidden;
-
-    background: #071e2d;
-
-    border:
-        1px solid rgba(9,34,51,.10);
-
-    box-shadow:
-        0 25px 60px rgba(5,25,37,.16);
-}
-
-.activity-card:hover {
-
-    transform:
-        translateY(-7px);
-}
-
-.activity-card-image {
-
-    width: 100%;
-    height: 330px;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition:
-        transform .7s ease;
-}
-
-.activity-card:hover
-.activity-card-image {
-
-    transform: scale(1.045);
-}
-
-.activity-card-content {
-
-    position: relative;
-
-    padding: 30px 32px 35px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #092536,
-            #061d2b
-        );
-}
-
-.activity-number {
-
-    position: absolute;
-
-    top: -27px;
-    right: 27px;
-
-    width: 54px;
-    height: 54px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #e1b13a;
-
-    color: #071d2a;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.25);
-}
-
-.activity-card h3 {
-
-    margin-bottom: 13px;
-
-    color: #fff;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 30px;
-
-    line-height: 1.1;
-}
-
-.activity-card p {
-
-    margin-bottom: 22px;
-
-    color:
-        rgba(255,255,255,.72);
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-.activity-meta {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 12px;
-}
-
-.activity-meta-item {
-
-    padding:
-        12px
-        14px;
-
-    background:
-        rgba(255,255,255,.045);
-
-    border-left:
-        2px solid #d9aa39;
-}
-
-.activity-meta-item span {
-
-    display: block;
-
-    margin-bottom: 5px;
-
-    color:
-        rgba(255,255,255,.43);
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-}
-
-.activity-meta-item strong {
-
-    color: #fff;
-
-    font-size: 12px;
-
-    font-weight: 500;
-
-    line-height: 1.45;
-}
-
-
-/* =========================================================
-   HISTORIA CANYET
-   ========================================================= */
-
-.section-image {
-
-    position: relative;
-
-    min-height: 780px;
-
-    display: flex;
-    align-items: center;
-
-    color: #fff;
-
-    background-image:
-        url("images/C78F305A-035D-4CB3-B26A-851DBDFA6B10.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-}
-
-.section-image-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(3,20,31,.88) 0%,
-            rgba(3,20,31,.68) 35%,
-            rgba(3,20,31,.30) 70%,
-            rgba(3,20,31,.35) 100%
-        ),
-        linear-gradient(
-            to bottom,
-            rgba(3,20,31,.18),
-            rgba(3,20,31,.55)
-        );
-}
-
-.section-image-content {
-
-    position: relative;
-
-    z-index: 2;
-}
-
-.canyet-story {
-
-    max-width: 880px;
-
-    padding:
-        70px
-        0;
-}
-
-.canyet-story h2 {
-
-    max-width: 800px;
-
-    margin-bottom: 35px;
-}
-
-.canyet-story p {
-
-    max-width: 790px;
-
-    margin-bottom: 17px;
-
-    color:
-        rgba(255,255,255,.88);
-
-    font-size: 14px;
-
-    line-height: 1.72;
-}
-
-.canyet-story p strong {
-
-    color: #e1b13a;
-
-    font-weight: 600;
-}
-
-.canyet-story::after {
-
-    content: "";
-
-    display: block;
-
-    width: 70px;
-    height: 3px;
-
-    margin-top: 28px;
-
-    background: #e1b13a;
-}
-
-
-/* =========================================================
-   MAR I TEMPS
-   ========================================================= */
-
-.marine-section {
-
-    position: relative;
-
-    padding:
-        110px
-        7%;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            #041824,
-            #082b3d 50%,
-            #061d2b
-        );
-}
-
-.marine-section::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle at 80% 15%,
-            rgba(225,177,58,.09),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 15% 85%,
-            rgba(65,170,200,.09),
-            transparent 35%
-        );
-
-    pointer-events: none;
-}
-
-.marine-section .container {
-
-    position: relative;
-
-    z-index: 2;
-}
-
-.marine-section h2 {
-
-    margin-bottom: 18px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(42px,5vw,68px);
-
-    font-weight: 400;
-}
-
-.marine-intro {
-
-    max-width: 650px;
-
-    color:
-        rgba(255,255,255,.70);
-
-    font-size: 15px;
-
-    line-height: 1.7;
-}
-
-.marine-location {
-
-    display: inline-flex;
-
-    margin:
-        20px
-        0
-        45px;
-
-    padding:
-        10px
-        15px;
-
-    border:
-        1px solid rgba(225,177,58,.42);
-
-    background:
-        rgba(255,255,255,.035);
-
-    color:
-        rgba(255,255,255,.78);
-
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-}
-
-
-/* DASHBOARD */
-
-.marine-dashboard {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 1px;
-
-    background:
-        rgba(255,255,255,.13);
-
-    border:
-        1px solid rgba(255,255,255,.10);
-
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.20);
-}
-
-.marine-card {
-
-    position: relative;
-
-    min-height: 250px;
-
-    padding:
-        30px;
-
-    display: flex;
-    flex-direction: column;
-
-    background:
-        rgba(3,25,38,.78);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    transition:
-        transform .3s ease,
-        background .3s ease;
-}
-
-.marine-card:hover {
-
-    transform:
-        translateY(-5px);
-
-    background:
-        rgba(8,43,61,.95);
-}
-
-.marine-icon {
-
-    margin-bottom: 25px;
-
-    font-size: 27px;
-}
-
-.marine-label {
-
-    margin-bottom: 13px;
-
-    color:
-        rgba(255,255,255,.48);
-
-    font-size: 9px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
-.marine-card strong {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 48px;
-
-    font-weight: 400;
-
-    line-height: 1;
-}
-
-.marine-card small {
-
-    margin-top: 9px;
-
-    color: #e1b13a;
-
-    font-size: 11px;
-}
-
-
-/* ACTUALIZACIÓN */
-
-.marine-update {
-
-    display: flex;
-    align-items: center;
-
-    gap: 9px;
-
-    margin-top: 22px;
-
-    color:
-        rgba(255,255,255,.42);
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-}
-
-.marine-update > span:first-child {
-    color: #67bd7e;
-}
-
-
-/* INFO EXTRA */
-
-.marine-extra-info {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 1px;
-
-    margin-top: 28px;
-
-    background:
-        rgba(255,255,255,.10);
-}
-
-.marine-extra-item {
-
-    padding:
-        20px;
-
-    display: flex;
-    align-items: center;
-
-    gap: 13px;
-
-    background:
-        rgba(255,255,255,.025);
-}
-
-.marine-extra-item > span {
-
-    font-size: 20px;
-}
-
-.marine-extra-item small {
-
-    display: block;
-
-    margin-bottom: 5px;
-
-    color:
-        rgba(255,255,255,.40);
-
-    font-size: 8px;
-
-    letter-spacing: 1px;
-}
-
-.marine-extra-item strong {
-
-    font-size: 14px;
-
-    font-weight: 500;
-}
-
-
-/* PREVISIÓN */
-
-.marine-forecast {
-
-    margin-top: 45px;
-}
-
-.marine-forecast h3 {
-
-    margin-bottom: 20px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 29px;
-
-    font-weight: 400;
-}
-
-.marine-forecast-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(6,1fr);
-
-    gap: 8px;
-}
-
-.marine-forecast-card {
-
-    padding:
-        18px
-        14px;
-
-    background:
-        rgba(255,255,255,.045);
-
-    border:
-        1px solid rgba(255,255,255,.07);
-
-    transition:
-        background .3s ease;
-}
-
-.marine-forecast-card:hover {
-    background:
-        rgba(255,255,255,.09);
-}
-
-.marine-forecast-time {
-
-    margin-bottom: 15px;
-
-    color: #e1b13a;
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-.marine-forecast-card div:not(.marine-forecast-time) {
-
-    margin-top: 7px;
-
-    color:
-        rgba(255,255,255,.68);
-
-    font-size: 10px;
-}
-
-.marine-forecast-temperature {
-
-    color: #fff !important;
-
-    font-size: 17px !important;
-}
-
-
-/* =========================================================
-   ÁREA PRIVADA
-   ========================================================= */
-
-.members-login {
-
-    max-width: 550px;
-
-    margin-top: 45px;
-
-    padding: 35px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.07),
-            rgba(255,255,255,.025)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.12);
-}
-
-.members-login h3 {
-
-    margin-bottom: 10px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 27px;
-
-    font-weight: 400;
-}
-
-.members-login p {
-
-    color:
-        rgba(255,255,255,.60);
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-.members-pin-form {
-
-    display: flex;
-
-    gap: 10px;
-
-    margin-top: 20px;
-}
-
-.members-pin-form input {
-
-    width: 180px;
-
-    padding:
-        14px;
-
-    border:
-        1px solid rgba(255,255,255,.15);
-
-    background:
-        rgba(0,0,0,.18);
-
-    color: #fff;
-
-    outline: none;
-}
-
-.members-pin-form button {
-
-    padding:
-        0 25px;
-
-    border: 0;
-
-    background: #d9aa39;
-
-    color: #071d2a;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-}
-
-.members-error {
-
-    color: #e98a8a !important;
-
-    margin-top: 12px;
-}
-
-.members-private {
-
-    margin-top: 45px;
-}
-
-.members-private h3 {
-
-    margin-bottom: 12px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 35px;
-
-    font-weight: 400;
-}
-
-.members-private > p {
-
-    color:
-        rgba(255,255,255,.64);
-}
-
-.members-private-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 15px;
-
-    margin-top: 30px;
-}
-
-.member-private-card {
-
-    padding: 27px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.07),
-            rgba(255,255,255,.025)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.10);
-
-    transition:
-        transform .3s ease;
-}
-
-.member-private-card:hover {
-    transform: translateY(-4px);
-}
-
-.member-private-card > span {
-
-    display: block;
-
-    margin-bottom: 15px;
-
-    font-size: 24px;
-}
-
-.member-private-card h4 {
-
-    margin-bottom: 10px;
-
-    color: #fff;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 23px;
-
-    font-weight: 400;
-}
-
-.member-private-card p {
-
-    color:
-        rgba(255,255,255,.60);
-
-    font-size: 12px;
-
-    line-height: 1.6;
-}
-
-.private-summary {
-
-    grid-column:
-        1 / -1;
-
-    border-left:
-        3px solid #d9aa39;
-}
-
-.private-summary ul {
-
-    margin:
-        20px
-        0;
-
-    padding-left: 18px;
-}
-
-.private-summary li {
-
-    margin-bottom: 10px;
-
-    color:
-        rgba(255,255,255,.75);
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-.document-link {
-
-    display: inline-flex;
-
-    margin-top: 8px;
-
-    padding:
-        13px
-        18px;
-
-    background: #d9aa39;
-
-    color: #071d2a;
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.members-logout {
-
-    margin-top: 25px;
-
-    padding:
-        12px
-        20px;
-
-    border:
-        1px solid rgba(255,255,255,.2);
-
-    background: transparent;
-
-    color: #fff;
-
-    cursor: pointer;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   CONTACTO
-   ========================================================= */
-
-.contact-info {
-
-    margin-top: 35px;
-}
-
-.contact-info p {
-
-    margin-bottom: 9px;
-
-    font-size: 14px;
-}
-
-.contact-info a {
-    color: #a37a20;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-
-    padding:
-        45px 7%;
-
-    background: #041520;
-
-    color:
-        rgba(255,255,255,.48);
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-}
-
-.footer p {
-    margin-bottom: 7px;
-}
-
-
-/* =========================================================
-   TABLET HORIZONTAL
-   ========================================================= */
-
-@media (max-width:1150px) {
-
-    .header {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .logo {
-        width: 155px;
-    }
-
-    .navigation {
-        gap: 16px;
-        margin-right: 10px;
-    }
-
-    .navigation a {
-        font-size: 9px;
-    }
-
-    .language-selector {
-        right: 25px;
-    }
-
-    .quick-links {
-        height: 175px;
-    }
-
-    .quick-link {
-        height: 175px;
-        padding: 22px 18px;
-    }
-
-    .quick-link h3 {
-        font-size: 18px;
-    }
-
-    .quick-link p {
-        font-size: 9px;
-    }
-
-    .marine-dashboard {
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .marine-forecast-grid {
-        grid-template-columns:
-            repeat(3,1fr);
-    }
-
-    .activity-card-image {
-        height: 280px;
-    }
-}
-
-
-/* =========================================================
-   TABLET VERTICAL
-   ========================================================= */
-
-@media (max-width:900px) {
-
-    .navigation {
-        display: none;
-    }
-
-    .language-selector {
-        top: 22px;
-        right: 25px;
-    }
-
-    .hero-content {
-        width: 68%;
-        margin-left: 6%;
-    }
-
-    .quick-links {
-
-        display: flex;
-
-        height: 175px;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        scrollbar-width: none;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .quick-links::-webkit-scrollbar {
-        display: none;
-    }
-
-    .quick-link {
-
-        flex:
-            0 0 205px;
-
-        min-width: 205px;
-
-        height: 175px;
-
-        padding:
-            25px
-            22px;
-    }
-
-    .cards {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .activity-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .marine-dashboard {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .marine-extra-info {
-        grid-template-columns:
-            1fr 1fr 1fr;
-    }
-
-    .marine-forecast-grid {
-        grid-template-columns:
-            repeat(3,1fr);
-    }
-
-    .members-private-grid {
-        grid-template-columns:
-            1fr 1fr;
-    }
-}
-
-
-/* =========================================================
-   MÓVIL
-   ========================================================= */
-
-@media (max-width:600px) {
-
-    .header {
-
-        height: 95px;
-
-        padding:
-            17px
-            20px;
-    }
-
-    .logo {
-        width: 130px;
-    }
-
-    .language-selector {
-        top: 17px;
-        right: 18px;
-    }
-
-    .hero {
-
-        min-height: 760px;
-
-        height: 100svh;
-
-        align-items: flex-start;
-
-        background-position:
-            60% center;
-    }
-
-    .hero-overlay {
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(2,18,29,.22),
-                rgba(2,18,29,.30) 38%,
-                rgba(2,18,29,.92) 100%
-            );
-    }
-
-    .hero-content {
-
-        width: 100%;
-
-        margin: 0;
-
-        padding:
-            245px
-            25px
-            220px;
-
-        transform: none;
-    }
-
-    .hero-kicker {
-
-        font-size: 9px;
-
-        letter-spacing: 2.7px;
-    }
-
-    .hero h1 {
-        font-size: 41px;
-    }
-
-    .hero-content > p {
-        font-size: 14px;
-    }
-
-
-    /* QUICK */
-
-    .quick-links {
-
-        height: 150px;
-
-        background:
-            rgba(3,24,38,.48);
-    }
-
-    .quick-link {
-
-        flex:
-            0 0 195px;
-
-        min-width: 195px;
-
-        height: 150px;
-
-        padding:
-            18px;
-    }
-
-    .quick-icon {
-        margin-bottom: 10px;
-        font-size: 20px;
-    }
-
-    .quick-link h3 {
-        font-size: 18px;
-    }
-
-    .quick-link p {
-        font-size: 9px;
-    }
-
-
-    /* SECCIONES */
-
-    .section {
-        padding:
-            78px
-            25px;
-    }
-
-    .section h2 {
-        font-size: 40px;
-    }
-
-    .cards {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    /* NÁUTICA */
-
-    .tariff-area {
-        padding: 20px;
-    }
-
-    .tariff-table {
-        min-width: 600px;
-    }
-
-
-    /* ACTIVIDADES */
-
-    .activity-grid {
-        gap: 18px;
-    }
-
-    .activity-card {
-        min-height: auto;
-    }
-
-    .activity-card-image {
-        height: 235px;
-    }
-
-    .activity-card-content {
-        padding:
-            27px
-            23px
-            28px;
-    }
-
-    .activity-card h3 {
-        font-size: 26px;
-    }
-
-    .activity-meta {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    /* HISTORIA */
-
-    .section-image {
-        min-height: 800px;
-
-        background-position:
-            58% center;
-    }
-
-    .section-image-overlay {
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(3,20,31,.35),
-                rgba(3,20,31,.72) 42%,
-                rgba(3,20,31,.93)
-            );
-    }
-
-    .canyet-story {
-        padding:
-            50px
-            0;
-    }
-
-    .canyet-story p {
-        font-size: 13px;
-        line-height: 1.68;
-    }
-
-
-    /* MAR */
-
-    .marine-section {
-        padding:
-            78px
-            25px;
-    }
-
-    .marine-section h2 {
-        font-size: 40px;
-    }
-
-    .marine-dashboard {
-        grid-template-columns:
-            1fr;
-    }
-
-    .marine-card {
-        min-height: 180px;
-    }
-
-    .marine-extra-info {
-        grid-template-columns:
-            1fr;
-    }
-
-    .marine-forecast-grid {
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-
-    /* SOCIOS */
-
-    .members-pin-form {
-        flex-direction: column;
-    }
-
-    .members-pin-form input {
-        width: 100%;
-    }
-
-    .members-pin-form button {
-        min-height: 45px;
-    }
-
-    .members-private-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .private-summary {
-        grid-column: auto;
-    }
-
-}
-
-
-/* =========================================================
-   MÓVIL PEQUEÑO
-   ========================================================= */
-
-@media (max-width:400px) {
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .logo {
-        width: 115px;
-    }
-
-    .hero-content {
-        padding-top: 230px;
-    }
-
-    .quick-link {
-        flex-basis: 180px;
-        min-width: 180px;
-    }
-
-    .marine-section h2 {
-        font-size: 36px;
-    }
-
-}
-
-
-/* =========================================================
-   ANIMACIONES
-   ========================================================= */
-
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-content {
-    animation:
-        fadeUp .9s ease both;
-}
-
-.activity-card,
-.card {
-    will-change: transform;
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Club Nàutic Canyet · Rosamar · Costa Brava
+    </title>
+
+    <meta name="description"
+          content="Club Nàutic Canyet · Rosamar · Costa Brava. Mar, natura, navegació, tradició i comunitat.">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <style>
+
+        /* =====================================================
+           EFECTOS PREMIUM · CLUB NÀUTIC CANYET
+           ===================================================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .activity-card-premium {
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease,
+                background 0.4s ease;
+        }
+
+        .activity-card-premium::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(225,177,58,0.16),
+                    transparent 45%
+                );
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .activity-card-premium:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 22px 55px rgba(0,0,0,0.28);
+        }
+
+        .activity-card-premium:hover::before {
+            opacity: 1;
+        }
+
+        .marine-compass {
+            display: inline-block;
+            transition:
+                transform 1.2s ease;
+        }
+
+        .marine-card:hover .marine-compass {
+            transform: rotate(18deg);
+        }
+
+        .members-login {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .members-login::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(225,177,58,0.13),
+                    transparent 35%
+                );
+            pointer-events: none;
+        }
+
+        .members-private {
+            animation:
+                privateAreaIn 0.7s ease both;
+        }
+
+        @keyframes privateAreaIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .member-private-card {
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .member-private-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .final-statement {
+            position: relative;
+            padding: 120px 7%;
+            text-align: center;
+            color: #ffffff;
+            background:
+                linear-gradient(
+                    135deg,
+                    #041520 0%,
+                    #082b3d 50%,
+                    #061d2b 100%
+                );
+            overflow: hidden;
+        }
+
+        .final-statement::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            top: -220px;
+            right: -100px;
+            background:
+                rgba(225,177,58,0.06);
+            pointer-events: none;
+        }
+
+        .final-statement::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            bottom: -180px;
+            left: -80px;
+            background:
+                rgba(55,140,170,0.08);
+            pointer-events: none;
+        }
+
+        .final-statement-content {
+            position: relative;
+            z-index: 2;
+            width: min(900px,100%);
+            margin: 0 auto;
+        }
+
+        .final-statement-kicker {
+            display: block;
+            margin-bottom: 20px;
+            color: #e1b13a;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .final-statement h2 {
+            margin-bottom: 25px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size: clamp(40px,5vw,68px);
+            line-height: 1.08;
+            font-weight: 400;
+        }
+
+        .final-statement p {
+            max-width: 720px;
+            margin: 0 auto;
+            color:
+                rgba(255,255,255,0.72);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           CANYET · HISTORIA
+           ===================================================== */
+
+        .history-story {
+            max-width: 900px;
+        }
+
+        .history-story p {
+            max-width: 850px;
+        }
+
+        .history-highlight {
+            margin-top: 38px;
+            padding: 28px 32px;
+            border-left: 2px solid #e1b13a;
+            background:
+                rgba(255,255,255,0.055);
+        }
+
+        .history-highlight strong {
+            display: block;
+            margin-bottom: 9px;
+            color: #e1b13a;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =====================================================
+           ACTIVIDADES · IMAGEN
+           ===================================================== */
+
+        .activity-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 28px;
+        }
+
+        .activity-date {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #e1b13a;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .activity-details {
+            margin-top: 15px;
+            color:
+                rgba(255,255,255,0.72);
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .activity-details strong {
+            color: #ffffff;
+        }
+
+        /* =====================================================
+           RESPONSIVE FINAL
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .final-statement {
+                padding:
+                    85px
+                    25px;
+            }
+
+            .final-statement h2 {
+                font-size: 39px;
+            }
+
+            .final-statement p {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -2214,7 +303,8 @@ input {
 
 <header class="header">
 
-    <a href="#inicio" class="logo">
+    <a href="#inicio"
+       class="logo">
 
         <img
             src="images/6468DE60-AED8-4554-BC22-8978B873ECDF.png"
@@ -2295,6 +385,10 @@ input {
 
 
 
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
 <main>
 
 
@@ -2307,6 +401,7 @@ input {
 
     <div class="hero-overlay"></div>
 
+
     <div class="hero-content">
 
         <span class="hero-kicker"
@@ -2314,10 +409,12 @@ input {
             CLUB NÀUTIC CANYET
         </span>
 
+
         <h1 data-i18n="hero_title">
             MAR, NATURA<br>
             I TRADICIÓ
         </h1>
+
 
         <p data-i18n="hero_text">
             Un espai únic al cor de la Costa Brava
@@ -2325,119 +422,153 @@ input {
 
     </div>
 
-
-    <section class="quick-links">
-
-
-        <a href="#club"
-           class="quick-link">
-
-            <span class="quick-icon">⛵</span>
-
-            <h3 data-i18n="quick_club">
-                EL CLUB
-            </h3>
-
-            <p data-i18n="quick_club_text">
-                Història, fundació, valors i comunitat
-            </p>
-
-            <span class="quick-arrow">→</span>
-
-        </a>
+</section>
 
 
-        <a href="#nautica"
-           class="quick-link">
 
-            <span class="quick-icon">⚓</span>
+<!-- =========================================================
+     ENLACES INFERIORES
+     ========================================================= -->
 
-            <h3 data-i18n="quick_nautica">
-                NÀUTICA
-            </h3>
-
-            <p data-i18n="quick_nautica_text">
-                Socis, fondejos, embarcacions i serveis
-            </p>
-
-            <span class="quick-arrow">→</span>
-
-        </a>
+<section class="quick-links">
 
 
-        <a href="#actividades"
-           class="quick-link">
+    <a href="#club"
+       class="quick-link">
 
-            <span class="quick-icon">◉</span>
+        <span class="quick-icon">
+            ⛵
+        </span>
 
-            <h3 data-i18n="quick_activities">
-                ACTIVITATS
-            </h3>
+        <h3 data-i18n="quick_club">
+            EL CLUB
+        </h3>
 
-            <p data-i18n="quick_activities_text">
-                Sortides especials i experiències al mar
-            </p>
+        <p data-i18n="quick_club_text">
+            Història, fundació, valors i comunitat
+        </p>
 
-            <span class="quick-arrow">→</span>
+        <span class="quick-arrow">
+            →
+        </span>
 
-        </a>
-
-
-        <a href="#canyet"
-           class="quick-link">
-
-            <span class="quick-icon">☀</span>
-
-            <h3 data-i18n="quick_canyet">
-                CANYET
-            </h3>
-
-            <p data-i18n="quick_canyet_text">
-                Història de la cala, pontets i entorn
-            </p>
-
-            <span class="quick-arrow">→</span>
-
-        </a>
+    </a>
 
 
-        <a href="#socios"
-           class="quick-link">
 
-            <span class="quick-icon">♧</span>
+    <a href="#nautica"
+       class="quick-link">
 
-            <h3 data-i18n="quick_members">
-                SOCIS
-            </h3>
+        <span class="quick-icon">
+            ⚓
+        </span>
 
-            <p data-i18n="quick_members_text">
-                Informació privada, avisos i documentació
-            </p>
+        <h3 data-i18n="quick_nautica">
+            NÀUTICA
+        </h3>
 
-            <span class="quick-arrow">→</span>
+        <p data-i18n="quick_nautica_text">
+            Socis, fondejos, embarcacions i serveis
+        </p>
 
-        </a>
+        <span class="quick-arrow">
+            →
+        </span>
 
-
-        <a href="#maritemps"
-           class="quick-link">
-
-            <span class="quick-icon">🌊</span>
-
-            <h3 data-i18n="quick_weather">
-                MAR I TEMPS
-            </h3>
-
-            <p data-i18n="quick_weather_text">
-                Estat de la mar, vent i previsió a Canyet
-            </p>
-
-            <span class="quick-arrow">→</span>
-
-        </a>
+    </a>
 
 
-    </section>
+
+    <a href="#actividades"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ◉
+        </span>
+
+        <h3 data-i18n="quick_activities">
+            ACTIVITATS
+        </h3>
+
+        <p data-i18n="quick_activities_text">
+            Sortides especials i experiències al mar
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <a href="#canyet"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ☀
+        </span>
+
+        <h3 data-i18n="quick_canyet">
+            CANYET
+        </h3>
+
+        <p data-i18n="quick_canyet_text">
+            Història de la cala, pontets i entorn
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <a href="#socios"
+       class="quick-link">
+
+        <span class="quick-icon">
+            ♧
+        </span>
+
+        <h3 data-i18n="quick_members">
+            SOCIS
+        </h3>
+
+        <p data-i18n="quick_members_text">
+            Informació privada, avisos i documentació
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <a href="#maritemps"
+       class="quick-link">
+
+        <span class="quick-icon">
+            🌊
+        </span>
+
+        <h3 data-i18n="quick_weather">
+            MAR I TEMPS
+        </h3>
+
+        <p data-i18n="quick_weather_text">
+            Estat de la mar, vent i previsió a Canyet
+        </p>
+
+        <span class="quick-arrow">
+            →
+        </span>
+
+    </a>
+
 
 </section>
 
@@ -2448,24 +579,28 @@ input {
      ========================================================= -->
 
 <section id="club"
-         class="section section-light">
+         class="section section-light reveal">
 
     <div class="container">
+
 
         <span class="section-kicker"
               data-i18n="club_kicker">
             EL CLUB
         </span>
 
+
         <h2 data-i18n="club_title">
             Un club nàutic amb identitat pròpia
         </h2>
+
 
         <p data-i18n="club_text_1">
             El Club Nàutic Canyet neix amb una vocació clara:
             preservar una manera de viure el mar, la costa i
             la comunitat de Canyet · Rosamar.
         </p>
+
 
         <p data-i18n="club_text_2">
             Més que un espai per a la navegació, el club és un
@@ -2475,6 +610,7 @@ input {
 
 
         <div class="cards">
+
 
             <article class="card">
 
@@ -2519,6 +655,7 @@ input {
 
             </article>
 
+
         </div>
 
     </div>
@@ -2532,18 +669,21 @@ input {
      ========================================================= -->
 
 <section id="nautica"
-         class="section section-dark">
+         class="section section-dark reveal">
 
     <div class="container">
+
 
         <span class="section-kicker"
               data-i18n="nautica_kicker">
             NÀUTICA
         </span>
 
+
         <h2 data-i18n="nautica_title">
             El mar com a forma de vida
         </h2>
+
 
         <p data-i18n="nautica_text">
             Ser soci del Club Nàutic Canyet significa formar
@@ -2555,59 +695,45 @@ input {
         <div class="cards">
 
 
-            <!-- CUOTA -->
-
             <article class="card">
 
                 <h3 data-i18n="member_price_title">
-                    Quota de soci
+                    Soci del Club
                 </h3>
 
                 <p data-i18n="member_price_text">
-                    Quota bàsica del Club.
+                    Quota anual de soci:
+                    <strong>250 €</strong>.
                 </p>
 
-                <div class="nautica-price">
-                    250 €
-                </div>
-
-                <p class="nautica-note"
-                   data-i18n="member_price_note">
-                    Quota anual de soci.
+                <p data-i18n="member_mooring_text">
+                    Adhesió al Club:
+                    <strong>1.500 €</strong>,
+                    pagament únic a fons perdut.
                 </p>
 
             </article>
 
 
-            <!-- ADHESIÓN -->
 
             <article class="card">
 
-                <h3 data-i18n="adhesion_title">
-                    Adhesió al Club
+                <h3 data-i18n="mooring_title">
+                    Fondejos
                 </h3>
 
-                <p data-i18n="adhesion_text">
-                    Per fer-se soci del CN Canyet, s'ha d'abonar
-                    una quota d'entrada única de 1.500 €. Aquest
-                    pagament és a fons perdut: es paga una sola
-                    vegada i no es recupera si el soci decideix
-                    abandonar el Club.
+                <p data-i18n="mooring_text">
+                    Els fondejos es gestionen segons les
+                    condicions i tarifes vigents del Club.
                 </p>
 
-                <div class="nautica-price">
-                    1.500 €
-                </div>
-
-                <p class="nautica-note"
-                   data-i18n="adhesion_note">
-                    Pagament únic · a fons perdut.
+                <p data-i18n="mooring_price_pending">
+                    Tarifes 2026: consultar.
                 </p>
 
             </article>
 
 
-            <!-- JOVES -->
 
             <article class="card">
 
@@ -2616,17 +742,12 @@ input {
                 </h3>
 
                 <p data-i18n="young_text">
-                    Els menors de 32 anys no paguen l'adhesió
-                    al Club.
+                    Per a menors de 32 anys.
+                    No paguen l'adhesió al Club.
                 </p>
 
-                <div class="nautica-price">
-                    0 €
-                </div>
-
-                <p class="nautica-note"
-                   data-i18n="young_note">
-                    Exempció de la quota d'adhesió.
+                <p data-i18n="young_price_pending">
+                    Condicions i tarifes segons normativa 2026.
                 </p>
 
             </article>
@@ -2636,324 +757,16 @@ input {
 
 
 
-        <!-- =================================================
-             TARIFES 2026
-             ================================================= -->
+        <div class="nautica-extra">
 
-        <div class="tariff-area">
-
-            <h3 data-i18n="tariff_title">
-                Tarifes temporada 2026
+            <h3 data-i18n="nautica_services_title">
+                Serveis i fondejos
             </h3>
 
-            <p class="tariff-intro"
-               data-i18n="tariff_intro">
-                Tarifes del Club Nàutic Canyet · Temporada 2026.
+            <p data-i18n="nautica_services_text">
+                Informació sobre fondejos, boies, embarcacions,
+                serveis i condicions d'ús del club.
             </p>
-
-
-            <!-- SOCIS -->
-
-            <div class="tariff-block">
-
-                <h4 data-i18n="tariff_members_title">
-                    Tarifa socis
-                </h4>
-
-                <div class="tariff-table-wrap">
-
-                    <table class="tariff-table">
-
-                        <thead>
-
-                            <tr>
-                                <th data-i18n="tariff_concept">
-                                    Concepte
-                                </th>
-
-                                <th data-i18n="tariff_gross">
-                                    Preu brut
-                                </th>
-
-                                <th data-i18n="tariff_vat">
-                                    IVA (21 %)
-                                </th>
-
-                                <th data-i18n="tariff_final">
-                                    Preu final
-                                </th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td data-i18n="tariff_basic">
-                                    Quota bàsica
-                                </td>
-                                <td>250 €</td>
-                                <td>—</td>
-                                <td><strong>250 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td data-i18n="tariff_u399">
-                                    Fins a 3,99 m
-                                </td>
-                                <td>820 €</td>
-                                <td>172,20 €</td>
-                                <td><strong>992,20 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td data-i18n="tariff_400599">
-                                    Entre 4,0 i 5,99 m
-                                </td>
-                                <td>1.181 €</td>
-                                <td>248,01 €</td>
-                                <td><strong>1.429,01 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td data-i18n="tariff_600799">
-                                    Entre 6,0 i 7,99 m (*)
-                                </td>
-                                <td>1.505 €</td>
-                                <td>316,05 €</td>
-                                <td><strong>1.821,05 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td data-i18n="tariff_rib80105">
-                                    Semirígides entre 8,0 i 10,5 m (**)
-                                </td>
-                                <td>2.155 €</td>
-                                <td>452,55 €</td>
-                                <td><strong>2.607,55 €</strong></td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-                <p class="tariff-note"
-                   data-i18n="tariff_members_note">
-                    (*) Fins a 7,5 m d'eslora màxima permesa,
-                    per a embarcacions de fibra de vidre o,
-                    en defecte d'això, 2 Tn de desplaçament.
-                    (**) Sota sol·licitud expressa.
-                </p>
-
-            </div>
-
-
-            <!-- TRANSEÜNTS -->
-
-            <div class="tariff-block">
-
-                <h4 data-i18n="tariff_transient_title">
-                    Transeünts · eslora màxima 7,5 m
-                </h4>
-
-                <div class="tariff-table-wrap">
-
-                    <table class="tariff-table">
-
-                        <thead>
-
-                            <tr>
-                                <th data-i18n="tariff_period">
-                                    Període
-                                </th>
-
-                                <th data-i18n="tariff_gross">
-                                    Preu brut
-                                </th>
-
-                                <th data-i18n="tariff_vat">
-                                    IVA (21 %)
-                                </th>
-
-                                <th data-i18n="tariff_final">
-                                    Preu final
-                                </th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td data-i18n="tariff_day">
-                                    Tarifa / dia
-                                </td>
-                                <td>100 €</td>
-                                <td>21 €</td>
-                                <td><strong>121 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>1 setmana</td>
-                                <td>663 €</td>
-                                <td>139,23 €</td>
-                                <td><strong>802,23 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>2 setmanes</td>
-                                <td>1.077 €</td>
-                                <td>226,17 €</td>
-                                <td><strong>1.303,17 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>3 setmanes</td>
-                                <td>1.408 €</td>
-                                <td>295,68 €</td>
-                                <td><strong>1.703,85 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>4 setmanes</td>
-                                <td>1.768 €</td>
-                                <td>371,28 €</td>
-                                <td><strong>2.139,28 €</strong></td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-
-            <!-- MINI -->
-
-            <div class="tariff-block">
-
-                <h4 data-i18n="tariff_mini_title">
-                    Transeünts Mini i motos d'aigua · eslora &lt; 3 m
-                </h4>
-
-                <div class="tariff-table-wrap">
-
-                    <table class="tariff-table">
-
-                        <thead>
-
-                            <tr>
-                                <th>Període</th>
-                                <th>Preu brut</th>
-                                <th>IVA (21 %)</th>
-                                <th>Preu final</th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>1 setmana</td>
-                                <td>292 €</td>
-                                <td>61,32 €</td>
-                                <td><strong>353,32 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>2 setmanes</td>
-                                <td>475 €</td>
-                                <td>99,75 €</td>
-                                <td><strong>574,75 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>3 setmanes</td>
-                                <td>640 €</td>
-                                <td>134,40 €</td>
-                                <td><strong>774,40 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td>4 setmanes</td>
-                                <td>773 €</td>
-                                <td>162,33 €</td>
-                                <td><strong>935,33 €</strong></td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-
-            <!-- TEMPORADA -->
-
-            <div class="tariff-block">
-
-                <h4 data-i18n="tariff_season_title">
-                    Transeünts tota la temporada
-                </h4>
-
-                <p class="tariff-subtitle"
-                   data-i18n="tariff_season_period">
-                    De l'1 de juny al 31 d'agost
-                </p>
-
-                <div class="tariff-table-wrap">
-
-                    <table class="tariff-table">
-
-                        <thead>
-
-                            <tr>
-                                <th>Concepte</th>
-                                <th>Preu brut</th>
-                                <th>IVA (21 %)</th>
-                                <th>Preu final</th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td data-i18n="tariff_season_45">
-                                    Fins a 4,5 m d'eslora
-                                </td>
-                                <td>1.600 €</td>
-                                <td>336 €</td>
-                                <td><strong>1.936 €</strong></td>
-                            </tr>
-
-                            <tr>
-                                <td data-i18n="tariff_season_4575">
-                                    De 4,5 a 7,5 m d'eslora
-                                </td>
-                                <td>2.300 €</td>
-                                <td>483 €</td>
-                                <td><strong>2.783 €</strong></td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-                <p class="tariff-note">
-                    (*) Fins a 7,5 m d'eslora màxima permesa
-                    o, en defecte d'això, 2 Tn de desplaçament.
-                </p>
-
-            </div>
 
         </div>
 
@@ -2964,87 +777,70 @@ input {
 
 
 <!-- =========================================================
-     ACTIVIDADES
+     ACTIVITATS
      ========================================================= -->
 
 <section id="actividades"
-         class="section activity-section">
+         class="section section-light reveal">
 
     <div class="container">
+
 
         <span class="section-kicker"
               data-i18n="activities_kicker">
             ACTIVITATS
         </span>
 
+
         <h2 data-i18n="activities_title">
             Experiències per viure el mar
         </h2>
 
-        <p class="activity-intro"
-           data-i18n="activities_intro">
-            Sortides especials per gaudir de la Costa Brava
-            d'una manera diferent.
+
+        <p data-i18n="activities_intro">
+            Activitats especials pensades per gaudir de la
+            Costa Brava des del mar.
         </p>
 
 
-        <div class="activity-grid">
+        <div class="cards">
 
 
-            <!-- FUEGOS -->
+            <!-- =================================================
+                 FOCS DE SANT FELIU
+                 ================================================= -->
 
-            <article class="activity-card">
+            <article class="card activity-card-premium">
 
                 <img
-                    class="activity-card-image"
                     src="images/CAB4665A-33BF-4BF0-911B-FA93D63C3F12.png"
-                    alt="Focs artificials de Sant Feliu de Guíxols">
-
-                <div class="activity-card-content">
-
-                    <div class="activity-number">
-                        01
-                    </div>
-
-                    <h3 data-i18n="fireworks_title">
-                        Focs artificials
-                    </h3>
-
-                    <p data-i18n="fireworks_text">
-                        Una sortida especial en embarcació per
-                        contemplar els focs artificials de
-                        Sant Feliu de Guíxols des del mar.
-                    </p>
+                    alt="Focs artificials de Sant Feliu de Guíxols"
+                    class="activity-image">
 
 
-                    <div class="activity-meta">
-
-                        <div class="activity-meta-item">
-
-                            <span data-i18n="date_label">
-                                DATA
-                            </span>
-
-                            <strong>
-                                08/08/2026
-                            </strong>
-
-                        </div>
+                <span class="activity-date">
+                    08/08/2026
+                </span>
 
 
-                        <div class="activity-meta-item">
+                <h3 data-i18n="fireworks_title">
+                    Focs de Sant Feliu de Guíxols
+                </h3>
 
-                            <span data-i18n="place_label">
-                                EXPERIÈNCIA
-                            </span>
 
-                            <strong data-i18n="fireworks_place">
-                                Sant Feliu de Guíxols · des del mar
-                            </strong>
+                <p data-i18n="fireworks_text">
+                    Sortida en embarcació per gaudir dels focs
+                    artificials de Sant Feliu de Guíxols des del mar.
+                </p>
 
-                        </div>
 
-                    </div>
+                <div class="activity-details">
+
+                    <strong>
+                        08/08/2026
+                    </strong>
+
+                    · Sant Feliu de Guíxols
 
                 </div>
 
@@ -3052,85 +848,74 @@ input {
 
 
 
-            <!-- ECLIPSE -->
+            <!-- =================================================
+                 ECLIPSI
+                 ================================================= -->
 
-            <article class="activity-card">
+            <article class="card activity-card-premium">
 
                 <img
-                    class="activity-card-image"
-                    src="images/ChatGPT%20Image%2011%20ago%202026%2C%2020_30_25.png"
-                    alt="Sortida en vaixell per observar l'eclipsi">
-
-                <div class="activity-card-content">
-
-                    <div class="activity-number">
-                        02
-                    </div>
-
-                    <h3 data-i18n="eclipse_title">
-                        Sortida per veure l'eclipsi
-                    </h3>
-
-                    <p data-i18n="eclipse_text">
-                        Una sortida especial per viure l'eclipsi
-                        des del mar davant de Canyet · Rosamar.
-                    </p>
+                    src="images/ChatGPT Image 11 ago 2026, 20_30_25.png"
+                    alt="Sortida en embarcació per veure l'eclipsi"
+                    class="activity-image">
 
 
-                    <div class="activity-meta">
-
-                        <div class="activity-meta-item">
-
-                            <span data-i18n="date_label">
-                                DATA
-                            </span>
-
-                            <strong>
-                                12/08/2026
-                            </strong>
-
-                        </div>
+                <span class="activity-date">
+                    12/08/2026
+                </span>
 
 
-                        <div class="activity-meta-item">
-
-                            <span data-i18n="departure_label">
-                                SORTIDA
-                            </span>
-
-                            <strong>
-                                18:30–19:00 h
-                            </strong>
-
-                        </div>
+                <h3 data-i18n="eclipse_title">
+                    Sortida per veure l'eclipsi
+                </h3>
 
 
-                        <div class="activity-meta-item">
-
-                            <span data-i18n="departure_place_label">
-                                SORTIDA DES DE
-                            </span>
-
-                            <strong data-i18n="departure_place">
-                                Camp de boies
-                            </strong>
-
-                        </div>
+                <p data-i18n="eclipse_text">
+                    Una sortida especial per viure l'eclipsi
+                    des d'un lloc privilegiat: el mar davant
+                    de Canyet · Rosamar.
+                </p>
 
 
-                        <div class="activity-meta-item">
+                <div class="activity-details">
 
-                            <span data-i18n="route_label">
-                                NAVEGACIÓ
-                            </span>
+                    <strong>
+                        Sortida:
+                    </strong>
 
-                            <strong>
-                                165° S-SE · 0,5 milles nàutiques
-                            </strong>
+                    18:30–19:00
 
-                        </div>
+                    <br>
 
-                    </div>
+                    <strong>
+                        Punt de sortida:
+                    </strong>
+
+                    Camp de boies
+
+                    <br>
+
+                    <strong>
+                        Rumb:
+                    </strong>
+
+                    165° S-SE
+
+                    <br>
+
+                    <strong>
+                        Navegació:
+                    </strong>
+
+                    0,5 milles nàutiques
+
+                    <br>
+
+                    <strong>
+                        Data:
+                    </strong>
+
+                    12/08/2026
 
                 </div>
 
@@ -3146,75 +931,111 @@ input {
 
 
 <!-- =========================================================
-     CANYET · HISTORIA
+     CANYET · ROSAMAR
      ========================================================= -->
 
 <section id="canyet"
-         class="section-image">
+         class="section section-image reveal"
+         style="
+            background-image:
+            url('images/C78F305A-035D-4CB3-B26A-851DBDFA6B10.png');
+         ">
 
     <div class="section-image-overlay"></div>
 
-    <div class="container section-image-content canyet-story">
+
+    <div class="container section-image-content">
+
 
         <span class="section-kicker"
               data-i18n="canyet_kicker">
             CANYET · ROSAMAR
         </span>
 
+
         <h2 data-i18n="canyet_title">
-            La història de Cala Canyet
+            Una cala amb història
         </h2>
 
 
-        <p data-i18n="canyet_text_1">
-            Descobrir Cala Canyet és entrar en un dels racons
-            més singulars de la Costa Brava, on la natura i la
-            història es troben sobre les roques del litoral.
-        </p>
+        <div class="history-story">
 
 
-        <p data-i18n="canyet_text_2">
-            <strong>Els orígens.</strong>
-            La transformació de l'entorn va començar a principis
-            del segle XX, vinculada a la família Castelló i a la
-            tradició surera de Sant Feliu de Guíxols. Al voltant
-            de 1912 es projectà l'accés privat al mar que donaria
-            forma a l'actual paisatge de la cala.
-        </p>
+            <p data-i18n="canyet_text_1">
+                Descobrir Cala Canyet és endinsar-se en un racó
+                de la Costa Brava on la natura més salvatge conviu
+                amb la història de la burgesia catalana.
+            </p>
 
 
-        <p data-i18n="canyet_text_3">
-            <strong>Els Pontets.</strong>
-            Les passarel·les construïdes sobre la roca permetien
-            arribar al mar i gaudir d'aquest indret privilegiat.
-            La seva integració amb les roques és avui una de les
-            imatges més reconeixibles de Canyet.
-        </p>
+            <p data-i18n="canyet_text_2">
+                La fisonomia actual de la cala va començar a prendre
+                forma a principis del segle XX, quan la finca estava
+                vinculada a la família Castelló, relacionada amb la
+                pròspera indústria surera de Sant Feliu de Guíxols.
+            </p>
 
 
-        <p data-i18n="canyet_text_4">
-            <strong>El mirador.</strong>
-            Sobre la Punta de Canyet, una elegant glorieta permetia
-            contemplar els pontets, el mar i l'horitzó mediterrani.
-        </p>
+            <p data-i18n="canyet_text_3">
+                Al voltant de 1912 es documenta la transformació
+                d'aquest entorn, amb la creació dels Pontets,
+                construccions integrades sobre la roca que permetien
+                accedir al mar i gaudir d'aquest paisatge excepcional.
+            </p>
 
 
-        <p data-i18n="canyet_text_5">
-            <strong>La dècada de 1940.</strong>
-            Amb la família Sacrest, la cala incorporà un viver
-            artificial excavat a la roca, destinat a mantenir
-            vives les captures de llagosta per als àpats de la
-            propietat.
-        </p>
+            <p data-i18n="canyet_text_4">
+                Sobre la Punta de Canyet també es va projectar
+                un mirador de caràcter clàssic, pensat per contemplar
+                el recorregut dels pontets i l'horitzó mediterrani.
+            </p>
 
 
-        <p data-i18n="canyet_text_6">
-            <strong>Un patrimoni viu.</strong>
-            El mar i els temporals han marcat la història de
-            Canyet. Els Pontets han hagut de ser reconstruïts
-            diverses vegades, mantenint la seva fisonomia i
-            la seva relació amb el paisatge.
-        </p>
+            <p data-i18n="canyet_text_5">
+                Durant la dècada de 1940, la propietat va passar
+                a la família Sacrest. En aquesta etapa es va crear
+                un viver artificial excavat a la roca, utilitzat
+                per conservar les captures de mar, especialment
+                les llagostes, abans dels àpats i celebracions
+                de la propietat.
+            </p>
+
+
+            <div class="history-highlight">
+
+                <strong>
+                    Un espai que encara avui conserva la seva funció
+                    vinculada al mar
+                </strong>
+
+                <p data-i18n="canyet_boat_text">
+                    Aquella zona que antigament servia per mantenir
+                    vives les llagostes és avui utilitzada per guardar
+                    petites embarcacions, mantenint així la seva
+                    vinculació amb la vida marítima de Canyet.
+                </p>
+
+            </div>
+
+
+            <p data-i18n="canyet_text_6">
+                Al llarg de les dècades, els temporals han castigat
+                repetidament aquestes estructures. Els Pontets han
+                estat reconstruïts i conservats respectant la seva
+                fisonomia i el caràcter singular del conjunt.
+            </p>
+
+
+            <p data-i18n="canyet_text_7">
+                Avui, caminar pels Pontets, contemplar el mar des
+                del mirador o observar les antigues estructures
+                vinculades al viver és connectar amb una part
+                molt especial de la història viva de la Costa Brava.
+            </p>
+
+
+        </div>
+
 
     </div>
 
@@ -3227,18 +1048,21 @@ input {
      ========================================================= -->
 
 <section id="maritemps"
-         class="marine-section">
+         class="marine-section reveal">
 
     <div class="container">
 
-        <span class="section-kicker"
+
+        <span class="section-kicker marine-kicker"
               data-i18n="marine_kicker">
             MAR I TEMPS
         </span>
 
-        <h2>
+
+        <h2 data-i18n="marine_title">
             Canyet · Rosamar
         </h2>
+
 
         <p class="marine-intro"
            data-i18n="marine_intro">
@@ -3246,9 +1070,11 @@ input {
             meteorològiques a Canyet · Rosamar.
         </p>
 
+
         <div class="marine-location">
             📍 CANYET · ROSAMAR · COSTA BRAVA
         </div>
+
 
 
         <div class="marine-dashboard">
@@ -3269,9 +1095,12 @@ input {
                     —
                 </strong>
 
-                <small>°C</small>
+                <small>
+                    °C
+                </small>
 
             </article>
+
 
 
             <article class="marine-card">
@@ -3289,9 +1118,12 @@ input {
                     —
                 </strong>
 
-                <small>m</small>
+                <small>
+                    m
+                </small>
 
             </article>
+
 
 
             <article class="marine-card">
@@ -3309,14 +1141,17 @@ input {
                     —
                 </strong>
 
-                <small>km/h</small>
+                <small>
+                    km/h
+                </small>
 
             </article>
 
 
+
             <article class="marine-card">
 
-                <span class="marine-icon">
+                <span class="marine-icon marine-compass">
                     🧭
                 </span>
 
@@ -3329,7 +1164,9 @@ input {
                     —
                 </strong>
 
-                <small></small>
+                <small>
+                    —
+                </small>
 
             </article>
 
@@ -3337,20 +1174,19 @@ input {
         </div>
 
 
+
         <div class="marine-update">
 
-            <span>●</span>
-
             <span>
-                ACTUALITZANT...
+                ●
+            </span>
+
+            <span data-i18n="marine_update">
+                Preparat per a actualització automàtica
             </span>
 
         </div>
 
-
-        <div id="marine-extra-info"
-             class="marine-extra-info">
-        </div>
 
 
         <div class="marine-forecast">
@@ -3359,16 +1195,20 @@ input {
                 Previsió marítima
             </h3>
 
-            <div id="marine-forecast-grid"
-                 class="marine-forecast-grid">
 
-                <div>
+            <div id="marine-forecast-grid">
+
+                <div class="marine-forecast-placeholder"
+                     data-i18n="marine_forecast_loading">
+
                     Carregant previsió...
+
                 </div>
 
             </div>
 
         </div>
+
 
     </div>
 
@@ -3377,22 +1217,25 @@ input {
 
 
 <!-- =========================================================
-     SOCIOS
+     SOCIS
      ========================================================= -->
 
 <section id="socios"
-         class="section section-dark">
+         class="section section-dark reveal">
 
     <div class="container">
+
 
         <span class="section-kicker"
               data-i18n="members_kicker">
             SOCIS
         </span>
 
+
         <h2 data-i18n="members_title">
             Àrea privada de socis
         </h2>
+
 
         <p data-i18n="members_text">
             Un espai reservat als membres del Club Nàutic
@@ -3401,16 +1244,20 @@ input {
         </p>
 
 
+
         <div class="members-login"
              id="members-login">
+
 
             <h3 data-i18n="members_login_title">
                 Accés exclusiu per als socis
             </h3>
 
+
             <p data-i18n="members_login_text">
                 Introdueix el PIN d'accés.
             </p>
+
 
             <div class="members-pin-form">
 
@@ -3420,112 +1267,55 @@ input {
                     maxlength="12"
                     inputmode="numeric"
                     autocomplete="off"
-                    placeholder="PIN">
+                    placeholder="PIN"
+                    aria-label="PIN">
+
 
                 <button
                     type="button"
                     onclick="checkMemberPin()"
                     data-i18n="members_login_button">
+
                     ENTRAR
+
                 </button>
 
             </div>
 
+
             <p id="members-error"
-               class="members-error">
+               class="members-error"
+               aria-live="polite">
             </p>
 
         </div>
+
 
 
         <div class="members-private"
              id="members-private"
              style="display:none;">
 
+
             <h3 data-i18n="members_private_title">
                 Benvingut a l'àrea de socis
             </h3>
 
+
             <p data-i18n="members_private_text">
-                Aquesta zona incorpora informació, avisos
-                i documentació del Club Nàutic Canyet.
+                Aquesta zona anirà incorporant la informació,
+                avisos i documentació que el club vagi facilitant.
             </p>
 
 
             <div class="members-private-grid">
 
 
-                <article class="member-private-card private-summary">
-
-                    <span>📋</span>
-
-                    <h4 data-i18n="private_meeting_title">
-                        Última reunió del Club
-                    </h4>
-
-                    <p data-i18n="private_meeting_intro">
-                        Resum de l'Assemblea General Extraordinària
-                        celebrada el 7 d'agost de 2026.
-                    </p>
-
-
-                    <ul>
-
-                        <li data-i18n="private_meeting_1">
-                            <strong>Embarcació:</strong>
-                            proposta de substitució de la
-                            semirígida Narwhal.
-                        </li>
-
-                        <li data-i18n="private_meeting_2">
-                            <strong>Nova embarcació:</strong>
-                            semirígida de 4,5 m, motor de 20 CV
-                            i remolc.
-                        </li>
-
-                        <li data-i18n="private_meeting_3">
-                            <strong>Inversió total:</strong>
-                            12.498 € incloent matriculació.
-                        </li>
-
-                        <li data-i18n="private_meeting_4">
-                            <strong>Finançament:</strong>
-                            derrama extraordinària de 350 €
-                            per soci/a.
-                        </li>
-
-                        <li data-i18n="private_meeting_5">
-                            <strong>Pagament:</strong>
-                            del 15 d'agost a l'1 d'octubre
-                            de 2026. Fora de termini,
-                            recàrrec del 20 %.
-                        </li>
-
-                        <li data-i18n="private_meeting_6">
-                            <strong>Aprovació:</strong>
-                            16 vots a favor i 1 en contra.
-                        </li>
-
-                    </ul>
-
-
-                    <a
-                        class="document-link"
-                        href="documents/acta-asamblea-general-extraordinaria-2026.pdf"
-                        target="_blank"
-                        rel="noopener"
-                        data-i18n="private_meeting_pdf">
-
-                        DESCARREGAR ACTA COMPLETA EN PDF
-
-                    </a>
-
-                </article>
-
-
                 <article class="member-private-card">
 
-                    <span>📢</span>
+                    <span>
+                        📢
+                    </span>
 
                     <h4 data-i18n="private_news">
                         Avisos
@@ -3538,50 +1328,72 @@ input {
                 </article>
 
 
+
                 <article class="member-private-card">
 
-                    <span>📄</span>
+                    <span>
+                        📄
+                    </span>
 
                     <h4 data-i18n="private_documents">
                         Documentació
                     </h4>
 
                     <p data-i18n="private_documents_text">
-                        Tarifes i documents del Club.
+                        Properament.
                     </p>
 
                 </article>
 
 
+
                 <article class="member-private-card">
 
-                    <span>⚓</span>
+                    <span>
+                        ⚓
+                    </span>
 
                     <h4 data-i18n="private_moorings">
                         Fondejos
                     </h4>
 
                     <p data-i18n="private_moorings_text">
-                        Informació sobre el camp de boies.
+                        Properament.
                     </p>
 
                 </article>
 
 
+
                 <article class="member-private-card">
 
-                    <span>📅</span>
+                    <span>
+                        📅
+                    </span>
 
                     <h4 data-i18n="private_calendar">
                         Calendari
                     </h4>
 
                     <p data-i18n="private_calendar_text">
-                        Activitats i dates del Club.
+                        Properament.
                     </p>
 
                 </article>
 
+
+            </div>
+
+
+            <div class="members-private-notice">
+
+                <strong>
+                    CLUB PRIVAT
+                </strong>
+
+                <p>
+                    Espai reservat als socis del Club Nàutic Canyet.
+                </p>
 
             </div>
 
@@ -3596,7 +1408,9 @@ input {
 
             </button>
 
+
         </div>
+
 
     </div>
 
@@ -3605,22 +1419,57 @@ input {
 
 
 <!-- =========================================================
-     CONTACTO
+     FRASE FINAL
+     ========================================================= -->
+
+<section class="final-statement reveal">
+
+    <div class="final-statement-content">
+
+        <span class="final-statement-kicker"
+              data-i18n="final_kicker">
+            CLUB NÀUTIC CANYET
+        </span>
+
+
+        <h2 data-i18n="final_title">
+            El mar no és només un lloc.<br>
+            És una manera de viure.
+        </h2>
+
+
+        <p data-i18n="final_text">
+            Canyet, Rosamar i el Mediterrani formen part d'una
+            història que continua viva. Un espai per navegar,
+            compartir i mantenir viu l'esperit del club.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACTE
      ========================================================= -->
 
 <section id="contacto"
-         class="section section-light">
+         class="section section-light reveal">
 
     <div class="container">
+
 
         <span class="section-kicker"
               data-i18n="contact_kicker">
             CONTACTE
         </span>
 
+
         <h2 data-i18n="contact_title">
             Parlem
         </h2>
+
 
         <p data-i18n="contact_text">
             Per a qualsevol consulta sobre el Club Nàutic Canyet,
@@ -3630,21 +1479,31 @@ input {
 
         <div class="contact-info">
 
+
             <p>
+
                 <strong>
                     Club Nàutic Canyet
                 </strong>
+
             </p>
+
 
             <p>
                 Rosamar · Costa Brava
             </p>
 
+
             <p>
+
                 <a href="mailto:info@clubnauticcanyet.com">
+
                     info@clubnauticcanyet.com
+
                 </a>
+
             </p>
+
 
         </div>
 
@@ -3679,7 +1538,12 @@ input {
 
 
 
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
 <script>
+
 
 /* =========================================================
    TRADUCCIONES
@@ -3688,444 +1552,856 @@ input {
 const translations = {
 
 
-ca: {
+    ca: {
 
-nav_inicio:"INICI",
-nav_club:"EL CLUB",
-nav_nautica:"NÀUTICA",
-nav_actividades:"ACTIVITATS",
-nav_canyet:"CANYET",
-nav_socios:"SOCIS",
-nav_mar:"MAR I TEMPS",
-nav_contacto:"CONTACTE",
+        nav_inicio: "INICI",
+        nav_club: "EL CLUB",
+        nav_nautica: "NÀUTICA",
+        nav_actividades: "ACTIVITATS",
+        nav_canyet: "CANYET",
+        nav_socios: "SOCIS",
+        nav_mar: "MAR I TEMPS",
+        nav_contacto: "CONTACTE",
 
-hero_kicker:"CLUB NÀUTIC CANYET",
-hero_title:"MAR, NATURA<br>I TRADICIÓ",
-hero_text:"Un espai únic al cor de la Costa Brava",
+        hero_kicker:
+            "CLUB NÀUTIC CANYET",
 
-quick_club:"EL CLUB",
-quick_club_text:"Història, fundació, valors i comunitat",
+        hero_title:
+            "MAR, NATURA<br>I TRADICIÓ",
 
-quick_nautica:"NÀUTICA",
-quick_nautica_text:"Socis, fondejos, embarcacions i serveis",
+        hero_text:
+            "Un espai únic al cor de la Costa Brava",
 
-quick_activities:"ACTIVITATS",
-quick_activities_text:"Sortides especials i experiències al mar",
+        quick_club:
+            "EL CLUB",
 
-quick_canyet:"CANYET",
-quick_canyet_text:"Història de la cala, pontets i entorn",
+        quick_club_text:
+            "Història, fundació, valors i comunitat",
 
-quick_members:"SOCIS",
-quick_members_text:"Informació privada, avisos i documentació",
+        quick_nautica:
+            "NÀUTICA",
 
-quick_weather:"MAR I TEMPS",
-quick_weather_text:"Estat de la mar, vent i previsió a Canyet",
+        quick_nautica_text:
+            "Socis, fondejos, embarcacions i serveis",
 
-club_kicker:"EL CLUB",
-club_title:"Un club nàutic amb identitat pròpia",
-club_text_1:"El Club Nàutic Canyet neix amb una vocació clara: preservar una manera de viure el mar, la costa i la comunitat de Canyet · Rosamar.",
-club_text_2:"Més que un espai per a la navegació, el club és un punt de trobada entre persones unides per la passió pel Mediterrani i pel privilegiat entorn de la Costa Brava.",
+        quick_activities:
+            "ACTIVITATS",
 
-club_foundation_title:"Fundació",
-club_foundation_text:"Una història vinculada al mar, a Canyet i a les persones que han fet possible la vida nàutica d'aquest indret.",
-club_values_title:"Valors",
-club_values_text:"Respecte pel mar, convivència, tradició, natura i una manera responsable de gaudir de la Costa Brava.",
-club_community_title:"Comunitat",
-club_community_text:"Un club pensat per compartir experiències, navegar i mantenir viu l'esperit de Canyet.",
+        quick_activities_text:
+            "Sortides especials i experiències al mar",
 
-nautica_kicker:"NÀUTICA",
-nautica_title:"El mar com a forma de vida",
-nautica_text:"Ser soci del Club Nàutic Canyet significa formar part d'una comunitat vinculada al mar i disposar d'un entorn privilegiat per gaudir de la navegació.",
+        quick_canyet:
+            "CANYET",
 
-member_price_title:"Quota de soci",
-member_price_text:"Quota bàsica del Club.",
-member_price_note:"Quota anual de soci.",
+        quick_canyet_text:
+            "Història de la cala, pontets i entorn",
 
-adhesion_title:"Adhesió al Club",
-adhesion_text:"Per fer-se soci del CN Canyet, s'ha d'abonar una quota d'entrada única de 1.500 €. Aquest pagament és a fons perdut: es paga una sola vegada i no es recupera si el soci decideix abandonar el Club.",
-adhesion_note:"Pagament únic · a fons perdut.",
+        quick_members:
+            "SOCIS",
 
-young_title:"Tarifa jove",
-young_text:"Els menors de 32 anys no paguen l'adhesió al Club.",
-young_note:"Exempció de la quota d'adhesió.",
+        quick_members_text:
+            "Informació privada, avisos i documentació",
 
-tariff_title:"Tarifes temporada 2026",
-tariff_intro:"Tarifes del Club Nàutic Canyet · Temporada 2026.",
-tariff_members_title:"Tarifa socis",
-tariff_concept:"Concepte",
-tariff_gross:"Preu brut",
-tariff_vat:"IVA (21 %)",
-tariff_final:"Preu final",
-tariff_basic:"Quota bàsica",
-tariff_u399:"Fins a 3,99 m",
-tariff_400599:"Entre 4,0 i 5,99 m",
-tariff_600799:"Entre 6,0 i 7,99 m (*)",
-tariff_rib80105:"Semirígides entre 8,0 i 10,5 m (**)",
-tariff_members_note:"(*) Fins a 7,5 m d'eslora màxima permesa, per a embarcacions de fibra de vidre o, en defecte d'això, 2 Tn de desplaçament. (**) Sota sol·licitud expressa.",
-tariff_transient_title:"Transeünts · eslora màxima 7,5 m",
-tariff_period:"Període",
-tariff_day:"Tarifa / dia",
-tariff_mini_title:"Transeünts Mini i motos d'aigua · eslora < 3 m",
-tariff_season_title:"Transeünts tota la temporada",
-tariff_season_period:"De l'1 de juny al 31 d'agost",
-tariff_season_45:"Fins a 4,5 m d'eslora",
-tariff_season_4575:"De 4,5 a 7,5 m d'eslora",
+        quick_weather:
+            "MAR I TEMPS",
 
-activities_kicker:"ACTIVITATS",
-activities_title:"Experiències per viure el mar",
-activities_intro:"Sortides especials per gaudir de la Costa Brava d'una manera diferent.",
+        quick_weather_text:
+            "Estat de la mar, vent i previsió a Canyet",
 
-fireworks_title:"Focs artificials",
-fireworks_text:"Una sortida especial en embarcació per contemplar els focs artificials de Sant Feliu de Guíxols des del mar.",
-fireworks_place:"Sant Feliu de Guíxols · des del mar",
+        club_kicker:
+            "EL CLUB",
 
-eclipse_title:"Sortida per veure l'eclipsi",
-eclipse_text:"Una sortida especial per viure l'eclipsi des del mar davant de Canyet · Rosamar.",
+        club_title:
+            "Un club nàutic amb identitat pròpia",
 
-date_label:"DATA",
-place_label:"EXPERIÈNCIA",
-departure_label:"SORTIDA",
-departure_place_label:"SORTIDA DES DE",
-departure_place:"Camp de boies",
-route_label:"NAVEGACIÓ",
+        club_text_1:
+            "El Club Nàutic Canyet neix amb una vocació clara: preservar una manera de viure el mar, la costa i la comunitat de Canyet · Rosamar.",
 
-canyet_kicker:"CANYET · ROSAMAR",
-canyet_title:"La història de Cala Canyet",
-canyet_text_1:"Descobrir Cala Canyet és entrar en un dels racons més singulars de la Costa Brava, on la natura i la història es troben sobre les roques del litoral.",
-canyet_text_2:"<strong>Els orígens.</strong> La transformació de l'entorn va començar a principis del segle XX, vinculada a la família Castelló i a la tradició surera de Sant Feliu de Guíxols. Al voltant de 1912 es projectà l'accés privat al mar que donaria forma a l'actual paisatge de la cala.",
-canyet_text_3:"<strong>Els Pontets.</strong> Les passarel·les construïdes sobre la roca permetien arribar al mar i gaudir d'aquest indret privilegiat. La seva integració amb les roques és avui una de les imatges més reconeixibles de Canyet.",
-canyet_text_4:"<strong>El mirador.</strong> Sobre la Punta de Canyet, una elegant glorieta permetia contemplar els pontets, el mar i l'horitzó mediterrani.",
-canyet_text_5:"<strong>La dècada de 1940.</strong> Amb la família Sacrest, la cala incorporà un viver artificial excavat a la roca, destinat a mantenir vives les captures de llagosta per als àpats de la propietat.",
-canyet_text_6:"<strong>Un patrimoni viu.</strong> El mar i els temporals han marcat la història de Canyet. Els Pontets han hagut de ser reconstruïts diverses vegades, mantenint la seva fisonomia i la seva relació amb el paisatge.",
+        club_text_2:
+            "Més que un espai per a la navegació, el club és un punt de trobada entre persones unides per la passió pel Mediterrani i pel privilegiat entorn de la Costa Brava.",
 
-marine_kicker:"MAR I TEMPS",
-marine_intro:"Estat actual de la mar, vent i condicions meteorològiques a Canyet · Rosamar.",
-marine_temperature:"TEMPERATURA",
-marine_wave:"ESTAT DE LA MAR",
-marine_wind:"VENT",
-marine_direction:"DIRECCIÓ DEL VENT",
-marine_forecast_title:"Previsió marítima",
+        club_foundation_title:
+            "Fundació",
 
-members_kicker:"SOCIS",
-members_title:"Àrea privada de socis",
-members_text:"Un espai reservat als membres del Club Nàutic Canyet per consultar informació, avisos, documentació i comunicacions del club.",
-members_login_title:"Accés exclusiu per als socis",
-members_login_text:"Introdueix el PIN d'accés.",
-members_login_button:"ENTRAR",
-members_private_title:"Benvingut a l'àrea de socis",
-members_private_text:"Aquesta zona incorpora informació, avisos i documentació del Club Nàutic Canyet.",
+        club_foundation_text:
+            "Una història vinculada al mar, a Canyet i a les persones que han fet possible la vida nàutica d'aquest indret.",
 
-private_meeting_title:"Última reunió del Club",
-private_meeting_intro:"Resum de l'Assemblea General Extraordinària celebrada el 7 d'agost de 2026.",
-private_meeting_1:"<strong>Embarcació:</strong> proposta de substitució de la semirígida Narwhal, amb més de deu anys de servei.",
-private_meeting_2:"<strong>Nova embarcació:</strong> semirígida de 4,5 m, motor de 20 CV i remolc.",
-private_meeting_3:"<strong>Inversió total:</strong> 12.498 € incloent matriculació.",
-private_meeting_4:"<strong>Finançament:</strong> derrama extraordinària de 350 € per soci/a.",
-private_meeting_5:"<strong>Pagament:</strong> del 15 d'agost a l'1 d'octubre de 2026. Fora de termini, recàrrec del 20 %.",
-private_meeting_6:"<strong>Aprovació:</strong> 16 vots a favor i 1 en contra.",
-private_meeting_pdf:"DESCARREGAR ACTA COMPLETA EN PDF",
+        club_values_title:
+            "Valors",
 
-private_news:"Avisos",
-private_news_text:"Properament.",
-private_documents:"Documentació",
-private_documents_text:"Tarifes i documents del Club.",
-private_moorings:"Fondejos",
-private_moorings_text:"Informació sobre el camp de boies.",
-private_calendar:"Calendari",
-private_calendar_text:"Activitats i dates del Club.",
-members_logout:"SORTIR",
+        club_values_text:
+            "Respecte pel mar, convivència, tradició, natura i una manera responsable de gaudir de la Costa Brava.",
 
-contact_kicker:"CONTACTE",
-contact_title:"Parlem",
-contact_text:"Per a qualsevol consulta sobre el Club Nàutic Canyet, posa't en contacte amb nosaltres."
+        club_community_title:
+            "Comunitat",
 
-},
+        club_community_text:
+            "Un club pensat per compartir experiències, navegar i mantenir viu l'esperit de Canyet.",
 
+        nautica_kicker:
+            "NÀUTICA",
 
-es: {
+        nautica_title:
+            "El mar com a forma de vida",
 
-nav_inicio:"INICIO",
-nav_club:"EL CLUB",
-nav_nautica:"NÁUTICA",
-nav_actividades:"ACTIVIDADES",
-nav_canyet:"CANYET",
-nav_socios:"SOCIOS",
-nav_mar:"MAR Y TIEMPO",
-nav_contacto:"CONTACTO",
+        nautica_text:
+            "Ser soci del Club Nàutic Canyet significa formar part d'una comunitat vinculada al mar i disposar d'un entorn privilegiat per gaudir de la navegació.",
 
-hero_kicker:"CLUB NÀUTIC CANYET",
-hero_title:"MAR, NATURALEZA<br>Y TRADICIÓN",
-hero_text:"Un espacio único en el corazón de la Costa Brava",
+        member_price_title:
+            "Soci del Club",
 
-quick_club:"EL CLUB",
-quick_club_text:"Historia, fundación, valores y comunidad",
-quick_nautica:"NÁUTICA",
-quick_nautica_text:"Socios, fondeos, embarcaciones y servicios",
-quick_activities:"ACTIVIDADES",
-quick_activities_text:"Salidas especiales y experiencias en el mar",
-quick_canyet:"CANYET",
-quick_canyet_text:"Historia de la cala, pontets y entorno",
-quick_members:"SOCIOS",
-quick_members_text:"Información privada, avisos y documentación",
-quick_weather:"MAR Y TIEMPO",
-quick_weather_text:"Estado del mar, viento y previsión en Canyet",
+        member_price_text:
+            "Quota anual de soci: 250 €.",
 
-club_kicker:"EL CLUB",
-club_title:"Un club náutico con identidad propia",
-club_text_1:"El Club Nàutic Canyet nace con una vocación clara: preservar una manera de vivir el mar, la costa y la comunidad de Canyet · Rosamar.",
-club_text_2:"Más que un espacio para la navegación, el club es un punto de encuentro entre personas unidas por la pasión por el Mediterráneo y por el privilegiado entorno de la Costa Brava.",
-club_foundation_title:"Fundación",
-club_foundation_text:"Una historia vinculada al mar, a Canyet y a las personas que han hecho posible la vida náutica de este lugar.",
-club_values_title:"Valores",
-club_values_text:"Respeto por el mar, convivencia, tradición, naturaleza y una manera responsable de disfrutar de la Costa Brava.",
-club_community_title:"Comunidad",
-club_community_text:"Un club pensado para compartir experiencias, navegar y mantener vivo el espíritu de Canyet.",
+        member_mooring_text:
+            "Adhesió al Club: 1.500 €, pagament únic a fons perdut.",
 
-nautica_kicker:"NÁUTICA",
-nautica_title:"El mar como forma de vida",
-nautica_text:"Ser socio del Club Nàutic Canyet significa formar parte de una comunidad vinculada al mar y disponer de un entorno privilegiado para disfrutar de la navegación.",
-member_price_title:"Cuota de socio",
-member_price_text:"Cuota básica del Club.",
-member_price_note:"Cuota anual de socio.",
-adhesion_title:"Adhesión al Club",
-adhesion_text:"Para hacerse socio del CN Canyet debe abonarse una cuota de entrada única de 1.500 €. Este pago es a fondo perdido: se paga una sola vez y no se recupera si el socio decide abandonar el Club.",
-adhesion_note:"Pago único · a fondo perdido.",
-young_title:"Tarifa joven",
-young_text:"Los menores de 32 años no pagan la adhesión al Club.",
-young_note:"Exención de la cuota de adhesión.",
+        mooring_title:
+            "Fondejos",
 
-tariff_title:"Tarifas temporada 2026",
-tariff_intro:"Tarifas del Club Nàutic Canyet · Temporada 2026.",
-tariff_members_title:"Tarifa socios",
-tariff_concept:"Concepto",
-tariff_gross:"Precio bruto",
-tariff_vat:"IVA (21 %)",
-tariff_final:"Precio final",
-tariff_basic:"Cuota básica",
-tariff_u399:"Hasta 3,99 m",
-tariff_400599:"Entre 4,0 y 5,99 m",
-tariff_600799:"Entre 6,0 y 7,99 m (*)",
-tariff_rib80105:"Semirrígidas entre 8,0 y 10,5 m (**)",
-tariff_members_note:"(*) Hasta 7,5 m de eslora máxima permitida, para embarcaciones de fibra de vidrio o, en su defecto, 2 Tn de desplazamiento. (**) Bajo solicitud expresa.",
-tariff_transient_title:"Transeúntes · eslora máxima 7,5 m",
-tariff_period:"Periodo",
-tariff_day:"Tarifa / día",
-tariff_mini_title:"Transeúntes Mini y motos de agua · eslora < 3 m",
-tariff_season_title:"Transeúntes toda la temporada",
-tariff_season_period:"Del 1 de junio al 31 de agosto",
-tariff_season_45:"Hasta 4,5 m de eslora",
-tariff_season_4575:"De 4,5 a 7,5 m de eslora",
+        mooring_text:
+            "Els fondejos es gestionen segons les condicions i tarifes vigents del Club.",
 
-activities_kicker:"ACTIVIDADES",
-activities_title:"Experiencias para vivir el mar",
-activities_intro:"Salidas especiales para disfrutar de la Costa Brava de una manera diferente.",
-fireworks_title:"Fuegos artificiales",
-fireworks_text:"Una salida especial en embarcación para contemplar los fuegos artificiales de Sant Feliu de Guíxols desde el mar.",
-fireworks_place:"Sant Feliu de Guíxols · desde el mar",
-eclipse_title:"Salida para ver el eclipse",
-eclipse_text:"Una salida especial para vivir el eclipse desde el mar frente a Canyet · Rosamar.",
-date_label:"FECHA",
-place_label:"EXPERIENCIA",
-departure_label:"SALIDA",
-departure_place_label:"SALIDA DESDE",
-departure_place:"Campo de boyas",
-route_label:"NAVEGACIÓN",
+        mooring_price_pending:
+            "Tarifes 2026: consultar.",
 
-canyet_kicker:"CANYET · ROSAMAR",
-canyet_title:"La historia de Cala Canyet",
-canyet_text_1:"Descubrir Cala Canyet es entrar en uno de los rincones más singulares de la Costa Brava, donde la naturaleza y la historia se encuentran sobre las rocas del litoral.",
-canyet_text_2:"<strong>Los orígenes.</strong> La transformación del entorno comenzó a principios del siglo XX, vinculada a la familia Castelló y a la tradición corchera de Sant Feliu de Guíxols. Alrededor de 1912 se proyectó el acceso privado al mar que daría forma al actual paisaje de la cala.",
-canyet_text_3:"<strong>Els Pontets.</strong> Las pasarelas construidas sobre la roca permitían llegar al mar y disfrutar de este lugar privilegiado. Su integración con las rocas es hoy una de las imágenes más reconocibles de Canyet.",
-canyet_text_4:"<strong>El mirador.</strong> Sobre la Punta de Canyet, una elegante glorieta permitía contemplar los pontets, el mar y el horizonte mediterráneo.",
-canyet_text_5:"<strong>La década de 1940.</strong> Con la familia Sacrest, la cala incorporó un vivero artificial excavado en la roca, destinado a mantener vivas las capturas de langosta para los banquetes de la propiedad.",
-canyet_text_6:"<strong>Un patrimonio vivo.</strong> El mar y los temporales han marcado la historia de Canyet. Els Pontets han tenido que ser reconstruidos en diferentes momentos, manteniendo su fisonomía y su relación con el paisaje.",
+        young_title:
+            "Tarifa jove",
 
-marine_kicker:"MAR Y TIEMPO",
-marine_intro:"Estado actual del mar, viento y condiciones meteorológicas en Canyet · Rosamar.",
-marine_temperature:"TEMPERATURA",
-marine_wave:"ESTADO DEL MAR",
-marine_wind:"VIENTO",
-marine_direction:"DIRECCIÓN DEL VIENTO",
-marine_forecast_title:"Previsión marítima",
+        young_text:
+            "Per a menors de 32 anys. No paguen l'adhesió al Club.",
 
-members_kicker:"SOCIOS",
-members_title:"Área privada de socios",
-members_text:"Un espacio reservado a los miembros del Club Nàutic Canyet para consultar información, avisos, documentación y comunicaciones del club.",
-members_login_title:"Acceso exclusivo para socios",
-members_login_text:"Introduce el PIN de acceso.",
-members_login_button:"ENTRAR",
-members_private_title:"Bienvenido al área de socios",
-members_private_text:"Esta zona incorpora información, avisos y documentación del Club Nàutic Canyet.",
-private_meeting_title:"Última reunión del Club",
-private_meeting_intro:"Resumen del Acta de la Asamblea General Extraordinaria celebrada el 7 de agosto de 2026.",
-private_meeting_1:"<strong>Embarcación:</strong> propuesta de sustitución de la semirrígida Narwhal, con más de diez años de servicio.",
-private_meeting_2:"<strong>Nueva embarcación:</strong> semirrígida de 4,5 m, motor de 20 CV y remolque.",
-private_meeting_3:"<strong>Inversión total:</strong> 12.498 € incluida la matriculación.",
-private_meeting_4:"<strong>Financiación:</strong> derrama extraordinaria de 350 € por socio/a.",
-private_meeting_5:"<strong>Pago:</strong> del 15 de agosto al 1 de octubre de 2026. Fuera de plazo, recargo del 20 %.",
-private_meeting_6:"<strong>Aprobación:</strong> 16 votos a favor y 1 en contra.",
-private_meeting_pdf:"DESCARGAR ACTA COMPLETA EN PDF",
-private_news:"Avisos",
-private_news_text:"Próximamente.",
-private_documents:"Documentación",
-private_documents_text:"Tarifas y documentos del Club.",
-private_moorings:"Fondeos",
-private_moorings_text:"Información sobre el campo de boyas.",
-private_calendar:"Calendario",
-private_calendar_text:"Actividades y fechas del Club.",
-members_logout:"SALIR",
+        young_price_pending:
+            "Condicions i tarifes segons normativa 2026.",
 
-contact_kicker:"CONTACTO",
-contact_title:"Hablemos",
-contact_text:"Para cualquier consulta sobre el Club Nàutic Canyet, ponte en contacto con nosotros."
+        nautica_services_title:
+            "Serveis i fondejos",
 
-},
+        nautica_services_text:
+            "Informació sobre fondejos, boies, embarcacions, serveis i condicions d'ús del club.",
+
+        activities_kicker:
+            "ACTIVITATS",
+
+        activities_title:
+            "Experiències per viure el mar",
+
+        activities_intro:
+            "Activitats especials pensades per gaudir de la Costa Brava des del mar.",
+
+        fireworks_title:
+            "Focs de Sant Feliu de Guíxols",
+
+        fireworks_text:
+            "Sortida en embarcació per gaudir dels focs artificials de Sant Feliu de Guíxols des del mar.",
+
+        eclipse_title:
+            "Sortida per veure l'eclipsi",
+
+        eclipse_text:
+            "Una sortida especial per viure l'eclipsi des d'un lloc privilegiat: el mar davant de Canyet · Rosamar.",
+
+        canyet_kicker:
+            "CANYET · ROSAMAR",
+
+        canyet_title:
+            "Una cala amb història",
+
+        canyet_text_1:
+            "Descobrir Cala Canyet és endinsar-se en un racó de la Costa Brava on la natura més salvatge conviu amb la història de la burgesia catalana.",
+
+        canyet_text_2:
+            "La fisonomia actual de la cala va començar a prendre forma a principis del segle XX, quan la finca estava vinculada a la família Castelló, relacionada amb la pròspera indústria surera de Sant Feliu de Guíxols.",
+
+        canyet_text_3:
+            "Al voltant de 1912 es documenta la transformació d'aquest entorn, amb la creació dels Pontets, construccions integrades sobre la roca que permetien accedir al mar i gaudir d'aquest paisatge excepcional.",
+
+        canyet_text_4:
+            "Sobre la Punta de Canyet també es va projectar un mirador de caràcter clàssic, pensat per contemplar el recorregut dels pontets i l'horitzó mediterrani.",
+
+        canyet_text_5:
+            "Durant la dècada de 1940, la propietat va passar a la família Sacrest. En aquesta etapa es va crear un viver artificial excavat a la roca, utilitzat per conservar les captures de mar, especialment les llagostes, abans dels àpats i celebracions de la propietat.",
+
+        canyet_boat_text:
+            "Aquella zona que antigament servia per mantenir vives les llagostes és avui utilitzada per guardar petites embarcacions, mantenint així la seva vinculació amb la vida marítima de Canyet.",
+
+        canyet_text_6:
+            "Al llarg de les dècades, els temporals han castigat repetidament aquestes estructures. Els Pontets han estat reconstruïts i conservats respectant la seva fisonomia i el caràcter singular del conjunt.",
+
+        canyet_text_7:
+            "Avui, caminar pels Pontets, contemplar el mar des del mirador o observar les antigues estructures vinculades al viver és connectar amb una part molt especial de la història viva de la Costa Brava.",
+
+        marine_kicker:
+            "MAR I TEMPS",
+
+        marine_title:
+            "Canyet · Rosamar",
+
+        marine_intro:
+            "Estat actual de la mar, vent i condicions meteorològiques a Canyet · Rosamar.",
+
+        marine_temperature:
+            "TEMPERATURA",
+
+        marine_wave:
+            "ESTAT DE LA MAR",
+
+        marine_wind:
+            "VENT",
+
+        marine_direction:
+            "DIRECCIÓ DEL VENT",
+
+        marine_update:
+            "Preparat per a actualització automàtica",
+
+        marine_forecast_title:
+            "Previsió marítima",
+
+        marine_forecast_loading:
+            "Carregant previsió...",
+
+        members_kicker:
+            "SOCIS",
+
+        members_title:
+            "Àrea privada de socis",
+
+        members_text:
+            "Un espai reservat als membres del Club Nàutic Canyet per consultar informació, avisos, documentació i comunicacions del club.",
+
+        members_login_title:
+            "Accés exclusiu per als socis",
+
+        members_login_text:
+            "Introdueix el PIN d'accés.",
+
+        members_login_button:
+            "ENTRAR",
+
+        members_private_title:
+            "Benvingut a l'àrea de socis",
+
+        members_private_text:
+            "Aquesta zona anirà incorporant la informació, avisos i documentació que el club vagi facilitant.",
+
+        private_news:
+            "Avisos",
+
+        private_news_text:
+            "Properament.",
+
+        private_documents:
+            "Documentació",
+
+        private_documents_text:
+            "Properament.",
+
+        private_moorings:
+            "Fondejos",
+
+        private_moorings_text:
+            "Properament.",
+
+        private_calendar:
+            "Calendari",
+
+        private_calendar_text:
+            "Properament.",
+
+        members_logout:
+            "SORTIR",
+
+        contact_kicker:
+            "CONTACTE",
+
+        contact_title:
+            "Parlem",
+
+        contact_text:
+            "Per a qualsevol consulta sobre el Club Nàutic Canyet, posa't en contacte amb nosaltres.",
+
+        final_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        final_title:
+            "El mar no és només un lloc.<br>És una manera de viure.",
+
+        final_text:
+            "Canyet, Rosamar i el Mediterrani formen part d'una història que continua viva. Un espai per navegar, compartir i mantenir viu l'esperit del club."
+
+    },
 
 
-fr: {
 
-nav_inicio:"ACCUEIL",
-nav_club:"LE CLUB",
-nav_nautica:"NAUTISME",
-nav_actividades:"ACTIVITÉS",
-nav_canyet:"CANYET",
-nav_socios:"MEMBRES",
-nav_mar:"MER ET MÉTÉO",
-nav_contacto:"CONTACT",
+    es: {
 
-hero_kicker:"CLUB NÀUTIC CANYET",
-hero_title:"MER, NATURE<br>ET TRADITION",
-hero_text:"Un lieu unique au cœur de la Costa Brava",
+        nav_inicio: "INICIO",
+        nav_club: "EL CLUB",
+        nav_nautica: "NÁUTICA",
+        nav_actividades: "ACTIVIDADES",
+        nav_canyet: "CANYET",
+        nav_socios: "SOCIOS",
+        nav_mar: "MAR Y TIEMPO",
+        nav_contacto: "CONTACTO",
 
-quick_club:"LE CLUB",
-quick_club_text:"Histoire, fondation, valeurs et communauté",
-quick_nautica:"NAUTISME",
-quick_nautica_text:"Membres, mouillages, bateaux et services",
-quick_activities:"ACTIVITÉS",
-quick_activities_text:"Sorties spéciales et expériences en mer",
-quick_canyet:"CANYET",
-quick_canyet_text:"Histoire de la crique, pontets et environs",
-quick_members:"MEMBRES",
-quick_members_text:"Informations privées, avis et documentation",
-quick_weather:"MER ET MÉTÉO",
-quick_weather_text:"État de la mer, vent et prévisions à Canyet",
+        hero_kicker:
+            "CLUB NÀUTIC CANYET",
 
-club_kicker:"LE CLUB",
-club_title:"Un club nautique avec une identité propre",
-club_text_1:"Le Club Nàutic Canyet est né avec une vocation claire : préserver une manière de vivre la mer, la côte et la communauté de Canyet · Rosamar.",
-club_text_2:"Plus qu'un espace de navigation, le club est un lieu de rencontre pour ceux qui partagent la passion de la Méditerranée et de l'environnement exceptionnel de la Costa Brava.",
-club_foundation_title:"Fondation",
-club_foundation_text:"Une histoire liée à la mer, à Canyet et aux personnes qui ont rendu possible la vie nautique de ce lieu.",
-club_values_title:"Valeurs",
-club_values_text:"Respect de la mer, convivialité, tradition, nature et une manière responsable de profiter de la Costa Brava.",
-club_community_title:"Communauté",
-club_community_text:"Un club conçu pour partager des expériences, naviguer et préserver l'esprit de Canyet.",
+        hero_title:
+            "MAR, NATURALEZA<br>Y TRADICIÓN",
 
-nautica_kicker:"NAUTISME",
-nautica_title:"La mer comme art de vivre",
-nautica_text:"Être membre du Club Nàutic Canyet signifie faire partie d'une communauté liée à la mer et profiter d'un environnement privilégié pour naviguer.",
-member_price_title:"Cotisation",
-member_price_text:"Cotisation de base du Club.",
-member_price_note:"Cotisation annuelle.",
-adhesion_title:"Adhésion au Club",
-adhesion_text:"Pour devenir membre du CN Canyet, une cotisation d'entrée unique de 1 500 € doit être versée. Ce paiement est non remboursable.",
-adhesion_note:"Paiement unique · non remboursable.",
-young_title:"Tarif jeune",
-young_text:"Les moins de 32 ans ne paient pas les frais d'adhésion.",
-young_note:"Exonération des frais d'adhésion.",
+        hero_text:
+            "Un espacio único en el corazón de la Costa Brava",
 
-tariff_title:"Tarifs saison 2026",
-tariff_intro:"Tarifs du Club Nàutic Canyet · Saison 2026.",
-tariff_members_title:"Tarifs membres",
-tariff_concept:"Concept",
-tariff_gross:"Prix brut",
-tariff_vat:"TVA (21 %)",
-tariff_final:"Prix final",
-tariff_basic:"Cotisation de base",
-tariff_u399:"Jusqu'à 3,99 m",
-tariff_400599:"Entre 4,0 et 5,99 m",
-tariff_600799:"Entre 6,0 et 7,99 m (*)",
-tariff_rib80105:"Semi-rigides entre 8,0 et 10,5 m (**)",
-tariff_members_note:"(*) Jusqu'à 7,5 m de longueur maximale autorisée. (**) Sur demande expresse.",
-tariff_transient_title:"Visiteurs · longueur maximale 7,5 m",
-tariff_period:"Période",
-tariff_day:"Tarif / jour",
-tariff_mini_title:"Visiteurs Mini et jet-skis · longueur < 3 m",
-tariff_season_title:"Visiteurs toute la saison",
-tariff_season_period:"Du 1er juin au 31 août",
-tariff_season_45:"Jusqu'à 4,5 m",
-tariff_season_4575:"De 4,5 à 7,5 m",
+        quick_club:
+            "EL CLUB",
 
-activities_kicker:"ACTIVITÉS",
-activities_title:"Des expériences pour vivre la mer",
-activities_intro:"Des sorties spéciales pour profiter de la Costa Brava autrement.",
-fireworks_title:"Feux d'artifice",
-fireworks_text:"Une sortie spéciale en bateau pour admirer les feux d'artifice de Sant Feliu de Guíxols depuis la mer.",
-fireworks_place:"Sant Feliu de Guíxols · depuis la mer",
-eclipse_title:"Sortie pour observer l'éclipse",
-eclipse_text:"Une sortie spéciale pour vivre l'éclipse depuis la mer face à Canyet · Rosamar.",
-date_label:"DATE",
-place_label:"EXPÉRIENCE",
-departure_label:"DÉPART",
-departure_place_label:"DÉPART DE",
-departure_place:"Champ de bouées",
-route_label:"NAVIGATION",
+        quick_club_text:
+            "Historia, fundación, valores y comunidad",
 
-canyet_kicker:"CANYET · ROSAMAR",
-canyet_title:"L'histoire de Cala Canyet",
-canyet_text_1:"Découvrir Cala Canyet, c'est entrer dans l'un des lieux les plus singuliers de la Costa Brava, où la nature et l'histoire se rencontrent sur les rochers du littoral.",
-canyet_text_2:"<strong>Les origines.</strong> La transformation du site commence au début du XXe siècle, liée à la famille Castelló et à la tradition du liège de Sant Feliu de Guíxols. Vers 1912, l'accès privé à la mer qui donnera forme au paysage actuel est projeté.",
-canyet_text_3:"<strong>Els Pontets.</strong> Les passerelles construites sur la roche permettaient d'accéder à la mer. Leur intégration au paysage est aujourd'hui l'une des images les plus reconnaissables de Canyet.",
-canyet_text_4:"<strong>Le belvédère.</strong> Sur la Punta de Canyet, une élégante gloriette permettait de contempler les pontets, la mer et l'horizon méditerranéen.",
-canyet_text_5:"<strong>Les années 1940.</strong> Avec la famille Sacrest, la crique accueille un vivier artificiel creusé dans la roche pour conserver les homards vivants.",
-canyet_text_6:"<strong>Un patrimoine vivant.</strong> La mer et les tempêtes ont marqué l'histoire de Canyet. Els Pontets ont été reconstruits à plusieurs reprises tout en conservant leur physionomie.",
+        quick_nautica:
+            "NÁUTICA",
 
-marine_kicker:"MER ET MÉTÉO",
-marine_intro:"État actuel de la mer, vent et conditions météorologiques à Canyet · Rosamar.",
-marine_temperature:"TEMPÉRATURE",
-marine_wave:"ÉTAT DE LA MER",
-marine_wind:"VENT",
-marine_direction:"DIRECTION DU VENT",
-marine_forecast_title:"Prévisions maritimes",
+        quick_nautica_text:
+            "Socios, fondeos, embarcaciones y servicios",
 
-members_kicker:"MEMBRES",
-members_title:"Espace privé des membres",
-members_text:"Un espace réservé aux membres du Club Nàutic Canyet pour consulter les informations, avis, documents et communications du club.",
-members_login_title:"Accès réservé aux membres",
-members_login_text:"Introduisez votre code PIN.",
-members_login_button:"ENTRER",
-members_private_title:"Bienvenue dans l'espace membres",
-members_private_text:"Cette zone contient les informations, avis et documents du Club Nàutic Canyet.",
-private_meeting_title:"Dernière réunion du Club",
-private_meeting_intro:"Résumé de l'Assemblée Générale Extraordinaire du 7 août 2026.",
-private_meeting_1:"<strong>Bateau :</strong> remplacement du semi-rigide Narwhal.",
-private_meeting_2:"<strong>Nouveau bateau :</strong> semi-rigide de 4,5 m, moteur 20 CV et remorque.",
-private_meeting_3:"<strong>Investissement :</strong> 12 498 € immatriculation comprise.",
-private_meeting_4:"<strong>Financement :</strong> appel exceptionnel de 350 € par membre.",
-private_meeting_5:"<strong>Paiement :</strong> du 15 août au 1er octobre 2026. Après cette date, majoration de 20 %.",
-private_meeting_6:"<strong>Vote :</strong> 16 voix pour et 1 contre.",
-private_meeting_pdf:"TÉLÉCHARGER LE PROCÈS-VERBAL COMPLET",
-private_news:"Avis",
-private_news_text:"Prochainement.",
-private_documents:"Documents",
-private_documents_text:"Tarifs et documents du Club.",
-private_moorings:"Mouillages",
-private_moorings_text:"Informations sur le champ de bouées.",
-private_calendar:"Calendrier",
-private_calendar_text:"Activités et dates du Club.",
-members_logout:"SORTIR",
+        quick_activities:
+            "ACTIVIDADES",
 
-contact_kicker:"CONTACT",
-contact_title:"Parlons-en",
-contact_text:"Pour toute question concernant le Club Nàutic Canyet, contactez-nous."
+        quick_activities_text:
+            "Salidas especiales y experiencias en el mar",
 
-}
+        quick_canyet:
+            "CANYET",
+
+        quick_canyet_text:
+            "Historia de la cala, pontets y entorno",
+
+        quick_members:
+            "SOCIOS",
+
+        quick_members_text:
+            "Información privada, avisos y documentación",
+
+        quick_weather:
+            "MAR Y TIEMPO",
+
+        quick_weather_text:
+            "Estado del mar, viento y previsión en Canyet",
+
+        club_kicker:
+            "EL CLUB",
+
+        club_title:
+            "Un club náutico con identidad propia",
+
+        club_text_1:
+            "El Club Nàutic Canyet nace con una vocación clara: preservar una manera de vivir el mar, la costa y la comunidad de Canyet · Rosamar.",
+
+        club_text_2:
+            "Más que un espacio para la navegación, el club es un punto de encuentro entre personas unidas por la pasión por el Mediterráneo y por el privilegiado entorno de la Costa Brava.",
+
+        club_foundation_title:
+            "Fundación",
+
+        club_foundation_text:
+            "Una historia vinculada al mar, a Canyet y a las personas que han hecho posible la vida náutica de este lugar.",
+
+        club_values_title:
+            "Valores",
+
+        club_values_text:
+            "Respeto por el mar, convivencia, tradición, naturaleza y una manera responsable de disfrutar de la Costa Brava.",
+
+        club_community_title:
+            "Comunidad",
+
+        club_community_text:
+            "Un club pensado para compartir experiencias, navegar y mantener vivo el espíritu de Canyet.",
+
+        nautica_kicker:
+            "NÁUTICA",
+
+        nautica_title:
+            "El mar como forma de vida",
+
+        nautica_text:
+            "Ser socio del Club Nàutic Canyet significa formar parte de una comunidad vinculada al mar y disponer de un entorno privilegiado para disfrutar de la navegación.",
+
+        member_price_title:
+            "Socio del Club",
+
+        member_price_text:
+            "Cuota anual de socio: 250 €.",
+
+        member_mooring_text:
+            "Adhesión al Club: 1.500 €, pago único a fondo perdido.",
+
+        mooring_title:
+            "Fondeos",
+
+        mooring_text:
+            "Los fondeos se gestionan según las condiciones y tarifas vigentes del Club.",
+
+        mooring_price_pending:
+            "Tarifas 2026: consultar.",
+
+        young_title:
+            "Tarifa joven",
+
+        young_text:
+            "Para menores de 32 años. No pagan la adhesión al Club.",
+
+        young_price_pending:
+            "Condiciones y tarifas según normativa 2026.",
+
+        nautica_services_title:
+            "Servicios y fondeos",
+
+        nautica_services_text:
+            "Información sobre fondeos, boyas, embarcaciones, servicios y condiciones de uso del club.",
+
+        activities_kicker:
+            "ACTIVIDADES",
+
+        activities_title:
+            "Experiencias para vivir el mar",
+
+        activities_intro:
+            "Actividades especiales pensadas para disfrutar de la Costa Brava desde el mar.",
+
+        fireworks_title:
+            "Fuegos de Sant Feliu de Guíxols",
+
+        fireworks_text:
+            "Salida en embarcación para disfrutar de los fuegos artificiales de Sant Feliu de Guíxols desde el mar.",
+
+        eclipse_title:
+            "Salida para ver el eclipse",
+
+        eclipse_text:
+            "Una salida especial para vivir el eclipse desde un lugar privilegiado: el mar frente a Canyet · Rosamar.",
+
+        canyet_kicker:
+            "CANYET · ROSAMAR",
+
+        canyet_title:
+            "Una cala con historia",
+
+        canyet_text_1:
+            "Descubrir Cala Canyet es adentrarse en un rincón de la Costa Brava donde la naturaleza más salvaje convive con la historia de la burguesía catalana.",
+
+        canyet_text_2:
+            "La fisonomía actual de la cala comenzó a tomar forma a principios del siglo XX, cuando la finca estaba vinculada a la familia Castelló, relacionada con la próspera industria corchera de Sant Feliu de Guíxols.",
+
+        canyet_text_3:
+            "Alrededor de 1912 se documenta la transformación de este entorno, con la creación de los Pontets, construcciones integradas sobre la roca que permitían acceder al mar y disfrutar de este paisaje excepcional.",
+
+        canyet_text_4:
+            "Sobre la Punta de Canyet también se proyectó un mirador de carácter clásico, pensado para contemplar el recorrido de los pontets y el horizonte mediterráneo.",
+
+        canyet_text_5:
+            "Durante la década de 1940, la propiedad pasó a la familia Sacrest. En esta etapa se creó un vivero artificial excavado en la roca, utilizado para conservar las capturas del mar, especialmente las langostas, antes de las comidas y celebraciones de la propiedad.",
+
+        canyet_boat_text:
+            "Aquella zona que antiguamente servía para mantener vivas las langostas se utiliza hoy para guardar pequeñas embarcaciones, manteniendo así su vinculación con la vida marítima de Canyet.",
+
+        canyet_text_6:
+            "A lo largo de las décadas, los temporales han castigado repetidamente estas estructuras. Los Pontets han sido reconstruidos y conservados respetando su fisonomía y el carácter singular del conjunto.",
+
+        canyet_text_7:
+            "Hoy, caminar por los Pontets, contemplar el mar desde el mirador u observar las antiguas estructuras vinculadas al vivero es conectar con una parte muy especial de la historia viva de la Costa Brava.",
+
+        marine_kicker:
+            "MAR Y TIEMPO",
+
+        marine_title:
+            "Canyet · Rosamar",
+
+        marine_intro:
+            "Estado actual del mar, viento y condiciones meteorológicas en Canyet · Rosamar.",
+
+        marine_temperature:
+            "TEMPERATURA",
+
+        marine_wave:
+            "ESTADO DEL MAR",
+
+        marine_wind:
+            "VIENTO",
+
+        marine_direction:
+            "DIRECCIÓN DEL VIENTO",
+
+        marine_update:
+            "Preparado para actualización automática",
+
+        marine_forecast_title:
+            "Previsión marítima",
+
+        marine_forecast_loading:
+            "Cargando previsión...",
+
+        members_kicker:
+            "SOCIOS",
+
+        members_title:
+            "Área privada de socios",
+
+        members_text:
+            "Un espacio reservado a los miembros del Club Nàutic Canyet para consultar información, avisos, documentación y comunicaciones del club.",
+
+        members_login_title:
+            "Acceso exclusivo para socios",
+
+        members_login_text:
+            "Introduce el PIN de acceso.",
+
+        members_login_button:
+            "ENTRAR",
+
+        members_private_title:
+            "Bienvenido al área de socios",
+
+        members_private_text:
+            "Esta zona irá incorporando la información, avisos y documentación que el club vaya facilitando.",
+
+        private_news:
+            "Avisos",
+
+        private_news_text:
+            "Próximamente.",
+
+        private_documents:
+            "Documentación",
+
+        private_documents_text:
+            "Próximamente.",
+
+        private_moorings:
+            "Fondeos",
+
+        private_moorings_text:
+            "Próximamente.",
+
+        private_calendar:
+            "Calendario",
+
+        private_calendar_text:
+            "Próximamente.",
+
+        members_logout:
+            "SALIR",
+
+        contact_kicker:
+            "CONTACTO",
+
+        contact_title:
+            "Hablemos",
+
+        contact_text:
+            "Para cualquier consulta sobre el Club Nàutic Canyet, ponte en contacto con nosotros.",
+
+        final_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        final_title:
+            "El mar no es solo un lugar.<br>Es una manera de vivir.",
+
+        final_text:
+            "Canyet, Rosamar y el Mediterráneo forman parte de una historia que continúa viva. Un espacio para navegar, compartir y mantener vivo el espíritu del club."
+
+    },
+
+
+
+    fr: {
+
+        nav_inicio: "ACCUEIL",
+        nav_club: "LE CLUB",
+        nav_nautica: "NAUTISME",
+        nav_actividades: "ACTIVITÉS",
+        nav_canyet: "CANYET",
+        nav_socios: "MEMBRES",
+        nav_mar: "MER ET MÉTÉO",
+        nav_contacto: "CONTACT",
+
+        hero_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        hero_title:
+            "MER, NATURE<br>ET TRADITION",
+
+        hero_text:
+            "Un lieu unique au cœur de la Costa Brava",
+
+        quick_club:
+            "LE CLUB",
+
+        quick_club_text:
+            "Histoire, fondation, valeurs et communauté",
+
+        quick_nautica:
+            "NAUTISME",
+
+        quick_nautica_text:
+            "Membres, mouillages, bateaux et services",
+
+        quick_activities:
+            "ACTIVITÉS",
+
+        quick_activities_text:
+            "Sorties spéciales et expériences en mer",
+
+        quick_canyet:
+            "CANYET",
+
+        quick_canyet_text:
+            "Histoire de la crique, pontets et environs",
+
+        quick_members:
+            "MEMBRES",
+
+        quick_members_text:
+            "Informations privées, avis et documentation",
+
+        quick_weather:
+            "MER ET MÉTÉO",
+
+        quick_weather_text:
+            "État de la mer, vent et prévisions à Canyet",
+
+        club_kicker:
+            "LE CLUB",
+
+        club_title:
+            "Un club nautique avec une identité propre",
+
+        club_text_1:
+            "Le Club Nàutic Canyet est né avec une vocation claire : préserver une manière de vivre la mer, la côte et la communauté de Canyet · Rosamar.",
+
+        club_text_2:
+            "Plus qu'un espace de navigation, le club est un lieu de rencontre pour ceux qui partagent la passion de la Méditerranée et de l'environnement exceptionnel de la Costa Brava.",
+
+        club_foundation_title:
+            "Fondation",
+
+        club_foundation_text:
+            "Une histoire liée à la mer, à Canyet et aux personnes qui ont rendu possible la vie nautique de ce lieu.",
+
+        club_values_title:
+            "Valeurs",
+
+        club_values_text:
+            "Respect de la mer, convivialité, tradition, nature et une manière responsable de profiter de la Costa Brava.",
+
+        club_community_title:
+            "Communauté",
+
+        club_community_text:
+            "Un club conçu pour partager des expériences, naviguer et préserver l'esprit de Canyet.",
+
+        nautica_kicker:
+            "NAUTISME",
+
+        nautica_title:
+            "La mer comme art de vivre",
+
+        nautica_text:
+            "Être membre du Club Nàutic Canyet signifie faire partie d'une communauté liée à la mer et profiter d'un environnement privilégié pour naviguer.",
+
+        member_price_title:
+            "Membre du Club",
+
+        member_price_text:
+            "Cotisation annuelle : 250 €.",
+
+        member_mooring_text:
+            "Adhésion au Club : 1 500 €, paiement unique non remboursable.",
+
+        mooring_title:
+            "Mouillages",
+
+        mooring_text:
+            "Les mouillages sont gérés selon les conditions et tarifs en vigueur du Club.",
+
+        mooring_price_pending:
+            "Tarifs 2026 : nous consulter.",
+
+        young_title:
+            "Tarif jeune",
+
+        young_text:
+            "Pour les moins de 32 ans. Ils ne paient pas l'adhésion au Club.",
+
+        young_price_pending:
+            "Conditions et tarifs selon la réglementation 2026.",
+
+        nautica_services_title:
+            "Services et mouillages",
+
+        nautica_services_text:
+            "Informations sur les mouillages, bouées, bateaux, services et conditions d'utilisation du club.",
+
+        activities_kicker:
+            "ACTIVITÉS",
+
+        activities_title:
+            "Des expériences pour vivre la mer",
+
+        activities_intro:
+            "Des activités spéciales pour profiter de la Costa Brava depuis la mer.",
+
+        fireworks_title:
+            "Feux de Sant Feliu de Guíxols",
+
+        fireworks_text:
+            "Sortie en bateau pour admirer les feux d'artifice de Sant Feliu de Guíxols depuis la mer.",
+
+        eclipse_title:
+            "Sortie pour observer l'éclipse",
+
+        eclipse_text:
+            "Une sortie spéciale pour vivre l'éclipse depuis un lieu privilégié : la mer face à Canyet · Rosamar.",
+
+        canyet_kicker:
+            "CANYET · ROSAMAR",
+
+        canyet_title:
+            "Une crique chargée d'histoire",
+
+        canyet_text_1:
+            "Découvrir Cala Canyet, c'est entrer dans un coin de la Costa Brava où la nature sauvage côtoie l'histoire de la bourgeoisie catalane.",
+
+        canyet_text_2:
+            "La physionomie actuelle de la crique a commencé à prendre forme au début du XXe siècle, lorsque le domaine était lié à la famille Castelló, associée à la prospère industrie du liège de Sant Feliu de Guíxols.",
+
+        canyet_text_3:
+            "Vers 1912, la transformation de cet environnement est documentée, avec la création des Pontets, des constructions intégrées à la roche permettant d'accéder à la mer et de profiter de ce paysage exceptionnel.",
+
+        canyet_text_4:
+            "Sur la Punta de Canyet, un belvédère de caractère classique fut également projeté, pensé pour contempler le parcours des pontets et l'horizon méditerranéen.",
+
+        canyet_text_5:
+            "Dans les années 1940, la propriété passa à la famille Sacrest. À cette époque, un vivier artificiel fut creusé dans la roche afin de conserver les prises de mer, notamment les langoustes, avant les repas et célébrations de la propriété.",
+
+        canyet_boat_text:
+            "Cette zone, autrefois utilisée pour conserver les langoustes vivantes, sert aujourd'hui à abriter de petites embarcations, conservant ainsi son lien avec la vie maritime de Canyet.",
+
+        canyet_text_6:
+            "Au fil des décennies, les tempêtes ont durement affecté ces structures. Les Pontets ont été reconstruits et conservés dans le respect de leur physionomie et du caractère singulier de l'ensemble.",
+
+        canyet_text_7:
+            "Aujourd'hui, parcourir les Pontets, contempler la mer depuis le belvédère ou observer les anciennes structures liées au vivier permet de se connecter à une partie très particulière de l'histoire vivante de la Costa Brava.",
+
+        marine_kicker:
+            "MER ET MÉTÉO",
+
+        marine_title:
+            "Canyet · Rosamar",
+
+        marine_intro:
+            "État actuel de la mer, vent et conditions météorologiques à Canyet · Rosamar.",
+
+        marine_temperature:
+            "TEMPÉRATURE",
+
+        marine_wave:
+            "ÉTAT DE LA MER",
+
+        marine_wind:
+            "VENT",
+
+        marine_direction:
+            "DIRECTION DU VENT",
+
+        marine_update:
+            "Prêt pour la mise à jour automatique",
+
+        marine_forecast_title:
+            "Prévisions maritimes",
+
+        marine_forecast_loading:
+            "Chargement des prévisions...",
+
+        members_kicker:
+            "MEMBRES",
+
+        members_title:
+            "Espace privé des membres",
+
+        members_text:
+            "Un espace réservé aux membres du Club Nàutic Canyet pour consulter les informations, avis, documents et communications du club.",
+
+        members_login_title:
+            "Accès réservé aux membres",
+
+        members_login_text:
+            "Introduisez votre code PIN.",
+
+        members_login_button:
+            "ENTRER",
+
+        members_private_title:
+            "Bienvenue dans l'espace membres",
+
+        members_private_text:
+            "Cette zone intégrera progressivement les informations, avis et documents communiqués par le club.",
+
+        private_news:
+            "Avis",
+
+        private_news_text:
+            "Prochainement.",
+
+        private_documents:
+            "Documents",
+
+        private_documents_text:
+            "Prochainement.",
+
+        private_moorings:
+            "Mouillages",
+
+        private_moorings_text:
+            "Prochainement.",
+
+        private_calendar:
+            "Calendrier",
+
+        private_calendar_text:
+            "Prochainement.",
+
+        members_logout:
+            "SORTIR",
+
+        contact_kicker:
+            "CONTACT",
+
+        contact_title:
+            "Parlons-en",
+
+        contact_text:
+            "Pour toute question concernant le Club Nàutic Canyet, contactez-nous.",
+
+        final_kicker:
+            "CLUB NÀUTIC CANYET",
+
+        final_title:
+            "La mer n'est pas seulement un lieu.<br>C'est une manière de vivre.",
+
+        final_text:
+            "Canyet, Rosamar et la Méditerranée font partie d'une histoire toujours vivante. Un lieu pour naviguer, partager et préserver l'esprit du club."
+
+    }
 
 };
 
 
+
 /* =========================================================
-   CAMBIO IDIOMA
+   CAMBIO DE IDIOMA
    ========================================================= */
 
 function changeLanguage(language) {
@@ -4135,17 +2411,18 @@ function changeLanguage(language) {
         language
     );
 
+
     document.documentElement.lang =
         language;
+
 
     document
         .querySelectorAll("[data-i18n]")
         .forEach(element => {
 
             const key =
-                element.getAttribute(
-                    "data-i18n"
-                );
+                element.getAttribute("data-i18n");
+
 
             if (
                 translations[language] &&
@@ -4159,6 +2436,7 @@ function changeLanguage(language) {
 
         });
 
+
     document
         .querySelectorAll(
             ".language-selector button"
@@ -4171,12 +2449,14 @@ function changeLanguage(language) {
 
         });
 
+
     const activeButton =
         document.querySelector(
             '.language-selector button[onclick*="' +
             language +
             '"]'
         );
+
 
     if (activeButton) {
 
@@ -4189,11 +2469,13 @@ function changeLanguage(language) {
 }
 
 
+
 /* =========================================================
-   PIN SOCIOS
+   ÁREA DE SOCIS
    ========================================================= */
 
-const MEMBER_PIN = "4729";
+const MEMBER_PIN =
+    "4729";
 
 
 function checkMemberPin() {
@@ -4203,30 +2485,37 @@ function checkMemberPin() {
             "members-pin"
         );
 
+
     const error =
         document.getElementById(
             "members-error"
         );
+
 
     const login =
         document.getElementById(
             "members-login"
         );
 
+
     const privateArea =
         document.getElementById(
             "members-private"
         );
 
+
     if (
-        input.value === MEMBER_PIN
+        input.value ===
+        MEMBER_PIN
     ) {
 
         login.style.display =
             "none";
 
+
         privateArea.style.display =
             "block";
+
 
         error.textContent =
             "";
@@ -4234,7 +2523,9 @@ function checkMemberPin() {
         input.value =
             "";
 
-    } else {
+    }
+
+    else {
 
         error.textContent =
             "PIN incorrecte.";
@@ -4249,40 +2540,61 @@ function checkMemberPin() {
 }
 
 
+
 function logoutMembers() {
 
-    document.getElementById(
-        "members-login"
-    ).style.display =
+    const login =
+        document.getElementById(
+            "members-login"
+        );
+
+
+    const privateArea =
+        document.getElementById(
+            "members-private"
+        );
+
+
+    login.style.display =
         "block";
 
-    document.getElementById(
-        "members-private"
-    ).style.display =
+
+    privateArea.style.display =
         "none";
 
 }
+
 
 
 /* =========================================================
    MAR I TEMPS
    ========================================================= */
 
-const CANYET_LAT = 41.7596;
-const CANYET_LON = 2.98205;
+const CANYET_LAT =
+    41.7596;
 
 
-/* NOMBRES CATALANES DEL VENT */
+const CANYET_LON =
+    2.98205;
 
-function windDirectionCatalan(degrees) {
+
+
+/* =========================================================
+   DIRECCIÓ DEL VENT
+   ========================================================= */
+
+function windDirection(degrees) {
 
     if (
         degrees === null ||
         degrees === undefined ||
         Number.isNaN(degrees)
     ) {
+
         return "—";
+
     }
+
 
     const directions = [
 
@@ -4297,49 +2609,22 @@ function windDirectionCatalan(degrees) {
 
     ];
 
+
     const index =
         Math.round(
             degrees / 45
         ) % 8;
+
 
     return directions[index];
 
 }
 
 
-/* ABREVIATURAS PARA PREVISIÓN */
 
-function windDirectionShort(degrees) {
-
-    if (
-        degrees === null ||
-        degrees === undefined ||
-        Number.isNaN(degrees)
-    ) {
-        return "—";
-    }
-
-    const directions = [
-        "N",
-        "NE",
-        "E",
-        "SE",
-        "S",
-        "SO",
-        "O",
-        "NO"
-    ];
-
-    return directions[
-        Math.round(
-            degrees / 45
-        ) % 8
-    ];
-
-}
-
-
-/* ESTADO MAR */
+/* =========================================================
+   ESTAT DE LA MAR
+   ========================================================= */
 
 function seaState(height) {
 
@@ -4347,63 +2632,120 @@ function seaState(height) {
         height === null ||
         height === undefined
     ) {
+
         return "—";
+
     }
 
-    if (height < .3)
+
+    if (height < 0.3) {
+
         return "Calma";
 
-    if (height < .7)
+    }
+
+
+    if (height < 0.7) {
+
         return "Suau";
 
-    if (height < 1.2)
+    }
+
+
+    if (height < 1.2) {
+
         return "Moderada";
 
-    if (height < 2)
+    }
+
+
+    if (height < 2.0) {
+
         return "Movida";
 
-    if (height < 3)
-        return "Fort";
+    }
 
-    return "Molt fort";
+
+    if (height < 3.0) {
+
+        return "Forta";
+
+    }
+
+
+    return "Molt forta";
 
 }
 
 
-/* CARGAR DATOS */
+
+/* =========================================================
+   CARGAR DATOS METEOROLÓGICOS
+   ========================================================= */
 
 async function loadMarineWeather() {
 
+
     try {
 
+
         const weatherURL =
+
             "https://api.open-meteo.com/v1/forecast" +
+
             "?latitude=" +
             CANYET_LAT +
+
             "&longitude=" +
             CANYET_LON +
-            "&current=temperature_2m,wind_speed_10m,wind_direction_10m" +
-            "&hourly=temperature_2m,wind_speed_10m,wind_direction_10m" +
+
+            "&current=" +
+            "temperature_2m," +
+            "wind_speed_10m," +
+            "wind_direction_10m" +
+
+            "&hourly=" +
+            "temperature_2m," +
+            "wind_speed_10m," +
+            "wind_direction_10m" +
+
             "&forecast_days=3" +
+
             "&timezone=Europe%2FMadrid";
+
 
 
         const marineURL =
+
             "https://marine-api.open-meteo.com/v1/marine" +
+
             "?latitude=" +
             CANYET_LAT +
+
             "&longitude=" +
             CANYET_LON +
-            "&current=wave_height,wave_direction,wave_period,sea_surface_temperature" +
-            "&hourly=wave_height,wave_direction,wave_period,sea_surface_temperature" +
+
+            "&current=" +
+            "wave_height," +
+            "wave_direction," +
+            "wave_period," +
+            "sea_surface_temperature," +
+            "swell_wave_height" +
+
+            "&hourly=" +
+            "wave_height," +
+            "wave_direction," +
+            "wave_period," +
+            "swell_wave_height," +
+            "sea_surface_temperature" +
+
             "&forecast_days=3" +
+
             "&timezone=Europe%2FMadrid";
 
 
-        const [
-            weatherResponse,
-            marineResponse
-        ] =
+
+        const responses =
             await Promise.all([
 
                 fetch(weatherURL),
@@ -4413,13 +2755,21 @@ async function loadMarineWeather() {
             ]);
 
 
+        const weatherResponse =
+            responses[0];
+
+
+        const marineResponse =
+            responses[1];
+
+
         if (
             !weatherResponse.ok ||
             !marineResponse.ok
         ) {
 
             throw new Error(
-                "Datos no disponibles"
+                "No se han podido obtener los datos."
             );
 
         }
@@ -4428,12 +2778,14 @@ async function loadMarineWeather() {
         const weather =
             await weatherResponse.json();
 
+
         const marine =
             await marineResponse.json();
 
 
         const currentWeather =
             weather.current || {};
+
 
         const currentMarine =
             marine.current || {};
@@ -4442,58 +2794,106 @@ async function loadMarineWeather() {
         const temperature =
             currentWeather.temperature_2m;
 
+
         const wind =
             currentWeather.wind_speed_10m;
+
 
         const windDegrees =
             currentWeather.wind_direction_10m;
 
+
         const wave =
             currentMarine.wave_height;
 
+
         const wavePeriod =
             currentMarine.wave_period;
+
 
         const seaTemperature =
             currentMarine.sea_surface_temperature;
 
 
-        document.getElementById(
-            "marine-temperature"
-        ).textContent =
-            temperature !== undefined
-                ? Math.round(temperature)
-                : "—";
 
-
-        document.getElementById(
-            "marine-wave"
-        ).textContent =
-            wave !== undefined
-                ? wave.toFixed(1)
-                : "—";
-
-
-        document.getElementById(
-            "marine-wind"
-        ).textContent =
-            wind !== undefined
-                ? Math.round(wind)
-                : "—";
-
-
-        /*
-           IMPORTANTE:
-           AQUÍ APARECEN LOS NOMBRES CATALANES
-           EN EL CUADRO PRINCIPAL.
-        */
-
-        document.getElementById(
-            "marine-direction"
-        ).textContent =
-            windDirectionCatalan(
-                windDegrees
+        const temperatureElement =
+            document.getElementById(
+                "marine-temperature"
             );
+
+
+        if (
+            temperatureElement &&
+            temperature !== null &&
+            temperature !== undefined
+        ) {
+
+            temperatureElement.textContent =
+                Math.round(
+                    temperature
+                );
+
+        }
+
+
+
+        const waveElement =
+            document.getElementById(
+                "marine-wave"
+            );
+
+
+        if (waveElement) {
+
+            waveElement.textContent =
+                wave !== null &&
+                wave !== undefined
+
+                    ? wave.toFixed(1)
+
+                    : "—";
+
+        }
+
+
+
+        const windElement =
+            document.getElementById(
+                "marine-wind"
+            );
+
+
+        if (windElement) {
+
+            windElement.textContent =
+                wind !== null &&
+                wind !== undefined
+
+                    ? Math.round(
+                        wind
+                    )
+
+                    : "—";
+
+        }
+
+
+
+        const directionElement =
+            document.getElementById(
+                "marine-direction"
+            );
+
+
+        if (directionElement) {
+
+            directionElement.textContent =
+                windDirection(
+                    windDegrees
+                );
+
+        }
+
 
 
         updateMarineExtraInfo(
@@ -4509,63 +2909,89 @@ async function loadMarineWeather() {
         );
 
 
-        const now =
-            new Date();
-
-        const time =
-            now.toLocaleTimeString(
-                "ca-ES",
-                {
-                    hour:"2-digit",
-                    minute:"2-digit"
-                }
+        const updateElement =
+            document.querySelector(
+                ".marine-update"
             );
 
 
-        document.querySelector(
-            ".marine-update"
-        ).innerHTML =
+        if (updateElement) {
 
-            "<span>●</span>" +
 
-            "<span>" +
+            const now =
+                new Date();
 
-            "ACTUALITZAT A LES " +
 
-            time +
+            const time =
+                now.toLocaleTimeString(
+                    "ca-ES",
+                    {
+                        hour:
+                            "2-digit",
 
-            " · CANYET" +
+                        minute:
+                            "2-digit"
+                    }
+                );
 
-            "</span>";
+
+            updateElement.innerHTML =
+
+                "<span>●</span>" +
+
+                "<span>" +
+
+                "ACTUALITZAT A LES " +
+
+                time +
+
+                " · CANYET" +
+
+                "</span>";
+
+        }
+
 
     }
 
+    catch (error) {
 
-    catch(error) {
 
         console.error(
-            "Mar i Temps:",
+            "Error cargando Mar i Temps:",
             error
         );
 
-        document.querySelector(
-            ".marine-update"
-        ).innerHTML =
 
-            "<span>●</span>" +
+        const updateElement =
+            document.querySelector(
+                ".marine-update"
+            );
 
-            "<span>" +
 
-            "Dades temporalment no disponibles" +
+        if (updateElement) {
 
-            "</span>";
+            updateElement.innerHTML =
+
+                "<span>●</span>" +
+
+                "<span>" +
+
+                "Dades temporalment no disponibles" +
+
+                "</span>";
+
+        }
 
     }
 
 }
 
 
-/* EXTRA MAR */
+
+/* =========================================================
+   INFORMACIÓN EXTRA DE LA MAR
+   ========================================================= */
 
 function updateMarineExtraInfo(
     seaTemperature,
@@ -4573,32 +2999,92 @@ function updateMarineExtraInfo(
     wave
 ) {
 
-    const container =
+
+    const marineSection =
+        document.querySelector(
+            ".marine-section"
+        );
+
+
+    if (!marineSection) {
+
+        return;
+
+    }
+
+
+    let extra =
         document.getElementById(
             "marine-extra-info"
         );
 
-    const water =
-        seaTemperature !== undefined &&
-        seaTemperature !== null
-            ? seaTemperature.toFixed(1)
+
+    if (!extra) {
+
+
+        extra =
+            document.createElement(
+                "div"
+            );
+
+
+        extra.id =
+            "marine-extra-info";
+
+
+        extra.className =
+            "marine-extra-info";
+
+
+        const forecast =
+            document.querySelector(
+                ".marine-forecast"
+            );
+
+
+        if (forecast) {
+
+            forecast.parentNode.insertBefore(
+                extra,
+                forecast
+            );
+
+        }
+
+    }
+
+
+    const waterText =
+        seaTemperature !== null &&
+        seaTemperature !== undefined
+
+            ? seaTemperature.toFixed(1) + " °C"
+
             : "—";
 
-    const period =
-        wavePeriod !== undefined &&
-        wavePeriod !== null
-            ? wavePeriod.toFixed(1)
+
+    const periodText =
+        wavePeriod !== null &&
+        wavePeriod !== undefined
+
+            ? wavePeriod.toFixed(1) + " s"
+
             : "—";
 
-    const state =
-        seaState(wave);
+
+    const stateText =
+        seaState(
+            wave
+        );
 
 
-    container.innerHTML = `
+    extra.innerHTML = `
 
         <div class="marine-extra-item">
 
-            <span>🌊</span>
+            <span>
+                🌊
+            </span>
 
             <div>
 
@@ -4607,7 +3093,7 @@ function updateMarineExtraInfo(
                 </small>
 
                 <strong>
-                    ${water} °C
+                    ${waterText}
                 </strong>
 
             </div>
@@ -4617,7 +3103,9 @@ function updateMarineExtraInfo(
 
         <div class="marine-extra-item">
 
-            <span>〰</span>
+            <span>
+                〰
+            </span>
 
             <div>
 
@@ -4626,7 +3114,7 @@ function updateMarineExtraInfo(
                 </small>
 
                 <strong>
-                    ${period} s
+                    ${periodText}
                 </strong>
 
             </div>
@@ -4636,7 +3124,9 @@ function updateMarineExtraInfo(
 
         <div class="marine-extra-item">
 
-            <span>◉</span>
+            <span>
+                ◉
+            </span>
 
             <div>
 
@@ -4645,7 +3135,7 @@ function updateMarineExtraInfo(
                 </small>
 
                 <strong>
-                    ${state}
+                    ${stateText}
                 </strong>
 
             </div>
@@ -4657,30 +3147,54 @@ function updateMarineExtraInfo(
 }
 
 
-/* PREVISIÓN */
+
+/* =========================================================
+   PREVISIÓN HORARIA
+   ========================================================= */
 
 function createMarineForecast(
     weather,
     marine
 ) {
 
+
     const container =
         document.getElementById(
             "marine-forecast-grid"
         );
 
-    container.innerHTML = "";
+
+    if (!container) {
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        "";
+
 
     const weatherTimes =
-        weather.hourly?.time || [];
+        weather.hourly &&
+        weather.hourly.time
+            ? weather.hourly.time
+            : [];
+
 
     const marineTimes =
-        marine.hourly?.time || [];
+        marine.hourly &&
+        marine.hourly.time
+            ? marine.hourly.time
+            : [];
+
 
     const now =
         new Date();
 
-    let shown = 0;
+
+    let shown =
+        0;
 
 
     for (
@@ -4689,8 +3203,14 @@ function createMarineForecast(
         i++
     ) {
 
-        if (shown >= 12)
+
+        if (
+            shown >= 12
+        ) {
+
             break;
+
+        }
 
 
         const date =
@@ -4699,8 +3219,13 @@ function createMarineForecast(
             );
 
 
-        if (date < now)
+        if (
+            date < now
+        ) {
+
             continue;
+
+        }
 
 
         const marineIndex =
@@ -4709,44 +3234,63 @@ function createMarineForecast(
             );
 
 
-        if (marineIndex === -1)
+        if (
+            marineIndex === -1
+        ) {
+
             continue;
+
+        }
 
 
         const hour =
             date.toLocaleTimeString(
                 "ca-ES",
                 {
-                    hour:"2-digit",
-                    minute:"2-digit"
+                    hour:
+                        "2-digit",
+
+                    minute:
+                        "2-digit"
                 }
             );
 
 
         const temperature =
-            weather.hourly.temperature_2m[i];
+            weather.hourly
+                .temperature_2m[i];
+
 
         const wind =
-            weather.hourly.wind_speed_10m[i];
+            weather.hourly
+                .wind_speed_10m[i];
+
 
         const windDegrees =
-            weather.hourly.wind_direction_10m[i];
+            weather.hourly
+                .wind_direction_10m[i];
+
 
         const wave =
-            marine.hourly.wave_height[
-                marineIndex
-            ];
+            marine.hourly
+                .wave_height[
+                    marineIndex
+                ];
+
 
         const period =
-            marine.hourly.wave_period[
-                marineIndex
-            ];
+            marine.hourly
+                .wave_period[
+                    marineIndex
+                ];
+
 
 
         const card =
             document.createElement(
                 "div"
             );
+
 
         card.className =
             "marine-forecast-card";
@@ -4755,33 +3299,98 @@ function createMarineForecast(
         card.innerHTML = `
 
             <div class="marine-forecast-time">
+
                 ${hour}
+
             </div>
 
-            <div>
+
+            <div class="marine-forecast-wave">
+
                 🌊
-                ${wave != null ? wave.toFixed(1) : "—"}
+
+                ${
+                    wave !== null &&
+                    wave !== undefined
+
+                        ? wave.toFixed(1)
+
+                        : "—"
+                }
+
                 m
+
             </div>
 
-            <div>
+
+            <div class="marine-forecast-wind">
+
                 💨
-                ${wind != null ? Math.round(wind) : "—"}
+
+                ${
+                    wind !== null &&
+                    wind !== undefined
+
+                        ? Math.round(
+                            wind
+                        )
+
+                        : "—"
+                }
+
                 km/h
+
             </div>
 
-            <div>
+
+            <div class="marine-forecast-direction">
+
                 🧭
-                ${windDirectionShort(windDegrees)}
+
+                ${
+                    windDirection(
+                        windDegrees
+                    )
+                }
+
             </div>
+
 
             <div class="marine-forecast-temperature">
-                ${temperature != null ? Math.round(temperature) : "—"} °C
+
+                ${
+                    temperature !== null &&
+                    temperature !== undefined
+
+                        ? Math.round(
+                            temperature
+                        )
+
+                        : "—"
+                }
+
+                °C
+
             </div>
 
-            <div>
+
+            <div class="marine-forecast-period">
+
                 〰
-                ${period != null ? period.toFixed(1) : "—"} s
+
+                ${
+                    period !== null &&
+                    period !== undefined
+
+                        ? period.toFixed(
+                            1
+                        )
+
+                        : "—"
+                }
+
+                s
+
             </div>
 
         `;
@@ -4791,11 +3400,143 @@ function createMarineForecast(
             card
         );
 
+
         shown++;
 
     }
 
+
+    if (
+        shown === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div class="marine-forecast-placeholder">
+
+                Dades de previsió temporalment no disponibles.
+
+            </div>
+
+        `;
+
+    }
+
 }
+
+
+
+/* =========================================================
+   ACTUALIZACIÓN AUTOMÁTICA
+   ========================================================= */
+
+let marineUpdateInterval;
+
+
+
+function startMarineUpdates() {
+
+
+    loadMarineWeather();
+
+
+    marineUpdateInterval =
+        setInterval(
+
+            function () {
+
+                loadMarineWeather();
+
+            },
+
+            15 * 60 * 1000
+
+        );
+
+}
+
+
+
+/* =========================================================
+   ANIMACIONES AL HACER SCROLL
+   ========================================================= */
+
+function initScrollReveal() {
+
+    const elements =
+        document.querySelectorAll(
+            ".reveal"
+        );
+
+
+    if (
+        !("IntersectionObserver" in window)
+    ) {
+
+        elements.forEach(
+            element => {
+
+                element.classList.add(
+                    "visible"
+                );
+
+            }
+        );
+
+        return;
+
+    }
+
+
+    const observer =
+        new IntersectionObserver(
+
+            function (
+                entries
+            ) {
+
+                entries.forEach(
+                    entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+
+            {
+                threshold:
+                    0.12
+            }
+
+        );
+
+
+    elements.forEach(
+        element => {
+
+            observer.observe(
+                element
+            );
+
+        }
+    );
+
+}
+
 
 
 /* =========================================================
@@ -4804,7 +3545,8 @@ function createMarineForecast(
 
 document.addEventListener(
     "DOMContentLoaded",
-    function() {
+    function () {
+
 
         const savedLanguage =
             localStorage.getItem(
@@ -4817,13 +3559,10 @@ document.addEventListener(
         );
 
 
-        loadMarineWeather();
+        startMarineUpdates();
 
 
-        setInterval(
-            loadMarineWeather,
-            15 * 60 * 1000
-        );
+        initScrollReveal();
 
 
         const pinInput =
@@ -4834,12 +3573,15 @@ document.addEventListener(
 
         if (pinInput) {
 
+
             pinInput.addEventListener(
                 "keydown",
-                function(event) {
+                function (event) {
+
 
                     if (
-                        event.key === "Enter"
+                        event.key ===
+                        "Enter"
                     ) {
 
                         checkMemberPin();
@@ -4853,6 +3595,7 @@ document.addEventListener(
 
     }
 );
+
 
 </script>
 
