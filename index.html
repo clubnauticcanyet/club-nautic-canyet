@@ -1421,6 +1421,93 @@ input {
 }
 
 
+/* RADAR DE VIENTO */
+
+.wind-radar {
+    margin-top: 48px;
+    padding: 28px;
+    background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 25px 70px rgba(0,0,0,.20);
+}
+
+.wind-radar-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.wind-radar-title {
+    margin: 0 !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.wind-radar-intro {
+    max-width: 620px;
+    margin: 7px 0 0;
+    color: rgba(255,255,255,.58);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.wind-radar-badge {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border: 1px solid rgba(225,177,58,.38);
+    color: #e1b13a;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.wind-radar-frame {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    background: #061d2b;
+    border: 1px solid rgba(255,255,255,.10);
+}
+
+.wind-radar-frame iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+.wind-radar-note {
+    margin: 12px 0 0;
+    color: rgba(255,255,255,.40);
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+@media (max-width:600px) {
+    .wind-radar {
+        margin-top: 35px;
+        padding: 18px;
+    }
+
+    .wind-radar-header {
+        display: block;
+    }
+
+    .wind-radar-badge {
+        display: inline-block;
+        margin-top: 14px;
+    }
+
+    .wind-radar-frame {
+        height: 430px;
+    }
+}
+
+
 /* =========================================================
    ÁREA PRIVADA
    ========================================================= */
@@ -3366,9 +3453,45 @@ input {
 
         </div>
 
+
+    <!-- RADAR DE VIENTO -->
+
+    <div class="wind-radar">
+
+        <div class="wind-radar-header">
+
+            <div>
+                <h3 class="wind-radar-title" data-i18n="marine_wind_radar_title">
+                    Radar de vent
+                </h3>
+
+                <p class="wind-radar-intro" data-i18n="marine_wind_radar_intro">
+                    Visualització en temps real de la circulació del vent al voltant de Canyet · Rosamar.
+                </p>
+            </div>
+
+            <span class="wind-radar-badge" data-i18n="marine_wind_radar_badge">
+                VENT · EN DIRECTE
+            </span>
+
+        </div>
+
+        <div class="wind-radar-frame">
+            <iframe
+                title="Radar de vent a Canyet · Rosamar"
+                src="https://embed.windy.com/embed2.html?lat=41.7596&lon=2.98205&zoom=10&level=surface&overlay=wind&menu=&message=false&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&detailLat=41.7596&detailLon=2.98205&metricWind=default&metricTemp=default&radarRange=-1"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="wind-radar-note" data-i18n="marine_wind_radar_note">
+            Font cartogràfica i meteorològica: Windy. La informació es mostra com a suport orientatiu i pot variar segons l'actualització de les dades.
+        </p>
+
     </div>
 
-</div>
+    </div>
 
 </section>
 
@@ -3802,6 +3925,10 @@ marine_wave:"ESTAT DE LA MAR",
 marine_wind:"VENT",
 marine_direction:"DIRECCIÓ DEL VENT",
 marine_forecast_title:"Previsió marítima",
+marine_wind_radar_title:"Radar de vent",
+marine_wind_radar_intro:"Visualització en temps real de la circulació del vent al voltant de Canyet · Rosamar.",
+marine_wind_radar_badge:"VENT · EN DIRECTE",
+marine_wind_radar_note:"Font cartogràfica i meteorològica: Windy. La informació es mostra com a suport orientatiu i pot variar segons l'actualització de les dades.",
 
 members_kicker:"SOCIS",
 members_title:"Àrea privada de socis",
@@ -3944,6 +4071,10 @@ marine_wave:"ESTADO DEL MAR",
 marine_wind:"VIENTO",
 marine_direction:"DIRECCIÓN DEL VIENTO",
 marine_forecast_title:"Previsión marítima",
+marine_wind_radar_title:"Radar de viento",
+marine_wind_radar_intro:"Visualización en tiempo real de la circulación del viento alrededor de Canyet · Rosamar.",
+marine_wind_radar_badge:"VIENTO · EN DIRECTO",
+marine_wind_radar_note:"Fuente cartográfica y meteorológica: Windy. La información se muestra como apoyo orientativo y puede variar según la actualización de los datos.",
 
 members_kicker:"SOCIOS",
 members_title:"Área privada de socios",
@@ -4084,6 +4215,10 @@ marine_wave:"ÉTAT DE LA MER",
 marine_wind:"VENT",
 marine_direction:"DIRECTION DU VENT",
 marine_forecast_title:"Prévisions maritimes",
+marine_wind_radar_title:"Radar du vent",
+marine_wind_radar_intro:"Visualisation en temps réel de la circulation du vent autour de Canyet · Rosamar.",
+marine_wind_radar_badge:"VENT · EN DIRECT",
+marine_wind_radar_note:"Source cartographique et météorologique : Windy. Les informations sont fournies à titre indicatif et peuvent varier selon la mise à jour des données.",
 
 members_kicker:"MEMBRES",
 members_title:"Espace privé des membres",
