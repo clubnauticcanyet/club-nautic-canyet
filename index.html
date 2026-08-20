@@ -33,12 +33,6 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
 }
 
 body {
@@ -342,7 +336,7 @@ input {
     bottom: 0;
 
     width: 100%;
-    height: 160px;
+    height: 190px;
 
     display: grid;
 
@@ -364,9 +358,9 @@ input {
     position: relative;
 
     min-width: 0;
-    height: 160px;
+    height: 190px;
 
-    padding: 20px 25px 18px;
+    padding: 27px 25px 22px;
 
     display: flex;
     flex-direction: column;
@@ -389,7 +383,7 @@ input {
 
 .quick-icon {
 
-    margin-bottom: 9px;
+    margin-bottom: 14px;
 
     color: #e1b13a;
 
@@ -400,7 +394,7 @@ input {
 
 .quick-link h3 {
 
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 
     font-family:
         Georgia,
@@ -427,7 +421,7 @@ input {
     position: absolute;
 
     right: 25px;
-    bottom: 14px;
+    bottom: 20px;
 
     color: #e1b13a;
 
@@ -2623,14 +2617,6 @@ input {
     will-change: transform;
 }
 
-
-/* CANYET · REPORTATGE HISTÒRIC */
-.canyet-reportage{padding-left:clamp(24px,5vw,72px);padding-right:clamp(24px,5vw,72px)}
-.canyet-reportage-intro{max-width:980px;margin:0 auto 4rem}.canyet-reportage-intro p{margin-bottom:1.4rem}
-.canyet-reportage-photo{margin:2rem 0 2.4rem;cursor:zoom-in;overflow:hidden}.canyet-reportage-photo img{display:block;width:100%;height:auto}.canyet-reportage-photo figcaption{padding:1rem 1.15rem 1.2rem}.canyet-reportage-photo figcaption strong,.canyet-reportage-photo figcaption span{display:block}.canyet-reportage-photo figcaption span{margin-top:.35rem}.canyet-reportage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin:2rem 0}.canyet-reportage-grid .canyet-reportage-photo{margin:0}@media(max-width:700px){.canyet-reportage{padding-left:20px;padding-right:20px}.canyet-reportage-grid{grid-template-columns:1fr}}
-
-/* Ajust d'altura de la portada per evitar el tall dels botons inferiors */
-.hero{min-height:100svh;min-height:100vh}
 </style>
 
 </head>
@@ -3574,70 +3560,423 @@ input {
 
 
 <!-- =========================================================
-     CANYET · HISTÒRIA
+     CANYET · HISTORIA
      ========================================================= -->
-<section id="canyet" class="section-image">
-    <div class="section-image-overlay"></div>
-    <div class="container section-image-content canyet-story canyet-reportage">
-        <span class="section-kicker">CANYET · ROSAMAR</span>
-        <h2>La història de Cala Canyet</h2>
 
-        <div class="canyet-reportage-intro">
-            <p>Canyet és molt més que una cala. És un paisatge construït lentament entre la roca, el bosc i la mar, on els camins, els Pontets, els quioscos i els miradors formen part d'una mateixa història. Les postals antigues permeten veure aquest indret abans de les transformacions de les darreres dècades i entendre fins a quin punt l'arquitectura es va adaptar al relleu natural.</p>
-            <p>La documentació gràfica conservada mostra diferents punts de vista de la mateixa geografia: la cala, l'accés litoral, les escales, els Pontets, la Punta de Canyet i les petites glorietes que dominaven el penya-segat. Són testimonis d'una època en què arribar fins al mar formava part de l'experiència de viure i gaudir d'aquest racó de la Costa Brava.</p>
+<section id="canyet"
+         class="section-image">
+
+<div class="section-image-overlay"></div>
+
+<div class="container section-image-content canyet-story">
+
+    <span class="section-kicker">
+        CANYET · ROSAMAR
+    </span>
+
+    <h2>
+        La història de Cala Canyet
+    </h2>
+
+    <div class="canyet-history-intro">
+
+        <p>
+            <strong>Canyet és molt més que una cala.</strong>
+            És un paisatge construït lentament entre la roca, el bosc i la mar,
+            on els camins, els Pontets, els quioscos i els miradors formen part
+            d'una mateixa història. Les postals antigues permeten veure aquest
+            indret abans de les transformacions de les darreres dècades i entendre
+            fins a quin punt l'arquitectura es va adaptar al relleu natural.
+        </p>
+
+        <p>
+            La documentació gràfica conservada mostra diferents punts de vista de
+            la mateixa geografia: la cala, l'accés litoral, les escales, els
+            Pontets, la Punta de Canyet i les petites glorietes que dominaven el
+            penya-segat. Són testimonis d'una època en què arribar fins al mar
+            formava part de l'experiència de viure i gaudir d'aquest racó de la
+            Costa Brava.
+        </p>
+
+    </div>
+
+    <div class="canyet-history-divider"></div>
+
+
+    <div class="canyet-timeline">
+
+        <article class="canyet-timeline-item">
+
+            <div class="canyet-timeline-label">
+                <span>ELS ORÍGENS</span>
+                <h3>Principis del segle XX</h3>
+            </div>
+
+            <div class="canyet-timeline-content">
+
+                <p>
+                    La transformació de l'entorn va començar a principis del
+                    segle XX, vinculada a la família Castelló i a la tradició
+                    surera de Sant Feliu de Guíxols. Al voltant de <strong>1912</strong>
+                    es projectà l'accés privat al mar que acabaria donant forma
+                    al paisatge que encara avui reconeixem a Canyet.
+                </p>
+
+                <p>
+                    Les fotografies antigues permeten seguir visualment aquest
+                    procés: un litoral abrupte convertit en un recorregut
+                    accessible, amb camins, escales, murs, baranes i petits
+                    elements arquitectònics integrats sobre la roca.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="canyet-timeline-item">
+
+            <div class="canyet-timeline-label">
+                <span>EL CAMÍ DE LA MAR</span>
+                <h3>Els Pontets</h3>
+            </div>
+
+            <div class="canyet-timeline-content">
+
+                <p>
+                    Els Pontets són probablement l'element més singular i
+                    recognoscible de Canyet. Les passarel·les construïdes sobre
+                    la roca permetien arribar fins a la mar seguint el perfil
+                    del penya-segat. Les escales i els trams de pas salvaven
+                    els desnivells i feien possible recórrer un litoral que,
+                    per la seva naturalesa, hauria estat difícilment accessible.
+                </p>
+
+                <p>
+                    Les postals mostren amb extraordinària claredat les
+                    baranes i els elements que guiaven el recorregut sobre
+                    la roca. Els pilars de pedra que donaven forma a l'accés
+                    no es trobaven als Pontets, sinó en el camí que connectava
+                    la finca amb la platja, marcant l'arribada al litoral.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="canyet-timeline-item">
+
+            <div class="canyet-timeline-label">
+                <span>LA PUNTA</span>
+                <h3>Els quioscos i el mirador</h3>
+            </div>
+
+            <div class="canyet-timeline-content">
+
+                <p>
+                    Sobre la Punta de Canyet, les fotografies mostren dues
+                    elegants glorietes o quioscos oberts al paisatge. Situats
+                    a diferents cotes, dominaven la roca i miraven directament
+                    cap a la Mediterrània.
+                </p>
+
+                <p>
+                    La seva presència explica també una manera de gaudir de
+                    Canyet: el passeig, la contemplació de la costa i la relació
+                    directa amb el mar formaven part del valor de l'indret.
+                    Les postals permeten veure com aquests petits espais
+                    arquitectònics es convertien en veritables miradors naturals.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="canyet-timeline-item">
+
+            <div class="canyet-timeline-label">
+                <span>LA VIDA A LA CALA</span>
+                <h3>La dècada de 1940</h3>
+            </div>
+
+            <div class="canyet-timeline-content">
+
+                <p>
+                    Amb la família Sacrest, la cala incorporà un
+                    <strong>viver artificial excavat a la roca</strong>,
+                    destinat a mantenir vives les captures de llagosta
+                    per als àpats de la propietat. Actualment, aquest espai
+                    es conserva i s'utilitza per guardar petites embarcacions.
+                </p>
+
+                <p>
+                    Aquest detall ajuda a entendre que Canyet no era només
+                    un paisatge contemplatiu. La mateixa roca i la proximitat
+                    de la mar formaven part de la vida quotidiana i de l'ús
+                    que es feia de l'espai.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="canyet-timeline-item">
+
+            <div class="canyet-timeline-label">
+                <span>MEMÒRIA DEL PAISATGE</span>
+                <h3>Un patrimoni viu</h3>
+            </div>
+
+            <div class="canyet-timeline-content">
+
+                <p>
+                    El mar i els temporals han marcat inevitablement la història
+                    de Canyet. Els Pontets han hagut de ser reconstruïts diverses
+                    vegades, però han mantingut la seva fisonomia i, sobretot,
+                    la seva relació amb el paisatge.
+                </p>
+
+                <p>
+                    Quan comparem les diferents vistes antigues, hi ha una idea
+                    que es repeteix: la roca continua sent la protagonista.
+                    Els camins, els murs, les escales i els quioscos canvien,
+                    es reconstrueixen o desapareixen, però la silueta de la
+                    Punta, la cala i l'horitzó mediterrani continuen identificant
+                    Canyet.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="canyet-history-gallery">
+
+        <div class="canyet-gallery-heading">
+
+            <div>
+                <span class="section-kicker">
+                    MEMÒRIA FOTOGRÀFICA
+                </span>
+
+                <h3>Canyet a través de les postals antigues</h3>
+            </div>
+
+            <p>
+                Una selecció de vistes històriques de Canyet, Sant Feliu de
+                Guíxols. Les imatges permeten identificar els Pontets, els
+                quioscos, els camins, les escales i la relació entre la cala
+                i el paisatge litoral.
+            </p>
+
         </div>
 
-        <article class="canyet-timeline-item canyet-reportage-item">
-            <div class="canyet-timeline-label"><span>ELS ORÍGENS</span><h3>Principis del segle XX</h3></div>
-            <div class="canyet-timeline-content">
-                <p>La transformació de l'entorn va començar a principis del segle XX, vinculada a la família Castelló i a la tradició surera de Sant Feliu de Guíxols. Al voltant de <strong>1912</strong> es projectà l'accés privat al mar que acabaria donant forma al paisatge que encara avui reconeixem a Canyet.</p>
-                <p>Les fotografies antigues permeten seguir visualment aquest procés: un litoral abrupte convertit en un recorregut accessible, amb camins, escales, murs, baranes i petits elements arquitectònics integrats sobre la roca.</p>
-                <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="Els orígens de Canyet" data-description="Una vista històrica que ajuda a entendre la relació entre la finca, la cala i el litoral."><img src="images/0105.JPG" alt="Els orígens de Canyet" loading="lazy"><figcaption><strong>Els orígens de Canyet</strong><span>La imatge documenta el paisatge de Canyet i la seva relació directa entre finca, roca i mar.</span></figcaption></figure>
-            </div>
-        </article>
 
-        <article class="canyet-timeline-item canyet-reportage-item">
-            <div class="canyet-timeline-label"><span>EL CAMÍ DE LA MAR</span><h3>Els Pontets</h3></div>
-            <div class="canyet-timeline-content">
-                <p>Els Pontets són probablement l'element més singular i recognoscible de Canyet. Formaven part de l'accés privat al litoral impulsat en el marc de la transformació de la finca de la família Castelló, amb la voluntat de fer practicable i gaudible un tram de costa fins aleshores abrupte i difícil d'accedir.</p>
-                <p>Les passarel·les construïdes sobre la roca permetien arribar fins a la mar seguint el perfil del penya-segat. Les escales i els trams de pas salvaven els desnivells i feien possible recórrer un litoral que, per la seva naturalesa, hauria estat difícilment accessible. Més que una obra aïllada, Els Pontets formaven part d'un itinerari pensat per connectar la finca amb el mar i convertir el trajecte en una experiència paisatgística.</p>
-            </div>
-        </article>
+        <div class="canyet-gallery">
 
-        <article class="canyet-timeline-item canyet-reportage-item">
-            <div class="canyet-timeline-label"><span>LA PUNTA</span><h3>Els quioscos i el mirador</h3></div>
-            <div class="canyet-timeline-content">
-                <p>Sobre la Punta de Canyet, les fotografies mostren dues elegants glorietes o quioscos oberts al paisatge. Situats a diferents cotes, dominaven la roca i miraven directament cap a la Mediterrània.</p>
-                <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="Els quioscos de Canyet" data-description="La Punta de Canyet amb les dues glorietes o quioscos oberts sobre el penya-segat."><img src="images/0122.JPG" alt="Els quioscos de Canyet" loading="lazy"><figcaption><strong>Els quioscos de Canyet</strong><span>Les dues petites construccions dominaven la Punta i obrien el recorregut cap al mar i l'horitzó mediterrani.</span></figcaption></figure>
-                <p>La seva presència explica també una manera de gaudir de Canyet: el passeig, la contemplació de la costa i la relació directa amb el mar formaven part del valor de l'indret. Les postals permeten veure com aquests petits espais arquitectònics es convertien en veritables miradors naturals.</p>
-            </div>
-        </article>
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="Vista general de Canyet"
+                    data-description="Una de les vistes panoràmiques que documenten la cala, el camí d’accés i el perfil rocallós de la costa.">
 
-        <article class="canyet-timeline-item canyet-reportage-item">
-            <div class="canyet-timeline-label"><span>LA VIDA A LA CALA</span><h3>La dècada de 1940</h3></div>
-            <div class="canyet-timeline-content">
-                <p>Amb la família Sacrest, Canyet va viure una nova etapa. La finca i la cala es van convertir en un espai de trobada i estiueig, vinculat a una manera de viure la Costa Brava anterior al turisme massiu. Entre els seus visitants i convidats hi havia figures destacades del món cultural i social de l'època, que trobaven en aquest racó un lloc discret, singular i especialment lligat al paisatge.</p>
-                <p>En aquest context, la cala incorporà un <strong>viver artificial excavat a la roca</strong>, destinat a mantenir vives les captures de llagosta per als àpats de la propietat. Aquest espai mostra fins a quin punt la mateixa roca i la proximitat de la mar formaven part de la vida quotidiana. <strong>Actualment, aquest espai es conserva i s'utilitza per guardar petites embarcacions.</strong></p>
-                <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="La vida a la cala" data-description="Una imatge històrica de Canyet que documenta la vida quotidiana i la relació directa de la finca amb el mar."><img src="images/0109.JPG" alt="La vida a la cala de Canyet" loading="lazy"><figcaption><strong>La vida a la cala</strong><span>La proximitat de la finca al mar feia de Canyet un espai de vida, trobada i gaudi, més enllà de la simple contemplació del paisatge.</span></figcaption></figure>
-            </div>
-        </article>
+                <img
+                    src="images/IMG_4236.JPG"
+                    alt="Vista general de Canyet · Canyet"
+                    loading="lazy">
 
-        <article class="canyet-timeline-item canyet-reportage-item">
-            <div class="canyet-timeline-label"><span>MEMÒRIA DEL PAISATGE</span><h3>Un patrimoni viu</h3></div>
-            <div class="canyet-timeline-content">
-                <p>El mar i els temporals han marcat inevitablement la història de Canyet. Els Pontets han hagut de ser reconstruïts diverses vegades, però han mantingut la seva fisonomia i, sobretot, la seva relació amb el paisatge.</p>
-                <div class="canyet-reportage-grid">
-                    <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="Vista històrica de Canyet" data-description="Una vista general del conjunt litoral de Canyet."><img src="images/0112.JPG" alt="Vista històrica de Canyet" loading="lazy"><figcaption><strong>El paisatge litoral</strong><span>Una vista que permet reconèixer la relació entre la roca, la Punta i el conjunt de la cala.</span></figcaption></figure>
-                    <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="Vista aèria de la finca i la platja" data-description="La fotografia mostra la finca i la platja de Canyet des d'una perspectiva aèria."><img src="images/0113.JPG" alt="Vista aèria de la finca i la platja de Canyet" loading="lazy"><figcaption><strong>La finca i la platja</strong><span>La perspectiva aèria permet entendre la situació privilegiada de la finca i la seva relació directa amb la platja.</span></figcaption></figure>
-                    <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="Canyet des de la costa" data-description="La vista des del mar mostra els quioscos de la Punta."><img src="images/0114.JPG" alt="Canyet des de la costa" loading="lazy"><figcaption><strong>Canyet des de la costa</strong><span>La imatge permet identificar clarament els quioscos, convertits en un dels signes més reconeixibles de la Punta.</span></figcaption></figure>
-                    <figure class="canyet-reportage-photo" onclick="openCanyetLightbox(this)" data-title="Canyet en color" data-description="Una vista posterior, ja en color, probablement de la segona meitat dels anys seixanta."><img src="images/0121.JPG" alt="Canyet en color" loading="lazy"><figcaption><strong>Canyet en color</strong><span>Una imatge posterior, probablement de la segona meitat dels anys seixanta, que mostra la continuïtat del paisatge de Canyet en una nova etapa.</span></figcaption></figure>
-                </div>
-                <p>Quan comparem les diferents vistes antigues, hi ha una idea que es repeteix: la roca continua sent la protagonista. Els camins, els murs, les escales i els quioscos canvien, es reconstrueixen o desapareixen, però la silueta de la Punta, la cala i l'horitzó mediterrani continuen identificant Canyet.</p>
-                <p class="canyet-gallery-note">Les llegendes descriuen el que es pot identificar visualment a les postals i expliquen els diferents elements del paisatge històric: els quioscos, els camins, la cala, la finca i la seva relació amb el litoral. Les imatges formen part d'aquest relat visual de la memòria de Canyet.</p>
-            </div>
-        </article>
+                <figcaption class="canyet-gallery-caption">
+                    <strong>Vista general de Canyet</strong>
+                    <span>Una de les vistes panoràmiques que documenten la cala, el camí d’accés i el perfil rocallós de la costa.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="Els quioscos de Canyet"
+                    data-description="La Punta de Canyet amb els dos quioscos o glorietes, disposats sobre el penya-segat i oberts al mar.">
+
+                <img
+                    src="images/IMG_4244.JPG"
+                    alt="Els quioscos de Canyet · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>Els quioscos de Canyet</strong>
+                    <span>La Punta de Canyet amb els dos quioscos o glorietes, disposats sobre el penya-segat i oberts al mar.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="El camí sobre els penya-segats"
+                    data-description="La via litoral i les baranes de pedra i cadena que guiaven el recorregut cap als Pontets i la punta.">
+
+                <img
+                    src="images/IMG_4238.JPG"
+                    alt="El camí sobre els penya-segats · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>El camí sobre els penya-segats</strong>
+                    <span>La via litoral i les baranes de pedra i cadena que guiaven el recorregut cap als Pontets i la punta.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="Quioscos i platges de Canyet"
+                    data-description="Una estampa antiga de l’entorn immediat: les construccions, el camí i el relleu encara molt poc transformat.">
+
+                <img
+                    src="images/IMG_4242.JPG"
+                    alt="Quioscos i platges de Canyet · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>Quioscos i platges de Canyet</strong>
+                    <span>Una estampa antiga de l’entorn immediat: les construccions, el camí i el relleu encara molt poc transformat.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="Vista aèria de Canyet i la platja"
+                    data-description="Una vista aèria permet apreciar la finca, la platja i la seva relació directa amb el litoral de Canyet.">
+
+                <img
+                    src="images/IMG_4237.JPG"
+                    alt="Vista aèria de Canyet i la platja · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>Vista aèria de Canyet i la platja</strong>
+                    <span>La vista aèria mostra amb claredat la finca, la platja i la seva privilegiada relació amb el mar.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="La Punta de Canyet"
+                    data-description="Una altra edició de la vista històrica dels quioscos i de l’espai litoral que envolta la punta.">
+
+                <img
+                    src="images/IMG_4247.JPG"
+                    alt="La Punta de Canyet · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>La Punta de Canyet</strong>
+                    <span>Una altra edició de la vista històrica dels quioscos i de l’espai litoral que envolta la punta.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="La Cala de Canyet"
+                    data-description="La postal mostra l’entrada rocosa a la cala i l’accés des del mar, un dels paisatges més íntims de Canyet.">
+
+                <img
+                    src="images/IMG_4239.JPG"
+                    alt="La Cala de Canyet · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>La Cala de Canyet</strong>
+                    <span>La postal mostra l’entrada rocosa a la cala i l’accés des del mar, un dels paisatges més íntims de Canyet.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="Canyet des de la costa"
+                    data-description="La vista mostra els quioscos de Canyet, un dels elements més singulars del paisatge històric de la Punta.">
+
+                <img
+                    src="images/IMG_4241.JPG"
+                    alt="Canyet des de la costa · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>Canyet des de la costa</strong>
+                    <span>Els quioscos de Canyet dominen la imatge i permeten reconèixer la Punta i el seu paisatge litoral.</span>
+                </figcaption>
+
+            </figure>
+
+            <figure class="canyet-gallery-card"
+                    onclick="openCanyetLightbox(this)"
+                    data-title="Vista general de Canyet"
+                    data-description="La panoràmica situa Canyet dins del conjunt de la Costa Brava i permet entendre la seva extraordinària relació entre bosc, roca i mar.">
+
+                <img
+                    src="images/IMG_4245.JPG"
+                    alt="Vista general de Canyet · Canyet"
+                    loading="lazy">
+
+                <figcaption class="canyet-gallery-caption">
+                    <strong>Vista general de Canyet</strong>
+                    <span>La panoràmica situa Canyet dins del conjunt de la Costa Brava i permet entendre la seva extraordinària relació entre bosc, roca i mar.</span>
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+        <p class="canyet-gallery-note">
+            Les llegendes descriuen el que es pot identificar visualment a les
+            postals i expliquen els diferents elements del paisatge històric:
+            els quioscos, els camins, la cala, la finca i la seva relació amb
+            el litoral. Les imatges formen part d'aquest relat visual de la
+            memòria de Canyet.
+        </p>
+
     </div>
+
+</div>
+
 </section>
+
+<!-- VISOR DE FOTOGRAFIA HISTÒRICA -->
+
+<div id="canyet-lightbox"
+     class="canyet-lightbox"
+     aria-hidden="true"
+     onclick="closeCanyetLightbox(event)">
+
+    <button
+        type="button"
+        class="canyet-lightbox-close"
+        aria-label="Tancar"
+        onclick="closeCanyetLightbox(event)">
+        ×
+    </button>
+
+    <img
+        id="canyet-lightbox-image"
+        class="canyet-lightbox-image"
+        src=""
+        alt="">
+
+    <div
+        id="canyet-lightbox-caption"
+        class="canyet-lightbox-caption">
+    </div>
+
+</div>
+
+
 
 <!-- =========================================================
      MAR I TEMPS
