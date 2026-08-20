@@ -2652,6 +2652,57 @@ input {
     will-change: transform;
 }
 
+
+
+/* =========================================================
+   AJUSTES FINALES · ESCRITORIO
+   ========================================================= */
+
+/* Oculta la barra visual sin bloquear el desplazamiento */
+html,
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+/* En ordenador, centra más el bloque de texto de la portada.
+   Tablet y móvil conservan exactamente su posición actual. */
+@media (min-width: 901px) {
+    .hero-content {
+        transform: translateY(-42px);
+    }
+}
+
+/* La sección ACTIVITATS tiene fondo claro: el título no puede ser blanco */
+.activity-section .section-kicker {
+    color: #b48a28;
+}
+
+.activity-section h2,
+.activity-section .section h2 {
+    color: #173447 !important;
+}
+
+.activity-section .activity-intro {
+    color: #455563 !important;
+}
+
+/* Refuerzo para que las imágenes de la historia se muestren correctamente */
+.canyet-history-photo img,
+.canyet-history-feature img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 </style>
 
 </head>
@@ -3691,7 +3742,7 @@ input {
                     petita cala i l'obertura directa cap al Mediterrani.
                 </p>
                 <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Els orígens" data-description="Una imatge històrica dels inicis de la transformació de Canyet.">
-                    <img src="images/0105.JPG" alt="Els orígens de Canyet" loading="lazy">
+                    <img src="images/IMG_4230.JPG" alt="Els orígens de Canyet" loading="lazy">
                     <figcaption>Els orígens</figcaption>
                 </figure>
 
@@ -3766,7 +3817,7 @@ input {
                     defineix la personalitat singular de l'indret.
                 </p>
                 <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Els quioscos" data-description="Els quioscos i el mirador de la Punta de Canyet.">
-                    <img src="images/0122.JPG" alt="Els quioscos de Canyet" loading="lazy">
+                    <img src="images/IMG_4236.JPG" alt="Els quioscos de Canyet" loading="lazy">
                     <figcaption>Els quioscos</figcaption>
                 </figure>
 
@@ -3828,7 +3879,7 @@ input {
                     forma part de la seva història i del seu caràcter actual.
                 </p>
                 <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="La vida a la cala" data-description="Una imatge de la vida quotidiana a Canyet.">
-                    <img src="images/0109.JPG" alt="La vida a la cala" loading="lazy">
+                    <img src="images/IMG_4237.JPG" alt="La vida a la cala" loading="lazy">
                     <figcaption>La vida a la cala</figcaption>
                 </figure>
 
@@ -3895,12 +3946,12 @@ input {
                     recognoscible.
                 </p>
                 <div class="canyet-history-photo-row">
-                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="Canyet i la permanència del seu paisatge."><img src="images/0112.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
-                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="Una altra mirada històrica de Canyet."><img src="images/0113.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
-                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="La roca, la cala i l'horitzó mediterrani."><img src="images/0114.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
+                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="Canyet i la permanència del seu paisatge."><img src="images/IMG_4238.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
+                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="Una altra mirada històrica de Canyet."><img src="images/IMG_4239.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
+                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="La roca, la cala i l'horitzó mediterrani."><img src="images/IMG_4241.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
                 </div>
                 <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Canyet en color" data-description="Una mirada en color al paisatge de Canyet.">
-                    <img src="images/0121.JPG" alt="Canyet en color" loading="lazy">
+                    <img src="images/IMG_4242.JPG" alt="Canyet en color" loading="lazy">
                     <figcaption>Canyet en color</figcaption>
                 </figure>
 
