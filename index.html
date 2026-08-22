@@ -1056,6 +1056,7 @@ input {
 /* =========================================================
    FOTOGRAFÍAS INTEGRADAS EN LA HISTORIA
    ========================================================= */
+
 .canyet-history-photo {
     margin: 24px 0 4px;
     position: relative;
@@ -1064,29 +1065,42 @@ input {
     border: 1px solid rgba(255,255,255,.10);
     cursor: zoom-in;
 }
+
 .canyet-history-photo img {
     display: block;
     width: 100%;
     max-height: 430px;
     object-fit: cover;
 }
+
 .canyet-history-photo figcaption {
     padding: 10px 14px 12px;
     color: rgba(255,255,255,.62);
     font-size: 10px;
     line-height: 1.5;
 }
+
 .canyet-history-photo-row {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
     margin-top: 24px;
 }
-.canyet-history-photo-row .canyet-history-photo { margin: 0; }
-@media (max-width:700px) {
-    .canyet-history-photo-row { grid-template-columns: 1fr; }
-    .canyet-history-photo img { max-height: 340px; }
+
+.canyet-history-photo-row .canyet-history-photo {
+    margin: 0;
 }
+
+@media (max-width:700px) {
+    .canyet-history-photo-row {
+        grid-template-columns: 1fr;
+    }
+
+    .canyet-history-photo img {
+        max-height: 340px;
+    }
+}
+
 
 /* =========================================================
    HISTORIA CANYET · GALERIA HISTÒRICA
@@ -1971,6 +1985,7 @@ input {
     color: #e98a8a !important;
 
     margin-top: 12px;
+
 }
 
 .members-private {
@@ -3656,17 +3671,18 @@ body::-webkit-scrollbar {
 
 <div class="container section-image-content canyet-story">
 
-    <span class="section-kicker">
+    <span class="section-kicker"
+          data-i18n="canyet_kicker">
         CANYET · ROSAMAR
     </span>
 
-    <h2>
+    <h2 data-i18n="canyet_title">
         La història de Cala Canyet
     </h2>
 
     <div class="canyet-history-intro">
 
-        <p>
+        <p data-i18n="canyet_history_intro_1">
             <strong>Canyet és molt més que una cala.</strong>
             És un paisatge construït lentament entre la roca, el bosc i la mar,
             on els camins, els Pontets, els quioscos i els miradors formen part
@@ -3675,7 +3691,7 @@ body::-webkit-scrollbar {
             fins a quin punt l'arquitectura es va adaptar al relleu natural.
         </p>
 
-        <p>
+        <p data-i18n="canyet_history_intro_2">
             La documentació gràfica conservada mostra diferents punts de vista de
             la mateixa geografia: la cala, l'accés litoral, les escales, els
             Pontets, la Punta de Canyet i les petites glorietes que dominaven el
@@ -3694,13 +3710,15 @@ body::-webkit-scrollbar {
         <article class="canyet-timeline-item">
 
             <div class="canyet-timeline-label">
-                <span>ELS ORÍGENS</span>
-                <h3>Principis del segle XX</h3>
+                <span data-i18n="history_origins_label">ELS ORÍGENS</span>
+                <h3 data-i18n="history_origins_title">
+                    Principis del segle XX
+                </h3>
             </div>
 
             <div class="canyet-timeline-content">
 
-                <p>
+                <p data-i18n="history_origins_p1">
                     La transformació de l'entorn va començar a principis del
                     segle XX, vinculada a la família Castelló i a la tradició
                     surera de Sant Feliu de Guíxols. Al voltant de <strong>1912</strong>
@@ -3708,14 +3726,14 @@ body::-webkit-scrollbar {
                     al paisatge que encara avui reconeixem a Canyet.
                 </p>
 
-                <p>
+                <p data-i18n="history_origins_p2">
                     Les fotografies antigues permeten seguir visualment aquest
                     procés: un litoral abrupte convertit en un recorregut
                     accessible, amb camins, escales, murs, baranes i petits
                     elements arquitectònics integrats sobre la roca.
                 </p>
 
-                <p>
+                <p data-i18n="history_origins_p3">
                     Aquest procés va transformar un litoral abrupte en un espai
                     progressivament transitable. L'accés al mar no es resolia amb
                     una única obra, sinó amb una successió de camins, escales,
@@ -3724,7 +3742,7 @@ body::-webkit-scrollbar {
                     relleu i convertia el descens cap a la cala en un recorregut.
                 </p>
 
-                <p>
+                <p data-i18n="history_origins_p4">
                     La vinculació amb la família Castelló i amb la tradició
                     surera de Sant Feliu de Guíxols situa aquesta transformació
                     dins del context d'una costa que començava a ser descoberta
@@ -3734,16 +3752,28 @@ body::-webkit-scrollbar {
                     paisatgística pròpia.
                 </p>
 
-                <p>
+                <p data-i18n="history_origins_p5">
                     En les fotografies apareixen trams de pas que avui han canviat,
                     elements que s'han reconstruït i d'altres que han desaparegut,
                     però també la mateixa estructura geogràfica que ha condicionat
                     tota la història posterior de Canyet: la Punta, la roca, la
                     petita cala i l'obertura directa cap al Mediterrani.
                 </p>
-                <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Els orígens" data-description="Una imatge històrica dels inicis de la transformació de Canyet.">
-                    <img src="images/IMG_4247.JPG" alt="Els orígens de Canyet" loading="lazy">
-                    <figcaption>Els orígens</figcaption>
+
+                <figure class="canyet-history-photo"
+                        onclick="openCanyetLightbox(this)"
+                        data-title="Els orígens"
+                        data-description="Una imatge històrica dels inicis de la transformació de Canyet.">
+
+                    <img
+                        src="images/IMG_4247.JPG"
+                        alt="Els orígens de Canyet"
+                        loading="lazy">
+
+                    <figcaption data-i18n="history_origins_caption">
+                        Els orígens
+                    </figcaption>
+
                 </figure>
 
             </div>
@@ -3754,13 +3784,18 @@ body::-webkit-scrollbar {
         <article class="canyet-timeline-item">
 
             <div class="canyet-timeline-label">
-                <span>EL CAMÍ DE LA MAR</span>
-                <h3>Els Pontets</h3>
+                <span data-i18n="history_pontets_label">
+                    EL CAMÍ DE LA MAR
+                </span>
+
+                <h3 data-i18n="history_pontets_title">
+                    Els Pontets
+                </h3>
             </div>
 
             <div class="canyet-timeline-content">
 
-                <p>
+                <p data-i18n="history_pontets_p1">
                     Els Pontets són probablement l'element més singular i
                     recognoscible de Canyet. Les passarel·les construïdes sobre
                     la roca permetien arribar fins a la mar seguint el perfil
@@ -3768,6 +3803,22 @@ body::-webkit-scrollbar {
                     els desnivells i feien possible recórrer un litoral que,
                     per la seva naturalesa, hauria estat difícilment accessible.
                 </p>
+
+                <figure class="canyet-history-photo"
+                        onclick="openCanyetLightbox(this)"
+                        data-title="Els Pontets"
+                        data-description="Els Pontets de Canyet en una fotografia històrica.">
+
+                    <img
+                        src="https://raw.githubusercontent.com/clubnauticcanyet/club-nautic-canyet/main/images/IMG_0127.png"
+                        alt="Els Pontets de Canyet"
+                        loading="lazy">
+
+                    <figcaption data-i18n="history_pontets_caption">
+                        Els Pontets
+                    </figcaption>
+
+                </figure>
 
             </div>
 
@@ -3777,13 +3828,20 @@ body::-webkit-scrollbar {
         <article class="canyet-timeline-item">
 
             <div class="canyet-timeline-label">
-                <span>LA PUNTA</span>
-                <h3>Els quioscos i el mirador</h3>
+
+                <span data-i18n="history_kiosks_label">
+                    LA PUNTA
+                </span>
+
+                <h3 data-i18n="history_kiosks_title">
+                    Els quioscos i el mirador
+                </h3>
+
             </div>
 
             <div class="canyet-timeline-content">
 
-                <p>
+                <p data-i18n="history_kiosks_p1">
                     Sobre la Punta de Canyet, les fotografies antigues mostren
                     dues elegants glorietes o quioscos oberts al paisatge.
                     Situats a diferents cotes, dominaven la roca i miraven
@@ -3791,7 +3849,7 @@ body::-webkit-scrollbar {
                     elevat en una autèntica balconada sobre la costa.
                 </p>
 
-                <p>
+                <p data-i18n="history_kiosks_p2">
                     La seva arquitectura era lleugera i estava pensada sobretot
                     per dialogar amb l'entorn. No competien amb el paisatge: el
                     marcaven i oferien punts de pausa dins del recorregut que
@@ -3799,7 +3857,7 @@ body::-webkit-scrollbar {
                     la Punta i l'horitzó mediterrani.
                 </p>
 
-                <p>
+                <p data-i18n="history_kiosks_p3">
                     La presència d'aquests petits pavellons explica també una
                     determinada manera de viure Canyet. El desplaçament per la
                     finca, el passeig entre la vegetació i la roca i l'arribada
@@ -3809,16 +3867,28 @@ body::-webkit-scrollbar {
                     manera de contemplar i habitar aquest racó de costa.
                 </p>
 
-                <p>
+                <p data-i18n="history_kiosks_p4">
                     Vistes des del mar o des de la mateixa cala, les glorietes
                     actuaven com a fites del paisatge. La seva silueta ajudava a
                     identificar la Punta de Canyet i reforçava la relació entre
                     arquitectura i geografia, una característica que encara avui
                     defineix la personalitat singular de l'indret.
                 </p>
-                <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Els quioscos" data-description="Els quioscos i el mirador de la Punta de Canyet.">
-                    <img src="images/IMG_4242.JPG" alt="Els quioscos de Canyet" loading="lazy">
-                    <figcaption>Els quioscos</figcaption>
+
+                <figure class="canyet-history-photo"
+                        onclick="openCanyetLightbox(this)"
+                        data-title="Els quioscos"
+                        data-description="Els quioscos i el mirador de la Punta de Canyet.">
+
+                    <img
+                        src="images/IMG_4242.JPG"
+                        alt="Els quioscos de Canyet"
+                        loading="lazy">
+
+                    <figcaption data-i18n="history_kiosks_caption">
+                        Els quioscos
+                    </figcaption>
+
                 </figure>
 
             </div>
@@ -3829,13 +3899,20 @@ body::-webkit-scrollbar {
         <article class="canyet-timeline-item">
 
             <div class="canyet-timeline-label">
-                <span>LA VIDA A LA CALA</span>
-                <h3>La dècada de 1940</h3>
+
+                <span data-i18n="history_1940s_label">
+                    LA VIDA A LA CALA
+                </span>
+
+                <h3 data-i18n="history_1940s_title">
+                    La dècada de 1940
+                </h3>
+
             </div>
 
             <div class="canyet-timeline-content">
 
-                <p>
+                <p data-i18n="history_1940s_p1">
                     Amb la família Sacrest, la cala incorporà un
                     <strong>viver artificial excavat a la roca</strong>,
                     destinat a mantenir vives les captures de llagosta
@@ -3843,7 +3920,7 @@ body::-webkit-scrollbar {
                     es conserva i s'utilitza per guardar petites embarcacions.
                 </p>
 
-                <p>
+                <p data-i18n="history_1940s_p2">
                     Aquest detall ajuda a entendre que Canyet no era només un
                     paisatge contemplatiu. La mateixa roca i la proximitat de la
                     mar formaven part de la vida quotidiana i de l'ús que es feia
@@ -3852,7 +3929,7 @@ body::-webkit-scrollbar {
                     amb els recursos del mar.
                 </p>
 
-                <p>
+                <p data-i18n="history_1940s_p3">
                     El viver, integrat dins la roca, és especialment significatiu
                     perquè mostra fins a quin punt la geografia natural podia
                     adaptar-se a les necessitats de la vida a la cala. L'aigua,
@@ -3861,7 +3938,7 @@ body::-webkit-scrollbar {
                     tot la intervenció humana del paisatge original.
                 </p>
 
-                <p>
+                <p data-i18n="history_1940s_p4">
                     Amb el pas del temps, els usos han canviat, però alguns
                     espais continuen conservant aquesta memòria. El viver que
                     antigament servia per mantenir vives les captures de llagosta
@@ -3871,16 +3948,28 @@ body::-webkit-scrollbar {
                     sense perdre mai la seva vinculació essencial amb la mar.
                 </p>
 
-                <p>
+                <p data-i18n="history_1940s_p5">
                     Les imatges d'aquella època permeten imaginar una cala més
                     íntima, on la vida domèstica i el paisatge marítim convivien
                     a pocs metres de distància. Canyet era alhora refugi, espai
                     de lleure i punt d'accés al mar; una relació quotidiana que
                     forma part de la seva història i del seu caràcter actual.
                 </p>
-                <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="La vida a la cala" data-description="Una imatge de la vida quotidiana a Canyet.">
-                    <img src="images/95F91CB8-8190-4932-B212-E6872C7CA7BD.PNG" alt="La vida a la cala" loading="lazy">
-                    <figcaption>La vida a la cala</figcaption>
+
+                <figure class="canyet-history-photo"
+                        onclick="openCanyetLightbox(this)"
+                        data-title="La vida a la cala"
+                        data-description="Una imatge de la vida quotidiana a Canyet.">
+
+                    <img
+                        src="images/95F91CB8-8190-4932-B212-E6872C7CA7BD.PNG"
+                        alt="La vida a la cala"
+                        loading="lazy">
+
+                    <figcaption data-i18n="history_1940s_caption">
+                        La vida a la cala
+                    </figcaption>
+
                 </figure>
 
             </div>
@@ -3891,20 +3980,27 @@ body::-webkit-scrollbar {
         <article class="canyet-timeline-item">
 
             <div class="canyet-timeline-label">
-                <span>MEMÒRIA DEL PAISATGE</span>
-                <h3>Un patrimoni viu</h3>
+
+                <span data-i18n="history_heritage_label">
+                    MEMÒRIA DEL PAISATGE
+                </span>
+
+                <h3 data-i18n="history_heritage_title">
+                    Un patrimoni viu
+                </h3>
+
             </div>
 
             <div class="canyet-timeline-content">
 
-                <p>
+                <p data-i18n="history_heritage_p1">
                     El mar i els temporals han marcat inevitablement la història
                     de Canyet. Els Pontets han hagut de ser reconstruïts diverses
                     vegades, però han mantingut la seva fisonomia i, sobretot,
                     la seva relació amb el paisatge.
                 </p>
 
-                <p>
+                <p data-i18n="history_heritage_p2">
                     Quan comparem les diferents vistes antigues, hi ha una idea
                     que es repeteix: la roca continua sent la protagonista. Els
                     camins, els murs, les escales i els quioscos canvien, es
@@ -3912,7 +4008,7 @@ body::-webkit-scrollbar {
                     la cala i l'horitzó mediterrani continuen identificant Canyet.
                 </p>
 
-                <p>
+                <p data-i18n="history_heritage_p3">
                     Les fotografies són, per això, molt més que un arxiu d'imatges
                     antigues. Permeten seguir les transformacions del litoral i
                     entendre quins elements han resistit el pas del temps. Cada
@@ -3920,7 +4016,7 @@ body::-webkit-scrollbar {
                     petita empremta en la manera com avui percebem la cala.
                 </p>
 
-                <p>
+                <p data-i18n="history_heritage_p4">
                     Els Pontets en són un exemple especialment clar. Han hagut de
                     ser reconstruïts diverses vegades a causa de la força de la
                     mar, però la seva existència continua explicant una mateixa
@@ -3928,7 +4024,7 @@ body::-webkit-scrollbar {
                     directa entre el recorregut terrestre i el Mediterrani.
                 </p>
 
-                <p>
+                <p data-i18n="history_heritage_p5">
                     Aquesta continuïtat entre passat i present és el que converteix
                     Canyet en un patrimoni viu. No es tracta d'un paisatge congelat
                     en una postal, sinó d'un lloc que continua evolucionant, utilitzat
@@ -3937,7 +4033,7 @@ body::-webkit-scrollbar {
                     dona valor als elements que encara formen part del seu paisatge.
                 </p>
 
-                <p>
+                <p data-i18n="history_heritage_p6">
                     La fotografia en color tanca aquest recorregut visual com un
                     pont entre èpoques. Després de les postals en blanc i negre i
                     les imatges antigues, Canyet apareix amb una altra mirada, però
@@ -3945,14 +4041,73 @@ body::-webkit-scrollbar {
                     mar i una silueta de costa que continua sent immediatament
                     recognoscible.
                 </p>
+
                 <div class="canyet-history-photo-row">
-                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="Canyet i la permanència del seu paisatge."><img src="images/IMG_4238.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
-                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="Una altra mirada històrica de Canyet."><img src="images/IMG_4237.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
-                    <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Memòria del paisatge" data-description="La roca, la cala i l'horitzó mediterrani."><img src="images/IMG_4241.JPG" alt="Memòria del paisatge" loading="lazy"><figcaption>Memòria del paisatge</figcaption></figure>
+
+                    <figure class="canyet-history-photo"
+                            onclick="openCanyetLightbox(this)"
+                            data-title="Memòria del paisatge"
+                            data-description="Canyet i la permanència del seu paisatge.">
+
+                        <img
+                            src="images/IMG_4238.JPG"
+                            alt="Memòria del paisatge"
+                            loading="lazy">
+
+                        <figcaption data-i18n="history_heritage_caption">
+                            Memòria del paisatge
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="canyet-history-photo"
+                            onclick="openCanyetLightbox(this)"
+                            data-title="Memòria del paisatge"
+                            data-description="Una altra mirada històrica de Canyet.">
+
+                        <img
+                            src="images/IMG_4237.JPG"
+                            alt="Memòria del paisatge"
+                            loading="lazy">
+
+                        <figcaption data-i18n="history_heritage_caption">
+                            Memòria del paisatge
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="canyet-history-photo"
+                            onclick="openCanyetLightbox(this)"
+                            data-title="Memòria del paisatge"
+                            data-description="La roca, la cala i l'horitzó mediterrani.">
+
+                        <img
+                            src="images/IMG_4241.JPG"
+                            alt="Memòria del paisatge"
+                            loading="lazy">
+
+                        <figcaption data-i18n="history_heritage_caption">
+                            Memòria del paisatge
+                        </figcaption>
+
+                    </figure>
+
                 </div>
-                <figure class="canyet-history-photo" onclick="openCanyetLightbox(this)" data-title="Canyet en color" data-description="Una mirada en color al paisatge de Canyet.">
-                    <img src="images/IMG_0121.jpeg" alt="Canyet en color" loading="lazy">
-                    <figcaption>Canyet en color</figcaption>
+
+                <figure class="canyet-history-photo"
+                        onclick="openCanyetLightbox(this)"
+                        data-title="Canyet en color"
+                        data-description="Una mirada en color al paisatge de Canyet.">
+
+                    <img
+                        src="images/IMG_0121.jpeg"
+                        alt="Canyet en color"
+                        loading="lazy">
+
+                    <figcaption data-i18n="history_color_caption">
+                        Canyet en color
+                    </figcaption>
+
                 </figure>
 
             </div>
@@ -3961,11 +4116,10 @@ body::-webkit-scrollbar {
 
     </div>
 
-
-
 </div>
 
 </section>
+
 
 <!-- VISOR DE FOTOGRAFIA HISTÒRICA -->
 
@@ -4167,12 +4321,14 @@ body::-webkit-scrollbar {
         </div>
 
         <div class="wind-radar-frame">
+
             <iframe
                 title="Radar de vent a Canyet · Rosamar"
                 src="https://embed.windy.com/embed2.html?lat=41.7596&lon=2.98205&zoom=10&level=surface&overlay=wind&menu=&message=false&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&detailLat=41.7596&detailLon=2.98205&metricWind=default&metricTemp=default&radarRange=-1"
                 loading="lazy"
                 allowfullscreen>
             </iframe>
+
         </div>
 
         <p class="wind-radar-note" data-i18n="marine_wind_radar_note">
@@ -4599,14 +4755,58 @@ departure_place_label:"SORTIDA DES DE",
 departure_place:"Camp de boies",
 route_label:"NAVEGACIÓ",
 
+/* =========================================================
+   HISTÒRIA CANYET · CATALÀ
+   ========================================================= */
+
 canyet_kicker:"CANYET · ROSAMAR",
 canyet_title:"La història de Cala Canyet",
-canyet_text_1:"Descobrir Cala Canyet és entrar en un dels racons més singulars de la Costa Brava, on la natura i la història es troben sobre les roques del litoral.",
-canyet_text_2:"<strong>Els orígens.</strong> La transformació de l'entorn va començar a principis del segle XX, vinculada a la família Castelló i a la tradició surera de Sant Feliu de Guíxols. Al voltant de 1912 es projectà l'accés privat al mar que donaria forma a l'actual paisatge de la cala.",
-canyet_text_3:"<strong>Els Pontets.</strong> Les passarel·les construïdes sobre la roca permetien arribar al mar i gaudir d'aquest indret privilegiat. La seva integració amb les roques és avui una de les imatges més reconeixibles de Canyet.",
-canyet_text_4:"<strong>El mirador.</strong> Sobre la Punta de Canyet, una elegant glorieta permetia contemplar els pontets, el mar i l'horitzó mediterrani.",
-canyet_text_5:"<strong>La dècada de 1940.</strong> Amb la família Sacrest, la cala incorporà un viver artificial excavat a la roca, destinat a mantenir vives les captures de llagosta per als àpats de la propietat.",
-canyet_text_6:"<strong>Un patrimoni viu.</strong> El mar i els temporals han marcat la història de Canyet. Els Pontets han hagut de ser reconstruïts diverses vegades, mantenint la seva fisonomia i la seva relació amb el paisatge.",
+
+canyet_history_intro_1:"<strong>Canyet és molt més que una cala.</strong> És un paisatge construït lentament entre la roca, el bosc i la mar, on els camins, els Pontets, els quioscos i els miradors formen part d'una mateixa història. Les postals antigues permeten veure aquest indret abans de les transformacions de les darreres dècades i entendre fins a quin punt l'arquitectura es va adaptar al relleu natural.",
+
+canyet_history_intro_2:"La documentació gràfica conservada mostra diferents punts de vista de la mateixa geografia: la cala, l'accés litoral, les escales, els Pontets, la Punta de Canyet i les petites glorietes que dominaven el penya-segat. Són testimonis d'una època en què arribar fins al mar formava part de l'experiència de viure i gaudir d'aquest racó de la Costa Brava.",
+
+history_origins_label:"ELS ORÍGENS",
+history_origins_title:"Principis del segle XX",
+history_origins_p1:"La transformació de l'entorn va començar a principis del segle XX, vinculada a la família Castelló i a la tradició surera de Sant Feliu de Guíxols. Al voltant de <strong>1912</strong> es projectà l'accés privat al mar que acabaria donant forma al paisatge que encara avui reconeixem a Canyet.",
+history_origins_p2:"Les fotografies antigues permeten seguir visualment aquest procés: un litoral abrupte convertit en un recorregut accessible, amb camins, escales, murs, baranes i petits elements arquitectònics integrats sobre la roca.",
+history_origins_p3:"Aquest procés va transformar un litoral abrupte en un espai progressivament transitable. L'accés al mar no es resolia amb una única obra, sinó amb una successió de camins, escales, murs, baranes i petits elements arquitectònics que s'adaptaven a la forma irregular del terreny. La intervenció seguia el relleu i convertia el descens cap a la cala en un recorregut.",
+history_origins_p4:"La vinculació amb la família Castelló i amb la tradició surera de Sant Feliu de Guíxols situa aquesta transformació dins del context d'una costa que començava a ser descoberta també com a espai de residència i de lleure. Canyet conserva en aquestes imatges la memòria d'aquell primer moment en què natura i obra humana començaren a construir una identitat paisatgística pròpia.",
+history_origins_p5:"En les fotografies apareixen trams de pas que avui han canviat, elements que s'han reconstruït i d'altres que han desaparegut, però també la mateixa estructura geogràfica que ha condicionat tota la història posterior de Canyet: la Punta, la roca, la petita cala i l'obertura directa cap al Mediterrani.",
+history_origins_caption:"Els orígens",
+
+history_pontets_label:"EL CAMÍ DE LA MAR",
+history_pontets_title:"Els Pontets",
+history_pontets_p1:"Els Pontets són probablement l'element més singular i recognoscible de Canyet. Les passarel·les construïdes sobre la roca permetien arribar fins a la mar seguint el perfil del penya-segat. Les escales i els trams de pas salvaven els desnivells i feien possible recórrer un litoral que, per la seva naturalesa, hauria estat difícilment accessible.",
+history_pontets_caption:"Els Pontets",
+
+history_kiosks_label:"LA PUNTA",
+history_kiosks_title:"Els quioscos i el mirador",
+history_kiosks_p1:"Sobre la Punta de Canyet, les fotografies antigues mostren dues elegants glorietes o quioscos oberts al paisatge. Situats a diferents cotes, dominaven la roca i miraven directament cap a la Mediterrània, convertint aquest punt elevat en una autèntica balconada sobre la costa.",
+history_kiosks_p2:"La seva arquitectura era lleugera i estava pensada sobretot per dialogar amb l'entorn. No competien amb el paisatge: el marcaven i oferien punts de pausa dins del recorregut que baixava cap a la mar. Des d'aquí, la mirada abraçava la cala, la Punta i l'horitzó mediterrani.",
+history_kiosks_p3:"La presència d'aquests petits pavellons explica també una determinada manera de viure Canyet. El desplaçament per la finca, el passeig entre la vegetació i la roca i l'arribada progressiva al mar formaven part d'una mateixa experiència. Les postals no només documenten unes construccions avui desaparegudes o transformades: conserven la memòria d'una manera de contemplar i habitar aquest racó de costa.",
+history_kiosks_p4:"Vistes des del mar o des de la mateixa cala, les glorietes actuaven com a fites del paisatge. La seva silueta ajudava a identificar la Punta de Canyet i reforçava la relació entre arquitectura i geografia, una característica que encara avui defineix la personalitat singular de l'indret.",
+history_kiosks_caption:"Els quioscos",
+
+history_1940s_label:"LA VIDA A LA CALA",
+history_1940s_title:"La dècada de 1940",
+history_1940s_p1:"Amb la família Sacrest, la cala incorporà un <strong>viver artificial excavat a la roca</strong>, destinat a mantenir vives les captures de llagosta per als àpats de la propietat. Actualment, aquest espai es conserva i s'utilitza per guardar petites embarcacions.",
+history_1940s_p2:"Aquest detall ajuda a entendre que Canyet no era només un paisatge contemplatiu. La mateixa roca i la proximitat de la mar formaven part de la vida quotidiana i de l'ús que es feia de l'espai. El litoral no era un simple decorat: era també un lloc de treball, d'esbarjo, de trobada i de relació directa amb els recursos del mar.",
+history_1940s_p3:"El viver, integrat dins la roca, és especialment significatiu perquè mostra fins a quin punt la geografia natural podia adaptar-se a les necessitats de la vida a la cala. L'aigua, les cavitats i les formes del penya-segat es convertien en part d'una infraestructura pràctica, sense separar mai del tot la intervenció humana del paisatge original.",
+history_1940s_p4:"Amb el pas del temps, els usos han canviat, però alguns espais continuen conservant aquesta memòria. El viver que antigament servia per mantenir vives les captures de llagosta es conserva actualment i s'utilitza per guardar petites embarcacions. Aquesta continuïtat d'ús és una de les claus per entendre Canyet: un lloc que ha anat transformant-se sense perdre mai la seva vinculació essencial amb la mar.",
+history_1940s_p5:"Les imatges d'aquella època permeten imaginar una cala més íntima, on la vida domèstica i el paisatge marítim convivien a pocs metres de distància. Canyet era alhora refugi, espai de lleure i punt d'accés al mar; una relació quotidiana que forma part de la seva història i del seu caràcter actual.",
+history_1940s_caption:"La vida a la cala",
+
+history_heritage_label:"MEMÒRIA DEL PAISATGE",
+history_heritage_title:"Un patrimoni viu",
+history_heritage_p1:"El mar i els temporals han marcat inevitablement la història de Canyet. Els Pontets han hagut de ser reconstruïts diverses vegades, però han mantingut la seva fisonomia i, sobretot, la seva relació amb el paisatge.",
+history_heritage_p2:"Quan comparem les diferents vistes antigues, hi ha una idea que es repeteix: la roca continua sent la protagonista. Els camins, els murs, les escales i els quioscos canvien, es reconstrueixen o desapareixen, però la silueta de la Punta, la cala i l'horitzó mediterrani continuen identificant Canyet.",
+history_heritage_p3:"Les fotografies són, per això, molt més que un arxiu d'imatges antigues. Permeten seguir les transformacions del litoral i entendre quins elements han resistit el pas del temps. Cada temporal, cada reconstrucció i cada canvi d'ús han deixat una petita empremta en la manera com avui percebem la cala.",
+history_heritage_p4:"Els Pontets en són un exemple especialment clar. Han hagut de ser reconstruïts diverses vegades a causa de la força de la mar, però la seva existència continua explicant una mateixa voluntat: fer accessible la roca i mantenir una connexió directa entre el recorregut terrestre i el Mediterrani.",
+history_heritage_p5:"Aquesta continuïtat entre passat i present és el que converteix Canyet en un patrimoni viu. No es tracta d'un paisatge congelat en una postal, sinó d'un lloc que continua evolucionant, utilitzat i estimat per les persones que hi viuen o el freqüenten. La memòria ajuda a interpretar el que veiem avui i, al mateix temps, dona valor als elements que encara formen part del seu paisatge.",
+history_heritage_p6:"La fotografia en color tanca aquest recorregut visual com un pont entre èpoques. Després de les postals en blanc i negre i les imatges antigues, Canyet apareix amb una altra mirada, però amb els mateixos protagonistes essencials: la roca, la cala, el mar i una silueta de costa que continua sent immediatament recognoscible.",
+history_heritage_caption:"Memòria del paisatge",
+history_color_caption:"Canyet en color",
 
 marine_kicker:"MAR I TEMPS",
 marine_intro:"Estat actual de la mar, vent i condicions meteorològiques a Canyet · Rosamar.",
@@ -4745,14 +4945,58 @@ departure_place_label:"SALIDA DESDE",
 departure_place:"Campo de boyas",
 route_label:"NAVEGACIÓN",
 
+/* =========================================================
+   HISTÒRIA CANYET · ESPAÑOL
+   ========================================================= */
+
 canyet_kicker:"CANYET · ROSAMAR",
 canyet_title:"La historia de Cala Canyet",
-canyet_text_1:"Descubrir Cala Canyet es entrar en uno de los rincones más singulares de la Costa Brava, donde la naturaleza y la historia se encuentran sobre las rocas del litoral.",
-canyet_text_2:"<strong>Los orígenes.</strong> La transformación del entorno comenzó a principios del siglo XX, vinculada a la familia Castelló y a la tradición corchera de Sant Feliu de Guíxols. Alrededor de 1912 se proyectó el acceso privado al mar que daría forma al actual paisaje de la cala.",
-canyet_text_3:"<strong>Els Pontets.</strong> Las pasarelas construidas sobre la roca permitían llegar al mar y disfrutar de este lugar privilegiado. Su integración con las rocas es hoy una de las imágenes más reconocibles de Canyet.",
-canyet_text_4:"<strong>El mirador.</strong> Sobre la Punta de Canyet, una elegante glorieta permitía contemplar los pontets, el mar y el horizonte mediterráneo.",
-canyet_text_5:"<strong>La década de 1940.</strong> Con la familia Sacrest, la cala incorporó un vivero artificial excavado en la roca, destinado a mantener vivas las capturas de langosta para los banquetes de la propiedad.",
-canyet_text_6:"<strong>Un patrimonio vivo.</strong> El mar y los temporales han marcado la historia de Canyet. Els Pontets han tenido que ser reconstruidos en diferentes momentos, manteniendo su fisonomía y su relación con el paisaje.",
+
+canyet_history_intro_1:"<strong>Canyet es mucho más que una cala.</strong> Es un paisaje construido lentamente entre la roca, el bosque y el mar, donde los caminos, los Pontets, los quioscos y los miradores forman parte de una misma historia. Las postales antiguas permiten ver este lugar antes de las transformaciones de las últimas décadas y entender hasta qué punto la arquitectura se adaptó al relieve natural.",
+
+canyet_history_intro_2:"La documentación gráfica conservada muestra diferentes puntos de vista de una misma geografía: la cala, el acceso litoral, las escaleras, los Pontets, la Punta de Canyet y las pequeñas glorietas que dominaban el acantilado. Son testimonios de una época en la que llegar hasta el mar formaba parte de la experiencia de vivir y disfrutar de este rincón de la Costa Brava.",
+
+history_origins_label:"LOS ORÍGENES",
+history_origins_title:"Principios del siglo XX",
+history_origins_p1:"La transformación del entorno comenzó a principios del siglo XX, vinculada a la familia Castelló y a la tradición corchera de Sant Feliu de Guíxols. Alrededor de <strong>1912</strong> se proyectó el acceso privado al mar que acabaría dando forma al paisaje que todavía hoy reconocemos en Canyet.",
+history_origins_p2:"Las fotografías antiguas permiten seguir visualmente este proceso: un litoral abrupto convertido en un recorrido accesible, con caminos, escaleras, muros, barandillas y pequeños elementos arquitectónicos integrados sobre la roca.",
+history_origins_p3:"Este proceso transformó un litoral abrupto en un espacio progresivamente transitable. El acceso al mar no se resolvía con una única obra, sino con una sucesión de caminos, escaleras, muros, barandillas y pequeños elementos arquitectónicos que se adaptaban a la forma irregular del terreno. La intervención seguía el relieve y convertía el descenso hacia la cala en un recorrido.",
+history_origins_p4:"La vinculación con la familia Castelló y con la tradición corchera de Sant Feliu de Guíxols sitúa esta transformación dentro del contexto de una costa que empezaba a ser descubierta también como espacio de residencia y ocio. Canyet conserva en estas imágenes la memoria de aquel primer momento en que naturaleza y obra humana comenzaron a construir una identidad paisajística propia.",
+history_origins_p5:"En las fotografías aparecen tramos de paso que hoy han cambiado, elementos que se han reconstruido y otros que han desaparecido, pero también la misma estructura geográfica que ha condicionado toda la historia posterior de Canyet: la Punta, la roca, la pequeña cala y la apertura directa hacia el Mediterráneo.",
+history_origins_caption:"Los orígenes",
+
+history_pontets_label:"EL CAMINO DEL MAR",
+history_pontets_title:"Els Pontets",
+history_pontets_p1:"Els Pontets son probablemente el elemento más singular y reconocible de Canyet. Las pasarelas construidas sobre la roca permitían llegar hasta el mar siguiendo el perfil del acantilado. Las escaleras y los tramos de paso salvaban los desniveles y hacían posible recorrer un litoral que, por su naturaleza, habría sido difícilmente accesible.",
+history_pontets_caption:"Els Pontets",
+
+history_kiosks_label:"LA PUNTA",
+history_kiosks_title:"Los quioscos y el mirador",
+history_kiosks_p1:"Sobre la Punta de Canyet, las fotografías antiguas muestran dos elegantes glorietas o quioscos abiertos al paisaje. Situados a diferentes cotas, dominaban la roca y miraban directamente hacia el Mediterráneo, convirtiendo este punto elevado en un auténtico balcón sobre la costa.",
+history_kiosks_p2:"Su arquitectura era ligera y estaba pensada sobre todo para dialogar con el entorno. No competían con el paisaje: lo enmarcaban y ofrecían puntos de pausa dentro del recorrido que descendía hacia el mar. Desde aquí, la mirada abrazaba la cala, la Punta y el horizonte mediterráneo.",
+history_kiosks_p3:"La presencia de estos pequeños pabellones explica también una determinada manera de vivir Canyet. El desplazamiento por la finca, el paseo entre la vegetación y la roca y la llegada progresiva al mar formaban parte de una misma experiencia. Las postales no solo documentan unas construcciones hoy desaparecidas o transformadas: conservan la memoria de una manera de contemplar y habitar este rincón de costa.",
+history_kiosks_p4:"Vistas desde el mar o desde la propia cala, las glorietas actuaban como hitos del paisaje. Su silueta ayudaba a identificar la Punta de Canyet y reforzaba la relación entre arquitectura y geografía, una característica que todavía hoy define la personalidad singular del lugar.",
+history_kiosks_caption:"Los quioscos",
+
+history_1940s_label:"LA VIDA EN LA CALA",
+history_1940s_title:"La década de 1940",
+history_1940s_p1:"Con la familia Sacrest, la cala incorporó un <strong>vivero artificial excavado en la roca</strong>, destinado a mantener vivas las capturas de langosta para las comidas de la propiedad. Actualmente, este espacio se conserva y se utiliza para guardar pequeñas embarcaciones.",
+history_1940s_p2:"Este detalle ayuda a entender que Canyet no era solo un paisaje contemplativo. La propia roca y la proximidad del mar formaban parte de la vida cotidiana y del uso que se hacía del espacio. El litoral no era un simple decorado: era también un lugar de trabajo, ocio, encuentro y relación directa con los recursos del mar.",
+history_1940s_p3:"El vivero, integrado en la roca, es especialmente significativo porque muestra hasta qué punto la geografía natural podía adaptarse a las necesidades de la vida en la cala. El agua, las cavidades y las formas del acantilado se convertían en parte de una infraestructura práctica, sin separar nunca por completo la intervención humana del paisaje original.",
+history_1940s_p4:"Con el paso del tiempo, los usos han cambiado, pero algunos espacios continúan conservando esta memoria. El vivero que antiguamente servía para mantener vivas las capturas de langosta se conserva actualmente y se utiliza para guardar pequeñas embarcaciones. Esta continuidad de uso es una de las claves para entender Canyet: un lugar que ha ido transformándose sin perder nunca su vinculación esencial con el mar.",
+history_1940s_p5:"Las imágenes de aquella época permiten imaginar una cala más íntima, donde la vida doméstica y el paisaje marítimo convivían a pocos metros de distancia. Canyet era a la vez refugio, espacio de ocio y punto de acceso al mar; una relación cotidiana que forma parte de su historia y de su carácter actual.",
+history_1940s_caption:"La vida en la cala",
+
+history_heritage_label:"MEMORIA DEL PAISAJE",
+history_heritage_title:"Un patrimonio vivo",
+history_heritage_p1:"El mar y los temporales han marcado inevitablemente la historia de Canyet. Els Pontets han tenido que ser reconstruidos varias veces, pero han mantenido su fisonomía y, sobre todo, su relación con el paisaje.",
+history_heritage_p2:"Cuando comparamos las diferentes vistas antiguas, hay una idea que se repite: la roca continúa siendo la protagonista. Los caminos, los muros, las escaleras y los quioscos cambian, se reconstruyen o desaparecen, pero la silueta de la Punta, la cala y el horizonte mediterráneo continúan identificando Canyet.",
+history_heritage_p3:"Las fotografías son, por ello, mucho más que un archivo de imágenes antiguas. Permiten seguir las transformaciones del litoral y entender qué elementos han resistido el paso del tiempo. Cada temporal, cada reconstrucción y cada cambio de uso han dejado una pequeña huella en la manera en que hoy percibimos la cala.",
+history_heritage_p4:"Els Pontets son un ejemplo especialmente claro. Han tenido que ser reconstruidos varias veces debido a la fuerza del mar, pero su existencia continúa explicando una misma voluntad: hacer accesible la roca y mantener una conexión directa entre el recorrido terrestre y el Mediterráneo.",
+history_heritage_p5:"Esta continuidad entre pasado y presente es lo que convierte Canyet en un patrimonio vivo. No se trata de un paisaje congelado en una postal, sino de un lugar que continúa evolucionando, utilizado y querido por las personas que viven en él o lo frecuentan. La memoria ayuda a interpretar lo que vemos hoy y, al mismo tiempo, da valor a los elementos que todavía forman parte de su paisaje.",
+history_heritage_p6:"La fotografía en color cierra este recorrido visual como un puente entre épocas. Después de las postales en blanco y negro y las imágenes antiguas, Canyet aparece con otra mirada, pero con los mismos protagonistas esenciales: la roca, la cala, el mar y una silueta de costa que continúa siendo inmediatamente reconocible.",
+history_heritage_caption:"Memoria del paisaje",
+history_color_caption:"Canyet en color",
 
 marine_kicker:"MAR Y TIEMPO",
 marine_intro:"Estado actual del mar, viento y condiciones meteorológicas en Canyet · Rosamar.",
@@ -4774,6 +5018,7 @@ members_login_text:"Introduce el PIN de acceso.",
 members_login_button:"ENTRAR",
 members_private_title:"Bienvenido al área de socios",
 members_private_text:"Esta zona incorpora información, avisos y documentación del Club Nàutic Canyet.",
+
 private_meeting_title:"Última reunión del Club",
 private_meeting_intro:"Resumen del Acta de la Asamblea General Extraordinaria celebrada el 7 de agosto de 2026.",
 private_meeting_1:"<strong>Embarcación:</strong> propuesta de sustitución de la semirrígida Narwhal, con más de diez años de servicio.",
@@ -4783,6 +5028,7 @@ private_meeting_4:"<strong>Financiación:</strong> derrama extraordinaria de 350
 private_meeting_5:"<strong>Pago:</strong> del 15 de agosto al 1 de octubre de 2026. Fuera de plazo, recargo del 20 %.",
 private_meeting_6:"<strong>Aprobación:</strong> 16 votos a favor y 1 en contra.",
 private_meeting_pdf:"DESCARGAR ACTA COMPLETA EN PDF",
+
 private_news:"Avisos",
 private_news_text:"Próximamente.",
 private_documents:"Documentación",
@@ -4889,14 +5135,58 @@ departure_place_label:"DÉPART DE",
 departure_place:"Champ de bouées",
 route_label:"NAVIGATION",
 
+/* =========================================================
+   HISTOIRE CANYET · FRANÇAIS
+   ========================================================= */
+
 canyet_kicker:"CANYET · ROSAMAR",
 canyet_title:"L'histoire de Cala Canyet",
-canyet_text_1:"Découvrir Cala Canyet, c'est entrer dans l'un des lieux les plus singuliers de la Costa Brava, où la nature et l'histoire se rencontrent sur les rochers du littoral.",
-canyet_text_2:"<strong>Les origines.</strong> La transformation du site commence au début du XXe siècle, liée à la famille Castelló et à la tradition du liège de Sant Feliu de Guíxols. Vers 1912, l'accès privé à la mer qui donnera forme au paysage actuel est projeté.",
-canyet_text_3:"<strong>Els Pontets.</strong> Les passerelles construites sur la roche permettaient d'accéder à la mer. Leur intégration au paysage est aujourd'hui l'une des images les plus reconnaissables de Canyet.",
-canyet_text_4:"<strong>Le belvédère.</strong> Sur la Punta de Canyet, une élégante gloriette permettait de contempler les pontets, la mer et l'horizon méditerranéen.",
-canyet_text_5:"<strong>Les années 1940.</strong> Avec la famille Sacrest, la crique accueille un vivier artificiel creusé dans la roche pour conserver les homards vivants.",
-canyet_text_6:"<strong>Un patrimoine vivant.</strong> La mer et les tempêtes ont marqué l'histoire de Canyet. Els Pontets ont été reconstruits à plusieurs reprises tout en conservant leur physionomie.",
+
+canyet_history_intro_1:"<strong>Canyet est bien plus qu'une crique.</strong> C'est un paysage construit lentement entre la roche, la forêt et la mer, où les chemins, les Pontets, les kiosques et les belvédères font partie d'une même histoire. Les anciennes cartes postales permettent de voir ce lieu avant les transformations des dernières décennies et de comprendre à quel point l'architecture s'est adaptée au relief naturel.",
+
+canyet_history_intro_2:"La documentation graphique conservée montre différents points de vue d'une même géographie : la crique, l'accès au littoral, les escaliers, les Pontets, la Punta de Canyet et les petites gloriettes qui dominaient la falaise. Ce sont les témoignages d'une époque où rejoindre la mer faisait partie de l'expérience de vivre et de profiter de ce coin de la Costa Brava.",
+
+history_origins_label:"LES ORIGINES",
+history_origins_title:"Début du XXe siècle",
+history_origins_p1:"La transformation du site commence au début du XXe siècle, liée à la famille Castelló et à la tradition du liège de Sant Feliu de Guíxols. Vers <strong>1912</strong>, l'accès privé à la mer qui allait donner forme au paysage que nous reconnaissons encore aujourd'hui à Canyet fut projeté.",
+history_origins_p2:"Les anciennes photographies permettent de suivre visuellement ce processus : un littoral abrupt transformé en parcours accessible, avec des chemins, des escaliers, des murs, des garde-corps et de petits éléments architecturaux intégrés à la roche.",
+history_origins_p3:"Ce processus transforma un littoral abrupt en un espace progressivement praticable. L'accès à la mer ne reposait pas sur un ouvrage unique, mais sur une succession de chemins, d'escaliers, de murs, de garde-corps et de petits éléments architecturaux qui s'adaptaient à la forme irrégulière du terrain. L'intervention suivait le relief et transformait la descente vers la crique en un véritable parcours.",
+history_origins_p4:"Le lien avec la famille Castelló et avec la tradition du liège de Sant Feliu de Guíxols situe cette transformation dans le contexte d'une côte qui commençait également à être découverte comme lieu de résidence et de loisirs. Dans ces images, Canyet conserve la mémoire de ce premier moment où nature et intervention humaine commencèrent à construire une identité paysagère propre.",
+history_origins_p5:"Les photographies montrent des passages qui ont aujourd'hui changé, des éléments qui ont été reconstruits et d'autres qui ont disparu, mais aussi la même structure géographique qui a conditionné toute l'histoire ultérieure de Canyet : la Punta, la roche, la petite crique et l'ouverture directe sur la Méditerranée.",
+history_origins_caption:"Les origines",
+
+history_pontets_label:"LE CHEMIN DE LA MER",
+history_pontets_title:"Els Pontets",
+history_pontets_p1:"Els Pontets sont probablement l'élément le plus singulier et reconnaissable de Canyet. Les passerelles construites sur la roche permettaient d'atteindre la mer en suivant le profil de la falaise. Les escaliers et les passages franchissaient les dénivelés et rendaient possible la découverte d'un littoral qui, par sa nature, aurait été difficilement accessible.",
+history_pontets_caption:"Els Pontets",
+
+history_kiosks_label:"LA PUNTA",
+history_kiosks_title:"Les kiosques et le belvédère",
+history_kiosks_p1:"Sur la Punta de Canyet, les anciennes photographies montrent deux élégantes gloriettes ou kiosques ouverts sur le paysage. Situés à différentes hauteurs, ils dominaient la roche et regardaient directement vers la Méditerranée, transformant ce point élevé en véritable balcon sur la côte.",
+history_kiosks_p2:"Leur architecture était légère et conçue avant tout pour dialoguer avec l'environnement. Ils ne rivalisaient pas avec le paysage : ils le mettaient en valeur et offraient des points de pause le long du parcours qui descendait vers la mer. De là, le regard embrassait la crique, la Punta et l'horizon méditerranéen.",
+history_kiosks_p3:"La présence de ces petits pavillons explique également une certaine manière de vivre Canyet. Le déplacement dans la propriété, la promenade entre la végétation et la roche et l'arrivée progressive à la mer faisaient partie d'une même expérience. Les cartes postales ne documentent pas seulement des constructions aujourd'hui disparues ou transformées : elles conservent la mémoire d'une manière de contempler et d'habiter ce coin de côte.",
+history_kiosks_p4:"Vues depuis la mer ou depuis la crique elle-même, les gloriettes servaient de repères dans le paysage. Leur silhouette permettait d'identifier la Punta de Canyet et renforçait la relation entre architecture et géographie, une caractéristique qui définit encore aujourd'hui la personnalité singulière du lieu.",
+history_kiosks_caption:"Les kiosques",
+
+history_1940s_label:"LA VIE DANS LA CRIQUE",
+history_1940s_title:"Les années 1940",
+history_1940s_p1:"Avec la famille Sacrest, la crique accueillit un <strong>vivier artificiel creusé dans la roche</strong>, destiné à conserver vivants les homards pêchés pour les repas de la propriété. Aujourd'hui, cet espace est conservé et utilisé pour ranger de petites embarcations.",
+history_1940s_p2:"Ce détail permet de comprendre que Canyet n'était pas seulement un paysage contemplatif. La roche elle-même et la proximité de la mer faisaient partie de la vie quotidienne et de l'usage de l'espace. Le littoral n'était pas un simple décor : c'était aussi un lieu de travail, de loisirs, de rencontres et de relation directe avec les ressources de la mer.",
+history_1940s_p3:"Le vivier, intégré dans la roche, est particulièrement significatif car il montre à quel point la géographie naturelle pouvait s'adapter aux besoins de la vie dans la crique. L'eau, les cavités et les formes de la falaise devenaient partie intégrante d'une infrastructure pratique, sans jamais séparer complètement l'intervention humaine du paysage originel.",
+history_1940s_p4:"Au fil du temps, les usages ont changé, mais certains espaces continuent de conserver cette mémoire. Le vivier qui servait autrefois à maintenir les homards vivants est toujours conservé et utilisé pour ranger de petites embarcations. Cette continuité d'usage est l'une des clés pour comprendre Canyet : un lieu qui s'est transformé sans jamais perdre son lien essentiel avec la mer.",
+history_1940s_p5:"Les images de cette époque permettent d'imaginer une crique plus intime, où la vie domestique et le paysage maritime coexistaient à quelques mètres de distance. Canyet était à la fois refuge, espace de loisirs et point d'accès à la mer ; une relation quotidienne qui fait partie de son histoire et de son caractère actuel.",
+history_1940s_caption:"La vie dans la crique",
+
+history_heritage_label:"MÉMOIRE DU PAYSAGE",
+history_heritage_title:"Un patrimoine vivant",
+history_heritage_p1:"La mer et les tempêtes ont inévitablement marqué l'histoire de Canyet. Els Pontets ont dû être reconstruits à plusieurs reprises, mais ils ont conservé leur physionomie et, surtout, leur relation avec le paysage.",
+history_heritage_p2:"Lorsque l'on compare les différentes vues anciennes, une idée revient : la roche reste la protagoniste. Les chemins, les murs, les escaliers et les kiosques changent, sont reconstruits ou disparaissent, mais la silhouette de la Punta, la crique et l'horizon méditerranéen continuent d'identifier Canyet.",
+history_heritage_p3:"Les photographies sont donc bien plus qu'une archive d'images anciennes. Elles permettent de suivre les transformations du littoral et de comprendre quels éléments ont résisté au passage du temps. Chaque tempête, chaque reconstruction et chaque changement d'usage ont laissé une petite empreinte dans la manière dont nous percevons aujourd'hui la crique.",
+history_heritage_p4:"Els Pontets en sont un exemple particulièrement clair. Ils ont dû être reconstruits plusieurs fois sous l'effet de la force de la mer, mais leur existence continue d'exprimer une même volonté : rendre la roche accessible et maintenir une connexion directe entre le parcours terrestre et la Méditerranée.",
+history_heritage_p5:"Cette continuité entre passé et présent fait de Canyet un patrimoine vivant. Il ne s'agit pas d'un paysage figé dans une carte postale, mais d'un lieu qui continue d'évoluer, utilisé et aimé par les personnes qui y vivent ou le fréquentent. La mémoire aide à interpréter ce que nous voyons aujourd'hui et, en même temps, donne de la valeur aux éléments qui font encore partie de son paysage.",
+history_heritage_p6:"La photographie en couleur clôt ce parcours visuel comme un pont entre les époques. Après les cartes postales en noir et blanc et les images anciennes, Canyet apparaît sous un autre regard, mais avec les mêmes protagonistes essentiels : la roche, la crique, la mer et une silhouette côtière qui reste immédiatement reconnaissable.",
+history_heritage_caption:"Mémoire du paysage",
+history_color_caption:"Canyet en couleur",
 
 marine_kicker:"MER ET MÉTÉO",
 marine_intro:"État actuel de la mer, vent et conditions météorologiques à Canyet · Rosamar.",
@@ -4918,6 +5208,7 @@ members_login_text:"Introduisez votre code PIN.",
 members_login_button:"ENTRER",
 members_private_title:"Bienvenue dans l'espace membres",
 members_private_text:"Cette zone contient les informations, avis et documents du Club Nàutic Canyet.",
+
 private_meeting_title:"Dernière réunion du Club",
 private_meeting_intro:"Résumé de l'Assemblée Générale Extraordinaire du 7 août 2026.",
 private_meeting_1:"<strong>Bateau :</strong> remplacement du semi-rigide Narwhal.",
@@ -4927,6 +5218,7 @@ private_meeting_4:"<strong>Financement :</strong> appel exceptionnel de 350 € 
 private_meeting_5:"<strong>Paiement :</strong> du 15 août au 1er octobre 2026. Après cette date, majoration de 20 %.",
 private_meeting_6:"<strong>Vote :</strong> 16 voix pour et 1 contre.",
 private_meeting_pdf:"TÉLÉCHARGER LE PROCÈS-VERBAL COMPLET",
+
 private_news:"Avis",
 private_news_text:"Prochainement.",
 private_documents:"Documents",
