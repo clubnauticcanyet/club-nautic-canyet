@@ -3301,7 +3301,24 @@ body::-webkit-scrollbar {
 }
 </style>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3uV1Wv7bN6X2gk5w6x5u5qv4M4z0Q=" crossorigin="" />
+<!-- Leaflet: overrides to prevent the site's global image rules from breaking map tiles -->
+<style>
+#anchorage-map.leaflet-container { position: relative; overflow: hidden; }
+#anchorage-map .leaflet-tile-pane img.leaflet-tile {
+  max-width: none !important;
+  width: 256px !important;
+  height: 256px !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#anchorage-map .leaflet-marker-icon,
+#anchorage-map .leaflet-marker-shadow,
+#anchorage-map .leaflet-pane img { max-width: none !important; }
+#anchorage-map .leaflet-control-zoom a { box-sizing: content-box; }
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 </head>
 
