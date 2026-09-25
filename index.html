@@ -3288,6 +3288,40 @@ body::-webkit-scrollbar {
 .anchorage-map-popup .popup-status{font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
 .anchorage-map-popup p{font-size:12px;line-height:1.5;margin:0 0 7px;}
 .anchorage-map-popup small{font-size:10px;color:#66727a;}
+
+.anchorage-restrictions{
+    margin:28px auto 0;
+    border:1px solid rgba(210,82,72,.28);
+    border-radius:18px;
+    background:rgba(255,255,255,.025);
+    overflow:hidden;
+}
+.anchorage-restrictions-head{padding:22px 22px 12px;text-align:center;}
+.anchorage-restrictions-head .marine-label{display:inline-flex;margin:0 auto;}
+.anchorage-restrictions-head h4{margin:6px 0 7px;font-family:Georgia,serif;font-size:22px;font-weight:400;color:#fff;}
+.anchorage-restrictions-head p{margin:0 auto;color:rgba(255,255,255,.64);font-size:12px;line-height:1.55;max-width:760px;}
+.anchorage-restrictions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:10px 18px 16px;}
+.anchorage-restrictions-grid article{padding:13px 13px 14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.025);}
+.anchorage-restrictions-grid b{display:block;color:#e9b0a9;font-size:10px;letter-spacing:.09em;margin-bottom:6px;}
+.anchorage-restrictions-grid span{display:block;color:rgba(255,255,255,.68);font-size:11px;line-height:1.5;}
+.anchorage-restrictions-sites{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid rgba(255,255,255,.07);}
+.anchorage-restrictions-sites>div{padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:10px;align-items:flex-start;}
+.anchorage-restrictions-sites>div:nth-child(odd){border-right:1px solid rgba(255,255,255,.06);}
+.anchorage-restrictions-sites strong{min-width:115px;color:#fff;font-family:Georgia,serif;font-size:14px;font-weight:400;}
+.anchorage-restrictions-sites span{color:rgba(255,255,255,.62);font-size:11px;line-height:1.45;}
+.anchorage-restrictions-foot{padding:13px 18px 15px;text-align:center;color:rgba(255,255,255,.5);font-size:10px;letter-spacing:.03em;}
+.legend-no-anchor{background:#c6534c;}
+@media(max-width:900px){.anchorage-restrictions-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:700px){
+    .anchorage-restrictions-head{padding:18px 15px 10px;}
+    .anchorage-restrictions-head h4{font-size:20px;}
+    .anchorage-restrictions-grid{grid-template-columns:1fr;padding:9px 12px 13px;}
+    .anchorage-restrictions-sites{grid-template-columns:1fr;}
+    .anchorage-restrictions-sites>div:nth-child(odd){border-right:0;}
+    .anchorage-restrictions-sites strong{min-width:92px;}
+    .anchorage-restrictions-sites>div{padding:10px 13px;}
+}
+
 .anchorage-marker{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid rgba(255,255,255,.95);box-shadow:0 2px 8px rgba(0,0,0,.35);}
 .anchorage-marker > span{display:block;transform:rotate(45deg);font-size:10px;line-height:16px;text-align:center;color:#fff;font-weight:700;}
 .anchorage-marker.good{background:#2f9b5d}.anchorage-marker.conditional{background:#c9961d}.anchorage-marker.caution{background:#c55f51}.anchorage-marker.muted{background:#6c7780}
@@ -5046,7 +5080,33 @@ body::-webkit-scrollbar {
                 <span><i class="legend-dot legend-good"></i> <span data-i18n="anchorage_map_legend_good">Fondeig recomanat</span></span>
                 <span><i class="legend-dot legend-conditional"></i> <span data-i18n="anchorage_map_legend_conditional">Segons el vent</span></span>
                 <span><i class="legend-dot legend-caution"></i> <span data-i18n="anchorage_map_legend_caution">Exposat / capacitat limitada</span></span>
+                <span><i class="legend-dot legend-no-anchor"></i> <span data-i18n="anchorage_map_legend_no_anchor">No fondejar / zona restringida</span></span>
             </div>
+        </div>
+
+        <div class="anchorage-restrictions">
+            <div class="anchorage-restrictions-head">
+                <span class="marine-label" data-i18n="anchorage_restrictions_label">NO FONDEJAR</span>
+                <h4 data-i18n="anchorage_restrictions_title">Zones de bany, praderies, boies i perills</h4>
+                <p data-i18n="anchorage_restrictions_intro">El mapa separa les zones on el fondeig està restringit o prohibit de les zones que simplement requereixen molta precaució.</p>
+            </div>
+            <div class="anchorage-restrictions-grid">
+                <article><b data-i18n="anchorage_restriction_bathing_title">ZONES DE BANY</b><span data-i18n="anchorage_restriction_bathing_text">Dins les zones abalisades no s'hi pot navegar ni fondejar. Sense abalisament, la franja de platja és de 200 m i la resta de costa de 50 m.</span></article>
+                <article><b data-i18n="anchorage_restriction_seagrass_title">PRADERIES</b><span data-i18n="anchorage_restriction_seagrass_text">No fondejar sobre Posidonia oceanica o Cymodocea nodosa. Només s'admeten sistemes de baix impacte autoritzats.</span></article>
+                <article><b data-i18n="anchorage_restriction_buoys_title">CAMPS DE BOIES</b><span data-i18n="anchorage_restriction_buoys_text">No tirar l'àncora dins un camp de boies ni travessar-ne la zona d'amarrament. Utilitza la boia autoritzada corresponent.</span></article>
+                <article><b data-i18n="anchorage_restriction_hazards_title">ROQUES I BAIXOS</b><span data-i18n="anchorage_restriction_hazards_text">No és una prohibició general per si sola, però són zones inadequades o perilloses per a l'àncora. Cal deixar marge de seguretat.</span></article>
+            </div>
+            <div class="anchorage-restrictions-sites">
+                <div><strong>Sa Conca</strong><span data-i18n="anchorage_restriction_sa_conca">No dins la zona de bany davant la platja; el fondeig s'ha de fer fora de la zona abalisada.</span></div>
+                <div><strong>Sant Pol</strong><span data-i18n="anchorage_restriction_sant_pol">Zona de bany + camp de boies + zona de protecció de Cymodocea. No fondejar dins aquestes àrees.</span></div>
+                <div><strong>Canyet</strong><span data-i18n="anchorage_restriction_canyet">Hi ha praderies de Posidonia al voltant de la cala: prioritzar les boies de fondeig i evitar l'àncora sobre la praderia.</span></div>
+                <div><strong>Futadera</strong><span data-i18n="anchorage_restriction_futadera">Respectar la zona de bany i evitar roques o baixos. Buscar només fons segur i net d'obstacles.</span></div>
+                <div><strong>Giverola</strong><span data-i18n="anchorage_restriction_giverola">Zona de bany i presència de praderia de Posidonia. Respectar les boies i no ancorar sobre la praderia.</span></div>
+                <div><strong>Pola</strong><span data-i18n="anchorage_restriction_pola">Camp de boies regulat i praderia de Posidonia: utilitzar l'amarratge autoritzat i no fondejar sobre la praderia.</span></div>
+                <div><strong>Bona</strong><span data-i18n="anchorage_restriction_bona">Capacitat molt limitada i fons amb roca; evitar els baixos i la zona de bany.</span></div>
+                <div><strong>Badia de Tossa</strong><span data-i18n="anchorage_restriction_tossa">Respectar les zones de bany i el camp de boies. Atenció especial als baixos prop de l'illa de la Palma.</span></div>
+            </div>
+            <div class="anchorage-restrictions-foot" data-i18n="anchorage_restrictions_foot">Abans de fondejar, prevalen sempre les boies, balises, cartes nàutiques i instruccions de les autoritats marítimes.</div>
         </div>
 
         <div class="anchorage-coverage">
@@ -5606,6 +5666,27 @@ anchorage_map_aria:"Mapa dels fondejos entre Platja d’Aro i Tossa de Mar",
 anchorage_map_legend_good:"Fondeig recomanat",
 anchorage_map_legend_conditional:"Segons el vent",
 anchorage_map_legend_caution:"Exposat / capacitat limitada",
+anchorage_map_legend_no_anchor:"No fondejar / zona restringida",
+anchorage_restrictions_label:"NO FONDEJAR",
+anchorage_restrictions_title:"Zones de bany, praderies, boies i perills",
+anchorage_restrictions_intro:"El mapa separa les zones on el fondeig està restringit o prohibit de les zones que simplement requereixen molta precaució.",
+anchorage_restriction_bathing_title:"ZONES DE BANY",
+anchorage_restriction_bathing_text:"Dins les zones abalisades no s'hi pot navegar ni fondejar. Sense abalisament, la franja de platja és de 200 m i la resta de costa de 50 m.",
+anchorage_restriction_seagrass_title:"PRADERIES",
+anchorage_restriction_seagrass_text:"No fondejar sobre Posidonia oceanica o Cymodocea nodosa. Només s'admeten sistemes de baix impacte autoritzats.",
+anchorage_restriction_buoys_title:"CAMPS DE BOIES",
+anchorage_restriction_buoys_text:"No tirar l'àncora dins un camp de boies ni travessar-ne la zona d'amarrament. Utilitza la boia autoritzada corresponent.",
+anchorage_restriction_hazards_title:"ROQUES I BAIXOS",
+anchorage_restriction_hazards_text:"No és una prohibició general per si sola, però són zones inadequades o perilloses per a l'àncora. Cal deixar marge de seguretat.",
+anchorage_restriction_sa_conca:"No dins la zona de bany davant la platja; el fondeig s'ha de fer fora de la zona abalisada.",
+anchorage_restriction_sant_pol:"Zona de bany + camp de boies + zona de protecció de Cymodocea. No fondejar dins aquestes àrees.",
+anchorage_restriction_canyet:"Hi ha praderies de Posidonia al voltant de la cala: prioritzar les boies de fondeig i evitar l'àncora sobre la praderia.",
+anchorage_restriction_futadera:"Respectar la zona de bany i evitar roques o baixos. Buscar només fons segur i net d'obstacles.",
+anchorage_restriction_giverola:"Zona de bany i presència de praderia de Posidonia. Respectar les boies i no ancorar sobre la praderia.",
+anchorage_restriction_pola:"Camp de boies regulat i praderia de Posidonia: utilitzar l'amarratge autoritzat i no fondejar sobre la praderia.",
+anchorage_restriction_bona:"Capacitat molt limitada i fons amb roca; evitar els baixos i la zona de bany.",
+anchorage_restriction_tossa:"Respectar les zones de bany i el camp de boies. Atenció especial als baixos prop de l'illa de la Palma.",
+anchorage_restrictions_foot:"Abans de fondejar, prevalen sempre les boies, balises, cartes nàutiques i instruccions de les autoritats marítimes. Criteri de protecció de fanerògames: normativa estatal vigent.",
 anchorage_map_route:"TRAM PLATJA D’ARO → TOSSA DE MAR",
 anchorage_map_count:"8 punts de fondeig i parada",
 anchorage_popup_mooring:"Fondeig",
@@ -5613,13 +5694,13 @@ anchorage_popup_good_shelter:"Bon abric",
 anchorage_popup_wind_dependent:"Segons el vent",
 anchorage_popup_exposed:"Exposat",
 anchorage_popup_sa_conca:"Cala profunda i envoltada de pins. Fondeig davant la platja; valorar sempre la mar local.",
-anchorage_popup_sant_pol:"Fondeig exterior del camp de boies. A l’estiu, respectar la zona abalisada.",
-anchorage_popup_canyet:"4–5 m sobre sorra. Bon abric de la Tramuntana i dels vents del nord-est.",
+anchorage_popup_sant_pol:"Fondeig només fora del camp de boies i de la zona de bany abalisada; respectar també la zona de protecció de Cymodocea.",
+anchorage_popup_canyet:"4–5 m sobre sorra. Bon abric de la Tramuntana i del nord-est, però evitar l’àncora sobre la praderia de Posidonia i prioritzar les boies.",
 anchorage_popup_futadera:"Especialment favorable amb Garbí. Cal evitar-la amb vents de nord.",
-anchorage_popup_giverola:"Uns 5 m de fons. Alternativa protegida de la Tramuntana.",
-anchorage_popup_pola:"Fondeig de poca capacitat i exposat al Llevant.",
+anchorage_popup_giverola:"Uns 5 m de fons. Alternativa protegida de la Tramuntana; respectar la zona de bany, les boies i la praderia de Posidonia.",
+anchorage_popup_pola:"Fondeig de poca capacitat i exposat al Llevant. Camp de boies regulat: no fondejar sobre la praderia de Posidonia.",
 anchorage_popup_bona:"Més recollida que Pola; exposada al Llevant. Possibilitat de cap a terra.",
-anchorage_popup_tossa:"Possible amb Tramuntana. Fons de sorra; atenció als baixos i a l’ocupació estival.",
+anchorage_popup_tossa:"Possible amb Tramuntana en la zona sorrenca indicada per Ports; respectar les zones de bany, el camp de boies i els baixos prop de l’illa de la Palma.",
 anchorage_popup_footer:"Club Nàutic Canyet · informació orientativa",
 
 members_kicker:"SOCIS",
@@ -5828,6 +5909,27 @@ anchorage_map_aria:"Mapa de los fondeos entre Platja d’Aro y Tossa de Mar",
 anchorage_map_legend_good:"Fondeo recomendado",
 anchorage_map_legend_conditional:"Según el viento",
 anchorage_map_legend_caution:"Expuesto / capacidad limitada",
+anchorage_map_legend_no_anchor:"No fondear / zona restringida",
+anchorage_restrictions_label:"NO FONDEAR",
+anchorage_restrictions_title:"Zonas de baño, praderas, boyas y peligros",
+anchorage_restrictions_intro:"El mapa separa las zonas donde el fondeo está restringido o prohibido de las zonas que simplemente requieren mucha precaución.",
+anchorage_restriction_bathing_title:"ZONAS DE BAÑO",
+anchorage_restriction_bathing_text:"Dentro de las zonas balizadas no se puede navegar ni fondear. Sin balizamiento, la franja de playa es de 200 m y el resto de costa de 50 m.",
+anchorage_restriction_seagrass_title:"PRADERAS",
+anchorage_restriction_seagrass_text:"No fondear sobre Posidonia oceanica o Cymodocea nodosa. Solo se admiten sistemas de bajo impacto autorizados.",
+anchorage_restriction_buoys_title:"CAMPOS DE BOYAS",
+anchorage_restriction_buoys_text:"No echar el ancla dentro de un campo de boyas ni atravesar su zona de amarre. Utiliza la boya autorizada correspondiente.",
+anchorage_restriction_hazards_title:"ROCAS Y BAJOS",
+anchorage_restriction_hazards_text:"No es una prohibición general por sí sola, pero son zonas inadecuadas o peligrosas para el ancla. Hay que dejar margen de seguridad.",
+anchorage_restriction_sa_conca:"No dentro de la zona de baño frente a la playa; el fondeo debe hacerse fuera de la zona balizada.",
+anchorage_restriction_sant_pol:"Zona de baño + campo de boyas + zona de protección de Cymodocea. No fondear dentro de estas áreas.",
+anchorage_restriction_canyet:"Hay praderas de Posidonia alrededor de la cala: priorizar las boyas de fondeo y evitar el ancla sobre la pradera.",
+anchorage_restriction_futadera:"Respetar la zona de baño y evitar rocas o bajos. Buscar solo fondo seguro y limpio de obstáculos.",
+anchorage_restriction_giverola:"Zona de baño y presencia de pradera de Posidonia. Respetar las boyas y no anclar sobre la pradera.",
+anchorage_restriction_pola:"Campo de boyas regulado y pradera de Posidonia: utilizar el amarre autorizado y no fondear sobre la pradera.",
+anchorage_restriction_bona:"Capacidad muy limitada y fondo con roca; evitar los bajos y la zona de baño.",
+anchorage_restriction_tossa:"Respetar las zonas de baño y el campo de boyas. Atención especial a los bajos cerca de la isla de la Palma.",
+anchorage_restrictions_foot:"Antes de fondear, prevalecen siempre las boyas, balizas, cartas náuticas y las instrucciones de las autoridades marítimas. Criterio de protección de fanerógamas: normativa estatal vigente.",
 anchorage_map_route:"TRAMO PLATJA D’ARO → TOSSA DE MAR",
 anchorage_map_count:"8 puntos de fondeo y parada",
 anchorage_popup_mooring:"Fondeo",
@@ -5835,11 +5937,11 @@ anchorage_popup_good_shelter:"Buen abrigo",
 anchorage_popup_wind_dependent:"Según el viento",
 anchorage_popup_exposed:"Expuesto",
 anchorage_popup_sa_conca:"Cala profunda y rodeada de pinos. Fondeo frente a la playa; valorar siempre la mar local.",
-anchorage_popup_sant_pol:"Fondeo exterior del campo de boyas. En verano, respetar la zona balizada.",
-anchorage_popup_canyet:"4–5 m sobre arena. Buen abrigo de la Tramontana y los vientos del nordeste.",
+anchorage_popup_sant_pol:"Fondeo solo fuera del campo de boyas y de la zona de baño balizada; respetar también la zona de protección de Cymodocea.",
+anchorage_popup_canyet:"4–5 m sobre arena. Buen abrigo de la Tramontana y del nordeste, pero evitar el ancla sobre la pradera de Posidonia y priorizar las boyas.",
 anchorage_popup_futadera:"Especialmente favorable con Garbí. Debe evitarse con vientos de norte.",
-anchorage_popup_giverola:"Unos 5 m de fondo. Alternativa protegida de la Tramontana.",
-anchorage_popup_pola:"Fondeo de poca capacidad y expuesto al Llevant.",
+anchorage_popup_giverola:"Unos 5 m de fondo. Alternativa protegida de la Tramontana; respetar la zona de baño, las boyas y la pradera de Posidonia.",
+anchorage_popup_pola:"Fondeo de poca capacidad y expuesto al Llevant. Campo de boyas regulado: no fondear sobre la pradera de Posidonia.",
 anchorage_popup_bona:"Más recogida que Pola; expuesta al Llevant. Posibilidad de cabo a tierra.",
 anchorage_popup_tossa:"Posible con Tramontana. Fondo de arena; atención a bajos y ocupación estival.",
 anchorage_popup_footer:"Club Nàutic Canyet · información orientativa",
@@ -6050,6 +6152,27 @@ anchorage_map_aria:"Carte des mouillages entre Platja d’Aro et Tossa de Mar",
 anchorage_map_legend_good:"Mouillage recommandé",
 anchorage_map_legend_conditional:"Selon le vent",
 anchorage_map_legend_caution:"Exposé / capacité limitée",
+anchorage_map_legend_no_anchor:"Mouillage interdit / zone réglementée",
+anchorage_restrictions_label:"PAS DE MOUILLAGE",
+anchorage_restrictions_title:"Zones de baignade, herbiers, bouées et dangers",
+anchorage_restrictions_intro:"La carte distingue les zones où le mouillage est réglementé ou interdit des zones qui exigent simplement une grande prudence.",
+anchorage_restriction_bathing_title:"ZONES DE BAIGNADE",
+anchorage_restriction_bathing_text:"Dans les zones balisées, la navigation et le mouillage sont interdits. Sans balisage, la bande de plage est de 200 m et le reste de la côte de 50 m.",
+anchorage_restriction_seagrass_title:"HERBIERS",
+anchorage_restriction_seagrass_text:"Ne pas mouiller sur Posidonia oceanica ou Cymodocea nodosa. Seuls les systèmes à faible impact autorisés sont admis.",
+anchorage_restriction_buoys_title:"CHAMPS DE BOUÉES",
+anchorage_restriction_buoys_text:"Ne pas jeter l'ancre dans un champ de bouées ni traverser sa zone d'amarrage. Utiliser la bouée autorisée correspondante.",
+anchorage_restriction_hazards_title:"ROCHERS ET HAUTS-FONDS",
+anchorage_restriction_hazards_text:"Ce n'est pas une interdiction générale en soi, mais ce sont des zones inadaptées ou dangereuses pour l'ancre. Garder une marge de sécurité.",
+anchorage_restriction_sa_conca:"Pas dans la zone de baignade devant la plage ; mouiller à l'extérieur de la zone balisée.",
+anchorage_restriction_sant_pol:"Zone de baignade + champ de bouées + zone de protection de Cymodocea. Pas de mouillage dans ces zones.",
+anchorage_restriction_canyet:"Des herbiers de Posidonia entourent la crique : privilégier les bouées et éviter l'ancre sur l'herbier.",
+anchorage_restriction_futadera:"Respecter la zone de baignade et éviter les rochers ou hauts-fonds. Chercher un fond sûr et dégagé.",
+anchorage_restriction_giverola:"Zone de baignade et présence d'un herbier de Posidonia. Respecter les bouées et ne pas ancrer sur l'herbier.",
+anchorage_restriction_pola:"Champ de bouées réglementé et herbier de Posidonia : utiliser l'amarrage autorisé et ne pas mouiller sur l'herbier.",
+anchorage_restriction_bona:"Capacité très limitée et fond rocheux ; éviter les hauts-fonds et la zone de baignade.",
+anchorage_restriction_tossa:"Respecter les zones de baignade et le champ de bouées. Attention particulière aux hauts-fonds près de l'île de la Palma.",
+anchorage_restrictions_foot:"Avant de mouiller, les bouées, balises, cartes nautiques et instructions des autorités maritimes prévalent toujours. Protection des herbiers : réglementation nationale en vigueur.",
 anchorage_map_route:"SECTEUR PLATJA D’ARO → TOSSA DE MAR",
 anchorage_map_count:"8 points de mouillage et d’arrêt",
 anchorage_popup_mooring:"Mouillage",
@@ -6057,13 +6180,13 @@ anchorage_popup_good_shelter:"Bon abri",
 anchorage_popup_wind_dependent:"Selon le vent",
 anchorage_popup_exposed:"Exposé",
 anchorage_popup_sa_conca:"Crique profonde entourée de pins. Mouillage devant la plage ; évaluer toujours l’état de la mer.",
-anchorage_popup_sant_pol:"Mouillage extérieur du champ de bouées. En été, respecter la zone balisée.",
-anchorage_popup_canyet:"4–5 m sur sable. Bon abri par Tramuntana et les vents de nord-est.",
+anchorage_popup_sant_pol:"Mouillage uniquement à l’extérieur du champ de bouées et de la zone de baignade balisée ; respecter aussi la zone de protection de Cymodocea.",
+anchorage_popup_canyet:"4–5 m sur sable. Bon abri par Tramuntana et nord-est, mais éviter l’ancre sur l’herbier de Posidonia et privilégier les bouées.",
 anchorage_popup_futadera:"Particulièrement favorable par Garbí. À éviter avec les vents de nord.",
-anchorage_popup_giverola:"Environ 5 m de fond. Alternative protégée de la Tramuntana.",
-anchorage_popup_pola:"Mouillage de faible capacité et exposé au Llevant.",
+anchorage_popup_giverola:"Environ 5 m de fond. Alternative protégée de la Tramuntana ; respecter la zone de baignade, les bouées et l’herbier de Posidonia.",
+anchorage_popup_pola:"Mouillage de faible capacité et exposé au Llevant. Champ de bouées réglementé : ne pas mouiller sur l’herbier de Posidonia.",
 anchorage_popup_bona:"Plus abritée que Pola ; exposée au Llevant. Possibilité de ligne à terre.",
-anchorage_popup_tossa:"Possible par Tramuntana. Fond sableux ; attention aux hauts-fonds et à l’occupation estivale.",
+anchorage_popup_tossa:"Possible par Tramuntana dans la zone sableuse indiquée par Ports ; respecter les zones de baignade, le champ de bouées et les hauts-fonds près de l’île de la Palma.",
 anchorage_popup_footer:"Club Nàutic Canyet · information indicative",
 
 members_kicker:"MEMBRES",
@@ -6339,15 +6462,21 @@ function windDirectionShort(degrees) {
    MAPA REAL DE FONDEJOS · PLATJA D’ARO → TOSSA
    ========================================================= */
 
+/*
+ * PUNTS DE FONDEIG
+ * Les coordenades no són el centre de la platja: el marcador es col·loca
+ * dins l'espai de badia/fondeig, sobre l'aigua, per evitar que aparegui a terra.
+ * S'han contrastat les coordenades de les cales amb fonts cartogràfiques.
+ */
 const ANCHORAGE_POINTS = [
-    {id:'sa-conca', name:'Cala Sa Conca', lat:41.7951, lon:3.0570, type:'good', statusKey:'anchorage_popup_mooring', textKey:'anchorage_popup_sa_conca'},
-    {id:'sant-pol', name:'Platja de Sant Pol', lat:41.7858, lon:3.0502, type:'good', statusKey:'anchorage_popup_mooring', textKey:'anchorage_popup_sant_pol'},
-    {id:'canyet', name:'Cala Canyet', lat:41.7680, lon:2.9817, type:'good', statusKey:'anchorage_popup_good_shelter', textKey:'anchorage_popup_canyet'},
-    {id:'futadera', name:'Cala Futadera', lat:41.7233, lon:2.9673, type:'conditional', statusKey:'anchorage_popup_wind_dependent', textKey:'anchorage_popup_futadera'},
-    {id:'giverola', name:'Cala Giverola', lat:41.7186, lon:2.9694, type:'good', statusKey:'anchorage_popup_good_shelter', textKey:'anchorage_popup_giverola'},
-    {id:'pola', name:'Cala Pola', lat:41.7138, lon:2.9540, type:'caution', statusKey:'anchorage_popup_exposed', textKey:'anchorage_popup_pola'},
-    {id:'bona', name:'Cala Bona', lat:41.7121, lon:2.9502, type:'caution', statusKey:'anchorage_popup_exposed', textKey:'anchorage_popup_bona'},
-    {id:'tossa', name:'Badia de Tossa', lat:41.7167, lon:2.9346, type:'conditional', statusKey:'anchorage_popup_wind_dependent', textKey:'anchorage_popup_tossa'}
+    {id:'sa-conca', name:'Cala Sa Conca', lat:41.79645, lon:3.06125, type:'good', statusKey:'anchorage_popup_mooring', textKey:'anchorage_popup_sa_conca'},
+    {id:'sant-pol', name:'Platja de Sant Pol', lat:41.78895, lon:3.04905, type:'good', statusKey:'anchorage_popup_mooring', textKey:'anchorage_popup_sant_pol'},
+    {id:'canyet', name:'Cala Canyet', lat:41.75895, lon:2.98095, type:'good', statusKey:'anchorage_popup_good_shelter', textKey:'anchorage_popup_canyet'},
+    {id:'futadera', name:'Cala Futadera', lat:41.73715, lon:2.95815, type:'conditional', statusKey:'anchorage_popup_wind_dependent', textKey:'anchorage_popup_futadera'},
+    {id:'giverola', name:'Cala Giverola', lat:41.73615, lon:2.95380, type:'good', statusKey:'anchorage_popup_good_shelter', textKey:'anchorage_popup_giverola'},
+    {id:'pola', name:'Cala Pola', lat:41.73215, lon:2.95125, type:'caution', statusKey:'anchorage_popup_exposed', textKey:'anchorage_popup_pola'},
+    {id:'bona', name:'Cala Bona', lat:41.72970, lon:2.94775, type:'caution', statusKey:'anchorage_popup_exposed', textKey:'anchorage_popup_bona'},
+    {id:'tossa', name:'Badia de Tossa', lat:41.71885, lon:2.93810, type:'conditional', statusKey:'anchorage_popup_wind_dependent', textKey:'anchorage_popup_tossa'}
 ];
 
 function currentAnchorageLanguage(){
@@ -6379,10 +6508,19 @@ function initAnchorageMap(){
     if(typeof L === 'undefined') return;
 
     anchorageMap=L.map(el,{zoomControl:true,scrollWheelZoom:false});
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-        maxZoom:18,
+
+    const street=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        maxZoom:19,
         attribution:'&copy; OpenStreetMap contributors'
-    }).addTo(anchorageMap);
+    });
+
+    const satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
+        maxZoom:19,
+        attribution:'Tiles &copy; Esri'
+    });
+
+    street.addTo(anchorageMap);
+    L.control.layers({'Mapa':street,'Satèl·lit':satellite},null,{collapsed:true,position:'topright'}).addTo(anchorageMap);
 
     const bounds=[];
     ANCHORAGE_POINTS.forEach(p=>{
