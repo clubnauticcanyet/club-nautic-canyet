@@ -1110,6 +1110,420 @@ button {
 }
 
 
+
+/* =========================================================
+   ON FONDEJAR AVUI?
+   ========================================================= */
+
+.anchorage-section {
+
+    margin-top: 58px;
+
+    padding-top: 46px;
+
+    border-top:
+        1px solid rgba(255,255,255,.13);
+}
+
+.anchorage-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.anchorage-header h3 {
+
+    margin-top: 7px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+}
+
+.anchorage-header p {
+
+    max-width: 650px;
+
+    margin-top: 8px;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.anchorage-live {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 12px;
+
+    border:
+        1px solid rgba(225,177,58,.32);
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+
+    white-space: nowrap;
+}
+
+.anchorage-live span:first-child {
+
+    color: #66c58b;
+
+    font-size: 10px;
+}
+
+.anchorage-recommendation {
+
+    display: grid;
+
+    grid-template-columns: 145px 1fr;
+
+    min-height: 210px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    transition:
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.anchorage-recommendation.anchorage-good {
+    border-color: rgba(91,185,126,.42);
+}
+
+.anchorage-recommendation.anchorage-watch {
+    border-color: rgba(225,177,58,.45);
+}
+
+.anchorage-recommendation.anchorage-limit {
+    border-color: rgba(220,105,86,.42);
+}
+
+.anchorage-compass {
+
+    position: relative;
+
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-right:
+        1px solid rgba(255,255,255,.10);
+
+    color: #e1b13a;
+}
+
+.anchorage-compass-ring {
+
+    width: 94px;
+    height: 94px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 7px;
+
+    border:
+        1px solid rgba(225,177,58,.35);
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.anchorage-compass::before,
+.anchorage-compass::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 94px;
+    height: 1px;
+
+    background: rgba(255,255,255,.10);
+}
+
+.anchorage-compass::after {
+
+    transform: rotate(90deg);
+}
+
+.anchorage-compass-arrow {
+
+    position: absolute;
+
+    color: #ffffff;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    transform: translate(16px, 5px) rotate(-10deg);
+}
+
+.anchorage-main {
+
+    padding: 29px 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.anchorage-status {
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding: 6px 10px;
+
+    margin-bottom: 12px;
+
+    background: rgba(94,184,126,.15);
+
+    color: #8ed0a5;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.anchorage-limit .anchorage-status {
+
+    background: rgba(220,105,86,.12);
+
+    color: #e9a092;
+}
+
+.anchorage-watch .anchorage-status {
+
+    background: rgba(225,177,58,.13);
+
+    color: #e6c46e;
+}
+
+.anchorage-main h4 {
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+}
+
+.anchorage-main p {
+
+    max-width: 760px;
+
+    margin-bottom: 20px;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.anchorage-conditions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.anchorage-conditions span {
+
+    padding: 8px 11px;
+
+    border:
+        1px solid rgba(255,255,255,.11);
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 10px;
+
+    letter-spacing: .5px;
+}
+
+.anchorage-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 1px;
+
+    margin-top: 1px;
+
+    background:
+        rgba(255,255,255,.11);
+}
+
+.anchorage-item {
+
+    min-height: 90px;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    background:
+        rgba(3,25,38,.58);
+}
+
+.anchorage-item strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+.anchorage-item small {
+
+    display: block;
+
+    color: rgba(255,255,255,.48);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.anchorage-dot {
+
+    flex:
+        0 0 9px;
+
+    width: 9px;
+    height: 9px;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    background: #66c58b;
+
+    box-shadow:
+        0 0 0 4px rgba(102,197,139,.10);
+}
+
+.anchorage-dot-watch {
+
+    background: #e1b13a;
+
+    box-shadow:
+        0 0 0 4px rgba(225,177,58,.10);
+}
+
+.anchorage-dot-limit {
+
+    background: #d66b59;
+
+    box-shadow:
+        0 0 0 4px rgba(214,107,89,.10);
+}
+
+.anchorage-note {
+
+    margin-top: 17px;
+
+    padding: 13px 16px;
+
+    border-left:
+        2px solid #e1b13a;
+
+    background:
+        rgba(225,177,58,.045);
+
+    color: rgba(255,255,255,.48);
+
+    font-size: 10px;
+
+    line-height: 1.65;
+}
+
+.anchorage-source {
+
+    margin-top: 12px;
+
+    color: rgba(255,255,255,.32);
+
+    font-size: 9px;
+
+    letter-spacing: .4px;
+}
+
 /* =========================================================
    PREVISIÓN MARÍTIMA
    ========================================================= */
@@ -1822,4 +2236,72 @@ button {
         min-width: 150px;
     }
 
+}
+
+/* =========================================================
+   FONDEIG AMPLIAT · PLATJA D'ARO → TOSSA
+   ========================================================= */
+.anchorage-list-expanded {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.anchorage-list-expanded .anchorage-item {
+    min-height: 78px;
+}
+
+.anchorage-item-active {
+    border-color: rgba(102,197,139,.75) !important;
+    background: rgba(102,197,139,.10) !important;
+    box-shadow: inset 3px 0 0 #66c58b;
+}
+
+.anchorage-item-active strong {
+    color: #ffffff;
+}
+
+.anchorage-coverage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-top: 28px;
+    padding: 12px 15px;
+    border: 1px solid rgba(225,177,58,.22);
+    background: rgba(225,177,58,.045);
+    color: rgba(255,255,255,.58);
+    font-size: 9px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+.anchorage-coverage span:first-child {
+    color: #e1b13a;
+}
+
+@media (max-width: 1050px) {
+    .anchorage-list-expanded {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .anchorage-list-expanded {
+        grid-template-columns: 1fr;
+    }
+    .anchorage-coverage {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* Ajust final: separació clara entre la pastilla del mapa i el text inferior */
+.anchorage-map-wrap + .anchorage-coverage {
+    margin-top: 32px !important;
+}
+
+@media (max-width: 640px) {
+    .anchorage-map-wrap + .anchorage-coverage {
+        margin-top: 28px !important;
+        padding-top: 14px;
+    }
 }

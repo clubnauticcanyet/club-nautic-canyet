@@ -1718,6 +1718,456 @@ input {
 }
 
 
+
+/* =========================================================
+   RECOMANACIÓ DE FONDEIG
+   ========================================================= */
+
+/* =========================================================
+   ON FONDEJAR AVUI?
+   ========================================================= */
+
+.anchorage-section {
+
+    margin-top: 58px;
+
+    padding-top: 46px;
+
+    border-top:
+        1px solid rgba(255,255,255,.13);
+}
+
+.anchorage-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.anchorage-header h3 {
+
+    margin-top: 7px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+}
+
+.anchorage-header p {
+
+    max-width: 650px;
+
+    margin-top: 8px;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.anchorage-live {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 12px;
+
+    border:
+        1px solid rgba(225,177,58,.32);
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+
+    white-space: nowrap;
+}
+
+.anchorage-live span:first-child {
+
+    color: #66c58b;
+
+    font-size: 10px;
+}
+
+.anchorage-recommendation {
+
+    display: grid;
+
+    grid-template-columns: 145px 1fr;
+
+    min-height: 210px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    transition:
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.anchorage-recommendation.anchorage-good {
+    border-color: rgba(91,185,126,.42);
+}
+
+.anchorage-recommendation.anchorage-watch {
+    border-color: rgba(225,177,58,.45);
+}
+
+.anchorage-recommendation.anchorage-limit {
+    border-color: rgba(220,105,86,.42);
+}
+
+.anchorage-compass {
+
+    position: relative;
+
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-right:
+        1px solid rgba(255,255,255,.10);
+
+    color: #e1b13a;
+}
+
+.anchorage-compass-ring {
+
+    width: 94px;
+    height: 94px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 7px;
+
+    border:
+        1px solid rgba(225,177,58,.35);
+
+    border-radius: 50%;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.anchorage-compass::before,
+.anchorage-compass::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 94px;
+    height: 1px;
+
+    background: rgba(255,255,255,.10);
+}
+
+.anchorage-compass::after {
+
+    transform: rotate(90deg);
+}
+
+.anchorage-compass-arrow {
+
+    position: absolute;
+
+    color: #ffffff;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    transform: translate(16px, 5px) rotate(-10deg);
+}
+
+.anchorage-main {
+
+    padding: 29px 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.anchorage-status {
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding: 6px 10px;
+
+    margin-bottom: 12px;
+
+    background: rgba(94,184,126,.15);
+
+    color: #8ed0a5;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.anchorage-limit .anchorage-status {
+
+    background: rgba(220,105,86,.12);
+
+    color: #e9a092;
+}
+
+.anchorage-watch .anchorage-status {
+
+    background: rgba(225,177,58,.13);
+
+    color: #e6c46e;
+}
+
+.anchorage-main h4 {
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+}
+
+.anchorage-main p {
+
+    max-width: 760px;
+
+    margin-bottom: 20px;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.anchorage-conditions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.anchorage-conditions span {
+
+    padding: 8px 11px;
+
+    border:
+        1px solid rgba(255,255,255,.11);
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 10px;
+
+    letter-spacing: .5px;
+}
+
+.anchorage-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 1px;
+
+    margin-top: 1px;
+
+    background:
+        rgba(255,255,255,.11);
+}
+
+.anchorage-item {
+
+    min-height: 90px;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    background:
+        rgba(3,25,38,.58);
+}
+
+.anchorage-item strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+.anchorage-item small {
+
+    display: block;
+
+    color: rgba(255,255,255,.48);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.anchorage-item {
+    transition: background .3s ease, box-shadow .3s ease;
+}
+
+.anchorage-item-active {
+    background: rgba(102,197,139,.09) !important;
+    box-shadow: inset 0 2px 0 rgba(102,197,139,.55);
+}
+
+.anchorage-item-active strong {
+    color: #f5f2e8;
+}
+
+.anchorage-item-muted {
+    opacity: .62;
+}
+
+.anchorage-compass-arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: transform .7s cubic-bezier(.2,.8,.2,1);
+    text-shadow: 0 3px 16px rgba(0,0,0,.28);
+}
+
+.anchorage-dot {
+
+    flex:
+        0 0 9px;
+
+    width: 9px;
+    height: 9px;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    background: #66c58b;
+
+    box-shadow:
+        0 0 0 4px rgba(102,197,139,.10);
+}
+
+.anchorage-dot-watch {
+
+    background: #e1b13a;
+
+    box-shadow:
+        0 0 0 4px rgba(225,177,58,.10);
+}
+
+.anchorage-dot-limit {
+
+    background: #d66b59;
+
+    box-shadow:
+        0 0 0 4px rgba(214,107,89,.10);
+}
+
+.anchorage-note {
+
+    margin-top: 17px;
+
+    padding: 13px 16px;
+
+    border-left:
+        2px solid #e1b13a;
+
+    background:
+        rgba(225,177,58,.045);
+
+    color: rgba(255,255,255,.48);
+
+    font-size: 10px;
+
+    line-height: 1.65;
+}
+
+.anchorage-source {
+
+    margin-top: 12px;
+
+    color: rgba(255,255,255,.32);
+
+    font-size: 9px;
+
+    letter-spacing: .4px;
+}
+
+
+
 /* PREVISIÓN */
 
 .marine-forecast {
@@ -2718,7 +3168,140 @@ body::-webkit-scrollbar {
     object-fit: cover;
 }
 
+
+@media (max-width: 900px) {
+    .anchorage-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .anchorage-recommendation {
+        grid-template-columns: 110px 1fr;
+    }
+    .anchorage-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .anchorage-recommendation {
+        grid-template-columns: 1fr;
+    }
+    .anchorage-compass {
+        min-height: 135px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .anchorage-main {
+        padding: 25px 22px;
+    }
+    .anchorage-main h4 {
+        font-size: 29px;
+    }
+    .anchorage-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ================= MAPA DE FONDEJOS ================= */
+.anchorage-map-wrap{
+    width:100%;
+    margin:28px auto 0;
+    border:1px solid rgba(225,177,58,.24);
+    background:rgba(255,255,255,.035);
+    border-radius:18px;
+    overflow:hidden;
+}
+.anchorage-map-header{
+    width:100%;
+    box-sizing:border-box;
+    padding:20px 22px 16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:9px;
+    text-align:center;
+}
+.anchorage-map-title{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+.anchorage-map-header .marine-label{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto;
+}
+.anchorage-map-header h4{
+    margin-top:4px;
+    font-family:Georgia,serif;
+    font-size:22px;
+    font-weight:400;
+    color:#fff;
+}
+.anchorage-map-hint{
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.58);
+}
+#anchorage-map{height:430px;width:100%;background:#dbe7e9;}
+.anchorage-coverage{
+    width:100%;
+    box-sizing:border-box;
+    margin:30px 0 0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:8px 18px;
+    font-family:Montserrat,Arial,sans-serif;
+    color:rgba(255,255,255,.9);
+    font-size:14px;
+    line-height:1.5;
+}
+.anchorage-coverage span:first-child{
+    font-weight:600;
+    letter-spacing:.04em;
+}
+.anchorage-coverage span:last-child{
+    color:rgba(255,255,255,.7);
+}
+.anchorage-map-legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    padding:12px 18px 15px;
+    font-size:11px;
+    color:rgba(255,255,255,.68);
+}
+.legend-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;}
+.legend-good{background:#54c77a}.legend-conditional{background:#e1b13a}.legend-caution{background:#e37b6b}
+.anchorage-map-popup{font-family:Montserrat,Arial,sans-serif;min-width:210px;color:#10212b;}
+.anchorage-map-popup strong{display:block;font-family:Georgia,serif;font-size:18px;margin-bottom:5px;}
+.anchorage-map-popup .popup-status{font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.anchorage-map-popup p{font-size:12px;line-height:1.5;margin:0 0 7px;}
+.anchorage-map-popup small{font-size:10px;color:#66727a;}
+.anchorage-marker{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid rgba(255,255,255,.95);box-shadow:0 2px 8px rgba(0,0,0,.35);}
+.anchorage-marker > span{display:block;transform:rotate(45deg);font-size:10px;line-height:16px;text-align:center;color:#fff;font-weight:700;}
+.anchorage-marker.good{background:#2f9b5d}.anchorage-marker.conditional{background:#c9961d}.anchorage-marker.caution{background:#c55f51}.anchorage-marker.muted{background:#6c7780}
+@media(max-width:700px){
+    .anchorage-map-header{align-items:center;flex-direction:column;gap:8px;padding:17px 16px 12px;text-align:center;}
+    .anchorage-map-title{align-items:center;}
+    #anchorage-map{height:360px;}
+    .anchorage-map-hint{font-size:10px;}
+    .anchorage-coverage{margin-top:26px;gap:5px 12px;font-size:13px;}
+    .anchorage-map-legend{gap:10px;font-size:10px;padding:10px 13px 13px;}
+}
 </style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3uV1Wv7bN6X2gk5w6x5u5qv4M4z0Q=" crossorigin="" />
 
 </head>
 
@@ -4298,6 +4881,176 @@ body::-webkit-scrollbar {
         </div>
 
 
+
+    <!-- =========================================================
+         ON FONDEJAR AVUI?
+         RECOMANACIÓ DINÀMICA DE FONDEIG
+         ========================================================= -->
+
+    <div class="anchorage-section">
+
+        <div class="anchorage-header">
+
+            <div>
+                <span class="marine-label">
+                    ON FONDEJAR AVUI?
+                </span>
+
+                <h3 data-i18n="anchorage_title">
+                    On fondejar avui?
+                </h3>
+
+                <p data-i18n="anchorage_intro">
+                    Una orientació de fondeig segons el vent i l'estat de la mar.
+                </p>
+            </div>
+
+            <span class="anchorage-live">
+                <span>●</span>
+                <span data-i18n="anchorage_live">DADES EN DIRECTE</span>
+            </span>
+
+        </div>
+
+
+        <div id="anchorage-recommendation"
+             class="anchorage-recommendation">
+
+            <div class="anchorage-compass">
+                <span class="anchorage-compass-ring">N</span>
+                <span id="anchorage-compass-arrow"
+              class="anchorage-compass-arrow"
+              aria-hidden="true">↑</span>
+            </div>
+
+            <div class="anchorage-main">
+
+                <span class="anchorage-status"
+                      data-i18n="anchorage_calculating">
+                    CALCULANT RECOMANACIÓ...
+                </span>
+
+                <h4 id="anchorage-place">
+                    —
+                </h4>
+
+                <p id="anchorage-reason">
+                    —
+                </p>
+
+                <div class="anchorage-conditions">
+                    <span id="anchorage-wind">Vent —</span>
+                    <span id="anchorage-wave">Mar —</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="anchorage-list anchorage-list-expanded">
+
+            <article class="anchorage-item" data-anchorage="sa-conca">
+                <span class="anchorage-dot anchorage-dot-good"></span>
+                <div>
+                    <strong>Cala Sa Conca</strong>
+                    <small>Fondeig davant la platja · bona opció amb mar favorable</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="sant-pol">
+                <span class="anchorage-dot anchorage-dot-good"></span>
+                <div>
+                    <strong>Platja de Sant Pol</strong>
+                    <small>Fondeig exterior del camp de boies a l'estiu</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="canyet">
+                <span class="anchorage-dot anchorage-dot-good"></span>
+                <div>
+                    <strong>Cala Canyet</strong>
+                    <small>4–5 m sobre sorra · molt bon abric amb Tramuntana i Gregal</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="futadera">
+                <span class="anchorage-dot anchorage-dot-watch"></span>
+                <div>
+                    <strong>Cala Futadera</strong>
+                    <small>Especialment favorable amb Garbí · evitar amb vents de nord</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="giverola">
+                <span class="anchorage-dot anchorage-dot-good"></span>
+                <div>
+                    <strong>Cala Giverola</strong>
+                    <small>Fondeig a uns 5 m · protegida de la Tramuntana</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="pola">
+                <span class="anchorage-dot anchorage-dot-watch"></span>
+                <div>
+                    <strong>Cala Pola</strong>
+                    <small>Fondeig de poca capacitat · exposada al Llevant</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="bona">
+                <span class="anchorage-dot anchorage-dot-watch"></span>
+                <div>
+                    <strong>Cala Bona</strong>
+                    <small>Fondeig amb possibilitat de cap a terra · exposada al Llevant</small>
+                </div>
+            </article>
+
+            <article class="anchorage-item" data-anchorage="tossa">
+                <span class="anchorage-dot anchorage-dot-good"></span>
+                <div>
+                    <strong>Badia de Tossa</strong>
+                    <small>Possible amb Tramuntana · fons de sorra i atenció als baixos</small>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="anchorage-map-wrap">
+            <div class="anchorage-map-header">
+                <div class="anchorage-map-title">
+                    <span class="marine-label" data-i18n="anchorage_map_label">MAPA DE FONDEJOS</span>
+                    <h4 data-i18n="anchorage_map_title">Platja d’Aro → Tossa de Mar</h4>
+                </div>
+                <span class="anchorage-map-hint" data-i18n="anchorage_map_hint">Toca un punt per veure’n la protecció</span>
+            </div>
+            <div id="anchorage-map" data-i18n-attr="aria-label:anchorage_map_aria" aria-label="Mapa dels fondejos entre Platja d’Aro i Tossa de Mar"></div>
+            <div class="anchorage-map-legend">
+                <span><i class="legend-dot legend-good"></i> <span data-i18n="anchorage_map_legend_good">Fondeig recomanat</span></span>
+                <span><i class="legend-dot legend-conditional"></i> <span data-i18n="anchorage_map_legend_conditional">Segons el vent</span></span>
+                <span><i class="legend-dot legend-caution"></i> <span data-i18n="anchorage_map_legend_caution">Exposat / capacitat limitada</span></span>
+            </div>
+        </div>
+
+        <div class="anchorage-coverage">
+            <span data-i18n="anchorage_map_route">TRAM PLATJA D’ARO → TOSSA DE MAR</span>
+            <span data-i18n="anchorage_map_count">8 punts de fondeig i parada</span>
+        </div>
+
+        <div class="anchorage-note"
+             data-i18n="anchorage_note">
+            Recomanació orientativa. Abans de fondejar, comprova sempre les condicions reals,
+            les zones abalisades, les restriccions vigents i la seguretat de l'ancoratge.
+        </div>
+
+        <div class="anchorage-source">
+            <span data-i18n="anchorage_source">
+                Criteris basats en informació nàutica de Ports de la Costa Brava.
+            </span>
+        </div>
+
+    </div>
+
     <!-- RADAR DE VIENTO -->
 
     <div class="wind-radar">
@@ -4819,6 +5572,38 @@ marine_wind_radar_title:"Radar de vent",
 marine_wind_radar_intro:"Visualització en temps real de la circulació del vent al voltant de Canyet · Rosamar.",
 marine_wind_radar_badge:"VENT · EN DIRECTE",
 marine_wind_radar_note:"Font cartogràfica i meteorològica: Windy. La informació es mostra com a suport orientatiu i pot variar segons l'actualització de les dades.",
+anchorage_title:"On fondejar avui?",
+anchorage_intro:"Una orientació de fondeig segons el vent i l'estat de la mar.",
+anchorage_live:"DADES EN DIRECTE",
+anchorage_calculating:"CALCULANT RECOMANACIÓ...",
+anchorage_canyet_note:"Bon abric amb Tramuntana i Gregal",
+anchorage_giverola_note:"Alternativa amb Tramuntana",
+anchorage_futadera_note:"Especialment favorable amb Garbí",
+anchorage_salions_note:"No és la primera opció amb mar oberta",
+anchorage_note:"Recomanació orientativa. Abans de fondejar, comprova sempre les condicions reals, les zones abalisades, les restriccions vigents i la seguretat de l'ancoratge.",
+anchorage_source:"Criteris basats en informació nàutica de Ports de la Costa Brava.",
+anchorage_map_label:"MAPA DE FONDEJOS",
+anchorage_map_title:"Platja d’Aro → Tossa de Mar",
+anchorage_map_hint:"Toca un punt per veure’n la protecció",
+anchorage_map_aria:"Mapa dels fondejos entre Platja d’Aro i Tossa de Mar",
+anchorage_map_legend_good:"Fondeig recomanat",
+anchorage_map_legend_conditional:"Segons el vent",
+anchorage_map_legend_caution:"Exposat / capacitat limitada",
+anchorage_map_route:"TRAM PLATJA D’ARO → TOSSA DE MAR",
+anchorage_map_count:"8 punts de fondeig i parada",
+anchorage_popup_mooring:"Fondeig",
+anchorage_popup_good_shelter:"Bon abric",
+anchorage_popup_wind_dependent:"Segons el vent",
+anchorage_popup_exposed:"Exposat",
+anchorage_popup_sa_conca:"Cala profunda i envoltada de pins. Fondeig davant la platja; valorar sempre la mar local.",
+anchorage_popup_sant_pol:"Fondeig exterior del camp de boies. A l’estiu, respectar la zona abalisada.",
+anchorage_popup_canyet:"4–5 m sobre sorra. Bon abric de la Tramuntana i dels vents del nord-est.",
+anchorage_popup_futadera:"Especialment favorable amb Garbí. Cal evitar-la amb vents de nord.",
+anchorage_popup_giverola:"Uns 5 m de fons. Alternativa protegida de la Tramuntana.",
+anchorage_popup_pola:"Fondeig de poca capacitat i exposat al Llevant.",
+anchorage_popup_bona:"Més recollida que Pola; exposada al Llevant. Possibilitat de cap a terra.",
+anchorage_popup_tossa:"Possible amb Tramuntana. Fons de sorra; atenció als baixos i a l’ocupació estival.",
+anchorage_popup_footer:"Club Nàutic Canyet · informació orientativa",
 
 members_kicker:"SOCIS",
 members_title:"Àrea privada de socis",
@@ -5009,6 +5794,38 @@ marine_wind_radar_title:"Radar de viento",
 marine_wind_radar_intro:"Visualización en tiempo real de la circulación del viento alrededor de Canyet · Rosamar.",
 marine_wind_radar_badge:"VIENTO · EN DIRECTO",
 marine_wind_radar_note:"Fuente cartográfica y meteorológica: Windy. La información se muestra como apoyo orientativo y puede variar según la actualización de los datos.",
+anchorage_title:"¿Dónde fondear hoy?",
+anchorage_intro:"Una orientación de fondeo según el viento y el estado de la mar.",
+anchorage_live:"DATOS EN DIRECTO",
+anchorage_calculating:"CALCULANDO RECOMENDACIÓN...",
+anchorage_canyet_note:"Buen abrigo con Tramontana y Gregal",
+anchorage_giverola_note:"Alternativa con Tramontana",
+anchorage_futadera_note:"Especialmente favorable con Garbí",
+anchorage_salions_note:"No es la primera opción con mar abierta",
+anchorage_note:"Recomendación orientativa. Antes de fondear, comprueba siempre las condiciones reales, las zonas balizadas, las restricciones vigentes y la seguridad del anclaje.",
+anchorage_source:"Criterios basados en información náutica de Ports de la Costa Brava.",
+anchorage_map_label:"MAPA DE FONDEOS",
+anchorage_map_title:"Platja d’Aro → Tossa de Mar",
+anchorage_map_hint:"Toca un punto para ver su protección",
+anchorage_map_aria:"Mapa de los fondeos entre Platja d’Aro y Tossa de Mar",
+anchorage_map_legend_good:"Fondeo recomendado",
+anchorage_map_legend_conditional:"Según el viento",
+anchorage_map_legend_caution:"Expuesto / capacidad limitada",
+anchorage_map_route:"TRAMO PLATJA D’ARO → TOSSA DE MAR",
+anchorage_map_count:"8 puntos de fondeo y parada",
+anchorage_popup_mooring:"Fondeo",
+anchorage_popup_good_shelter:"Buen abrigo",
+anchorage_popup_wind_dependent:"Según el viento",
+anchorage_popup_exposed:"Expuesto",
+anchorage_popup_sa_conca:"Cala profunda y rodeada de pinos. Fondeo frente a la playa; valorar siempre la mar local.",
+anchorage_popup_sant_pol:"Fondeo exterior del campo de boyas. En verano, respetar la zona balizada.",
+anchorage_popup_canyet:"4–5 m sobre arena. Buen abrigo de la Tramontana y los vientos del nordeste.",
+anchorage_popup_futadera:"Especialmente favorable con Garbí. Debe evitarse con vientos de norte.",
+anchorage_popup_giverola:"Unos 5 m de fondo. Alternativa protegida de la Tramontana.",
+anchorage_popup_pola:"Fondeo de poca capacidad y expuesto al Llevant.",
+anchorage_popup_bona:"Más recogida que Pola; expuesta al Llevant. Posibilidad de cabo a tierra.",
+anchorage_popup_tossa:"Posible con Tramontana. Fondo de arena; atención a bajos y ocupación estival.",
+anchorage_popup_footer:"Club Nàutic Canyet · información orientativa",
 
 members_kicker:"SOCIOS",
 members_title:"Área privada de socios",
@@ -5199,6 +6016,38 @@ marine_wind_radar_title:"Radar du vent",
 marine_wind_radar_intro:"Visualisation en temps réel de la circulation du vent autour de Canyet · Rosamar.",
 marine_wind_radar_badge:"VENT · EN DIRECT",
 marine_wind_radar_note:"Source cartographique et météorologique : Windy. Les informations sont fournies à titre indicatif et peuvent varier selon la mise à jour des données.",
+anchorage_title:"Où mouiller aujourd'hui ?",
+anchorage_intro:"Une orientation de mouillage selon le vent et l'état de la mer.",
+anchorage_live:"DONNÉES EN DIRECT",
+anchorage_calculating:"CALCUL DE LA RECOMMANDATION...",
+anchorage_canyet_note:"Bon abri par Tramuntana et Gregal",
+anchorage_giverola_note:"Alternative par Tramuntana",
+anchorage_futadera_note:"Particulièrement favorable par Garbí",
+anchorage_salions_note:"Pas le premier choix par mer ouverte",
+anchorage_note:"Recommandation indicative. Vérifiez toujours les conditions réelles, les zones balisées, les restrictions en vigueur et la sécurité du mouillage.",
+anchorage_source:"Critères basés sur les informations nautiques de Ports de la Costa Brava.",
+anchorage_map_label:"CARTE DES MOUILLAGES",
+anchorage_map_title:"Platja d’Aro → Tossa de Mar",
+anchorage_map_hint:"Touchez un point pour voir sa protection",
+anchorage_map_aria:"Carte des mouillages entre Platja d’Aro et Tossa de Mar",
+anchorage_map_legend_good:"Mouillage recommandé",
+anchorage_map_legend_conditional:"Selon le vent",
+anchorage_map_legend_caution:"Exposé / capacité limitée",
+anchorage_map_route:"SECTEUR PLATJA D’ARO → TOSSA DE MAR",
+anchorage_map_count:"8 points de mouillage et d’arrêt",
+anchorage_popup_mooring:"Mouillage",
+anchorage_popup_good_shelter:"Bon abri",
+anchorage_popup_wind_dependent:"Selon le vent",
+anchorage_popup_exposed:"Exposé",
+anchorage_popup_sa_conca:"Crique profonde entourée de pins. Mouillage devant la plage ; évaluer toujours l’état de la mer.",
+anchorage_popup_sant_pol:"Mouillage extérieur du champ de bouées. En été, respecter la zone balisée.",
+anchorage_popup_canyet:"4–5 m sur sable. Bon abri par Tramuntana et les vents de nord-est.",
+anchorage_popup_futadera:"Particulièrement favorable par Garbí. À éviter avec les vents de nord.",
+anchorage_popup_giverola:"Environ 5 m de fond. Alternative protégée de la Tramuntana.",
+anchorage_popup_pola:"Mouillage de faible capacité et exposé au Llevant.",
+anchorage_popup_bona:"Plus abritée que Pola ; exposée au Llevant. Possibilité de ligne à terre.",
+anchorage_popup_tossa:"Possible par Tramuntana. Fond sableux ; attention aux hauts-fonds et à l’occupation estivale.",
+anchorage_popup_footer:"Club Nàutic Canyet · information indicative",
 
 members_kicker:"MEMBRES",
 members_title:"Espace privé des membres",
@@ -5272,6 +6121,20 @@ function changeLanguage(language) {
             }
 
         });
+
+    document
+        .querySelectorAll("[data-i18n-attr]")
+        .forEach(element => {
+            const spec = element.getAttribute("data-i18n-attr") || "";
+            const [attribute, key] = spec.split(":");
+            if (attribute && key && translations[language] && translations[language][key]) {
+                element.setAttribute(attribute, translations[language][key]);
+            }
+        });
+
+    if (typeof updateAnchorageMapPopups === "function") {
+        updateAnchorageMapPopups();
+    }
 
     document
         .querySelectorAll(
@@ -5453,6 +6316,172 @@ function windDirectionShort(degrees) {
 }
 
 
+
+
+/* =========================================================
+   MAPA REAL DE FONDEJOS · PLATJA D’ARO → TOSSA
+   ========================================================= */
+
+const ANCHORAGE_POINTS = [
+    {id:'sa-conca', name:'Cala Sa Conca', lat:41.7951, lon:3.0570, type:'good', statusKey:'anchorage_popup_mooring', textKey:'anchorage_popup_sa_conca'},
+    {id:'sant-pol', name:'Platja de Sant Pol', lat:41.7858, lon:3.0502, type:'good', statusKey:'anchorage_popup_mooring', textKey:'anchorage_popup_sant_pol'},
+    {id:'canyet', name:'Cala Canyet', lat:41.7680, lon:2.9817, type:'good', statusKey:'anchorage_popup_good_shelter', textKey:'anchorage_popup_canyet'},
+    {id:'futadera', name:'Cala Futadera', lat:41.7233, lon:2.9673, type:'conditional', statusKey:'anchorage_popup_wind_dependent', textKey:'anchorage_popup_futadera'},
+    {id:'giverola', name:'Cala Giverola', lat:41.7186, lon:2.9694, type:'good', statusKey:'anchorage_popup_good_shelter', textKey:'anchorage_popup_giverola'},
+    {id:'pola', name:'Cala Pola', lat:41.7138, lon:2.9540, type:'caution', statusKey:'anchorage_popup_exposed', textKey:'anchorage_popup_pola'},
+    {id:'bona', name:'Cala Bona', lat:41.7121, lon:2.9502, type:'caution', statusKey:'anchorage_popup_exposed', textKey:'anchorage_popup_bona'},
+    {id:'tossa', name:'Badia de Tossa', lat:41.7167, lon:2.9346, type:'conditional', statusKey:'anchorage_popup_wind_dependent', textKey:'anchorage_popup_tossa'}
+];
+
+function currentAnchorageLanguage(){
+    return document.documentElement.lang || localStorage.getItem('clubLanguage') || 'ca';
+}
+
+function anchorageText(key){
+    const lang=currentAnchorageLanguage();
+    return (translations[lang] && translations[lang][key]) || (translations.ca && translations.ca[key]) || key;
+}
+
+function anchoragePopupHtml(p){
+    return `<div class="anchorage-map-popup"><strong>${p.name}</strong><div class="popup-status">${anchorageText(p.statusKey)}</div><p>${anchorageText(p.textKey)}</p><small>${anchorageText('anchorage_popup_footer')}</small></div>`;
+}
+
+function updateAnchorageMapPopups(){
+    Object.entries(anchorageMarkers).forEach(([id, marker])=>{
+        const point=ANCHORAGE_POINTS.find(p=>p.id===id);
+        if(point) marker.setPopupContent(anchoragePopupHtml(point));
+    });
+}
+
+let anchorageMap = null;
+let anchorageMarkers = {};
+
+function initAnchorageMap(){
+    const el=document.getElementById('anchorage-map');
+    if(!el || anchorageMap) return;
+    if(typeof L === 'undefined') return;
+
+    anchorageMap=L.map(el,{zoomControl:true,scrollWheelZoom:false});
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        maxZoom:18,
+        attribution:'&copy; OpenStreetMap contributors'
+    }).addTo(anchorageMap);
+
+    const bounds=[];
+    ANCHORAGE_POINTS.forEach(p=>{
+        const icon=L.divIcon({className:'',html:`<div class="anchorage-marker ${p.type}"><span>⚓</span></div>`,iconSize:[22,22],iconAnchor:[11,21],popupAnchor:[0,-19]});
+        const marker=L.marker([p.lat,p.lon],{icon}).addTo(anchorageMap);
+        marker.bindPopup(anchoragePopupHtml(p));
+        anchorageMarkers[p.id]=marker;
+        bounds.push([p.lat,p.lon]);
+    });
+    anchorageMap.fitBounds(bounds,{padding:[28,28]});
+}
+
+function focusAnchorageMap(id){
+    const marker=anchorageMarkers[id];
+    if(!marker || !anchorageMap) return;
+    anchorageMap.setView(marker.getLatLng(),13,{animate:true});
+    marker.openPopup();
+}
+
+function updateAnchorageMapSelection(selected){
+    ANCHORAGE_POINTS.forEach(p=>{
+        const marker=anchorageMarkers[p.id];
+        if(!marker) return;
+        const el=marker.getElement();
+        if(!el) return;
+        el.style.opacity = selected && p.id!==selected ? '0.48' : '1';
+        el.style.transform = selected===p.id ? 'scale(1.22)' : '';
+    });
+}
+
+function updateAnchorageRecommendation(
+    windDegrees,
+    windSpeed,
+    waveHeight
+) {
+    const place = document.getElementById("anchorage-place");
+    const reason = document.getElementById("anchorage-reason");
+    const status = document.querySelector(".anchorage-status");
+    const wind = document.getElementById("anchorage-wind");
+    const wave = document.getElementById("anchorage-wave");
+    const box = document.getElementById("anchorage-recommendation");
+    const arrow = document.getElementById("anchorage-compass-arrow");
+
+    if (!place || !reason || !status || !box || windDegrees === undefined || windDegrees === null || Number.isNaN(windDegrees)) return;
+
+    const windName = windDirectionCatalan(windDegrees);
+    const shortName = windDirectionShort(windDegrees);
+    const speed = windSpeed !== undefined && windSpeed !== null ? Math.round(windSpeed) : null;
+    const waveValue = waveHeight !== undefined && waveHeight !== null ? Number(waveHeight) : null;
+
+    if (arrow) {
+        arrow.style.transform = `translate(-50%, -50%) rotate(${Number(windDegrees)}deg)`;
+        arrow.title = `Vent de ${windName}`;
+    }
+
+    wind.textContent = speed !== null ? `Vent ${windName} (${shortName}) · ${speed} km/h` : `Vent ${windName} (${shortName})`;
+    wave.textContent = waveValue !== null ? `Mar ${waveValue.toFixed(1)} m` : "Mar —";
+
+    // Criteris documentats per Ports Costa Brava per al tram Platja d'Aro → Tossa.
+    // Quan no hi ha una proteccio prou clara, no fem una recomanacio automatica.
+    const candidates = {
+        "canyet": { name: "Cala Canyet", good: [0,1], note: "Bon abric amb Tramuntana i Gregal; 4–5 m sobre sorra." },
+        "giverola": { name: "Cala Giverola", good: [0,1,7], note: "Bona alternativa amb Tramuntana i vents de component nord; uns 5 m de fons." },
+        "futadera": { name: "Cala Futadera", good: [5], avoid: [0,7], note: "Especialment adequada amb Garbí; cal evitar-la amb vents de nord." },
+        "tossa": { name: "Badia de Tossa", good: [0], note: "Possibilitat de fondeig amb Tramuntana; atenció als baixos i a l'ocupació estival." },
+        "pola": { name: "Cala Pola", good: [5,6,7], avoid: [2], note: "Fondeig de poca capacitat i exposat al Llevant." },
+        "bona": { name: "Cala Bona", good: [5,6,7], avoid: [2], note: "Més recollida que Pola; pot permetre cap a terra. Exposada al Llevant." },
+        "sa-conca": { name: "Cala Sa Conca", good: [], note: "Fondeig davant la platja; valorar la mar local abans d'entrar." },
+        "sant-pol": { name: "Platja de Sant Pol", good: [], note: "Fondeig exterior; a l'estiu cal respectar el camp de boies." }
+    };
+
+    const directionIndex = Math.round(Number(windDegrees) / 45) % 8;
+    const candidatesOrder = ["canyet","giverola","futadera","tossa","pola","bona","sa-conca","sant-pol"];
+    let selected = null;
+
+    // Mar agitada o vent fort: mostrar el tram, però no inventar una recomanació.
+    if ((speed !== null && speed >= 30) || (waveValue !== null && waveValue >= 1.5)) {
+        place.textContent = "Revisar abans de fondejar";
+        reason.textContent = "El vent o la mar són prou significatius perquè no sigui prudent fer una recomanació automàtica. Revisa les condicions locals i l'evolució prevista.";
+        status.textContent = "PRECAUCIÓ";
+        box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
+        box.classList.add("anchorage-limit");
+    } else {
+        selected = candidatesOrder.find(key => {
+            const c = candidates[key];
+            return c.good.includes(directionIndex) && !(c.avoid || []).includes(directionIndex);
+        });
+
+        // Casos sense criteri específic: prioritzar Canyet només amb condicions suaus.
+        if (!selected && waveValue !== null && waveValue < 0.7 && speed !== null && speed < 20) {
+            selected = "canyet";
+        }
+
+        if (selected) {
+            const c = candidates[selected];
+            place.textContent = c.name;
+            reason.textContent = c.note;
+            status.textContent = "OPCIÓ FAVORABLE";
+            box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
+            box.classList.add("anchorage-good");
+        } else {
+            place.textContent = "Revisar el mapa de fondejos";
+            reason.textContent = `Amb ${windName}, la protecció depèn molt de la mar local. Consulta les opcions del tram abans de fondejar.`;
+            status.textContent = "CONDICIONS A VALORAR";
+            box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
+            box.classList.add("anchorage-watch");
+        }
+    }
+
+    document.querySelectorAll(".anchorage-item").forEach(item => {
+        item.classList.remove("anchorage-item-active", "anchorage-item-muted");
+        if (selected && item.dataset.anchorage === selected) item.classList.add("anchorage-item-active");
+    });
+    updateAnchorageMapSelection(selected);
+}
+
 /* ESTADO MAR */
 
 function seaState(height) {
@@ -5613,6 +6642,13 @@ async function loadMarineWeather() {
         updateMarineExtraInfo(
             seaTemperature,
             wavePeriod,
+            wave
+        );
+
+
+        updateAnchorageRecommendation(
+            windDegrees,
+            wind,
             wave
         );
 
@@ -6031,11 +7067,13 @@ document.addEventListener(
 
         loadMarineWeather();
 
+        setTimeout(initAnchorageMap, 250);
+        document.querySelectorAll(".anchorage-item").forEach(item => {
+            item.addEventListener("click", () => focusAnchorageMap(item.dataset.anchorage));
+        });
 
-        setInterval(
-            loadMarineWeather,
-            15 * 60 * 1000
-        );
+        /* Actualització periòdica de les condicions marines. */
+        setInterval(loadMarineWeather, 15 * 60 * 1000);
 
 
         const pinInput =
@@ -6067,6 +7105,8 @@ document.addEventListener(
 );
 
 </script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
 </body>
 
