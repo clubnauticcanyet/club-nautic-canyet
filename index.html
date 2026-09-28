@@ -6561,21 +6561,24 @@ function updateAnchorageMapSelection(selected){
     });
 }
 
-function updateAnchorageListAdvice(selected, blockedAll=false){
+function updateAnchorageListAdvice(selected, favorableIds=[], blockedAll=false){
     const lang=currentAnchorageLanguage();
     const labels={
-        ca:{good:"FAVORABLE ARA",bad:"NO RECOMANAT ARA"},
-        es:{good:"FAVORABLE AHORA",bad:"NO RECOMENDADO AHORA"},
-        fr:{good:"FAVORABLE MAINTENANT",bad:"NON RECOMMANDÉ MAINTENANT"}
-    }[lang] || {good:"FAVORABLE ARA",bad:"NO RECOMANAT ARA"};
+        ca:{good:"FAVORABLE ARA",primary:"OPCIÓ PRINCIPAL",bad:"NO RECOMANAT ARA"},
+        es:{good:"FAVORABLE AHORA",primary:"OPCIÓN PRINCIPAL",bad:"NO RECOMENDADO AHORA"},
+        fr:{good:"FAVORABLE MAINTENANT",primary:"OPTION PRINCIPALE",bad:"NON RECOMMANDÉ MAINTENANT"}
+    }[lang] || {good:"FAVORABLE ARA",primary:"OPCIÓ PRINCIPAL",bad:"NO RECOMANAT ARA"};
 
+    const favorable = new Set(favorableIds || []);
     document.querySelectorAll(".anchorage-item[data-anchorage]").forEach(item=>{
         const id=item.dataset.anchorage;
         const advice=item.querySelector(".anchorage-advice");
         const dot=item.querySelector(".anchorage-dot");
         if(!advice || !dot) return;
-        const good = !blockedAll && selected === id;
-        advice.textContent = good ? labels.good : labels.bad;
+
+        const good = !blockedAll && favorable.has(id);
+        const primary = good && selected === id;
+        advice.textContent = primary ? labels.primary : (good ? labels.good : labels.bad);
         dot.classList.remove("anchorage-dot-good","anchorage-dot-watch","anchorage-dot-limit");
         dot.classList.add(good ? "anchorage-dot-good" : "anchorage-dot-limit");
     });
@@ -6642,10 +6645,15 @@ function updateAnchorageRecommendation(
      * documentados, sin inventar una exposición que no existe en ese momento.
      */
     const candidatesOrder = [
-        "giverola", "sa-conca", "sant-pol", "tossa", "bona", "pola",
+        "giverola", "sa-conca", "sant-pol", "bona", "pola", "tossa",
         "concagats", "ses-mongetes", "musics", "rampells", "bosc",
-        "romaguer", "futadera", "salionc", "vigata"
+        "romaguer", "futadera", "salionc"
     ];
+
+    // Punts que es poden considerar per a fondeig amb àncora.
+    // Vigatà i Boies blanques queden fora: són sistemes de boies/ecològics,
+    // no fondeig lliure amb àncora.
+    const anchorableIds = candidatesOrder.slice();
 
     const calmWind = speed !== null && speed <= 10;
     const calmSea = waveValue !== null && waveValue <= 0.6;
@@ -6655,6 +6663,7 @@ function updateAnchorageRecommendation(
     const veryRoughSea = waveValue !== null && waveValue >= 1.5;
 
     let selected = null;
+    let favorableIds = [];
 
     if (strongWind || veryRoughSea) {
         place.textContent = "Revisar abans de fondejar";
@@ -6663,42 +6672,42 @@ function updateAnchorageRecommendation(
         box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
         box.classList.add("anchorage-limit");
     } else if (calmWind && calmSea) {
-        /*
-         * Cas com 3 km/h + 0,3 m: la direcció E no converteix totes les cales
-         * en "no recomanades". Seleccionem el primer fondeig generalista de
-         * la llista, evitant les opcions que tenen una restricció especial.
-         */
+        // Amb vent molt feble i mar baixa, la direcció per si sola no exclou
+        // una cala. Mostrem diverses alternatives realment comparables.
+        favorableIds = anchorableIds.filter(key => key !== "salionc");
         selected = "giverola";
-        const c = candidates[selected];
-        place.textContent = c.name;
-        reason.textContent = "Vent i mar molt tranquils. Opció favorable ara, mantenint-se fora de zones de bany, praderies i camps de boies i comprovant el fons abans de fondejar.";
-        status.textContent = "OPCIÓ FAVORABLE";
+        place.textContent = candidates[selected].name;
+        reason.textContent = "Vent i mar molt tranquils. Hi ha diverses opcions favorables ara; aquesta és l'opció principal. Mantén-te fora de zones de bany, praderies i camps de boies i comprova el fons abans de fondejar.";
+        status.textContent = "OPCIÓ PRINCIPAL";
         box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
         box.classList.add("anchorage-good");
     } else {
-        /*
-         * Amb condicions no extremes, primer busquem una cala protegida de la
-         * direcció actual. Si el vent és feble/moderat però la mar és baixa,
-         * també permetem una opció generalista encara que no tingui la
-         * direcció marcada explícitament com a favorable.
-         */
-        selected = candidatesOrder.find(key => {
+        // En condicions més definides, classifiquem totes les cales que tenen
+        // una protecció coherent amb el vent actual. Això evita que només una
+        // cala aparegui com a vàlida quan n'hi ha diverses de similars.
+        favorableIds = candidatesOrder.filter(key => {
             const c = candidates[key];
             return c.good.includes(directionIndex) && !(c.avoid || []).includes(directionIndex);
         });
 
-        if (!selected && !moderateWind && !roughSea) {
-            selected = candidatesOrder.find(key => {
+        // Amb vent/mar encara moderats, una cala no explícitament favorable
+        // pot continuar sent una alternativa si no està marcada com exposada.
+        if (!favorableIds.length && !moderateWind && !roughSea) {
+            favorableIds = candidatesOrder.filter(key => {
                 const c = candidates[key];
-                return !(c.avoid || []).includes(directionIndex) && key !== "vigata";
+                return !(c.avoid || []).includes(directionIndex) && key !== "salionc";
             });
         }
+
+        selected = favorableIds[0] || null;
 
         if (selected) {
             const c = candidates[selected];
             place.textContent = c.name;
-            reason.textContent = c.note;
-            status.textContent = "OPCIÓ FAVORABLE";
+            reason.textContent = favorableIds.length > 1
+                ? `${c.note} També hi ha altres fondejadors favorables ara, indicats al llistat.`
+                : c.note;
+            status.textContent = "OPCIÓ PRINCIPAL";
             box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
             box.classList.add("anchorage-good");
         } else {
@@ -6715,7 +6724,7 @@ function updateAnchorageRecommendation(
         item.classList.remove("anchorage-item-active", "anchorage-item-muted");
         if (selected && item.dataset.anchorage === selected) item.classList.add("anchorage-item-active");
     });
-    updateAnchorageListAdvice(selected, blockedAll);
+    updateAnchorageListAdvice(selected, favorableIds, blockedAll);
     updateAnchorageMapSelection(selected);
 }
 
