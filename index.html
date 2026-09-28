@@ -6631,21 +6631,68 @@ function updateAnchorageRecommendation(
     };
 
     const directionIndex = Math.round(Number(windDegrees) / 45) % 8;
-    const candidatesOrder = ["giverola","futadera","tossa","pola","bona","salionc","vigata","concagats","ses-mongetes","musics","rampells","bosc","romaguer","sa-conca","sant-pol"];
+
+    /*
+     * LÓGICA DE RECOMENDACIÓN
+     *
+     * No descartamos una cala únicamente porque el viento venga de una
+     * dirección que no figure como "favorable". La dirección importa cuando
+     * el viento o la mar tienen entidad. Con viento muy débil y mar muy baja,
+     * se busca una opción generalista y se priorizan los fondeaderos mejor
+     * documentados, sin inventar una exposición que no existe en ese momento.
+     */
+    const candidatesOrder = [
+        "giverola", "sa-conca", "sant-pol", "tossa", "bona", "pola",
+        "concagats", "ses-mongetes", "musics", "rampells", "bosc",
+        "romaguer", "futadera", "salionc", "vigata"
+    ];
+
+    const calmWind = speed !== null && speed <= 10;
+    const calmSea = waveValue !== null && waveValue <= 0.6;
+    const moderateWind = speed !== null && speed >= 20;
+    const roughSea = waveValue !== null && waveValue >= 1.2;
+    const strongWind = speed !== null && speed >= 30;
+    const veryRoughSea = waveValue !== null && waveValue >= 1.5;
+
     let selected = null;
 
-    // Mar agitada o vent fort: mostrar el tram, però no inventar una recomanació.
-    if ((speed !== null && speed >= 30) || (waveValue !== null && waveValue >= 1.5)) {
+    if (strongWind || veryRoughSea) {
         place.textContent = "Revisar abans de fondejar";
         reason.textContent = "El vent o la mar són prou significatius perquè no sigui prudent fer una recomanació automàtica. Revisa les condicions locals i l'evolució prevista.";
         status.textContent = "PRECAUCIÓ";
         box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
         box.classList.add("anchorage-limit");
+    } else if (calmWind && calmSea) {
+        /*
+         * Cas com 3 km/h + 0,3 m: la direcció E no converteix totes les cales
+         * en "no recomanades". Seleccionem el primer fondeig generalista de
+         * la llista, evitant les opcions que tenen una restricció especial.
+         */
+        selected = "giverola";
+        const c = candidates[selected];
+        place.textContent = c.name;
+        reason.textContent = "Vent i mar molt tranquils. Opció favorable ara, mantenint-se fora de zones de bany, praderies i camps de boies i comprovant el fons abans de fondejar.";
+        status.textContent = "OPCIÓ FAVORABLE";
+        box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
+        box.classList.add("anchorage-good");
     } else {
+        /*
+         * Amb condicions no extremes, primer busquem una cala protegida de la
+         * direcció actual. Si el vent és feble/moderat però la mar és baixa,
+         * també permetem una opció generalista encara que no tingui la
+         * direcció marcada explícitament com a favorable.
+         */
         selected = candidatesOrder.find(key => {
             const c = candidates[key];
             return c.good.includes(directionIndex) && !(c.avoid || []).includes(directionIndex);
         });
+
+        if (!selected && !moderateWind && !roughSea) {
+            selected = candidatesOrder.find(key => {
+                const c = candidates[key];
+                return !(c.avoid || []).includes(directionIndex) && key !== "vigata";
+            });
+        }
 
         if (selected) {
             const c = candidates[selected];
@@ -6656,14 +6703,14 @@ function updateAnchorageRecommendation(
             box.classList.add("anchorage-good");
         } else {
             place.textContent = "Revisar el mapa de fondejos";
-            reason.textContent = `Amb ${windName}, la protecció depèn molt de la mar local. Consulta les opcions del tram abans de fondejar.`;
+            reason.textContent = `Amb ${windName}, la protecció depèn de la mar local. Consulta les opcions del tram abans de fondejar.`;
             status.textContent = "CONDICIONS A VALORAR";
             box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
             box.classList.add("anchorage-watch");
         }
     }
 
-    const blockedAll = (speed !== null && speed >= 30) || (waveValue !== null && waveValue >= 1.5);
+    const blockedAll = strongWind || veryRoughSea;
     document.querySelectorAll(".anchorage-item").forEach(item => {
         item.classList.remove("anchorage-item-active", "anchorage-item-muted");
         if (selected && item.dataset.anchorage === selected) item.classList.add("anchorage-item-active");
