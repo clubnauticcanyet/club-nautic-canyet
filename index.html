@@ -6561,12 +6561,12 @@ function updateAnchorageMapSelection(selected){
     });
 }
 
-function updateAnchorageListAdvice(selected, favorableIds=[], blockedAll=false){
+function updateAnchorageListAdvice(selected, favorableIds=[], blockedAll=false, outingCaution=false){
     const lang=currentAnchorageLanguage();
     const labels={
-        ca:{good:"FAVORABLE ARA",primary:"OPCIÓ PRINCIPAL",bad:"NO RECOMANAT ARA"},
-        es:{good:"FAVORABLE AHORA",primary:"OPCIÓN PRINCIPAL",bad:"NO RECOMENDADO AHORA"},
-        fr:{good:"FAVORABLE MAINTENANT",primary:"OPTION PRINCIPALE",bad:"NON RECOMMANDÉ MAINTENANT"}
+        ca:{good:"FAVORABLE ARA",primary:"OPCIÓ PRINCIPAL",bad:"NO RECOMANAT ARA",shelter:"ABRIC RELATIU"},
+        es:{good:"FAVORABLE AHORA",primary:"OPCIÓN PRINCIPAL",bad:"NO RECOMENDADO AHORA",shelter:"ABRIGO RELATIVO"},
+        fr:{good:"FAVORABLE MAINTENANT",primary:"OPTION PRINCIPALE",bad:"NON RECOMMANDÉ MAINTENANT",shelter:"ABRI RELATIF"}
     }[lang] || {good:"FAVORABLE ARA",primary:"OPCIÓ PRINCIPAL",bad:"NO RECOMANAT ARA"};
 
     const favorable = new Set(favorableIds || []);
@@ -6578,7 +6578,7 @@ function updateAnchorageListAdvice(selected, favorableIds=[], blockedAll=false){
 
         const good = !blockedAll && favorable.has(id);
         const primary = good && selected === id;
-        advice.textContent = primary ? labels.primary : (good ? labels.good : labels.bad);
+        advice.textContent = primary ? (outingCaution ? labels.shelter : labels.primary) : (good ? (outingCaution ? labels.shelter : labels.good) : labels.bad);
         dot.classList.remove("anchorage-dot-good","anchorage-dot-watch","anchorage-dot-limit");
         dot.classList.add(good ? "anchorage-dot-good" : "anchorage-dot-limit");
     });
@@ -6656,11 +6656,13 @@ function updateAnchorageRecommendation(
     const anchorableIds = candidatesOrder.slice();
 
     const calmWind = speed !== null && speed <= 10;
-    const calmSea = waveValue !== null && waveValue <= 0.6;
+    const calmSea = waveValue !== null && waveValue < 0.4;
     const moderateWind = speed !== null && speed >= 20;
-    const roughSea = waveValue !== null && waveValue >= 1.2;
+    const roughSea = waveValue !== null && waveValue >= 1.0;
     const strongWind = speed !== null && speed >= 30;
-    const veryRoughSea = waveValue !== null && waveValue >= 1.5;
+    const veryRoughSea = waveValue !== null && waveValue >= 1.2;
+    // Valorem per separat les condicions de sortida i l'abric local de la cala.
+    const outingCaution = (waveValue !== null && waveValue >= 0.7) || moderateWind;
 
     let selected = null;
     let favorableIds = [];
@@ -6704,16 +6706,18 @@ function updateAnchorageRecommendation(
         if (selected) {
             const c = candidates[selected];
             place.textContent = c.name;
-            reason.textContent = favorableIds.length > 1
-                ? `${c.note} També hi ha altres fondejadors favorables ara, indicats al llistat.`
-                : c.note;
-            status.textContent = "OPCIÓ PRINCIPAL";
+            reason.textContent = outingCaution
+                ? `La cala pot oferir aquest abric relatiu (${c.note}) però les condicions generals a mar obert requereixen precaució. Valora l'estat real del mar, les ratxes i la previsió de tornada abans de sortir.`
+                : (favorableIds.length > 1
+                    ? `${c.note} També hi ha altres fondejadors favorables ara, indicats al llistat.`
+                    : c.note);
+            status.textContent = outingCaution ? "SORTIDA A VALORAR · PRECAUCIÓ" : "OPCIÓ PRINCIPAL";
             box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
-            box.classList.add("anchorage-good");
+            box.classList.add(outingCaution ? "anchorage-watch" : "anchorage-good");
         } else {
             place.textContent = "Revisar el mapa de fondejos";
             reason.textContent = `Amb ${windName}, la protecció depèn de la mar local. Consulta les opcions del tram abans de fondejar.`;
-            status.textContent = "CONDICIONS A VALORAR";
+            status.textContent = outingCaution ? "SORTIDA A VALORAR · PRECAUCIÓ" : "CONDICIONS A VALORAR";
             box.classList.remove("anchorage-good", "anchorage-watch", "anchorage-limit");
             box.classList.add("anchorage-watch");
         }
@@ -6724,7 +6728,7 @@ function updateAnchorageRecommendation(
         item.classList.remove("anchorage-item-active", "anchorage-item-muted");
         if (selected && item.dataset.anchorage === selected) item.classList.add("anchorage-item-active");
     });
-    updateAnchorageListAdvice(selected, favorableIds, blockedAll);
+    updateAnchorageListAdvice(selected, favorableIds, blockedAll, outingCaution);
     updateAnchorageMapSelection(selected);
 }
 
