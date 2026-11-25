@@ -3354,6 +3354,11 @@ body::-webkit-scrollbar {
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
+<style>
+@media (max-width: 700px) {
+  .herbarium-map-wrap > div:nth-child(2) { height: 460px !important; }
+}
+</style>
 </head>
 
 <body>
@@ -5067,6 +5072,27 @@ body::-webkit-scrollbar {
                 <span><i class="legend-dot legend-caution"></i> <span data-i18n="anchorage_map_legend_caution">Exposat / capacitat limitada</span></span>
                 <span><i class="legend-dot legend-no-anchor"></i> <span data-i18n="anchorage_map_legend_no_anchor">No fondejar / zona restringida</span></span>
             </div>
+        </div>
+
+        <div class="herbarium-map-wrap" style="width:100%;margin:30px auto 0;border:1px solid rgba(225,177,58,.24);background:rgba(255,255,255,.035);border-radius:18px;overflow:hidden;">
+            <div style="padding:20px 22px 16px;text-align:center;">
+                <span class="marine-label">CARTOGRAFIA OFICIAL</span>
+                <h4 style="margin:6px 0 7px;font-family:Georgia,serif;font-size:22px;font-weight:400;color:#fff;">Herbassars marins · Posidònia i altres fanerògames</h4>
+                <p style="margin:0;color:rgba(255,255,255,.58);font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Mapa independent de consulta de la Generalitat de Catalunya</p>
+            </div>
+            <div style="width:100%;height:560px;min-height:420px;background:#dbe7e9;">
+                <iframe
+                    title="Cartografia oficial dels herbassars marins de Catalunya"
+                    src="https://www.google.com/maps/d/embed?mid=18WgsmikuaQhnTd5FDjZrQmvjZyim6LM&amp;hl=ca&amp;ll=41.75%2C3.0&amp;z=11"
+                    style="display:block;width:100%;height:100%;border:0;"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p style="margin:0;padding:10px 16px 13px;color:rgba(255,255,255,.58);font-size:10px;line-height:1.5;text-align:center;">
+                Cartografia informativa dels herbassars marins coneguts. Consulta sempre la normativa i les indicacions locals abans de fondejar.
+                <a href="https://gen.cat/mapaherbassarsmarins" target="_blank" rel="noopener" style="color:#d9b66d;">Obrir mapa oficial</a>
+            </p>
         </div>
 
         <div class="anchorage-coverage">
