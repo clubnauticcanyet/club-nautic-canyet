@@ -2309,3 +2309,58 @@ button {
         padding-top: 14px;
     }
 }
+
+
+/* AJUSTOS SOL·LICITATS: logo complet i targetes del club */
+#club .club-cards .card h3,
+#club .club-cards .card p {
+    color: #ffffff !important;
+}
+
+#club .club-cards .card h3 {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Evita que el nom CANYET quedi tallat sota el símbol del logo */
+@media (max-width: 600px) {
+    .header {
+        height: auto !important;
+        min-height: 155px !important;
+        overflow: visible !important;
+        align-items: flex-start !important;
+    }
+
+    .header .logo {
+        width: 145px !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .header .logo img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+}
+
+@media (min-width: 601px) {
+    .header {
+        height: auto !important;
+        min-height: 205px !important;
+        overflow: visible !important;
+    }
+
+    .header .logo {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .header .logo img {
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+}
