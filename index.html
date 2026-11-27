@@ -341,7 +341,7 @@ input {
     display: grid;
 
     grid-template-columns:
-        repeat(6,1fr);
+        repeat(5,1fr);
 
     background:
         rgba(3,24,38,.38);
@@ -963,7 +963,7 @@ input {
     color: #fff;
 
     background-image:
-        url("images/C78F305A-035D-4CB3-B26A-851DBDFA6B10.png");
+        url("images/pontets-canyet-mejorada.jpg");
 
     background-size: cover;
 
@@ -3333,6 +3333,18 @@ body::-webkit-scrollbar {
     .anchorage-coverage{margin-top:26px;gap:5px 12px;font-size:13px;}
     .anchorage-map-legend{gap:10px;font-size:10px;padding:10px 13px 13px;}
 }
+
+/* CLUB · dades de constitució i targetes */
+.club-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0 24px}
+.club-fact{min-height:112px;border:1px solid rgba(17,37,55,.14);border-radius:18px;background:rgba(255,255,255,.72);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}
+.club-fact strong{display:block;color:#27365d;font-size:clamp(25px,3vw,36px);font-weight:750;line-height:1.15;letter-spacing:-.5px}
+.club-fact span{display:block;margin-top:8px;color:#48515c;font-size:13px;letter-spacing:.2px}
+.club-main-copy{font-size:clamp(16px,1.35vw,19px);line-height:1.75;text-align:justify;margin:12px 0 30px;color:#26323c}
+.club-cards .card{padding:28px 25px}
+.club-cards .card h3{display:block!important;visibility:visible!important;opacity:1!important;font-size:21px!important;font-weight:700!important;color:#172c3b!important;margin:0 0 14px!important;line-height:1.3}
+@media(max-width:650px){.club-facts{grid-template-columns:1fr;gap:10px}.club-fact{min-height:90px}.club-main-copy{text-align:left}}
+
+.footer-social{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px;font-size:12px;letter-spacing:1px}.footer-social a:hover{color:#e4b63d}
 </style>
 
 <!-- Leaflet: overrides to prevent the site's global image rules from breaking map tiles -->
@@ -3372,7 +3384,7 @@ body::-webkit-scrollbar {
 <a href="#inicio" class="logo">
 
     <img
-        src="images/6468DE60-AED8-4554-BC22-8978B873ECDF.png"
+        src="images/logo-canyet-original-ball.png"
         alt="Club Nàutic Canyet">
 
 </a>
@@ -3404,11 +3416,6 @@ body::-webkit-scrollbar {
     <a href="#canyet"
        data-i18n="nav_canyet">
         CANYET
-    </a>
-
-    <a href="#socios"
-       data-i18n="nav_socios">
-        SOCIS
     </a>
 
     <a href="#maritemps"
@@ -3443,6 +3450,8 @@ body::-webkit-scrollbar {
     <button onclick="changeLanguage('fr')">
         FR
     </button>
+    <span>|</span>
+    <button onclick="changeLanguage('en')">EN</button>
 
 </div>
 
@@ -3555,24 +3564,6 @@ body::-webkit-scrollbar {
     </a>
 
 
-    <a href="#socios"
-       class="quick-link">
-
-        <span class="quick-icon">♧</span>
-
-        <h3 data-i18n="quick_members">
-            SOCIS
-        </h3>
-
-        <p data-i18n="quick_members_text">
-            Informació privada, avisos i documentació
-        </p>
-
-        <span class="quick-arrow">→</span>
-
-    </a>
-
-
     <a href="#maritemps"
        class="quick-link">
 
@@ -3601,82 +3592,27 @@ body::-webkit-scrollbar {
      EL CLUB
      ========================================================= -->
 
-<section id="club"
-         class="section section-light">
-
+<section id="club" class="section section-light">
 <div class="container">
+    <span class="section-kicker" data-i18n="club_kicker">EL CLUB</span>
+    <h2 data-i18n="club_title">Un club nàutic amb identitat pròpia</h2>
 
-    <span class="section-kicker"
-          data-i18n="club_kicker">
-        EL CLUB
-    </span>
-
-    <h2 data-i18n="club_title">
-        Un club nàutic amb identitat pròpia
-    </h2>
-
-    <p data-i18n="club_text_1">
-        El Club Nàutic Canyet neix amb una vocació clara:
-        preservar una manera de viure el mar, la costa i
-        la comunitat de Canyet · Rosamar.
-    </p>
-
-    <p data-i18n="club_text_2">
-        Més que un espai per a la navegació, el club és un
-        punt de trobada entre persones unides per la passió
-        pel Mediterrani i pel privilegiat entorn de la Costa Brava.
-    </p>
-
-
-    <div class="cards">
-
-        <article class="card">
-
-            <h3 data-i18n="club_foundation_title">
-                Fundació
-            </h3>
-
-            <p data-i18n="club_foundation_text">
-                Una història vinculada al mar, a Canyet i a
-                les persones que han fet possible la vida
-                nàutica d'aquest indret.
-            </p>
-
-        </article>
-
-
-        <article class="card">
-
-            <h3 data-i18n="club_values_title">
-                Valors
-            </h3>
-
-            <p data-i18n="club_values_text">
-                Respecte pel mar, convivència, tradició,
-                natura i una manera responsable de gaudir
-                de la Costa Brava.
-            </p>
-
-        </article>
-
-
-        <article class="card">
-
-            <h3 data-i18n="club_community_title">
-                Comunitat
-            </h3>
-
-            <p data-i18n="club_community_text">
-                Un club pensat per compartir experiències,
-                navegar i mantenir viu l'esperit de Canyet.
-            </p>
-
-        </article>
-
+    <div class="club-facts">
+        <div class="club-fact"><strong>1994</strong><span data-i18n="club_year_label">Any de constitució</span></div>
+        <div class="club-fact"><strong>38</strong><span data-i18n="club_members_label">Socis/es actuals</span></div>
+        <div class="club-fact"><strong data-i18n="club_nonprofit">SENSE ÀNIM DE LUCRE</strong><span data-i18n="club_nonprofit_sub">DE LUCRE</span></div>
     </div>
 
-</div>
+    <p class="club-main-copy" data-i18n="club_text_1">
+        El Club Nàutic Canyet va néixer entre un grup d’amics per donar solució i ordenar el camp de boies de Cala Canyet. Avui manté la mateixa essència i comparteix el mateix objectiu comú: compartir la passió pel mar, gaudir de les precioses cales de la Costa Brava i facilitar una activitat nàutica ordenada.
+    </p>
 
+    <div class="cards club-cards">
+        <article class="card"><h3 data-i18n="club_foundation_title">Fundació</h3><p data-i18n="club_foundation_text">Una història vinculada al mar, a Canyet i a les persones que han fet possible la vida nàutica d'aquest indret.</p></article>
+        <article class="card"><h3 data-i18n="club_values_title">Valors</h3><p data-i18n="club_values_text">Respecte pel mar, convivència, tradició, natura i una manera responsable de gaudir de la Costa Brava.</p></article>
+        <article class="card"><h3 data-i18n="club_community_title">Comunitat</h3><p data-i18n="club_community_text">Un club pensat per compartir experiències, navegar i mantenir viu l'esperit de Canyet.</p></article>
+    </div>
+</div>
 </section>
 
 
@@ -5163,227 +5099,7 @@ body::-webkit-scrollbar {
      SOCIOS
      ========================================================= -->
 
-<section id="socios"
-         class="section section-dark">
 
-<div class="container">
-
-    <span class="section-kicker"
-          data-i18n="members_kicker">
-        SOCIS
-    </span>
-
-    <h2 data-i18n="members_title">
-        Àrea privada de socis
-    </h2>
-
-    <p data-i18n="members_text">
-        Un espai reservat als membres del Club Nàutic
-        Canyet per consultar informació, avisos,
-        documentació i comunicacions del club.
-    </p>
-
-
-    <div class="members-login"
-         id="members-login">
-
-        <h3 data-i18n="members_login_title">
-            Accés exclusiu per als socis
-        </h3>
-
-        <p data-i18n="members_login_text">
-            Introdueix el PIN d'accés.
-        </p>
-
-        <div class="members-pin-form">
-
-            <input
-                type="password"
-                id="members-pin"
-                maxlength="12"
-                inputmode="numeric"
-                autocomplete="off"
-                placeholder="PIN">
-
-            <button
-                type="button"
-                onclick="checkMemberPin()"
-                data-i18n="members_login_button">
-                ENTRAR
-            </button>
-
-        </div>
-
-        <p id="members-error"
-           class="members-error">
-        </p>
-
-    </div>
-
-
-    <div class="members-private"
-         id="members-private"
-         style="display:none;">
-
-        <h3 data-i18n="members_private_title">
-            Benvingut a l'àrea de socis
-        </h3>
-
-        <p data-i18n="members_private_text">
-            Aquesta zona incorpora informació, avisos
-            i documentació del Club Nàutic Canyet.
-        </p>
-
-
-        <div class="members-private-grid">
-
-
-            <article class="member-private-card private-summary">
-
-                <span>📋</span>
-
-                <h4 data-i18n="private_meeting_title">
-                    Última reunió del Club
-                </h4>
-
-                <p data-i18n="private_meeting_intro">
-                    Resum de l'Assemblea General Extraordinària
-                    celebrada el 7 d'agost de 2026.
-                </p>
-
-
-                <ul>
-
-                    <li data-i18n="private_meeting_1">
-                        <strong>Embarcació:</strong>
-                        proposta de substitució de la
-                        semirígida Narwhal.
-                    </li>
-
-                    <li data-i18n="private_meeting_2">
-                        <strong>Nova embarcació:</strong>
-                        semirígida de 4,5 m, motor de 20 CV
-                        i remolc.
-                    </li>
-
-                    <li data-i18n="private_meeting_3">
-                        <strong>Inversió total:</strong>
-                        12.498 € incloent matriculació.
-                    </li>
-
-                    <li data-i18n="private_meeting_4">
-                        <strong>Finançament:</strong>
-                        derrama extraordinària de 350 €
-                        per soci/a.
-                    </li>
-
-                    <li data-i18n="private_meeting_5">
-                        <strong>Pagament:</strong>
-                        del 15 d'agost a l'1 d'octubre
-                        de 2026. Fora de termini,
-                        recàrrec del 20 %.
-                    </li>
-
-                    <li data-i18n="private_meeting_6">
-                        <strong>Aprovació:</strong>
-                        16 vots a favor i 1 en contra.
-                    </li>
-
-                </ul>
-
-
-                <a
-                    class="document-link"
-                    href="documents/acta-asamblea-general-extraordinaria-2026.pdf"
-                    target="_blank"
-                    rel="noopener"
-                    data-i18n="private_meeting_pdf">
-
-                    DESCARREGAR ACTA COMPLETA EN PDF
-
-                </a>
-
-            </article>
-
-
-            <article class="member-private-card">
-
-                <span>📢</span>
-
-                <h4 data-i18n="private_news">
-                    Avisos
-                </h4>
-
-                <p data-i18n="private_news_text">
-                    Properament.
-                </p>
-
-            </article>
-
-
-            <article class="member-private-card">
-
-                <span>📄</span>
-
-                <h4 data-i18n="private_documents">
-                    Documentació
-                </h4>
-
-                <p data-i18n="private_documents_text">
-                    Tarifes i documents del Club.
-                </p>
-
-            </article>
-
-
-            <article class="member-private-card">
-
-                <span>⚓</span>
-
-                <h4 data-i18n="private_moorings">
-                    Fondejos
-                </h4>
-
-                <p data-i18n="private_moorings_text">
-                    Informació sobre el camp de boies.
-                </p>
-
-            </article>
-
-
-            <article class="member-private-card">
-
-                <span>📅</span>
-
-                <h4 data-i18n="private_calendar">
-                    Calendari
-                </h4>
-
-                <p data-i18n="private_calendar_text">
-                    Activitats i dates del Club.
-                </p>
-
-            </article>
-
-
-        </div>
-
-
-        <button
-            type="button"
-            class="members-logout"
-            onclick="logoutMembers()"
-            data-i18n="members_logout">
-
-            SORTIR
-
-        </button>
-
-    </div>
-
-</div>
-
-</section>
 
 
 
@@ -5454,6 +5170,11 @@ body::-webkit-scrollbar {
     <p>
         Club Nàutic Canyet
     </p>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/clubnauticcanyet/?locale=zh_CN" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+        <span>·</span>
+        <a href="https://www.instagram.com/cncanyet/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+    </div>
 
 </div>
 
@@ -5505,7 +5226,11 @@ quick_weather_text:"Estat de la mar, vent i previsió a Canyet",
 
 club_kicker:"EL CLUB",
 club_title:"Un club nàutic amb identitat pròpia",
-club_text_1:"El Club Nàutic Canyet neix amb una vocació clara: preservar una manera de viure el mar, la costa i la comunitat de Canyet · Rosamar.",
+club_year_label:"Any de constitució",
+club_members_label:"Socis/es actuals",
+club_nonprofit:"SENSE ÀNIM",
+club_nonprofit_sub:"DE LUCRE",
+club_text_1:"El Club Nàutic Canyet va néixer entre un grup d’amics per donar solució i ordenar el camp de boies de Cala Canyet. Avui manté la mateixa essència i comparteix el mateix objectiu comú: compartir la passió pel mar, gaudir de les precioses cales de la Costa Brava i facilitar una activitat nàutica ordenada.",
 club_text_2:"Més que un espai per a la navegació, el club és un punt de trobada entre persones unides per la passió pel Mediterrani i pel privilegiat entorn de la Costa Brava.",
 
 club_foundation_title:"Fundació",
@@ -5769,7 +5494,11 @@ quick_weather_text:"Estado del mar, viento y previsión en Canyet",
 
 club_kicker:"EL CLUB",
 club_title:"Un club náutico con identidad propia",
-club_text_1:"El Club Nàutic Canyet nace con una vocación clara: preservar una manera de vivir el mar, la costa y la comunidad de Canyet · Rosamar.",
+club_year_label:"Año de constitución",
+club_members_label:"Socios/as actuales",
+club_nonprofit:"SIN ÁNIMO",
+club_nonprofit_sub:"DE LUCRO",
+club_text_1:"El Club Nàutic Canyet nació entre un grupo de amigos para dar solución y ordenar el campo de boyas de Cala Canyet. Hoy mantiene la misma esencia y comparte el mismo objetivo común: compartir la pasión por el mar, disfrutar de las preciosas calas de la Costa Brava y facilitar una actividad náutica ordenada.",
 club_text_2:"Más que un espacio para la navegación, el club es un punto de encuentro entre personas unidas por la pasión por el Mediterráneo y por el privilegiado entorno de la Costa Brava.",
 club_foundation_title:"Fundación",
 club_foundation_text:"Una historia vinculada al mar, a Canyet y a las personas que han hecho posible la vida náutica de este lugar.",
@@ -6026,7 +5755,11 @@ quick_weather_text:"État de la mer, vent et prévisions à Canyet",
 
 club_kicker:"LE CLUB",
 club_title:"Un club nautique avec une identité propre",
-club_text_1:"Le Club Nàutic Canyet est né avec une vocation claire : préserver une manière de vivre la mer, la côte et la communauté de Canyet · Rosamar.",
+club_year_label:"Année de fondation",
+club_members_label:"Membres actuels",
+club_nonprofit:"SANS BUT",
+club_nonprofit_sub:"LUCRATIF",
+club_text_1:"Le Club Nàutic Canyet est né d’un groupe d’amis souhaitant organiser et apporter une solution au champ de bouées de Cala Canyet. Aujourd’hui, il conserve le même esprit et partage un objectif commun : partager la passion de la mer, profiter des magnifiques criques de la Costa Brava et favoriser une activité nautique organisée.",
 club_text_2:"Plus qu'un espace de navigation, le club est un lieu de rencontre pour ceux qui partagent la passion de la Méditerranée et de l'environnement exceptionnel de la Costa Brava.",
 club_foundation_title:"Fondation",
 club_foundation_text:"Une histoire liée à la mer, à Canyet et aux personnes qui ont rendu possible la vie nautique de ce lieu.",
@@ -6250,6 +5983,88 @@ contact_kicker:"CONTACT",
 contact_title:"Parlons-en",
 contact_text:"Pour toute question concernant le Club Nàutic Canyet, contactez-nous."
 
+}
+,
+en: {
+nav_inicio:"HOME",
+nav_club:"THE CLUB",
+nav_nautica:"SAILING",
+nav_actividades:"ACTIVITIES",
+nav_canyet:"CANYET",
+nav_mar:"SEA & WEATHER",
+nav_contacto:"CONTACT",
+hero_kicker:"CLUB NÀUTIC CANYET",
+hero_title:"SEA, NATURE<br>AND TRADITION",
+hero_text:"A unique place in the heart of the Costa Brava",
+quick_club:"THE CLUB",
+quick_club_text:"History, foundation, values and community",
+quick_nautica:"SAILING",
+quick_nautica_text:"Moorings, boats and services",
+quick_activities:"ACTIVITIES",
+quick_activities_text:"Special outings and experiences at sea",
+quick_canyet:"CANYET",
+quick_canyet_text:"The cove, the Pontets and its surroundings",
+quick_weather:"SEA & WEATHER",
+quick_weather_text:"Sea conditions, wind and forecast in Canyet",
+club_kicker:"THE CLUB",
+club_title:"A sailing club with its own identity",
+club_year_label:"Year founded",
+club_members_label:"Current members",
+club_nonprofit:"NON-PROFIT",
+club_nonprofit_sub:"ORGANISATION",
+club_text_1:"Club Nàutic Canyet was founded by a group of friends to organise and bring order to the mooring-buoy field at Cala Canyet. Today, it preserves that same spirit and shares a common purpose: sharing a passion for the sea, enjoying the beautiful coves of the Costa Brava and supporting well-organised nautical activities.",
+club_text_2:"More than a place for boating, the club is a meeting point for people united by their passion for the Mediterranean and the privileged surroundings of the Costa Brava.",
+club_foundation_title:"Our beginnings",
+club_foundation_text:"A story connected to the sea, Canyet and the people who made nautical life in this place possible.",
+club_values_title:"Our values",
+club_values_text:"Respect for the sea, community, tradition, nature and a responsible way to enjoy the Costa Brava.",
+club_community_title:"Community",
+club_community_text:"A club created to share experiences, go boating and keep the spirit of Canyet alive.",
+nautica_kicker:"SAILING",
+nautica_title:"The sea as a way of life",
+nautica_text:"Being a member of Club Nàutic Canyet means joining a community connected to the sea and enjoying a privileged setting for boating.",
+member_price_title:"Membership fee",
+member_price_text:"Basic club membership fee.",
+member_price_note:"Annual membership fee.",
+adhesion_title:"Joining the Club",
+adhesion_text:"A one-off joining fee of €1,500 is payable to become a member of CN Canyet. This payment is non-refundable.",
+adhesion_note:"One-off payment · non-refundable.",
+young_title:"Young member rate",
+young_text:"Members under 32 do not pay the joining fee.",
+young_note:"Joining fee waived.",
+tariff_title:"2026 season rates",
+tariff_intro:"Club Nàutic Canyet rates · 2026 season.",
+tariff_members_title:"Members' rates",
+activities_kicker:"ACTIVITIES",
+activities_title:"Experiences at sea",
+activities_intro:"Special outings and activities organised by the Club.",
+canyet_kicker:"CANYET · ROSAMAR",
+canyet_title:"The story of Cala Canyet",
+marine_kicker:"SEA & WEATHER",
+marine_intro:"Current sea, wind and weather conditions in Canyet · Rosamar.",
+marine_temperature:"TEMPERATURE",
+marine_wave:"SEA STATE",
+marine_wind:"WIND",
+marine_direction:"WIND DIRECTION",
+marine_forecast_title:"Forecast",
+anchorage_title:"Where to anchor today?",
+anchorage_intro:"Anchoring guidance based on wind and sea conditions.",
+anchorage_live:"LIVE DATA",
+anchorage_calculating:"CALCULATING RECOMMENDATION…",
+anchorage_map_label:"ANCHORING MAP",
+anchorage_map_title:"Platja d’Aro → Tossa de Mar",
+anchorage_map_hint:"SELECT A POINT TO VIEW SHELTER",
+anchorage_map_legend_good:"Favourable anchorage",
+anchorage_map_legend_conditional:"Depending on conditions",
+anchorage_map_legend_caution:"Exposed / limited capacity",
+anchorage_map_legend_no_anchor:"No anchoring / restricted area",
+marine_wind_radar_title:"Wind map",
+marine_wind_radar_intro:"Explore wind conditions in the area.",
+marine_wind_radar_badge:"LIVE MAP",
+marine_wind_radar_note:"Weather information is indicative and may vary with each update.",
+contact_kicker:"CONTACT",
+contact_title:"Get in touch",
+contact_text:"For any questions about Club Nàutic Canyet, please contact us."
 }
 
 };
