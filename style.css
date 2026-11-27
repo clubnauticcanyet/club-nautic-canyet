@@ -2364,3 +2364,123 @@ button {
         object-fit: contain !important;
     }
 }
+
+
+/* CORRECCIÓ DEFINITIVA DEL LOGO: no retallar cap part de l'escut */
+.header {
+    height: auto !important;
+    min-height: 225px !important;
+    overflow: visible !important;
+    align-items: flex-start !important;
+    padding-top: 24px !important;
+    padding-bottom: 18px !important;
+}
+.header .logo {
+    display: block !important;
+    width: 190px !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    flex: 0 0 auto !important;
+}
+.header .logo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+    overflow: visible !important;
+}
+@media (max-width: 600px) {
+    .header {
+        min-height: 205px !important;
+        height: auto !important;
+        padding: 22px 20px 16px !important;
+        overflow: visible !important;
+    }
+    .header .logo {
+        width: 170px !important;
+        max-width: 52vw !important;
+    }
+    .header .logo img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+@media (max-width: 400px) {
+    .header {
+        min-height: 190px !important;
+    }
+    .header .logo {
+        width: 155px !important;
+    }
+}
+
+
+/* FIX REAL DEL RECORTE SUPERIOR DEL TEXTO DEL LOGO */
+header.header,
+.header {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+header.header > a.logo,
+.header > a.logo,
+.header .logo {
+    display: block !important;
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    width: 185px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    line-height: 0 !important;
+    margin-top: 0 !important;
+}
+header.header .logo img,
+.header .logo img {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    object-fit: fill !important;
+    object-position: center top !important;
+    clip: auto !important;
+    clip-path: none !important;
+    transform: none !important;
+}
+@media (max-width: 700px) {
+    header.header,
+    .header {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 14px 18px 18px !important;
+        overflow: visible !important;
+        align-items: flex-start !important;
+    }
+    header.header > a.logo,
+    .header > a.logo,
+    .header .logo {
+        width: 180px !important;
+        max-width: 60vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    header.header .logo img,
+    .header .logo img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
